@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "obj-list-diff": "^1.0.0",
+    "simple-diff": "^1.6.0"
+  }
+}

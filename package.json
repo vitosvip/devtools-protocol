@@ -7,5 +7,9 @@
   "license": "SEE LICENSE IN https://chromium.googlesource.com/chromium/src/+/master/LICENSE",
   "bugs": {
     "url": "https://github.com/ChromeDevTools/devtools-protocol/issues"
+  },
+  "dependencies": {
+    "deep-object-diff": "^1.0.4",
+    "simple-git": "^1.75.0"
   }
 }
