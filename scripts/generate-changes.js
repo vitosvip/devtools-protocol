@@ -58,9 +58,9 @@ function collectChanges(prevDomains, currentDomains) {
     const typesDiff = objListDiff(prevDomain.types, domain.types, {key: 'id'});
     logDiff('types', domain.domain, typesDiff);
 
-    //   For each method
+    // TODO: For each method
     //     Any new parameters?
-    // uninmplemented
+    // uninmplemented.. we just now only say modified
   }
 }
 
@@ -74,7 +74,6 @@ function outputChanges(domainName, itemType, changeType, changes) {
     console.log(`* [\`${change[itemName]}\`](${linkHref})`);
   });
   // TODO: For a new domain, we should log all methods/events added or removed
-  // console.log(changes);
 }
 
 
@@ -86,10 +85,11 @@ function outputChanges(domainName, itemType, changeType, changes) {
   const commitlogs = commitlog.all;
 
   commitlogs.forEach(async (commit, i) => {
-    if (i > 5) return;
+    // Skip the first commits of the repo.
+    if (i >= (commitlogs.length - 3)) return;
+
+
     // hack to quit early.
-    // 12 has a new domain added
-    // 10 has a new method added to runtime 1da2f2124d8db26d6d6c7e64724e1f86ab6e138d
     // if (i != 10) return;
     // if (i < 7 || i > 11) return;
 
@@ -111,63 +111,14 @@ function outputChanges(domainName, itemType, changeType, changes) {
 
     const previousJSProtocol = readJSON(JSprotocol);
     const previousBrowserProtocol = readJSON(Browserprotocol);
-    // const diff = dodiff.detailedDiff(previousProtocol, currentProtocol);
-    // const diff = simpleDiff(previousProtocol, currentProtocol, {
-    //   idProps: {
-    //     'domains': 'domain',
-    //     'domains.*.commands': 'name',
-    //     'domains.*.events': 'name',
-    //     'domains.*.types': 'id',
-    //   }
-    // });
-    // const diff = objListDiff(previousProtocol.domains, currentProtocol.domains, 'domain');
+
     console.log(`\n\n## ${commit.message}`);
-    // console.log(`# ${commit.hash.slice(0, 7)}`);
-    // console.log(`# Diff of ${previousCommit.hash}...${commit.hash}:`);
     console.log(`https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}`);
 
     // Do i need to normalize the sorted order of all objects in arrays?
     collectChanges(previousJSProtocol.domains, currentJSProtocol.domains);
     collectChanges(previousBrowserProtocol.domains, currentBrowserProtocol.domains);
-
-    // console.dir(diff, {colors: true, depth: 2});
-    return;
-
-    console.log('now formatted:');
-
-    if (Object.keys(diff.added).length > 0) {
-      console.log('## Added items:');
-      logChanges(diff.added, currentProtocol);
-    }
-
-    if (Object.keys(diff.deleted).length > 0) {
-      console.log('## Deleted items:');
-      logChanges(diff.deleted, previousProtocol);
-    }
-
-    if (Object.keys(diff.updated).length > 0) {
-      console.log('## Updated items:');
-      logChanges(diff.updated, currentProtocol);
-    }
-
-    console.log('----------');
-    console.log('----------');
-    console.log('----------');
-    console.log('----------');
-
-    // console.log(previousProtocol.domains.find(d => d.domain === 'Memory').commands.map(c => c.name));
   });
-  // console.log(log);
+
 })();
 
-// # Deleted domain
-// # Deleted methods
-// # Deleted events/types
-// # Deleted parameters
-
-// # Added domain
-// # Added methods
-// # Added events/types
-// # Added parameters
-
-// # modified?
