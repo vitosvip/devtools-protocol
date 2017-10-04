@@ -7,6 +7,9 @@ const objListDiff = require('obj-list-diff');
 
 let results = '';
 
+/**
+ * Changeset handles diffing the unique shape of the protocol
+ */
 class Changeset {
   constructor(prev, curr) {
     this.prevDomains = prev.domains;
@@ -20,18 +23,25 @@ class Changeset {
     this.diffs.push({itemType: 'domains', domainName: '', diff: domainsDiff});
 
     // For each domain
-    for (const domain of this.currentDomains) {
-      const prevDomain = this.prevDomains.find(d => d.domain === domain.domain);
+    for (const currDomain of this.currentDomains) {
+      let prevDomain = this.prevDomains.find(d => d.domain === currDomain.domain);
+      if (!prevDomain) {
+        prevDomain = {
+          commands: [],
+          events: [],
+          types: []
+        };
+      }
 
       //   Any new methods, events, types?
-      const commandsDiff = objListDiff(prevDomain.commands, domain.commands, {key: 'name'});
-      this.diffs.push({itemType: 'commands', domainName: domain.domain, diff: commandsDiff});
+      const commandsDiff = objListDiff(prevDomain.commands, currDomain.commands, {key: 'name'});
+      this.diffs.push({itemType: 'commands', domainName: currDomain.domain, diff: commandsDiff});
 
-      const eventsDiff = objListDiff(prevDomain.events, domain.events, {key: 'name'});
-      this.diffs.push({itemType: 'events', domainName: domain.domain, diff: eventsDiff});
+      const eventsDiff = objListDiff(prevDomain.events, currDomain.events, {key: 'name'});
+      this.diffs.push({itemType: 'events', domainName: currDomain.domain, diff: eventsDiff});
 
-      const typesDiff = objListDiff(prevDomain.types, domain.types, {key: 'id'});
-      this.diffs.push({itemType: 'types', domainName: domain.domain, diff: typesDiff});
+      const typesDiff = objListDiff(prevDomain.types, currDomain.types, {key: 'id'});
+      this.diffs.push({itemType: 'types', domainName: currDomain.domain, diff: typesDiff});
 
       // TODO: For each method
       //     Any new parameters?
@@ -40,33 +50,54 @@ class Changeset {
   }
 }
 
+/**
+ * Formatter purely taking the diff objects and formatting them to markdown
+ */
 class Formatter {
-  static logDiff({itemType, domainName, diff}) {
-    delete diff.discardedOrig;
-    delete diff.discardedDest;
+  static logCommit(previousCommit, commit, changes) {
+    // Don't log commits that don't change the protocol.
+    changes.forEach(change => Formatter.cleanDiff(change));
+    changes = changes.filter(change => change.diff.added.length || change.diff.removed.length || change.diff.modified.length);
+    if (changes.length === 0) return;
+
+    results += `\n\n## ${commit.message}\n`;
+    results += `(${commit.date}) https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}\n`;
+    changes.forEach(change => Formatter.logDiff(change));
+  }
+
+  static cleanDiff({itemType, domainName, diff}) {
     delete diff.unchanged;
 
     // Note: domainsDiff.modified will include new methods in a domain
     if (itemType === 'domains') diff.modified = [];
+  }
 
+  static logDiff({itemType, domainName, diff}) {
     for (const changeType of Object.keys(diff)) {
-      const changes = diff[changeType];
-      if (changes.length === 0) continue;
-      Formatter.outputChanges(domainName, itemType, changeType, changes);
+      const diffDetails = diff[changeType];
+      if (diffDetails.length === 0) continue;
+      domainName = domainName || diffDetails[0].domain;
+      Formatter.outputChanges(domainName, itemType, changeType, diffDetails);
     }
   }
 
-  static outputChanges(domainName, itemType, changeType, changes) {
-    results += `### ${changeType} ${itemType}: \`${domainName}\`\n`;
+  static outputChanges(domainName, itemType, changeType, diffDetails) {
+    if (diffDetails.length === 0) return;
 
-    const cleanType = type => type.replace('commands', 'methods').replace(/s$/, '');
+    const displayChangeType = changeType.replace('added', 'new');
+    const displayItemType = itemType.replace('commands', 'methods');
+    const pluralize = (type, diffDetails) => `${type.replace(/s$/, '')}${diffDetails.length > 1 ? 's' : ''}`;
 
-    changes.forEach(change => {
-      const itemName = Formatter.getKey(change);
-      const linkHref = `https://chromedevtools.github.io/devtools-protocol/tot/${domainName}/#${cleanType(itemType)}-${itemName}`;
-      results += `* [\`${change[itemName]}\`](${linkHref})\n`;
+    results += `### \`${domainName}\`: ${displayChangeType} ${pluralize(itemType, diffDetails)} \n`;
+
+    const cleanType = type => type.replace(/s$/, '');
+
+    diffDetails.forEach(change => {
+      const itemKey = Formatter.getKey(change);
+      const itemValue = change[itemKey];
+      const linkHref = `https://chromedevtools.github.io/devtools-protocol/tot/${domainName}/#${cleanType(displayItemType)}-${itemValue}`;
+      results += `* [\`${domainName}.${itemValue}\`](${linkHref})\n`;
     });
-    // TODO: For a new domain, we should log all methods/events added or removed
   }
 
   static getKey(obj) {
@@ -77,6 +108,9 @@ class Formatter {
   }
 }
 
+/**
+ * CommitCrawler handles the git interaction and begins the diffing
+ */
 class CommitCrawler {
   constructor() {
     this.remote = 'https://github.com/ChromeDevTools/devtools-protocol.git';
@@ -98,16 +132,18 @@ class CommitCrawler {
       if (i >= this.commitlogs.length - 3) return;
 
       // Hack to quit early.
-      if (i > 10) return;
-      const commit = this.commitlogs[i];
-      await this.checkoutAndDiff(commit, i);
-    }
-    // await this.commitlogs.forEach(async (commit, i) => {
+      // if (i > 60) return;
 
-    // });
+      const commit = this.commitlogs[i];
+      const previousCommit = this.commitlogs[i + 1];
+      if (!previousCommit) return;
+
+      const changes = await this.checkoutAndDiff(commit, previousCommit);
+      Formatter.logCommit(previousCommit, commit, changes);
+    }
   }
 
-  async checkoutAndDiff(commit, i) {
+  async checkoutAndDiff(commit, previousCommit) {
     const readJSON = filename => JSON.parse(fs.readFileSync(`${this.path}/json/${filename}`, 'utf-8'));
 
     await this.git.checkout(commit.hash);
@@ -118,8 +154,6 @@ class CommitCrawler {
     const currentJSProtocol = readJSON(JSprotocol);
     const currentBrowserProtocol = readJSON(Browserprotocol);
 
-    const previousCommit = this.commitlogs[i + 1];
-    if (!previousCommit) return;
     await this.git.checkout(previousCommit.hash);
 
     // HACK
@@ -136,11 +170,7 @@ class CommitCrawler {
     jsChange.collectChanges();
     browserChange.collectChanges();
 
-    if (jsChange.diffs.length > 0 || browserChange.diffs.length > 0) {
-      results += `\n\n## ${commit.message}\n`;
-      results += `https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}\n`;
-      jsChange.diffs.concat(browserChange.diffs).forEach(Formatter.logDiff);
-    }
+    return jsChange.diffs.concat(browserChange.diffs);
   }
 }
 
