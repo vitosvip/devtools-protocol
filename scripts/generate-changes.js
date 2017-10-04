@@ -5,15 +5,7 @@ const fs = require('fs');
 const simpleGit = require('simple-git/promise');
 const objListDiff = require('obj-list-diff');
 
-const remote = 'https://github.com/ChromeDevTools/devtools-protocol.git';
-const path = './stubprotocolrepo';
-
-function getKey(obj) {
-  if (obj.domain) return 'domain';
-  if (obj.id) return 'id';
-  if (obj.name) return 'name';
-  throw new Error('Unknown object');
-}
+let results = '';
 
 class Changeset {
   constructor(prev, curr) {
@@ -65,36 +57,60 @@ class Formatter {
   }
 
   static outputChanges(domainName, itemType, changeType, changes) {
+    results += `### ${changeType} ${itemType}: \`${domainName}\`\n`;
+
     const cleanType = type => type.replace('commands', 'methods').replace(/s$/, '');
 
-    console.log(`### ${changeType} ${itemType}: \`${domainName}\``);
     changes.forEach(change => {
-      const itemName = getKey(change);
+      const itemName = Formatter.getKey(change);
       const linkHref = `https://chromedevtools.github.io/devtools-protocol/tot/${domainName}/#${cleanType(itemType)}-${itemName}`;
-      console.log(`* [\`${change[itemName]}\`](${linkHref})`);
+      results += `* [\`${change[itemName]}\`](${linkHref})\n`;
     });
     // TODO: For a new domain, we should log all methods/events added or removed
   }
+
+  static getKey(obj) {
+    if (obj.domain) return 'domain';
+    if (obj.id) return 'id';
+    if (obj.name) return 'name';
+    throw new Error('Unknown object');
+  }
 }
 
-(async function() {
-  // await simpleGit().clone(remote, path);
-  const git = simpleGit(path);
-  await git.reset('hard');
-  await git.checkout('heads/master');
-  const commitlog = await git.log();
-  const commitlogs = commitlog.all;
+class CommitCrawler {
+  constructor() {
+    this.remote = 'https://github.com/ChromeDevTools/devtools-protocol.git';
+    this.path = './stubprotocolrepo';
 
-  const readJSON = filename => JSON.parse(fs.readFileSync(`${path}/json/${filename}`, 'utf-8'));
+    this.git = simpleGit(this.path);
+    // await simpleGit().clone(this.remote, this.path);
+  }
 
-  commitlogs.forEach(async (commit, i) => {
-    // Skip the first commits of the repo.
-    if (i >= commitlogs.length - 3) return;
+  async crawl() {
+    const git = this.git;
+    await git.reset('hard');
+    await git.checkout('heads/master');
+    const commitlog = await git.log();
+    this.commitlogs = commitlog.all;
 
-    // Hack to quit early.
-    if (i > 10) return;
+    for (let i = 0; i < this.commitlogs.length; i++) {
+      // Skip the first commits of the repo.
+      if (i >= this.commitlogs.length - 3) return;
 
-    await git.checkout(commit.hash);
+      // Hack to quit early.
+      if (i > 10) return;
+      const commit = this.commitlogs[i];
+      await this.checkoutAndDiff(commit, i);
+    }
+    // await this.commitlogs.forEach(async (commit, i) => {
+
+    // });
+  }
+
+  async checkoutAndDiff(commit, i) {
+    const readJSON = filename => JSON.parse(fs.readFileSync(`${this.path}/json/${filename}`, 'utf-8'));
+
+    await this.git.checkout(commit.hash);
 
     const JSprotocol = 'js_protocol.json';
     const Browserprotocol = 'browser_protocol.json';
@@ -102,10 +118,11 @@ class Formatter {
     const currentJSProtocol = readJSON(JSprotocol);
     const currentBrowserProtocol = readJSON(Browserprotocol);
 
-    const previousCommit = commitlogs[i + 1];
+    const previousCommit = this.commitlogs[i + 1];
     if (!previousCommit) return;
-    await git.checkout(previousCommit.hash);
+    await this.git.checkout(previousCommit.hash);
 
+    // HACK
     // if (previousCommit.hash !== 'f2537966702cad6e91f04fafecc0fd339c707ad0') return; // audits domain added
     // if (previousCommit.hash !== '1da2f2124d8db26d6d6c7e64724e1f86ab6e138d') return; // queryobj method added to runtime
     // if (previousCommit.hash !== 'adb29482b8f2a850634c0720ab4a9c724d1af732') return; // typeprofile added somewhere.. i think?
@@ -120,9 +137,15 @@ class Formatter {
     browserChange.collectChanges();
 
     if (jsChange.diffs.length > 0 || browserChange.diffs.length > 0) {
-      console.log(`\n\n## ${commit.message}`);
-      console.log(`https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}`);
+      results += `\n\n## ${commit.message}\n`;
+      results += `https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}\n`;
       jsChange.diffs.concat(browserChange.diffs).forEach(Formatter.logDiff);
     }
-  });
+  }
+}
+
+(async function() {
+  const crawler = new CommitCrawler();
+  await crawler.crawl();
+  console.log(results);
 })();
