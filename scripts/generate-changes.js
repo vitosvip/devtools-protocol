@@ -10,50 +10,73 @@ const objListDiff = require('obj-list-diff');
 const remote = 'https://github.com/ChromeDevTools/devtools-protocol.git';
 const path = './stubprotocolrepo';
 
-function readJSON() {
-  const data = fs.readFileSync(`${path}/json/browser_protocol.json`, 'utf-8');
+function readJSON(filename) {
+  const data = fs.readFileSync(`${path}/json/${filename}`, 'utf-8');
   return JSON.parse(data);
 }
 
-function collectChanges(prevDomains, currentDomains) {
-  const diff = objListDiff(prevDomains, currentDomains, 'domain');
+function getKey(obj) {
+  if (obj.domain) return 'domain';
+  if (obj.id) return 'id';
+  if (obj.name) return 'name';
+  throw new Error('Unknown object');
+}
+
+function logDiff(itemType, domainName, diff) {
   delete diff.discardedOrig;
   delete diff.discardedDest;
-  console.log('domains', diff);
+  delete diff.unchanged;
 
+    // domainsDiff.modified will include new methods in a domain
+  if (itemType === 'domains') diff.modified = [];
+
+  for (const changeType of Object.keys(diff)) {
+    const changes = diff[changeType];
+    if (changes.length === 0) continue;
+    // console.log(domainName, itemType, changeType, changes);
+    outputChanges(domainName, itemType, changeType, changes);
+  }
+}
+
+function collectChanges(prevDomains, currentDomains) {
+  // Any new/removed domains?
+  const domainsDiff = objListDiff(prevDomains, currentDomains, {key: 'domain'});
+  logDiff('domains', '', domainsDiff);
+
+
+  // For each domain
   for (const domain of currentDomains) {
-    if (domain.domain !== 'Memory') continue;
     const prevDomain = prevDomains.find(d => d.domain === domain.domain);
-    console.dir({
-      prev: prevDomain.commands, curr: domain.commands
-    }, {colors: true, depth: 7});
-    const diffA = objListDiff(prevDomain.commands, domain.commands, ['name']);
-    delete diffA.discardedOrig;
-    delete diffA.discardedDest;
-    console.log('methods', diffA);
+
+    //   Any new methods, events, types?
+    const commandsDiff = objListDiff(prevDomain.commands, domain.commands, {key: 'name'});
+    logDiff('commands', domain.domain, commandsDiff);
+
+    const eventsDiff = objListDiff(prevDomain.events, domain.events, {key: 'name'});
+    logDiff('events', domain.domain, eventsDiff);
+
+    const typesDiff = objListDiff(prevDomain.types, domain.types, {key: 'id'});
+    logDiff('types', domain.domain, typesDiff);
+
+    //   For each method
+    //     Any new parameters?
+    // uninmplemented
   }
 }
-function logChanges(changeObj, protocolRef) {
-  for (const domainKey of Object.keys(changeObj.domains)) {
-    const domain = protocolRef.domains[domainKey];
-    const domainName = domain.domain;
-    const commands = changeObj.domains[domainKey].commands;
-    const events = changeObj.domains[domainKey].events;
 
-    console.log(domainKey, commands);
+function outputChanges(domainName, itemType, changeType, changes) {
+  const cleanType = type => type.replace('commands', 'methods').replace(/s$/, '');
 
-    for (const methodKey of Object.keys(commands || {})) {
-      const methodName = domain.commands[methodKey].name;
-      console.log(`### Method: ${domainName}.${methodName}`);
-      console.dir(commands[methodKey], {colors: true, depth: 7});
-    }
-    for (const eventKey of Object.keys(events || {})) {
-      const eventName = domain.events[eventKey].name;
-      console.log(`### Event: ${domainName}.${eventName}`);
-      console.dir(events[eventKey], {colors: true, depth: 7});
-    }
-  }
+  console.log(`### ${changeType} ${itemType}: \`${domainName}\``);
+  changes.forEach(change => {
+    const itemName = getKey(change);
+    const linkHref = `https://chromedevtools.github.io/devtools-protocol/tot/${domainName}/#${cleanType(itemType)}-${itemName}`;
+    console.log(`* [\`${change[itemName]}\`](${linkHref})`);
+  });
+  // TODO: For a new domain, we should log all methods/events added or removed
+  // console.log(changes);
 }
+
 
 (async function() {
   // await simpleGit().clone(remote, path);
@@ -63,16 +86,31 @@ function logChanges(changeObj, protocolRef) {
   const commitlogs = commitlog.all;
 
   commitlogs.forEach(async (commit, i) => {
-    if (i > 1) return;
-    // if (i < 5 || i > 8) return;
+    if (i > 5) return;
+    // hack to quit early.
+    // 12 has a new domain added
+    // 10 has a new method added to runtime 1da2f2124d8db26d6d6c7e64724e1f86ab6e138d
+    // if (i != 10) return;
+    // if (i < 7 || i > 11) return;
 
     await git.checkout(commit.hash);
-    const currentProtocol = readJSON();
+
+    const JSprotocol = 'js_protocol.json';
+    const Browserprotocol = 'browser_protocol.json';
+
+    const currentJSProtocol = readJSON(JSprotocol);
+    const currentBrowserProtocol = readJSON(Browserprotocol);
 
     const previousCommit = commitlogs[i + 1];
     if (!previousCommit) return;
     await git.checkout(previousCommit.hash);
-    const previousProtocol = readJSON();
+
+    // if (previousCommit.hash !== 'f2537966702cad6e91f04fafecc0fd339c707ad0') return; // audits domain added
+    // if (previousCommit.hash !== '1da2f2124d8db26d6d6c7e64724e1f86ab6e138d') return; // queryobj method added to runtime
+    // if (previousCommit.hash !== 'adb29482b8f2a850634c0720ab4a9c724d1af732') return; // typeprofile added somewhere.. i think?
+
+    const previousJSProtocol = readJSON(JSprotocol);
+    const previousBrowserProtocol = readJSON(Browserprotocol);
     // const diff = dodiff.detailedDiff(previousProtocol, currentProtocol);
     // const diff = simpleDiff(previousProtocol, currentProtocol, {
     //   idProps: {
@@ -83,13 +121,18 @@ function logChanges(changeObj, protocolRef) {
     //   }
     // });
     // const diff = objListDiff(previousProtocol.domains, currentProtocol.domains, 'domain');
+    console.log(`\n\n## ${commit.message}`);
+    // console.log(`# ${commit.hash.slice(0, 7)}`);
+    // console.log(`# Diff of ${previousCommit.hash}...${commit.hash}:`);
+    console.log(`https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}`);
 
-    collectChanges(previousProtocol.domains, currentProtocol.domains);
+    // Do i need to normalize the sorted order of all objects in arrays?
+    collectChanges(previousJSProtocol.domains, currentJSProtocol.domains);
+    collectChanges(previousBrowserProtocol.domains, currentBrowserProtocol.domains);
 
-    console.log(`# Diff of ${previousCommit.hash}...${commit.hash}:`);
-    console.log(`https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash}...${commit.hash}`);
     // console.dir(diff, {colors: true, depth: 2});
     return;
+
     console.log('now formatted:');
 
     if (Object.keys(diff.added).length > 0) {
@@ -116,3 +159,15 @@ function logChanges(changeObj, protocolRef) {
   });
   // console.log(log);
 })();
+
+// # Deleted domain
+// # Deleted methods
+// # Deleted events/types
+// # Deleted parameters
+
+// # Added domain
+// # Added methods
+// # Added events/types
+// # Added parameters
+
+// # modified?
