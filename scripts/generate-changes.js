@@ -1,6 +1,7 @@
 'use script';
 
 const fs = require('fs');
+const path = require('path');
 
 const simpleGit = require('simple-git/promise');
 const objListDiff = require('obj-list-diff');
@@ -60,7 +61,9 @@ class Formatter {
     changes = changes.filter(change => change.diff.added.length || change.diff.removed.length || change.diff.modified.length);
     if (changes.length === 0) return;
 
-    results += `\n\n## ${commit.message}\n`;
+    // simple-git adds this "(HEAD, origin/master)" string to the first commit's message...
+    const commitMessage = commit.message.replace(/\(HEAD.*/,'');
+    results += `\n\n## ${commitMessage}\n`;
     results += `(${commit.date}) https://github.com/ChromeDevTools/devtools-protocol/compare/${previousCommit.hash.slice(0, 7)}...${commit.hash.slice(0, 7)}\n`;
     changes.forEach(change => Formatter.logDiff(change));
   }
@@ -86,7 +89,7 @@ class Formatter {
 
     const displayChangeType = changeType.replace('added', 'new');
     const displayItemType = itemType.replace('commands', 'methods');
-    const pluralize = (type, diffDetails) => `${type.replace(/s$/, '')}${diffDetails.length > 1 ? 's' : ''}`;
+    const pluralize = (type, details) => `${type.replace(/s$/, '')}${details.length > 1 ? 's' : ''}`;
 
     results += `### \`${domainName}\`: ${displayChangeType} ${pluralize(itemType, diffDetails)} \n`;
 
@@ -114,14 +117,19 @@ class Formatter {
 class CommitCrawler {
   constructor() {
     this.remote = 'https://github.com/ChromeDevTools/devtools-protocol.git';
-    this.path = './stubprotocolrepo';
+    this.path = path.join(__dirname, './stubprotocolrepo');
 
+    if (!fs.existsSync(this.path)) {
+      fs.mkdirSync(this.path);
+    }
     this.git = simpleGit(this.path);
-    // await simpleGit().clone(this.remote, this.path);
   }
 
   async crawl() {
     const git = this.git;
+    if (!fs.existsSync(path.join(this.path, '.git'))) {
+      await git.clone(this.remote, this.path);
+    }
     await git.reset('hard');
     await git.checkout('heads/master');
     const commitlog = await git.log();
@@ -132,7 +140,7 @@ class CommitCrawler {
       if (i >= this.commitlogs.length - 3) return;
 
       // Hack to quit early.
-      // if (i > 60) return;
+      // if (i > 2) return;
 
       const commit = this.commitlogs[i];
       const previousCommit = this.commitlogs[i + 1];
@@ -177,5 +185,5 @@ class CommitCrawler {
 (async function() {
   const crawler = new CommitCrawler();
   await crawler.crawl();
-  console.log(results);
+  fs.writeFileSync(path.join(__dirname, '../changelog.md'), results);
 })();
