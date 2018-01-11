@@ -1,41 +1,4 @@
-<!--
-@license
-Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
--->
-
-<!--
-A set of layout classes that let you specify layout properties directly in markup.
-You must include this file in every element that needs to use them.
-
-Sample use:
-
-    <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
-    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-
-    <div class="layout horizontal layout-start">
-      <div>cross axis start alignment</div>
-    </div>
-
-The following imports are available:
- - iron-flex
- - iron-flex-reverse
- - iron-flex-alignment
- - iron-flex-factors
- - iron-positioning
--->
-
-<link rel="import" href="../polymer/polymer.html">
-
-<!-- Most common used flex styles-->
-<dom-module id="iron-flex">
-  <template>
-    <style>
-      .layout.horizontal,
+<link rel=import href=../polymer/polymer.html><dom-module id=iron-flex><template><style>.layout.horizontal,
       .layout.vertical {
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -104,16 +67,7 @@ The following imports are available:
         -ms-flex: none;
         -webkit-flex: none;
         flex: none;
-      }
-    </style>
-  </template>
-</dom-module>
-
-<!-- Basic flexbox reverse styles -->
-<dom-module id="iron-flex-reverse">
-  <template>
-    <style>
-      .layout.horizontal-reverse,
+      }</style></template></dom-module><dom-module id=iron-flex-reverse><template><style>.layout.horizontal-reverse,
       .layout.vertical-reverse {
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -136,16 +90,7 @@ The following imports are available:
         -ms-flex-wrap: wrap-reverse;
         -webkit-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
-      }
-    </style>
-  </template>
-</dom-module>
-
-<!-- Flexbox alignment -->
-<dom-module id="iron-flex-alignment">
-  <template>
-    <style>
-      /**
+      }</style></template></dom-module><dom-module id=iron-flex-alignment><template><style>/**
        * Alignment in cross axis.
        */
       .layout.start {
@@ -276,15 +221,7 @@ The following imports are available:
         -ms-align-content: space-around;
         -webkit-align-content: space-around;
         align-content: space-around;
-      }
-    </style>
-  </template>
-</dom-module>
-
-<dom-module id="iron-flex-factors">
-  <template>
-    <style>
-      .flex,
+      }</style></template></dom-module><dom-module id=iron-flex-factors><template><style>.flex,
       .flex-1 {
         -ms-flex: 1 1 0.000000001px;
         -webkit-flex: 1;
@@ -357,16 +294,7 @@ The following imports are available:
         -ms-flex: 12;
         -webkit-flex: 12;
         flex: 12;
-      }
-    </style>
-  </template>
-</dom-module>
-
-<!-- Non-flexbox positioning helper styles -->
-<dom-module id="iron-positioning">
-  <template>
-    <style>
-      .block {
+      }</style></template></dom-module><dom-module id=iron-positioning><template><style>.block {
         display: block;
       }
 
@@ -430,7 +358,4 @@ The following imports are available:
         top: 0;
         bottom: 0;
         left: 0;
-      }
-    </style>
-  </template>
-</dom-module>
+      }</style></template></dom-module>
