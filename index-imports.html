@@ -2374,7 +2374,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-family: inherit;
       }
       span.deprecated {
-        background-color: hsla(0,0%,90%,1);
+        background-color: #FFCC80;
+        color: black;
+        border: 1px solid #EF6C00;
       }
 
       .domain-experimental span.experimental {
@@ -2414,11 +2416,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-weight: bold;
       }
 
-      .optional {
+      [optional] {
         opacity: .9;
       }
 
-      .optional:after {
+      [optional]:after {
         content: "optional";
         opacity: .6;
         font-size: 70%;
@@ -2473,7 +2475,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .monospace {
         font-family: Consolas, Menlo, monospace;
-      }</style><div class="param"><div class="param-pair"><dt class="param-name monospace {% if param.optional %}optional{% endif %}">[[param.name]]</dt><dd class="param-def"><span hidden$="[[!param.type]]" class="param-type">[[param.type]] <span hidden$="[[!param.items]]"><span hidden$="[[!param.items.type]]">[ [[param.items.type]] ] </span><span hidden$="[[param.items.type]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span></span><span hidden$="[[param.type]]"><span class="param-type" hidden$="[[!referral]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span><span class="param-description"><span inner-h-t-m-l="[[param.description]]" hidden$="[[!param.description]]"></span> <span>[[_computeParamEnum(param.enum)]]</span><cr-domain-experimental item="[[param]]"></cr-domain-experimental></span></dd></div><div hidden$="[[!_paramItemExist(param)]]" class="param-pair param-sub"><div class="param-name"></div><div class="param-def"><h6>Array element:</h6>[[param.items.description]]<template is="dom-repeat" items="[[param.items.properties]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template><span>[[_computeParamEnum(param.items.enum)]]</span></div></div></div></template><script>customElements.define('cr-domain-param',class extends Polymer.Element{static get is(){return'cr-domain-param'}static get properties(){return{param:Object,referral:{type:String,computed:'_computeReferral(param)'},version:String,domain:String}}_computeReferral(a){return a.type?a.items&&a.items.$ref||'':a.$ref}_hasType(a){return'false'!==a.type}_computeUrl(a,b,c){return-1===c.indexOf('.')?`${a}/${b}#type-${c}`:`${a}/${c.replace('.','#type-')}`}_computeParamEnum(a){return a&&a.join(', ')||''}_paramItemExist(a){return a.items&&(a.items.properties||a.items.enum||a.items.description)}});</script></dom-module><dom-module id="cr-domain-details" assetpath="elements/cr-domain/"><template><style>[hidden] {
+      }</style><div class="param"><div class="param-pair"><dt class="param-name monospace" optional$="[[param.optional]]">[[param.name]]</dt><dd class="param-def"><span hidden$="[[!param.type]]" class="param-type">[[param.type]] <span hidden$="[[!param.items]]"><span hidden$="[[!param.items.type]]">[ [[param.items.type]] ] </span><span hidden$="[[param.items.type]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span></span><span hidden$="[[param.type]]"><span class="param-type" hidden$="[[!referral]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span><span class="param-description"><span inner-h-t-m-l="[[param.description]]" hidden$="[[!param.description]]"></span> <span>[[_computeParamEnum(param.enum)]]</span><cr-domain-experimental item="[[param]]"></cr-domain-experimental></span></dd></div><div hidden$="[[!_paramItemExist(param)]]" class="param-pair param-sub"><div class="param-name"></div><div class="param-def"><h6>Array element:</h6>[[param.items.description]]<template is="dom-repeat" items="[[param.items.properties]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template><span>[[_computeParamEnum(param.items.enum)]]</span></div></div></div></template><script>customElements.define('cr-domain-param',class extends Polymer.Element{static get is(){return'cr-domain-param'}static get properties(){return{param:Object,referral:{type:String,computed:'_computeReferral(param)'},version:String,domain:String}}_computeReferral(a){return a.type?a.items&&a.items.$ref||'':a.$ref}_hasType(a){return'false'!==a.type}_computeUrl(a,b,c){return-1===c.indexOf('.')?`${a}/${b}#type-${c}`:`${a}/${c.replace('.','#type-')}`}_computeParamEnum(a){return a&&a.join(', ')||''}_paramItemExist(a){return a.items&&(a.items.properties||a.items.enum||a.items.description)}});</script></dom-module><dom-module id="cr-domain-details" assetpath="elements/cr-domain/"><template><style>[hidden] {
         display: none !important;
       }
 
