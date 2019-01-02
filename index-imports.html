@@ -2466,6 +2466,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           font-size: 120%;
       }
 
+      div.enum:not(:empty) {
+        margin-top: 5px;
+        font-size: 90%;
+      }
+
+      div.enum:not(:empty):before {
+        content: "Allowed values: ";
+        color: gray;
+        font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
       h6 {
         margin: 12px 0;
         font-size: 16px;
@@ -2475,7 +2488,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .monospace {
         font-family: Consolas, Menlo, monospace;
-      }</style><div class="param"><div class="param-pair"><dt class="param-name monospace" optional$="[[param.optional]]">[[param.name]]</dt><dd class="param-def"><span hidden$="[[!param.type]]" class="param-type">[[param.type]] <span hidden$="[[!param.items]]"><span hidden$="[[!param.items.type]]">[ [[param.items.type]] ] </span><span hidden$="[[param.items.type]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span></span><span hidden$="[[param.type]]"><span class="param-type" hidden$="[[!referral]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span><span class="param-description"><cr-markdownish hidden$="[[!param.description]]" markdown="[[param.description]]"></cr-markdownish><span>[[_computeParamEnum(param.enum)]]</span><cr-domain-experimental item="[[param]]"></cr-domain-experimental></span></dd></div><div hidden$="[[!_paramItemExist(param)]]" class="param-pair param-sub"><div class="param-name"></div><div class="param-def"><h6>Array element:</h6>[[param.items.description]]<template is="dom-repeat" items="[[param.items.properties]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template><span>[[_computeParamEnum(param.items.enum)]]</span></div></div></div></template><script>customElements.define('cr-domain-param',class extends Polymer.Element{static get is(){return'cr-domain-param'}static get properties(){return{param:Object,referral:{type:String,computed:'_computeReferral(param)'},version:String,domain:String}}_computeReferral(a){return a.type?a.items&&a.items.$ref||'':a.$ref}_hasType(a){return'false'!==a.type}_computeUrl(a,b,c){return-1===c.indexOf('.')?`${a}/${b}#type-${c}`:`${a}/${c.replace('.','#type-')}`}_computeParamEnum(a){return a&&a.join(', ')||''}_paramItemExist(a){return a.items&&(a.items.properties||a.items.enum||a.items.description)}});</script></dom-module><dom-module id="cr-domain-details" assetpath="elements/cr-domain/"><template><style>[hidden] {
+      }</style><div class="param"><div class="param-pair"><dt class="param-name monospace" optional$="[[param.optional]]">[[param.name]]</dt><dd class="param-def"><span hidden$="[[!param.type]]" class="param-type">[[param.type]] <span hidden$="[[!param.items]]"><span hidden$="[[!param.items.type]]">[ [[param.items.type]] ] </span><span hidden$="[[param.items.type]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span></span><span hidden$="[[param.type]]"><span class="param-type" hidden$="[[!referral]]"><a href$="[[_computeUrl(version, domain, referral)]]">[[referral]]</a> </span></span><span class="param-description"><cr-markdownish hidden$="[[!param.description]]" markdown="[[param.description]]"></cr-markdownish><div class="enum monospace">[[_computeParamEnum(param.enum)]]</div><cr-domain-experimental item="[[param]]"></cr-domain-experimental></span></dd></div><div hidden$="[[!_paramItemExist(param)]]" class="param-pair param-sub"><div class="param-name"></div><div class="param-def"><h6>Array element:</h6>[[param.items.description]]<template is="dom-repeat" items="[[param.items.properties]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template><div class="enum monospace">[[_computeParamEnum(param.items.enum)]]</div></div></div></div></template><script>customElements.define('cr-domain-param',class extends Polymer.Element{static get is(){return'cr-domain-param'}static get properties(){return{param:Object,referral:{type:String,computed:'_computeReferral(param)'},version:String,domain:String}}_computeReferral(a){return a.type?a.items&&a.items.$ref||'':a.$ref}_hasType(a){return'false'!==a.type}_computeUrl(a,b,c){return-1===c.indexOf('.')?`${a}/${b}#type-${c}`:`${a}/${c.replace('.','#type-')}`}_computeParamEnum(a){return a&&a.join(', ')||''}_paramItemExist(a){return a.items&&(a.items.properties||a.items.enum||a.items.description)}});</script></dom-module><dom-module id="cr-domain-details" assetpath="elements/cr-domain/"><template><style>[hidden] {
         display: none !important;
       }
 
@@ -2524,12 +2537,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: gray;
         font-weight: 300;
         text-transform: uppercase;
-        letter-spacing: 1px;
         margin: 1rem 0 0;
       }
 
       .monospace {
         font-family: Consolas, Menlo, monospace;
+      }
+      .sm {
+        font-size: 90%;
+      }
+
+      h5 + p {
+        margin-top: 0;
       }
 
       .parameter-list {
@@ -2542,7 +2561,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         .parameter-list {
           margin: 0;
         }
-      }</style><div class="details"><h4 class="details-name monospace" id$="details-[[name]]"><span><span class="domain-dot" hidden$="[[_filterType(type)]]">[[domain]].</span>[[name]] </span><a href$="[[version]]/[[domain]]#[[type]]-[[name]]" class="permalink">#</a></h4><p class="details-description"><cr-markdownish hidden$="[[!details.description]]" markdown="[[details.description]]"></cr-markdownish><cr-domain-experimental item="[[details]]"></cr-domain-experimental></p><p hidden$="[[!details.type]]" class="type-type">Type: <strong>[[details.type]]</strong></p><div hidden$="[[!properties]]"><h5>[[properties.name]]</h5><dl class="parameter-list"><template is="dom-repeat" items="[[properties.values]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template></dl></div><div hidden$="[[!details.returns.length]]"><h5>Return object</h5><dl class="parameter-list"><template is="dom-repeat" items="[[details.returns]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template></dl></div><div hidden$="[[!details.enum.length]]"><h5>Allowed values</h5><p>[[_computeDetailsEnum(details)]].</p></div></div></template><script>customElements.define('cr-domain-details',class extends Polymer.Element{static get is(){return'cr-domain-details'}static get properties(){return{domain:String,details:Object,version:String,type:String,name:{type:String,computed:'_computeName(details)'},properties:{type:Object,computed:'_computeProperties(details)'}}}_computeName(a){return a.name||a.id}_computeProperties(a){if(a.parameters)return{name:'parameters',values:a.parameters};return a.properties?{name:'properties',values:a.properties}:void 0}_computeDetailsEnum(a){return a.enum&&a.enum.join(', ')}_filterType(a){return'type'===a}});</script></dom-module><dom-module id="cr-domain" assetpath="elements/cr-domain/"><template><style include="custom-paper-material-styles">h3 {
+      }</style><div class="details"><h4 class="details-name monospace" id$="details-[[name]]"><span><span class="domain-dot" hidden$="[[_filterType(type)]]">[[domain]].</span>[[name]] </span><a href$="[[version]]/[[domain]]#[[type]]-[[name]]" class="permalink">#</a></h4><p class="details-description"><cr-markdownish hidden$="[[!details.description]]" markdown="[[details.description]]"></cr-markdownish><cr-domain-experimental item="[[details]]"></cr-domain-experimental></p><p hidden$="[[!details.type]]" class="type-type">Type: <strong>[[details.type]]</strong></p><div hidden$="[[!_hasProperties(details)]]"><h5>[[properties.name]]</h5><dl class="parameter-list"><template is="dom-repeat" items="[[properties.values]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template></dl></div><div hidden$="[[!details.returns.length]]"><h5>Return object</h5><dl class="parameter-list"><template is="dom-repeat" items="[[details.returns]]"><cr-domain-param param="[[item]]" version="[[version]]" domain="[[domain]]"></cr-domain-param></template></dl></div><div hidden$="[[!details.enum.length]]"><h5>Allowed values</h5><p class="monospace sm">[[_computeDetailsEnum(details)]]</p></div></div></template><script>customElements.define('cr-domain-details',class extends Polymer.Element{static get is(){return'cr-domain-details'}static get properties(){return{domain:String,details:Object,version:String,type:String,name:{type:String,computed:'_computeName(details)'},properties:{type:Object,computed:'_computeProperties(details)'}}}_computeName(a){return a.name||a.id}_computeProperties(a){if(a.parameters)return{name:'parameters',values:a.parameters};return a.properties?{name:'properties',values:a.properties}:void 0}_hasProperties(a){return!!this._computeProperties(a)}_computeDetailsEnum(a){return a.enum&&a.enum.join(', ')}_filterType(a){return'type'===a}});</script></dom-module><dom-module id="cr-domain" assetpath="elements/cr-domain/"><template><style include="custom-paper-material-styles">h3 {
         font-size: 20px;
         line-height: 28px;
       }
