@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - SystemInfo domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">SystemInfo Domain</h2>
+        
+      <div class="details-description">
+        <p>The SystemInfo domain defines methods and events for querying low-level system information.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-getInfo"><span class="domain-dot">SystemInfo.</span>getInfo</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getProcessInfo"><span class="domain-dot">SystemInfo.</span>getProcessInfo</a>
+        
+      </div>
+      
+        
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-GPUDevice"><span class="domain-dot">SystemInfo.</span>GPUDevice</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Size"><span class="domain-dot">SystemInfo.</span>Size</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-VideoDecodeAcceleratorCapability"><span class="domain-dot">SystemInfo.</span>VideoDecodeAcceleratorCapability</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-VideoEncodeAcceleratorCapability"><span class="domain-dot">SystemInfo.</span>VideoEncodeAcceleratorCapability</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SubsamplingFormat"><span class="domain-dot">SystemInfo.</span>SubsamplingFormat</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ImageType"><span class="domain-dot">SystemInfo.</span>ImageType</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ImageDecodeAcceleratorCapability"><span class="domain-dot">SystemInfo.</span>ImageDecodeAcceleratorCapability</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-GPUInfo"><span class="domain-dot">SystemInfo.</span>GPUInfo</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ProcessInfo"><span class="domain-dot">SystemInfo.</span>ProcessInfo</a>
+        
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getInfo">
+          <span class="domain-dot">SystemInfo.</span>getInfo
+          <a href="#method-getInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns information about the system.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">gpu</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-GPUInfo class="param-type">GPUInfo</a>
+          
+      <div class="details-description">
+        <p>Information about the GPUs on the system.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">modelName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>A platform-dependent description of the model of the machine. On Mac OS, this is, for
+example, &#39;MacBookPro&#39;. Will be the empty string if not supported.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">modelVersion</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>A platform-dependent description of the version of the machine. On Mac OS, this is, for
+example, &#39;10.1&#39;. Will be the empty string if not supported.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">commandLine</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The command line string used to launch the browser. Will be the empty string if not
+supported.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getProcessInfo">
+          <span class="domain-dot">SystemInfo.</span>getProcessInfo
+          <a href="#method-getProcessInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns information about all running processes.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">processInfo</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>An array of process info blocks.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      </div>
+    
+      
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-GPUDevice">
+          <span class="domain-dot">SystemInfo.</span>GPUDevice
+          <a href="#type-GPUDevice" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Describes a single graphics processor (GPU).</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">vendorId</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>PCI ID of the GPU vendor, if available; 0 otherwise.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">deviceId</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>PCI ID of the GPU device, if available; 0 otherwise.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">subSysId</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Sub sys ID of the GPU, only available on Windows.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">revision</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Revision of the GPU, only available on Windows.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">vendorString</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>String description of the GPU vendor, if the PCI ID is not available.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">deviceString</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>String description of the GPU device, if the PCI ID is not available.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">driverVendor</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>String description of the GPU driver vendor.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">driverVersion</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>String description of the GPU driver version.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Size">
+          <span class="domain-dot">SystemInfo.</span>Size
+          <a href="#type-Size" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Describes the width and height dimensions of an entity.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">width</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Width in pixels.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">height</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Height in pixels.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-VideoDecodeAcceleratorCapability">
+          <span class="domain-dot">SystemInfo.</span>VideoDecodeAcceleratorCapability
+          <a href="#type-VideoDecodeAcceleratorCapability" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Describes a supported video decoding profile with its associated minimum and
+maximum resolutions.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">profile</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Video codec profile that is supported, e.g. VP9 Profile 2.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxResolution</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
+          
+      <div class="details-description">
+        <p>Maximum video dimensions in pixels supported for this |profile|.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">minResolution</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
+          
+      <div class="details-description">
+        <p>Minimum video dimensions in pixels supported for this |profile|.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-VideoEncodeAcceleratorCapability">
+          <span class="domain-dot">SystemInfo.</span>VideoEncodeAcceleratorCapability
+          <a href="#type-VideoEncodeAcceleratorCapability" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Describes a supported video encoding profile with its associated maximum
+resolution and maximum framerate.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">profile</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Video codec profile that is supported, e.g H264 Main.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxResolution</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
+          
+      <div class="details-description">
+        <p>Maximum video dimensions in pixels supported for this |profile|.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxFramerateNumerator</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Maximum encoding framerate in frames per second supported for this
+|profile|, as fraction&#39;s numerator and denominator, e.g. 24/1 fps,
+24000/1001 fps, etc.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxFramerateDenominator</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SubsamplingFormat">
+          <span class="domain-dot">SystemInfo.</span>SubsamplingFormat
+          <a href="#type-SubsamplingFormat" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>YUV subsampling type of the pixels of a given image.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">yuv420, yuv422, yuv444</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ImageType">
+          <span class="domain-dot">SystemInfo.</span>ImageType
+          <a href="#type-ImageType" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Image format of a given image.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">jpeg, webp, unknown</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ImageDecodeAcceleratorCapability">
+          <span class="domain-dot">SystemInfo.</span>ImageDecodeAcceleratorCapability
+          <a href="#type-ImageDecodeAcceleratorCapability" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Describes a supported image decoding profile with its associated minimum and
+maximum resolutions and subsampling.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">imageType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-ImageType class="param-type">ImageType</a>
+          
+      <div class="details-description">
+        <p>Image coded, e.g. Jpeg.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxDimensions</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
+          
+      <div class="details-description">
+        <p>Maximum supported dimensions of the image in pixels.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">minDimensions</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
+          
+      <div class="details-description">
+        <p>Minimum supported dimensions of the image in pixels.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">subsamplings</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Optional array of supported subsampling formats, e.g. 4:2:0, if known.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-GPUInfo">
+          <span class="domain-dot">SystemInfo.</span>GPUInfo
+          <a href="#type-GPUInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Provides information about the GPU(s) on the system.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">devices</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The graphics devices on the system. Element 0 is the primary GPU.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">auxAttributes</dt>
+        <dd>
+          <span class="param-type">object</span>
+          
+      <div class="details-description">
+        <p>An optional dictionary of additional GPU related attributes.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">featureStatus</dt>
+        <dd>
+          <span class="param-type">object</span>
+          
+      <div class="details-description">
+        <p>An optional dictionary of graphics features and their status.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">driverBugWorkarounds</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>An optional array of GPU driver bug workarounds.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">videoDecoding</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Supported accelerated video decoding capabilities.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">videoEncoding</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Supported accelerated video encoding capabilities.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">imageDecoding</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Supported accelerated image decoding capabilities.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ProcessInfo">
+          <span class="domain-dot">SystemInfo.</span>ProcessInfo
+          <a href="#type-ProcessInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Represents process info.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Specifies process type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">id</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Specifies process id.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cpuTime</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Specifies cumulative CPU usage in seconds across all threads of the
+process since the process start.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

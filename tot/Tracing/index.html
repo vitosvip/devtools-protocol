@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - Tracing domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">Tracing Domain</h2>
+        
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-end"><span class="domain-dot">Tracing.</span>end</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getCategories"><span class="domain-dot">Tracing.</span>getCategories</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-recordClockSyncMarker"><span class="domain-dot">Tracing.</span>recordClockSyncMarker</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-requestMemoryDump"><span class="domain-dot">Tracing.</span>requestMemoryDump</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-start"><span class="domain-dot">Tracing.</span>start</a>
+        
+      </div>
+      
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a href="#event-bufferUsage"><span class="domain-dot">Tracing.</span>bufferUsage</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-dataCollected"><span class="domain-dot">Tracing.</span>dataCollected</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-tracingComplete"><span class="domain-dot">Tracing.</span>tracingComplete</a>
+        
+      </div>
+      
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-MemoryDumpConfig"><span class="domain-dot">Tracing.</span>MemoryDumpConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-TraceConfig"><span class="domain-dot">Tracing.</span>TraceConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-StreamFormat"><span class="domain-dot">Tracing.</span>StreamFormat</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-StreamCompression"><span class="domain-dot">Tracing.</span>StreamCompression</a>
+        
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-end">
+          <span class="domain-dot">Tracing.</span>end
+          <a href="#method-end" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Stop trace events collection.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getCategories">
+          <span class="domain-dot">Tracing.</span>getCategories
+          <a href="#method-getCategories" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Gets supported tracing categories.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">categories</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>A list of supported tracing categories.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-recordClockSyncMarker">
+          <span class="domain-dot">Tracing.</span>recordClockSyncMarker
+          <a href="#method-recordClockSyncMarker" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Record a clock sync marker in the trace.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">syncId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The ID of this clock sync marker</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-requestMemoryDump">
+          <span class="domain-dot">Tracing.</span>requestMemoryDump
+          <a href="#method-requestMemoryDump" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Request a global memory dump.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">deterministic</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Enables more deterministic results by forcing garbage collection</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">dumpGuid</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>GUID of the resulting global memory dump.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">success</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True iff the global memory dump succeeded.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-start">
+          <span class="domain-dot">Tracing.</span>start
+          <a href="#method-start" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Start trace events collection.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">categories</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Category/tag filter</p>
+
+      </div>
+    
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        </dd>
+      
+        <dt class="param-name">options</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Tracing options</p>
+
+      </div>
+    
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        </dd>
+      
+        <dt class="param-name">bufferUsageReportingInterval</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>If set, the agent will issue bufferUsage events at this interval, specified in milliseconds</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">transferMode</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Whether to report trace events as series of dataCollected events or to save trace to a
+stream (defaults to <code>ReportEvents</code>).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">streamFormat</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-StreamFormat class="param-type">StreamFormat</a>
+          
+      <div class="details-description">
+        <p>Trace data format to use. This only applies when using <code>ReturnAsStream</code>
+transfer mode (defaults to <code>json</code>).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">streamCompression</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-StreamCompression class="param-type">StreamCompression</a>
+          
+      <div class="details-description">
+        <p>Compression format to use. This only applies when using <code>ReturnAsStream</code>
+transfer mode (defaults to <code>none</code>)</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">traceConfig</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-TraceConfig class="param-type">TraceConfig</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-bufferUsage">
+          <span class="domain-dot">Tracing.</span>bufferUsage
+          <a href="#event-bufferUsage" class="permalink">#</a>
+        </h4>
+        
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">percentFull</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>A number in range [0..1] that indicates the used size of event buffer as a fraction of its
+total size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">eventCount</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>An approximate number of events in the trace log.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>A number in range [0..1] that indicates the used size of event buffer as a fraction of its
+total size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-dataCollected">
+          <span class="domain-dot">Tracing.</span>dataCollected
+          <a href="#event-dataCollected" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Contains an bucket of collected trace events. When tracing is stopped collected events will be
+send as a sequence of dataCollected events followed by tracingComplete event.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-tracingComplete">
+          <span class="domain-dot">Tracing.</span>tracingComplete
+          <a href="#event-tracingComplete" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Signals that tracing is stopped and there is no trace buffers pending flush, all data were
+delivered via dataCollected events.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">dataLossOccurred</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Indicates whether some trace data is known to have been lost, e.g. because the trace ring
+buffer wrapped around.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">stream</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">IO.StreamHandle</a>
+          
+      <div class="details-description">
+        <p>A handle of the stream that holds resulting trace data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">traceFormat</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-StreamFormat class="param-type">StreamFormat</a>
+          
+      <div class="details-description">
+        <p>Trace data format of returned stream.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">streamCompression</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-StreamCompression class="param-type">StreamCompression</a>
+          
+      <div class="details-description">
+        <p>Compression format of returned stream.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MemoryDumpConfig">
+          <span class="domain-dot">Tracing.</span>MemoryDumpConfig
+          <a href="#type-MemoryDumpConfig" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Configuration for memory dump. Used only when &quot;memory-infra&quot; category is enabled.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TraceConfig">
+          <span class="domain-dot">Tracing.</span>TraceConfig
+          <a href="#type-TraceConfig" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">recordMode</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Controls how the trace buffer stores data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">enableSampling</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Turns on JavaScript stack sampling.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">enableSystrace</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Turns on system tracing.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">enableArgumentFilter</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Turns on argument filter.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">includedCategories</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Included category filters.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">excludedCategories</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Excluded category filters.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">syntheticDelays</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Configuration to synthesize the delays in tracing.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">memoryDumpConfig</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Tracing/#type-MemoryDumpConfig class="param-type">MemoryDumpConfig</a>
+          
+      <div class="details-description">
+        <p>Configuration for memory dump triggers. Used only when &quot;memory-infra&quot; category is enabled.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-StreamFormat">
+          <span class="domain-dot">Tracing.</span>StreamFormat
+          <a href="#type-StreamFormat" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Data format of a trace. Can be either the legacy JSON format or the
+protocol buffer format. Note that the JSON format will be deprecated soon.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">json, proto</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-StreamCompression">
+          <span class="domain-dot">Tracing.</span>StreamCompression
+          <a href="#type-StreamCompression" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Compression type to use for traces returned via streams.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">none, gzip</div>
+    
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - Emulation domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">Emulation Domain</h2>
+        
+      <div class="details-description">
+        <p>This domain emulates different environments for the page.</p>
+
+      </div>
+    
+        
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-canEmulate"><span class="domain-dot">Emulation.</span>canEmulate</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-clearDeviceMetricsOverride"><span class="domain-dot">Emulation.</span>clearDeviceMetricsOverride</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-clearGeolocationOverride"><span class="domain-dot">Emulation.</span>clearGeolocationOverride</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-resetPageScaleFactor"><span class="domain-dot">Emulation.</span>resetPageScaleFactor</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setFocusEmulationEnabled"><span class="domain-dot">Emulation.</span>setFocusEmulationEnabled</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setCPUThrottlingRate"><span class="domain-dot">Emulation.</span>setCPUThrottlingRate</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setDefaultBackgroundColorOverride"><span class="domain-dot">Emulation.</span>setDefaultBackgroundColorOverride</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setDeviceMetricsOverride"><span class="domain-dot">Emulation.</span>setDeviceMetricsOverride</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setScrollbarsHidden"><span class="domain-dot">Emulation.</span>setScrollbarsHidden</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setDocumentCookieDisabled"><span class="domain-dot">Emulation.</span>setDocumentCookieDisabled</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setEmitTouchEventsForMouse"><span class="domain-dot">Emulation.</span>setEmitTouchEventsForMouse</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setEmulatedMedia"><span class="domain-dot">Emulation.</span>setEmulatedMedia</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setEmulatedVisionDeficiency"><span class="domain-dot">Emulation.</span>setEmulatedVisionDeficiency</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setGeolocationOverride"><span class="domain-dot">Emulation.</span>setGeolocationOverride</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setNavigatorOverrides"><span class="domain-dot">Emulation.</span>setNavigatorOverrides</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setPageScaleFactor"><span class="domain-dot">Emulation.</span>setPageScaleFactor</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setScriptExecutionDisabled"><span class="domain-dot">Emulation.</span>setScriptExecutionDisabled</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setTouchEmulationEnabled"><span class="domain-dot">Emulation.</span>setTouchEmulationEnabled</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setVirtualTimePolicy"><span class="domain-dot">Emulation.</span>setVirtualTimePolicy</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setLocaleOverride"><span class="domain-dot">Emulation.</span>setLocaleOverride</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setTimezoneOverride"><span class="domain-dot">Emulation.</span>setTimezoneOverride</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setVisibleSize"><span class="domain-dot">Emulation.</span>setVisibleSize</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setUserAgentOverride"><span class="domain-dot">Emulation.</span>setUserAgentOverride</a>
+        
+      </div>
+      
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a href="#event-virtualTimeBudgetExpired"><span class="domain-dot">Emulation.</span>virtualTimeBudgetExpired</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-ScreenOrientation"><span class="domain-dot">Emulation.</span>ScreenOrientation</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-MediaFeature"><span class="domain-dot">Emulation.</span>MediaFeature</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-VirtualTimePolicy"><span class="domain-dot">Emulation.</span>VirtualTimePolicy</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-canEmulate">
+          <span class="domain-dot">Emulation.</span>canEmulate
+          <a href="#method-canEmulate" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Tells whether emulation is supported.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if emulation is supported.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-clearDeviceMetricsOverride">
+          <span class="domain-dot">Emulation.</span>clearDeviceMetricsOverride
+          <a href="#method-clearDeviceMetricsOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Clears the overriden device metrics.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-clearGeolocationOverride">
+          <span class="domain-dot">Emulation.</span>clearGeolocationOverride
+          <a href="#method-clearGeolocationOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Clears the overriden Geolocation Position and Error.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-resetPageScaleFactor">
+          <span class="domain-dot">Emulation.</span>resetPageScaleFactor
+          <a href="#method-resetPageScaleFactor" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that page scale factor is reset to initial values.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setFocusEmulationEnabled">
+          <span class="domain-dot">Emulation.</span>setFocusEmulationEnabled
+          <a href="#method-setFocusEmulationEnabled" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables or disables simulating a focused and active page.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">enabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to enable to disable focus emulation.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setCPUThrottlingRate">
+          <span class="domain-dot">Emulation.</span>setCPUThrottlingRate
+          <a href="#method-setCPUThrottlingRate" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables CPU throttling to emulate slow CPUs.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">rate</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Throttling rate as a slowdown factor (1 is no throttle, 2 is 2x slowdown, etc).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setDefaultBackgroundColorOverride">
+          <span class="domain-dot">Emulation.</span>setDefaultBackgroundColorOverride
+          <a href="#method-setDefaultBackgroundColorOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets or clears an override of the default background color of the frame. This override is used
+if the content does not specify one.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">color</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>RGBA of the default background color. If not specified, any existing override will be
+cleared.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setDeviceMetricsOverride">
+          <span class="domain-dot">Emulation.</span>setDeviceMetricsOverride
+          <a href="#method-setDeviceMetricsOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+window.innerWidth, window.innerHeight, and &quot;device-width&quot;/&quot;device-height&quot;-related CSS media
+query results).</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">width</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Overriding width value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">height</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Overriding height value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">deviceScaleFactor</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Overriding device scale factor value. 0 disables the override.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">mobile</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text
+autosizing and more.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">scale</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Scale to apply to resulting view image.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">screenWidth</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Overriding screen width value in pixels (minimum 0, maximum 10000000).</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">screenHeight</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Overriding screen height value in pixels (minimum 0, maximum 10000000).</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">positionX</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Overriding view X position on screen in pixels (minimum 0, maximum 10000000).</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">positionY</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Overriding view Y position on screen in pixels (minimum 0, maximum 10000000).</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">dontSetVisibleSize</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Do not set visible view size, rely upon explicit setVisibleSize call.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">screenOrientation</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Emulation/#type-ScreenOrientation class="param-type">ScreenOrientation</a>
+          
+      <div class="details-description">
+        <p>Screen orientation override.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">viewport</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-Viewport class="param-type">Page.Viewport</a>
+          
+      <div class="details-description">
+        <p>If set, the visible area of the page will be overridden to this viewport. This viewport
+change is not observed by the page, e.g. viewport-relative elements do not change positions.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setScrollbarsHidden">
+          <span class="domain-dot">Emulation.</span>setScrollbarsHidden
+          <a href="#method-setScrollbarsHidden" class="permalink">#</a>
+        </h4>
+        
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">hidden</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether scrollbars should be always hidden.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setDocumentCookieDisabled">
+          <span class="domain-dot">Emulation.</span>setDocumentCookieDisabled
+          <a href="#method-setDocumentCookieDisabled" class="permalink">#</a>
+        </h4>
+        
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">disabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether document.coookie API should be disabled.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setEmitTouchEventsForMouse">
+          <span class="domain-dot">Emulation.</span>setEmitTouchEventsForMouse
+          <a href="#method-setEmitTouchEventsForMouse" class="permalink">#</a>
+        </h4>
+        
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">enabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether touch emulation based on mouse input should be enabled.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">configuration</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Touch/gesture events configuration. Default: current platform.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setEmulatedMedia">
+          <span class="domain-dot">Emulation.</span>setEmulatedMedia
+          <a href="#method-setEmulatedMedia" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Emulates the given media type or media feature for CSS media queries.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">media</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Media type to emulate. Empty string disables the override.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">features</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Media features to emulate.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setEmulatedVisionDeficiency">
+          <span class="domain-dot">Emulation.</span>setEmulatedVisionDeficiency
+          <a href="#method-setEmulatedVisionDeficiency" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Emulates the given vision deficiency.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Vision deficiency to emulate.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setGeolocationOverride">
+          <span class="domain-dot">Emulation.</span>setGeolocationOverride
+          <a href="#method-setGeolocationOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
+unavailable.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">latitude</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Mock latitude</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">longitude</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Mock longitude</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">accuracy</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Mock accuracy</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setNavigatorOverrides">
+          <span class="domain-dot">Emulation.</span>setNavigatorOverrides
+          <a href="#method-setNavigatorOverrides" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Overrides value returned by the javascript navigator object.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">platform</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The platform navigator.platform should return.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setPageScaleFactor">
+          <span class="domain-dot">Emulation.</span>setPageScaleFactor
+          <a href="#method-setPageScaleFactor" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets a specified page scale factor.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">pageScaleFactor</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Page scale factor.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setScriptExecutionDisabled">
+          <span class="domain-dot">Emulation.</span>setScriptExecutionDisabled
+          <a href="#method-setScriptExecutionDisabled" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Switches script execution in the page.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether script execution should be disabled in the page.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setTouchEmulationEnabled">
+          <span class="domain-dot">Emulation.</span>setTouchEmulationEnabled
+          <a href="#method-setTouchEmulationEnabled" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables touch on platforms which do not support them.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">enabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the touch event emulation should be enabled.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxTouchPoints</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Maximum touch points supported. Defaults to one.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setVirtualTimePolicy">
+          <span class="domain-dot">Emulation.</span>setVirtualTimePolicy
+          <a href="#method-setVirtualTimePolicy" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets
+the current virtual time policy.  Note this supersedes any previous time budget.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">policy</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Emulation/#type-VirtualTimePolicy class="param-type">VirtualTimePolicy</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">budget</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>If set, after this many virtual milliseconds have elapsed virtual time will be paused and a
+virtualTimeBudgetExpired event is sent.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxVirtualTimeTaskStarvationCount</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>If set this specifies the maximum number of tasks that can be run before virtual is forced
+forwards to prevent deadlock.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">waitForNavigation</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If set the virtual time policy change should be deferred until any frame starts navigating.
+Note any previous deferred policy change is superseded.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">initialVirtualTime</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>If set, base::Time::Now will be overriden to initially return this value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">virtualTimeTicksBase</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Absolute timestamp at which virtual time was first enabled (up time in milliseconds).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setLocaleOverride">
+          <span class="domain-dot">Emulation.</span>setLocaleOverride
+          <a href="#method-setLocaleOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Overrides default host system locale with the specified one.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">locale</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>ICU style C locale (e.g. &quot;en_US&quot;). If not specified or empty, disables the override and
+restores default host system locale.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setTimezoneOverride">
+          <span class="domain-dot">Emulation.</span>setTimezoneOverride
+          <a href="#method-setTimezoneOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Overrides default host system timezone with the specified one.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">timezoneId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The timezone identifier. If empty, disables the override and
+restores default host system timezone.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setVisibleSize">
+          <span class="domain-dot">Emulation.</span>setVisibleSize
+          <a href="#method-setVisibleSize" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Resizes the frame/viewport of the page. Note that this does not affect the frame&#39;s container
+(e.g. browser window). Can be used to produce screenshots of the specified size. Not supported
+on Android.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">width</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Frame width (DIP).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">height</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Frame height (DIP).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setUserAgentOverride">
+          <span class="domain-dot">Emulation.</span>setUserAgentOverride
+          <a href="#method-setUserAgentOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Allows overriding user agent with the given string.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">userAgent</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>User agent to use.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">acceptLanguage</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Browser langugage to emulate.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">platform</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The platform navigator.platform should return.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-virtualTimeBudgetExpired">
+          <span class="domain-dot">Emulation.</span>virtualTimeBudgetExpired
+          <a href="#event-virtualTimeBudgetExpired" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ScreenOrientation">
+          <span class="domain-dot">Emulation.</span>ScreenOrientation
+          <a href="#type-ScreenOrientation" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Screen orientation.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Orientation type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">angle</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Orientation angle.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MediaFeature">
+          <span class="domain-dot">Emulation.</span>MediaFeature
+          <a href="#type-MediaFeature" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-VirtualTimePolicy">
+          <span class="domain-dot">Emulation.</span>VirtualTimePolicy
+          <a href="#type-VirtualTimePolicy" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>advance: If the scheduler runs out of immediate work, the virtual time base may fast forward to
+allow the next delayed task (if any) to run; pause: The virtual time base may not advance;
+pauseIfNetworkFetchesPending: The virtual time base may not advance if there are any pending
+resource fetches.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">advance, pause, pauseIfNetworkFetchesPending</div>
+    
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

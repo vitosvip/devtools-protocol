@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - Audits domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">Audits Domain</h2>
+        
+      <div class="details-description">
+        <p>Audits domain allows investigation of page violations and possible improvements.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-getEncodedResponse"><span class="domain-dot">Audits.</span>getEncodedResponse</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-disable"><span class="domain-dot">Audits.</span>disable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-enable"><span class="domain-dot">Audits.</span>enable</a>
+        
+      </div>
+      
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a href="#event-issueAdded"><span class="domain-dot">Audits.</span>issueAdded</a>
+        
+      </div>
+      
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-AffectedCookie"><span class="domain-dot">Audits.</span>AffectedCookie</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SameSiteCookieExclusionReason"><span class="domain-dot">Audits.</span>SameSiteCookieExclusionReason</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SameSiteCookieWarningReason"><span class="domain-dot">Audits.</span>SameSiteCookieWarningReason</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SameSiteCookieIssueDetails"><span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-AffectedResources"><span class="domain-dot">Audits.</span>AffectedResources</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InspectorIssueCode"><span class="domain-dot">Audits.</span>InspectorIssueCode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InspectorIssueDetails"><span class="domain-dot">Audits.</span>InspectorIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InspectorIssue"><span class="domain-dot">Audits.</span>InspectorIssue</a>
+        
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getEncodedResponse">
+          <span class="domain-dot">Audits.</span>getEncodedResponse
+          <a href="#method-getEncodedResponse" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the response body and size if it were re-encoded with the specified settings. Only
+applies to images.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">Network.RequestId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the network request to get content for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">encoding</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The encoding to use.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">quality</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>The quality of the encoding (0-1). (defaults to 1)</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sizeOnly</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to only return the size information (defaults to false).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">body</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The encoded body as a base64 string. Omitted if sizeOnly is true.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">originalSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Size before re-encoding.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">encodedSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Size after re-encoding.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-disable">
+          <span class="domain-dot">Audits.</span>disable
+          <a href="#method-disable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Disables issues domain, prevents further issues from being reported to the client.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-enable">
+          <span class="domain-dot">Audits.</span>enable
+          <a href="#method-enable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables issues domain, sends the issues collected so far to the client by means of the
+<code>issueAdded</code> event.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-issueAdded">
+          <span class="domain-dot">Audits.</span>issueAdded
+          <a href="#event-issueAdded" class="permalink">#</a>
+        </h4>
+        
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">issue</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-InspectorIssue class="param-type">InspectorIssue</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-AffectedCookie">
+          <span class="domain-dot">Audits.</span>AffectedCookie
+          <a href="#type-AffectedCookie" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about a cookie that is affected by an inspector issue.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The following three properties uniquely identify a cookie</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name">domain</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name">siteForCookies</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Optionally identifies the site-for-cookies, which may be used by the
+front-end as additional context.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieExclusionReason">
+          <span class="domain-dot">Audits.</span>SameSiteCookieExclusionReason
+          <a href="#type-SameSiteCookieExclusionReason" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">ExcludeSameSiteUnspecifiedTreatedAsLax, ExcludeSameSiteNoneInsecure</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieWarningReason">
+          <span class="domain-dot">Audits.</span>SameSiteCookieWarningReason
+          <a href="#type-SameSiteCookieWarningReason" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">WarnSameSiteUnspecifiedCrossSiteContext, WarnSameSiteNoneInsecure, WarnSameSiteUnspecifiedLaxAllowUnsafe, WarnSameSiteCrossSchemeSecureUrlMethodUnsafe, WarnSameSiteCrossSchemeSecureUrlLax, WarnSameSiteCrossSchemeSecureUrlStrict, WarnSameSiteCrossSchemeInsecureUrlMethodUnsafe, WarnSameSiteCrossSchemeInsecureUrlLax, WarnSameSiteCrossSchemeInsecureUrlStrict</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieIssueDetails">
+          <span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails
+          <a href="#type-SameSiteCookieIssueDetails" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This information is currently necessary, as the front-end has a difficult
+time finding a specific cookie. With this, we can convey specific error
+information without the cookie.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">cookieWarningReasons</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name">cookieExclusionReasons</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-AffectedResources">
+          <span class="domain-dot">Audits.</span>AffectedResources
+          <a href="#type-AffectedResources" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">cookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InspectorIssueCode">
+          <span class="domain-dot">Audits.</span>InspectorIssueCode
+          <a href="#type-InspectorIssueCode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>A unique identifier for the type of issue. Each type may use one of the
+optional fields in InspectorIssueDetails to convey more specific
+information about the kind of issue, and AffectedResources to identify
+resources that are affected by this issue.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">SameSiteCookieIssue</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InspectorIssueDetails">
+          <span class="domain-dot">Audits.</span>InspectorIssueDetails
+          <a href="#type-InspectorIssueDetails" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This struct holds a list of optional fields with additional information
+pertaining to the kind of issue. This is useful if there is a number of
+very similar issues that only differ in details.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">sameSiteCookieIssueDetails</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieIssueDetails class="param-type">SameSiteCookieIssueDetails</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InspectorIssue">
+          <span class="domain-dot">Audits.</span>InspectorIssue
+          <a href="#type-InspectorIssue" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>An inspector issue reported from the back-end.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">code</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-InspectorIssueCode class="param-type">InspectorIssueCode</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">details</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-InspectorIssueDetails class="param-type">InspectorIssueDetails</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">resources</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedResources class="param-type">AffectedResources</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

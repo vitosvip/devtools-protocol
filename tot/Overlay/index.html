@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - Overlay domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">Overlay Domain</h2>
+        
+      <div class="details-description">
+        <p>This domain provides various functionality related to drawing atop the inspected page.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-disable"><span class="domain-dot">Overlay.</span>disable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-enable"><span class="domain-dot">Overlay.</span>enable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getHighlightObjectForTest"><span class="domain-dot">Overlay.</span>getHighlightObjectForTest</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-hideHighlight"><span class="domain-dot">Overlay.</span>hideHighlight</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-highlightFrame"><span class="domain-dot">Overlay.</span>highlightFrame</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-highlightNode"><span class="domain-dot">Overlay.</span>highlightNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-highlightQuad"><span class="domain-dot">Overlay.</span>highlightQuad</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-highlightRect"><span class="domain-dot">Overlay.</span>highlightRect</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setInspectMode"><span class="domain-dot">Overlay.</span>setInspectMode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowAdHighlights"><span class="domain-dot">Overlay.</span>setShowAdHighlights</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setPausedInDebuggerMessage"><span class="domain-dot">Overlay.</span>setPausedInDebuggerMessage</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowDebugBorders"><span class="domain-dot">Overlay.</span>setShowDebugBorders</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowFPSCounter"><span class="domain-dot">Overlay.</span>setShowFPSCounter</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowPaintRects"><span class="domain-dot">Overlay.</span>setShowPaintRects</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowLayoutShiftRegions"><span class="domain-dot">Overlay.</span>setShowLayoutShiftRegions</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowScrollBottleneckRects"><span class="domain-dot">Overlay.</span>setShowScrollBottleneckRects</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowHitTestBorders"><span class="domain-dot">Overlay.</span>setShowHitTestBorders</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setShowViewportSizeOnResize"><span class="domain-dot">Overlay.</span>setShowViewportSizeOnResize</a>
+        
+      </div>
+      
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a href="#event-inspectNodeRequested"><span class="domain-dot">Overlay.</span>inspectNodeRequested</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-nodeHighlightRequested"><span class="domain-dot">Overlay.</span>nodeHighlightRequested</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-screenshotRequested"><span class="domain-dot">Overlay.</span>screenshotRequested</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-inspectModeCanceled"><span class="domain-dot">Overlay.</span>inspectModeCanceled</a>
+        
+      </div>
+      
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-HighlightConfig"><span class="domain-dot">Overlay.</span>HighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InspectMode"><span class="domain-dot">Overlay.</span>InspectMode</a>
+        
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-disable">
+          <span class="domain-dot">Overlay.</span>disable
+          <a href="#method-disable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Disables domain notifications.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-enable">
+          <span class="domain-dot">Overlay.</span>enable
+          <a href="#method-enable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables domain notifications.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getHighlightObjectForTest">
+          <span class="domain-dot">Overlay.</span>getHighlightObjectForTest
+          <a href="#method-getHighlightObjectForTest" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>For testing.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to get highlight object for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">includeDistance</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to include distance info.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">includeStyle</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to include style info.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">highlight</dt>
+        <dd>
+          <span class="param-type">object</span>
+          
+      <div class="details-description">
+        <p>Highlight data for the node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-hideHighlight">
+          <span class="domain-dot">Overlay.</span>hideHighlight
+          <a href="#method-hideHighlight" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Hides any highlight.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-highlightFrame">
+          <span class="domain-dot">Overlay.</span>highlightFrame
+          <a href="#method-highlightFrame" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights owner element of the frame with given id.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the frame to highlight.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">contentColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">contentOutlineColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight outline color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-highlightNode">
+          <span class="domain-dot">Overlay.</span>highlightNode
+          <a href="#method-highlightNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or
+objectId must be specified.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">highlightConfig</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-HighlightConfig class="param-type">HighlightConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the highlight appearance.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node to highlight.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">backendNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the backend node to highlight.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">objectId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
+          
+      <div class="details-description">
+        <p>JavaScript object id of the node to be highlighted.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">selector</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Selectors to highlight relevant nodes.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-highlightQuad">
+          <span class="domain-dot">Overlay.</span>highlightQuad
+          <a href="#method-highlightQuad" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights given quad. Coordinates are absolute with respect to the main frame viewport.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">quad</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">DOM.Quad</a>
+          
+      <div class="details-description">
+        <p>Quad to highlight</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">color</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">outlineColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The highlight outline color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-highlightRect">
+          <span class="domain-dot">Overlay.</span>highlightRect
+          <a href="#method-highlightRect" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">x</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>X coordinate</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">y</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Y coordinate</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">width</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Rectangle width</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">height</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Rectangle height</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">color</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">outlineColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The highlight outline color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setInspectMode">
+          <span class="domain-dot">Overlay.</span>setInspectMode
+          <a href="#method-setInspectMode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enters the &#39;inspect&#39; mode. In this mode, elements that user is hovering over are highlighted.
+Backend then generates &#39;inspectNodeRequested&#39; event upon element selection.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">mode</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-InspectMode class="param-type">InspectMode</a>
+          
+      <div class="details-description">
+        <p>Set an inspection mode.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">highlightConfig</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-HighlightConfig class="param-type">HighlightConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the highlight appearance of hovered-over nodes. May be omitted if <code>enabled
+== false</code>.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowAdHighlights">
+          <span class="domain-dot">Overlay.</span>setShowAdHighlights
+          <a href="#method-setShowAdHighlights" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlights owner element of all frames detected to be ads.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">show</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing ad highlights</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setPausedInDebuggerMessage">
+          <span class="domain-dot">Overlay.</span>setPausedInDebuggerMessage
+          <a href="#method-setPausedInDebuggerMessage" class="permalink">#</a>
+        </h4>
+        
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">message</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The message to display, also triggers resume and step over controls.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowDebugBorders">
+          <span class="domain-dot">Overlay.</span>setShowDebugBorders
+          <a href="#method-setShowDebugBorders" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that backend shows debug borders on layers</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">show</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing debug borders</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowFPSCounter">
+          <span class="domain-dot">Overlay.</span>setShowFPSCounter
+          <a href="#method-setShowFPSCounter" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that backend shows the FPS counter</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">show</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing the FPS counter</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowPaintRects">
+          <span class="domain-dot">Overlay.</span>setShowPaintRects
+          <a href="#method-setShowPaintRects" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that backend shows paint rectangles</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing paint rectangles</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowLayoutShiftRegions">
+          <span class="domain-dot">Overlay.</span>setShowLayoutShiftRegions
+          <a href="#method-setShowLayoutShiftRegions" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that backend shows layout shift regions</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing layout shift regions</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowScrollBottleneckRects">
+          <span class="domain-dot">Overlay.</span>setShowScrollBottleneckRects
+          <a href="#method-setShowScrollBottleneckRects" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that backend shows scroll bottleneck rects</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">show</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing scroll bottleneck rects</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowHitTestBorders">
+          <span class="domain-dot">Overlay.</span>setShowHitTestBorders
+          <a href="#method-setShowHitTestBorders" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that backend shows hit-test borders on layers</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">show</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True for showing hit-test borders</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setShowViewportSizeOnResize">
+          <span class="domain-dot">Overlay.</span>setShowViewportSizeOnResize
+          <a href="#method-setShowViewportSizeOnResize" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Paints viewport size upon main frame resize.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">show</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to paint size or not.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-inspectNodeRequested">
+          <span class="domain-dot">Overlay.</span>inspectNodeRequested
+          <a href="#event-inspectNodeRequested" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when the node should be inspected. This happens after call to <code>setInspectMode</code> or when
+user manually inspects an element.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">backendNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to inspect.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-nodeHighlightRequested">
+          <span class="domain-dot">Overlay.</span>nodeHighlightRequested
+          <a href="#event-nodeHighlightRequested" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when the node should be highlighted. This happens after call to <code>setInspectMode</code>.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-screenshotRequested">
+          <span class="domain-dot">Overlay.</span>screenshotRequested
+          <a href="#event-screenshotRequested" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when user asks to capture screenshot of some area on the page.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">viewport</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-Viewport class="param-type">Page.Viewport</a>
+          
+      <div class="details-description">
+        <p>Viewport to capture, in device independent pixels (dip).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-inspectModeCanceled">
+          <span class="domain-dot">Overlay.</span>inspectModeCanceled
+          <a href="#event-inspectModeCanceled" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when user cancels the inspect mode.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-HighlightConfig">
+          <span class="domain-dot">Overlay.</span>HighlightConfig
+          <a href="#type-HighlightConfig" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Configuration data for the highlighting of page elements.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">showInfo</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the node info tooltip should be shown (default: false).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">showStyles</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the node styles in the tooltip (default: false).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">showRulers</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the rulers should be shown (default: false).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">showExtensionLines</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the extension lines from node to the rulers should be shown (default: false).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">contentColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">paddingColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The padding highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">borderColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The border highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">marginColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The margin highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">eventTargetColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The event target element highlight fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">shapeColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The shape outside fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">shapeMarginColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The shape margin fill color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cssGridColor</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The grid layout color (default: transparent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InspectMode">
+          <span class="domain-dot">Overlay.</span>InspectMode
+          <a href="#type-InspectMode" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">searchForNode, searchForUAShadowDOM, captureAreaScreenshot, showDistances, none</div>
+    
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - CSS domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">CSS Domain</h2>
+        
+      <div class="details-description">
+        <p>This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
+have an associated <code>id</code> used in subsequent operations on the related object. Each object type has
+a specific <code>id</code> structure, and those are not interchangeable between objects of different kinds.
+CSS objects can be loaded using the <code>get*ForNode()</code> calls (which accept a DOM node id). A client
+can also keep track of stylesheets via the <code>styleSheetAdded</code>/<code>styleSheetRemoved</code> events and
+subsequently load the required stylesheet contents using the <code>getStyleSheet[Text]()</code> methods.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-addRule"><span class="domain-dot">CSS.</span>addRule</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-collectClassNames"><span class="domain-dot">CSS.</span>collectClassNames</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-createStyleSheet"><span class="domain-dot">CSS.</span>createStyleSheet</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-disable"><span class="domain-dot">CSS.</span>disable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-enable"><span class="domain-dot">CSS.</span>enable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-forcePseudoState"><span class="domain-dot">CSS.</span>forcePseudoState</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getBackgroundColors"><span class="domain-dot">CSS.</span>getBackgroundColors</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getComputedStyleForNode"><span class="domain-dot">CSS.</span>getComputedStyleForNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getInlineStylesForNode"><span class="domain-dot">CSS.</span>getInlineStylesForNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getMatchedStylesForNode"><span class="domain-dot">CSS.</span>getMatchedStylesForNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getMediaQueries"><span class="domain-dot">CSS.</span>getMediaQueries</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getPlatformFontsForNode"><span class="domain-dot">CSS.</span>getPlatformFontsForNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getStyleSheetText"><span class="domain-dot">CSS.</span>getStyleSheetText</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setEffectivePropertyValueForNode"><span class="domain-dot">CSS.</span>setEffectivePropertyValueForNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setKeyframeKey"><span class="domain-dot">CSS.</span>setKeyframeKey</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setMediaText"><span class="domain-dot">CSS.</span>setMediaText</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setRuleSelector"><span class="domain-dot">CSS.</span>setRuleSelector</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setStyleSheetText"><span class="domain-dot">CSS.</span>setStyleSheetText</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setStyleTexts"><span class="domain-dot">CSS.</span>setStyleTexts</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-startRuleUsageTracking"><span class="domain-dot">CSS.</span>startRuleUsageTracking</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-stopRuleUsageTracking"><span class="domain-dot">CSS.</span>stopRuleUsageTracking</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-takeCoverageDelta"><span class="domain-dot">CSS.</span>takeCoverageDelta</a>
+        
+      </div>
+      
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a href="#event-fontsUpdated"><span class="domain-dot">CSS.</span>fontsUpdated</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-mediaQueryResultChanged"><span class="domain-dot">CSS.</span>mediaQueryResultChanged</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-styleSheetAdded"><span class="domain-dot">CSS.</span>styleSheetAdded</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-styleSheetChanged"><span class="domain-dot">CSS.</span>styleSheetChanged</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-styleSheetRemoved"><span class="domain-dot">CSS.</span>styleSheetRemoved</a>
+        
+      </div>
+      
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-StyleSheetId"><span class="domain-dot">CSS.</span>StyleSheetId</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-StyleSheetOrigin"><span class="domain-dot">CSS.</span>StyleSheetOrigin</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-PseudoElementMatches"><span class="domain-dot">CSS.</span>PseudoElementMatches</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InheritedStyleEntry"><span class="domain-dot">CSS.</span>InheritedStyleEntry</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-RuleMatch"><span class="domain-dot">CSS.</span>RuleMatch</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Value"><span class="domain-dot">CSS.</span>Value</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SelectorList"><span class="domain-dot">CSS.</span>SelectorList</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSStyleSheetHeader"><span class="domain-dot">CSS.</span>CSSStyleSheetHeader</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSRule"><span class="domain-dot">CSS.</span>CSSRule</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-RuleUsage"><span class="domain-dot">CSS.</span>RuleUsage</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SourceRange"><span class="domain-dot">CSS.</span>SourceRange</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ShorthandEntry"><span class="domain-dot">CSS.</span>ShorthandEntry</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSComputedStyleProperty"><span class="domain-dot">CSS.</span>CSSComputedStyleProperty</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSStyle"><span class="domain-dot">CSS.</span>CSSStyle</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSProperty"><span class="domain-dot">CSS.</span>CSSProperty</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSMedia"><span class="domain-dot">CSS.</span>CSSMedia</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-MediaQuery"><span class="domain-dot">CSS.</span>MediaQuery</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-MediaQueryExpression"><span class="domain-dot">CSS.</span>MediaQueryExpression</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-PlatformFontUsage"><span class="domain-dot">CSS.</span>PlatformFontUsage</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-FontFace"><span class="domain-dot">CSS.</span>FontFace</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSKeyframesRule"><span class="domain-dot">CSS.</span>CSSKeyframesRule</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CSSKeyframeRule"><span class="domain-dot">CSS.</span>CSSKeyframeRule</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-StyleDeclarationEdit"><span class="domain-dot">CSS.</span>StyleDeclarationEdit</a>
+        
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-addRule">
+          <span class="domain-dot">CSS.</span>addRule
+          <a href="#method-addRule" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Inserts a new rule with the given <code>ruleText</code> in a stylesheet with given <code>styleSheetId</code>, at the
+position specified by <code>location</code>.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The css style sheet identifier where a new rule should be inserted.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">ruleText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The text of a new rule.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">location</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>Text position of a new rule in the target style sheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">rule</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSRule class="param-type">CSSRule</a>
+          
+      <div class="details-description">
+        <p>The newly created rule.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-collectClassNames">
+          <span class="domain-dot">CSS.</span>collectClassNames
+          <a href="#method-collectClassNames" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns all class names from specified stylesheet.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">classNames</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Class name list.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-createStyleSheet">
+          <span class="domain-dot">CSS.</span>createStyleSheet
+          <a href="#method-createStyleSheet" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Creates a new special &quot;via-inspector&quot; stylesheet in the frame with given <code>frameId</code>.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the frame where &quot;via-inspector&quot; stylesheet should be created.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the created &quot;via-inspector&quot; stylesheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-disable">
+          <span class="domain-dot">CSS.</span>disable
+          <a href="#method-disable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Disables the CSS agent for the given page.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-enable">
+          <span class="domain-dot">CSS.</span>enable
+          <a href="#method-enable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been
+enabled until the result of this command is received.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-forcePseudoState">
+          <span class="domain-dot">CSS.</span>forcePseudoState
+          <a href="#method-forcePseudoState" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Ensures that the given node will have specified pseudo-classes whenever its style is computed by
+the browser.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>The element id for which to force the pseudo state.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">forcedPseudoClasses</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Element pseudo classes to force when computing the element&#39;s style.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getBackgroundColors">
+          <span class="domain-dot">CSS.</span>getBackgroundColors
+          <a href="#method-getBackgroundColors" class="permalink">#</a>
+        </h4>
+        
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to get background colors for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">backgroundColors</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The range of background colors behind this element, if it contains any visible text. If no
+visible text is present, this will be undefined. In the case of a flat background color,
+this will consist of simply that color. In the case of a gradient, this will consist of each
+of the color stops. For anything more complicated, this will be an empty array. Images will
+be ignored (as if the image had failed to load).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">computedFontSize</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The computed font size for this node, as a CSS computed value string (e.g. &#39;12px&#39;).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">computedFontWeight</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The computed font weight for this node, as a CSS computed value string (e.g. &#39;normal&#39; or
+&#39;100&#39;).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getComputedStyleForNode">
+          <span class="domain-dot">CSS.</span>getComputedStyleForNode
+          <a href="#method-getComputedStyleForNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the computed style for a DOM node identified by <code>nodeId</code>.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">computedStyle</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Computed style for the specified DOM node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getInlineStylesForNode">
+          <span class="domain-dot">CSS.</span>getInlineStylesForNode
+          <a href="#method-getInlineStylesForNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the styles defined inline (explicitly in the &quot;style&quot; attribute and implicitly, using DOM
+attributes) for a DOM node identified by <code>nodeId</code>.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">inlineStyle</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>Inline style for the specified DOM node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">attributesStyle</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>Attribute-defined element style (e.g. resulting from &quot;width=20 height=100%&quot;).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getMatchedStylesForNode">
+          <span class="domain-dot">CSS.</span>getMatchedStylesForNode
+          <a href="#method-getMatchedStylesForNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns requested styles for a DOM node identified by <code>nodeId</code>.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">inlineStyle</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>Inline style for the specified DOM node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">attributesStyle</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>Attribute-defined element style (e.g. resulting from &quot;width=20 height=100%&quot;).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">matchedCSSRules</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>CSS rules matching this node, from all applicable stylesheets.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">pseudoElements</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Pseudo style matches for this node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">inherited</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>A chain of inherited styles (from the immediate node parent up to the DOM tree root).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cssKeyframesRules</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>A list of CSS keyframed animations matching this node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getMediaQueries">
+          <span class="domain-dot">CSS.</span>getMediaQueries
+          <a href="#method-getMediaQueries" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns all media queries parsed by the rendering engine.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">medias</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getPlatformFontsForNode">
+          <span class="domain-dot">CSS.</span>getPlatformFontsForNode
+          <a href="#method-getPlatformFontsForNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests information about platform fonts which we used to render child TextNodes in the given
+node.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">fonts</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Usage statistics for every employed platform font.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getStyleSheetText">
+          <span class="domain-dot">CSS.</span>getStyleSheetText
+          <a href="#method-getStyleSheetText" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the current textual content for a stylesheet.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The stylesheet text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setEffectivePropertyValueForNode">
+          <span class="domain-dot">CSS.</span>setEffectivePropertyValueForNode
+          <a href="#method-setEffectivePropertyValueForNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Find a rule with the given active property for the given node and set the new value for this
+property</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>The element id for which to set property.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">propertyName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setKeyframeKey">
+          <span class="domain-dot">CSS.</span>setKeyframeKey
+          <a href="#method-setKeyframeKey" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Modifies the keyframe rule key text.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">keyText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">keyText</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a>
+          
+      <div class="details-description">
+        <p>The resulting key text after modification.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setMediaText">
+          <span class="domain-dot">CSS.</span>setMediaText
+          <a href="#method-setMediaText" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Modifies the rule selector.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">media</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSMedia class="param-type">CSSMedia</a>
+          
+      <div class="details-description">
+        <p>The resulting CSS media rule after modification.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setRuleSelector">
+          <span class="domain-dot">CSS.</span>setRuleSelector
+          <a href="#method-setRuleSelector" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Modifies the rule selector.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">selector</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">selectorList</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SelectorList class="param-type">SelectorList</a>
+          
+      <div class="details-description">
+        <p>The resulting selector list after modification.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setStyleSheetText">
+          <span class="domain-dot">CSS.</span>setStyleSheetText
+          <a href="#method-setStyleSheetText" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets the new stylesheet text.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">sourceMapURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of source map associated with script (if any).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setStyleTexts">
+          <span class="domain-dot">CSS.</span>setStyleTexts
+          <a href="#method-setStyleTexts" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Applies specified style edits one after another in the given order.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">edits</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styles</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The resulting styles after modification.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-startRuleUsageTracking">
+          <span class="domain-dot">CSS.</span>startRuleUsageTracking
+          <a href="#method-startRuleUsageTracking" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables the selector recording.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-stopRuleUsageTracking">
+          <span class="domain-dot">CSS.</span>stopRuleUsageTracking
+          <a href="#method-stopRuleUsageTracking" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Stop tracking rule usage and return the list of rules that were used since last call to
+<code>takeCoverageDelta</code> (or since start of coverage instrumentation)</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">ruleUsage</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-takeCoverageDelta">
+          <span class="domain-dot">CSS.</span>takeCoverageDelta
+          <a href="#method-takeCoverageDelta" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Obtain list of rules that became used since last call to this method (or since start of coverage
+instrumentation)</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">coverage</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Monotonically increasing time, in seconds.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-fontsUpdated">
+          <span class="domain-dot">CSS.</span>fontsUpdated
+          <a href="#event-fontsUpdated" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fires whenever a web font is updated.  A non-empty font parameter indicates a successfully loaded
+web font</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">font</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-FontFace class="param-type">FontFace</a>
+          
+      <div class="details-description">
+        <p>The web font that has loaded.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-mediaQueryResultChanged">
+          <span class="domain-dot">CSS.</span>mediaQueryResultChanged
+          <a href="#event-mediaQueryResultChanged" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fires whenever a MediaQuery result changes (for example, after a browser window has been
+resized.) The current implementation considers only viewport-dependent media features.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-styleSheetAdded">
+          <span class="domain-dot">CSS.</span>styleSheetAdded
+          <a href="#event-styleSheetAdded" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired whenever an active document stylesheet is added.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">header</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyleSheetHeader class="param-type">CSSStyleSheetHeader</a>
+          
+      <div class="details-description">
+        <p>Added stylesheet metainfo.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-styleSheetChanged">
+          <span class="domain-dot">CSS.</span>styleSheetChanged
+          <a href="#event-styleSheetChanged" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired whenever a stylesheet is changed as a result of the client operation.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-styleSheetRemoved">
+          <span class="domain-dot">CSS.</span>styleSheetRemoved
+          <a href="#event-styleSheetRemoved" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired whenever an active document stylesheet is removed.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the removed stylesheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-StyleSheetId">
+          <span class="domain-dot">CSS.</span>StyleSheetId
+          <a href="#type-StyleSheetId" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-StyleSheetOrigin">
+          <span class="domain-dot">CSS.</span>StyleSheetOrigin
+          <a href="#type-StyleSheetOrigin" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Stylesheet type: &quot;injected&quot; for stylesheets injected via extension, &quot;user-agent&quot; for user-agent
+stylesheets, &quot;inspector&quot; for stylesheets created by the inspector (i.e. those holding the &quot;via
+inspector&quot; rules), &quot;regular&quot; for regular stylesheets.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">injected, user-agent, inspector, regular</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PseudoElementMatches">
+          <span class="domain-dot">CSS.</span>PseudoElementMatches
+          <a href="#type-PseudoElementMatches" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS rule collection for a single pseudo style.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">pseudoType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-PseudoType class="param-type">DOM.PseudoType</a>
+          
+      <div class="details-description">
+        <p>Pseudo element type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">matches</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Matches of CSS rules applicable to the pseudo style.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InheritedStyleEntry">
+          <span class="domain-dot">CSS.</span>InheritedStyleEntry
+          <a href="#type-InheritedStyleEntry" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Inherited CSS rule collection from ancestor node.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">inlineStyle</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>The ancestor node&#39;s inline style, if any, in the style inheritance chain.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">matchedCSSRules</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Matches of CSS rules matching the ancestor node in the style inheritance chain.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-RuleMatch">
+          <span class="domain-dot">CSS.</span>RuleMatch
+          <a href="#type-RuleMatch" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Match data for a CSS rule.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">rule</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSRule class="param-type">CSSRule</a>
+          
+      <div class="details-description">
+        <p>CSS rule in the match.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">matchingSelectors</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Matching selector indices in the rule&#39;s selectorList selectors (0-based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Value">
+          <span class="domain-dot">CSS.</span>Value
+          <a href="#type-Value" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Data for a simple selector (these are delimited by commas in a selector list).</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Value text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>Value range in the underlying resource (if available).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SelectorList">
+          <span class="domain-dot">CSS.</span>SelectorList
+          <a href="#type-SelectorList" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Selector list data.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">selectors</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Selectors in the list.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Rule selector text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSStyleSheetHeader">
+          <span class="domain-dot">CSS.</span>CSSStyleSheetHeader
+          <a href="#type-CSSStyleSheetHeader" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS stylesheet metainformation.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The stylesheet identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Owner frame identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sourceURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Stylesheet resource URL.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sourceMapURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of source map associated with the stylesheet (if any).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">origin</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetOrigin class="param-type">StyleSheetOrigin</a>
+          
+      <div class="details-description">
+        <p>Stylesheet origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">title</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Stylesheet title.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">ownerNode</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>The backend id for the owner node of the stylesheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">disabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Denotes whether the stylesheet is disabled.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">hasSourceURL</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the sourceURL field value comes from the sourceURL comment.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">isInline</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether this stylesheet is created for STYLE tag by parser. This flag is not set for
+document.written STYLE tags.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">startLine</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Line offset of the stylesheet within the resource (zero based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">startColumn</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Column offset of the stylesheet within the resource (zero based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">length</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Size of the content (in characters).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">endLine</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Line offset of the end of the stylesheet within the resource (zero based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">endColumn</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Column offset of the end of the stylesheet within the resource (zero based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSRule">
+          <span class="domain-dot">CSS.</span>CSSRule
+          <a href="#type-CSSRule" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS rule representation.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
+stylesheet rules) this rule came from.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">selectorList</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SelectorList class="param-type">SelectorList</a>
+          
+      <div class="details-description">
+        <p>Rule selector data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">origin</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetOrigin class="param-type">StyleSheetOrigin</a>
+          
+      <div class="details-description">
+        <p>Parent stylesheet&#39;s origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">style</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>Associated style declaration.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">media</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Media list array (for rules involving media queries). The array enumerates media queries
+starting with the innermost one, going outwards.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-RuleUsage">
+          <span class="domain-dot">CSS.</span>RuleUsage
+          <a href="#type-RuleUsage" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS coverage information.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
+stylesheet rules) this rule came from.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">startOffset</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Offset of the start of the rule (including selector) from the beginning of the stylesheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">endOffset</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Offset of the end of the rule body from the beginning of the stylesheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">used</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Indicates whether the rule was actually used by some element in the page.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SourceRange">
+          <span class="domain-dot">CSS.</span>SourceRange
+          <a href="#type-SourceRange" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Text range within a resource. All numbers are zero-based.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">startLine</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Start line of range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">startColumn</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Start column of range (inclusive).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">endLine</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>End line of range</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">endColumn</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>End column of range (exclusive).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ShorthandEntry">
+          <span class="domain-dot">CSS.</span>ShorthandEntry
+          <a href="#type-ShorthandEntry" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Shorthand name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Shorthand value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">important</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the property has &quot;!important&quot; annotation (implies <code>false</code> if absent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSComputedStyleProperty">
+          <span class="domain-dot">CSS.</span>CSSComputedStyleProperty
+          <a href="#type-CSSComputedStyleProperty" class="permalink">#</a>
+        </h4>
+        
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Computed style property name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Computed style property value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSStyle">
+          <span class="domain-dot">CSS.</span>CSSStyle
+          <a href="#type-CSSStyle" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS style representation.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
+stylesheet rules) this rule came from.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cssProperties</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>CSS properties in the style.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">shorthandEntries</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Computed values for all shorthands found in the style.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cssText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Style declaration text (if available).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>Style declaration range in the enclosing stylesheet (if available).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSProperty">
+          <span class="domain-dot">CSS.</span>CSSProperty
+          <a href="#type-CSSProperty" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS property declaration data.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The property name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The property value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">important</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the property has &quot;!important&quot; annotation (implies <code>false</code> if absent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">implicit</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the property is implicit (implies <code>false</code> if absent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The full property text as specified in the style.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">parsedOk</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the property is understood by the browser (implies <code>true</code> if absent).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">disabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the property is disabled by the user (present for source-based properties only).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>The entire property range in the enclosing style declaration (if available).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSMedia">
+          <span class="domain-dot">CSS.</span>CSSMedia
+          <a href="#type-CSSMedia" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS media rule descriptor.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Media query text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">source</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Source of the media query: &quot;mediaRule&quot; if specified by a @media rule, &quot;importRule&quot; if
+specified by an @import rule, &quot;linkedSheet&quot; if specified by a &quot;media&quot; attribute in a linked
+stylesheet&#39;s LINK tag, &quot;inlineSheet&quot; if specified by a &quot;media&quot; attribute in an inline
+stylesheet&#39;s STYLE tag.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sourceURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the document containing the media query description.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>The associated rule (@media or @import) header range in the enclosing stylesheet (if
+available).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the stylesheet containing this object (if exists).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">mediaList</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Array of media queries.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MediaQuery">
+          <span class="domain-dot">CSS.</span>MediaQuery
+          <a href="#type-MediaQuery" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Media query descriptor.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">expressions</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Array of media query expressions.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">active</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the media query condition is satisfied.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MediaQueryExpression">
+          <span class="domain-dot">CSS.</span>MediaQueryExpression
+          <a href="#type-MediaQueryExpression" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Media query expression descriptor.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Media query expression value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">unit</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Media query expression units.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">feature</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Media query expression feature.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">valueRange</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>The associated range of the value text in the enclosing stylesheet (if available).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">computedLength</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Computed length of media query expression (if applicable).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PlatformFontUsage">
+          <span class="domain-dot">CSS.</span>PlatformFontUsage
+          <a href="#type-PlatformFontUsage" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about amount of glyphs that were rendered with given font.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">familyName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Font&#39;s family name reported by platform.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">isCustomFont</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Indicates if the font was downloaded or resolved locally.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">glyphCount</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Amount of glyphs that were rendered with this font.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-FontFace">
+          <span class="domain-dot">CSS.</span>FontFace
+          <a href="#type-FontFace" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Properties of a web font: <a href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions">https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions</a></p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">fontFamily</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The font-family.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fontStyle</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The font-style.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fontVariant</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The font-variant.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fontWeight</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The font-weight.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fontStretch</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The font-stretch.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">unicodeRange</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The unicode-range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">src</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The src.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">platformFontFamily</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The resolved platform font family</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSKeyframesRule">
+          <span class="domain-dot">CSS.</span>CSSKeyframesRule
+          <a href="#type-CSSKeyframesRule" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS keyframes rule representation.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">animationName</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a>
+          
+      <div class="details-description">
+        <p>Animation name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">keyframes</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>List of keyframes.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CSSKeyframeRule">
+          <span class="domain-dot">CSS.</span>CSSKeyframeRule
+          <a href="#type-CSSKeyframeRule" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS keyframe rule representation.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
+stylesheet rules) this rule came from.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">origin</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetOrigin class="param-type">StyleSheetOrigin</a>
+          
+      <div class="details-description">
+        <p>Parent stylesheet&#39;s origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">keyText</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a>
+          
+      <div class="details-description">
+        <p>Associated key text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">style</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
+          
+      <div class="details-description">
+        <p>Associated style declaration.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-StyleDeclarationEdit">
+          <span class="domain-dot">CSS.</span>StyleDeclarationEdit
+          <a href="#type-StyleDeclarationEdit" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>A descriptor of operation to mutate style declaration text.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">styleSheetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
+          
+      <div class="details-description">
+        <p>The css style sheet identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">range</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
+          
+      <div class="details-description">
+        <p>The range of the style text in the enclosing stylesheet.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>New style text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

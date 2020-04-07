@@ -1,0 +1,6041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chrome DevTools Protocol Viewer - version tot - Network domain">
+  <title>Chrome DevTools Protocol Viewer - tot</title>
+
+  <meta name="theme-color" content="#303F9F">
+
+  <script type="module" src="/devtools-protocol/scripts/index.js"></script>
+  <link href="/devtools-protocol/styles/protocol.css" rel="stylesheet">
+</head>
+<body>
+  <aside>
+    <div id="versions">
+      <header>Versions</header>
+      <nav>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
+        </a>
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/tot" name="tot">
+          latest (tip-of-tree)
+        </a>
+        <a href="/devtools-protocol/v8" name="v8">
+          v8-inspector (node)
+        </a>
+        <a href="/devtools-protocol/" name="" class="homelink">
+          Home
+        </a>
+      </nav>
+    </div>
+
+    <div id="domains" class="version-tot">
+      <header>Domains</header>
+      <div class="scroller">
+        <nav>
+          <a href="/devtools-protocol/tot/Browser" class="tot 1-3">Browser</a>
+          <a href="/devtools-protocol/tot/Debugger" class="tot 1-2 1-3 v8">Debugger</a>
+          <a href="/devtools-protocol/tot/DOM" class="tot 1-2 1-3">DOM</a>
+          <a href="/devtools-protocol/tot/DOMDebugger" class="tot 1-2 1-3">DOMDebugger</a>
+          <a href="/devtools-protocol/tot/Emulation" class="tot 1-2 1-3">Emulation</a>
+          <a href="/devtools-protocol/tot/Input" class="tot 1-2 1-3">Input</a>
+          <a href="/devtools-protocol/tot/IO" class="tot 1-3">IO</a>
+          <a href="/devtools-protocol/tot/Log" class="tot 1-3">Log</a>
+          <a href="/devtools-protocol/tot/Network" class="tot 1-2 1-3">Network</a>
+          <a href="/devtools-protocol/tot/Page" class="tot 1-2 1-3">Page</a>
+          <a href="/devtools-protocol/tot/Performance" class="tot 1-3">Performance</a>
+          <a href="/devtools-protocol/tot/Profiler" class="tot 1-2 1-3 v8">Profiler</a>
+          <a href="/devtools-protocol/tot/Runtime" class="tot 1-2 1-3 v8">Runtime</a>
+          <a href="/devtools-protocol/tot/Security" class="tot 1-3">Security</a>
+          <a href="/devtools-protocol/tot/Target" class="tot 1-3">Target</a>
+          <a href="/devtools-protocol/tot/Console" class="tot deprecated v8">Console</a>
+          <a href="/devtools-protocol/tot/Schema" class="tot deprecated 1-2 v8">Schema</a>
+          <a href="/devtools-protocol/tot/Accessibility" class="tot experimental">Accessibility</a>
+          <a href="/devtools-protocol/tot/Animation" class="tot experimental">Animation</a>
+          <a href="/devtools-protocol/tot/ApplicationCache" class="tot experimental">ApplicationCache</a>
+          <a href="/devtools-protocol/tot/Audits" class="tot experimental">Audits</a>
+          <a href="/devtools-protocol/tot/BackgroundService" class="tot experimental">BackgroundService</a>
+          <a href="/devtools-protocol/tot/CacheStorage" class="tot experimental">CacheStorage</a>
+          <a href="/devtools-protocol/tot/Cast" class="tot experimental">Cast</a>
+          <a href="/devtools-protocol/tot/CSS" class="tot experimental">CSS</a>
+          <a href="/devtools-protocol/tot/Database" class="tot experimental">Database</a>
+          <a href="/devtools-protocol/tot/DeviceOrientation" class="tot experimental">DeviceOrientation</a>
+          <a href="/devtools-protocol/tot/DOMSnapshot" class="tot experimental">DOMSnapshot</a>
+          <a href="/devtools-protocol/tot/DOMStorage" class="tot experimental">DOMStorage</a>
+          <a href="/devtools-protocol/tot/Fetch" class="tot experimental">Fetch</a>
+          <a href="/devtools-protocol/tot/HeadlessExperimental" class="tot experimental">HeadlessExperimental</a>
+          <a href="/devtools-protocol/tot/HeapProfiler" class="tot experimental v8">HeapProfiler</a>
+          <a href="/devtools-protocol/tot/IndexedDB" class="tot experimental">IndexedDB</a>
+          <a href="/devtools-protocol/tot/Inspector" class="tot experimental">Inspector</a>
+          <a href="/devtools-protocol/tot/LayerTree" class="tot experimental">LayerTree</a>
+          <a href="/devtools-protocol/tot/Media" class="tot experimental">Media</a>
+          <a href="/devtools-protocol/tot/Memory" class="tot experimental">Memory</a>
+          <a href="/devtools-protocol/tot/Overlay" class="tot experimental">Overlay</a>
+          <a href="/devtools-protocol/tot/ServiceWorker" class="tot experimental">ServiceWorker</a>
+          <a href="/devtools-protocol/tot/Storage" class="tot experimental">Storage</a>
+          <a href="/devtools-protocol/tot/SystemInfo" class="tot experimental">SystemInfo</a>
+          <a href="/devtools-protocol/tot/Tethering" class="tot experimental">Tethering</a>
+          <a href="/devtools-protocol/tot/Tracing" class="tot experimental">Tracing</a>
+          <a href="/devtools-protocol/tot/WebAudio" class="tot experimental">WebAudio</a>
+          <a href="/devtools-protocol/tot/WebAuthn" class="tot experimental">WebAuthn</a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Chrome DevTools Protocol Viewer</h1>
+      <cr-search-control base-url="/devtools-protocol/" protocol-search-index="/search_index/tot.json"></cr-search-control>
+    </header>
+    <section>
+      <div class="main-content-section domain">
+        
+    <div class="domain-section">
+      <div id="header">
+        <h2 class="heading">Network Domain</h2>
+        
+      <div class="details-description">
+        <p>Network domain allows tracking network activities of the page. It exposes information about http,
+file, data and other requests and responses, their headers, bodies, timing, etc.</p>
+
+      </div>
+    
+        
+        <h3>Methods</h3>
+      <div class="toc-link">
+        <a href="#method-canClearBrowserCache"><span class="domain-dot">Network.</span>canClearBrowserCache</a>
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-canClearBrowserCookies"><span class="domain-dot">Network.</span>canClearBrowserCookies</a>
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-canEmulateNetworkConditions"><span class="domain-dot">Network.</span>canEmulateNetworkConditions</a>
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-clearBrowserCache"><span class="domain-dot">Network.</span>clearBrowserCache</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-clearBrowserCookies"><span class="domain-dot">Network.</span>clearBrowserCookies</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-continueInterceptedRequest"><span class="domain-dot">Network.</span>continueInterceptedRequest</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-deleteCookies"><span class="domain-dot">Network.</span>deleteCookies</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-disable"><span class="domain-dot">Network.</span>disable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-emulateNetworkConditions"><span class="domain-dot">Network.</span>emulateNetworkConditions</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-enable"><span class="domain-dot">Network.</span>enable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getAllCookies"><span class="domain-dot">Network.</span>getAllCookies</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getCertificate"><span class="domain-dot">Network.</span>getCertificate</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getCookies"><span class="domain-dot">Network.</span>getCookies</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getResponseBody"><span class="domain-dot">Network.</span>getResponseBody</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getRequestPostData"><span class="domain-dot">Network.</span>getRequestPostData</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-getResponseBodyForInterception"><span class="domain-dot">Network.</span>getResponseBodyForInterception</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-takeResponseBodyForInterceptionAsStream"><span class="domain-dot">Network.</span>takeResponseBodyForInterceptionAsStream</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-replayXHR"><span class="domain-dot">Network.</span>replayXHR</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-searchInResponseBody"><span class="domain-dot">Network.</span>searchInResponseBody</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setBlockedURLs"><span class="domain-dot">Network.</span>setBlockedURLs</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setBypassServiceWorker"><span class="domain-dot">Network.</span>setBypassServiceWorker</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setCacheDisabled"><span class="domain-dot">Network.</span>setCacheDisabled</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setCookie"><span class="domain-dot">Network.</span>setCookie</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setCookies"><span class="domain-dot">Network.</span>setCookies</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setDataSizeLimitsForTest"><span class="domain-dot">Network.</span>setDataSizeLimitsForTest</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setExtraHTTPHeaders"><span class="domain-dot">Network.</span>setExtraHTTPHeaders</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setRequestInterception"><span class="domain-dot">Network.</span>setRequestInterception</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#method-setUserAgentOverride"><span class="domain-dot">Network.</span>setUserAgentOverride</a>
+        
+      </div>
+      
+        <h3>Events</h3>
+      <div class="toc-link">
+        <a href="#event-dataReceived"><span class="domain-dot">Network.</span>dataReceived</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-eventSourceMessageReceived"><span class="domain-dot">Network.</span>eventSourceMessageReceived</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-loadingFailed"><span class="domain-dot">Network.</span>loadingFailed</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-loadingFinished"><span class="domain-dot">Network.</span>loadingFinished</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-requestIntercepted"><span class="domain-dot">Network.</span>requestIntercepted</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-requestServedFromCache"><span class="domain-dot">Network.</span>requestServedFromCache</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-requestWillBeSent"><span class="domain-dot">Network.</span>requestWillBeSent</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-resourceChangedPriority"><span class="domain-dot">Network.</span>resourceChangedPriority</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-signedExchangeReceived"><span class="domain-dot">Network.</span>signedExchangeReceived</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-responseReceived"><span class="domain-dot">Network.</span>responseReceived</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketClosed"><span class="domain-dot">Network.</span>webSocketClosed</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketCreated"><span class="domain-dot">Network.</span>webSocketCreated</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketFrameError"><span class="domain-dot">Network.</span>webSocketFrameError</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketFrameReceived"><span class="domain-dot">Network.</span>webSocketFrameReceived</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketFrameSent"><span class="domain-dot">Network.</span>webSocketFrameSent</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketHandshakeResponseReceived"><span class="domain-dot">Network.</span>webSocketHandshakeResponseReceived</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-webSocketWillSendHandshakeRequest"><span class="domain-dot">Network.</span>webSocketWillSendHandshakeRequest</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-requestWillBeSentExtraInfo"><span class="domain-dot">Network.</span>requestWillBeSentExtraInfo</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#event-responseReceivedExtraInfo"><span class="domain-dot">Network.</span>responseReceivedExtraInfo</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+        <h3>Types</h3>
+      <div class="toc-link">
+        <a href="#type-ResourceType"><span class="domain-dot">Network.</span>ResourceType</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-LoaderId"><span class="domain-dot">Network.</span>LoaderId</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-RequestId"><span class="domain-dot">Network.</span>RequestId</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InterceptionId"><span class="domain-dot">Network.</span>InterceptionId</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ErrorReason"><span class="domain-dot">Network.</span>ErrorReason</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-TimeSinceEpoch"><span class="domain-dot">Network.</span>TimeSinceEpoch</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-MonotonicTime"><span class="domain-dot">Network.</span>MonotonicTime</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Headers"><span class="domain-dot">Network.</span>Headers</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ConnectionType"><span class="domain-dot">Network.</span>ConnectionType</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CookieSameSite"><span class="domain-dot">Network.</span>CookieSameSite</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CookiePriority"><span class="domain-dot">Network.</span>CookiePriority</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ResourceTiming"><span class="domain-dot">Network.</span>ResourceTiming</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-ResourcePriority"><span class="domain-dot">Network.</span>ResourcePriority</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Request"><span class="domain-dot">Network.</span>Request</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SignedCertificateTimestamp"><span class="domain-dot">Network.</span>SignedCertificateTimestamp</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SecurityDetails"><span class="domain-dot">Network.</span>SecurityDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CertificateTransparencyCompliance"><span class="domain-dot">Network.</span>CertificateTransparencyCompliance</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-BlockedReason"><span class="domain-dot">Network.</span>BlockedReason</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Response"><span class="domain-dot">Network.</span>Response</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-WebSocketRequest"><span class="domain-dot">Network.</span>WebSocketRequest</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-WebSocketResponse"><span class="domain-dot">Network.</span>WebSocketResponse</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-WebSocketFrame"><span class="domain-dot">Network.</span>WebSocketFrame</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CachedResource"><span class="domain-dot">Network.</span>CachedResource</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Initiator"><span class="domain-dot">Network.</span>Initiator</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-Cookie"><span class="domain-dot">Network.</span>Cookie</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SetCookieBlockedReason"><span class="domain-dot">Network.</span>SetCookieBlockedReason</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CookieBlockedReason"><span class="domain-dot">Network.</span>CookieBlockedReason</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-BlockedSetCookieWithReason"><span class="domain-dot">Network.</span>BlockedSetCookieWithReason</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-BlockedCookieWithReason"><span class="domain-dot">Network.</span>BlockedCookieWithReason</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-CookieParam"><span class="domain-dot">Network.</span>CookieParam</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-AuthChallenge"><span class="domain-dot">Network.</span>AuthChallenge</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-AuthChallengeResponse"><span class="domain-dot">Network.</span>AuthChallengeResponse</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-InterceptionStage"><span class="domain-dot">Network.</span>InterceptionStage</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-RequestPattern"><span class="domain-dot">Network.</span>RequestPattern</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SignedExchangeSignature"><span class="domain-dot">Network.</span>SignedExchangeSignature</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SignedExchangeHeader"><span class="domain-dot">Network.</span>SignedExchangeHeader</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SignedExchangeErrorField"><span class="domain-dot">Network.</span>SignedExchangeErrorField</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SignedExchangeError"><span class="domain-dot">Network.</span>SignedExchangeError</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a href="#type-SignedExchangeInfo"><span class="domain-dot">Network.</span>SignedExchangeInfo</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      </div>
+
+      
+      <h3 id="methods">Methods</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="method-canClearBrowserCache">
+          <span class="domain-dot">Network.</span>canClearBrowserCache
+          <a href="#method-canClearBrowserCache" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Tells whether clearing browser cache is supported.</p>
+
+      </div>
+    
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if browser cache can be cleared.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-canClearBrowserCookies">
+          <span class="domain-dot">Network.</span>canClearBrowserCookies
+          <a href="#method-canClearBrowserCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Tells whether clearing browser cookies is supported.</p>
+
+      </div>
+    
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if browser cookies can be cleared.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-canEmulateNetworkConditions">
+          <span class="domain-dot">Network.</span>canEmulateNetworkConditions
+          <a href="#method-canEmulateNetworkConditions" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Tells whether emulation of network conditions is supported.</p>
+
+      </div>
+    
+        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if emulation of network conditions is supported.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-clearBrowserCache">
+          <span class="domain-dot">Network.</span>clearBrowserCache
+          <a href="#method-clearBrowserCache" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Clears browser cache.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-clearBrowserCookies">
+          <span class="domain-dot">Network.</span>clearBrowserCookies
+          <a href="#method-clearBrowserCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Clears browser cookies.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-continueInterceptedRequest">
+          <span class="domain-dot">Network.</span>continueInterceptedRequest
+          <a href="#method-continueInterceptedRequest" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Response to Network.requestIntercepted which either modifies the request to continue with any
+modifications, or blocks it, or completes it with the provided response bytes. If a network
+fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted
+event will be sent with the same InterceptionId.
+Deprecated, use Fetch.continueRequest, Fetch.fulfillRequest and Fetch.failRequest instead.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">interceptionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-InterceptionId class="param-type">InterceptionId</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">errorReason</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ErrorReason class="param-type">ErrorReason</a>
+          
+      <div class="details-description">
+        <p>If set this causes the request to fail with the given reason. Passing <code>Aborted</code> for requests
+marked with <code>isNavigationRequest</code> also cancels the navigation. Must not be set in response
+to an authChallenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">rawResponse</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If set the requests completes using with the provided base64 encoded raw response, including
+HTTP status line and headers etc... Must not be set in response to an authChallenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If set the request url will be modified in a way that&#39;s not observable by page. Must not be
+set in response to an authChallenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">method</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If set this allows the request method to be overridden. Must not be set in response to an
+authChallenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">postData</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If set this allows postData to be set. Must not be set in response to an authChallenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>If set this allows the request headers to be changed. Must not be set in response to an
+authChallenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">authChallengeResponse</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-AuthChallengeResponse class="param-type">AuthChallengeResponse</a>
+          
+      <div class="details-description">
+        <p>Response to a requestIntercepted with an authChallenge. Must not be set otherwise.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-deleteCookies">
+          <span class="domain-dot">Network.</span>deleteCookies
+          <a href="#method-deleteCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Deletes browser cookies with matching name and url or domain/path pair.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Name of the cookies to remove.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If specified, deletes all the cookies with the given name where domain and path match
+provided URL.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">domain</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If specified, deletes only cookies with the exact domain.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>If specified, deletes only cookies with the exact path.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-disable">
+          <span class="domain-dot">Network.</span>disable
+          <a href="#method-disable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Disables network tracking, prevents network events from being sent to the client.</p>
+
+      </div>
+    
+        
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-emulateNetworkConditions">
+          <span class="domain-dot">Network.</span>emulateNetworkConditions
+          <a href="#method-emulateNetworkConditions" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Activates emulation of network conditions.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">offline</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True to emulate internet disconnection.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">latency</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Minimum latency from request sent to response headers received (ms).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">downloadThroughput</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Maximal aggregated download throughput (bytes/sec). -1 disables download throttling.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">uploadThroughput</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Maximal aggregated upload throughput (bytes/sec).  -1 disables upload throttling.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">connectionType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ConnectionType class="param-type">ConnectionType</a>
+          
+      <div class="details-description">
+        <p>Connection type if known.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-enable">
+          <span class="domain-dot">Network.</span>enable
+          <a href="#method-enable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables network tracking, network events will now be delivered to the client.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">maxTotalBufferSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Buffer size in bytes to use when preserving network payloads (XHRs, etc).</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">maxResourceBufferSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Per-resource buffer size in bytes to use when preserving network payloads (XHRs, etc).</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">maxPostDataSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Longest post body size (in bytes) that would be included in requestWillBeSent notification</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getAllCookies">
+          <span class="domain-dot">Network.</span>getAllCookies
+          <a href="#method-getAllCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns all browser cookies. Depending on the backend support, will return detailed cookie
+information in the <code>cookies</code> field.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">cookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Array of cookie objects.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getCertificate">
+          <span class="domain-dot">Network.</span>getCertificate
+          <a href="#method-getCertificate" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the DER-encoded certificate.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">origin</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Origin to get certificate for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">tableNames</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getCookies">
+          <span class="domain-dot">Network.</span>getCookies
+          <a href="#method-getCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns all browser cookies for the current URL. Depending on the backend support, will return
+detailed cookie information in the <code>cookies</code> field.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">urls</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The list of URLs for which applicable cookies will be fetched</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">cookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Array of cookie objects.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getResponseBody">
+          <span class="domain-dot">Network.</span>getResponseBody
+          <a href="#method-getResponseBody" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns content served for the given request.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the network request to get content for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">body</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Response body.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">base64Encoded</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True, if content was sent as base64.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getRequestPostData">
+          <span class="domain-dot">Network.</span>getRequestPostData
+          <a href="#method-getRequestPostData" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns post data sent with the request. Returns an error when no data was sent with the request.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the network request to get content for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">postData</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Request body string, omitting files from multipart requests</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getResponseBodyForInterception">
+          <span class="domain-dot">Network.</span>getResponseBodyForInterception
+          <a href="#method-getResponseBodyForInterception" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns content served for the given currently intercepted request.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">interceptionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-InterceptionId class="param-type">InterceptionId</a>
+          
+      <div class="details-description">
+        <p>Identifier for the intercepted request to get body for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">body</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Response body.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">base64Encoded</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True, if content was sent as base64.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-takeResponseBodyForInterceptionAsStream">
+          <span class="domain-dot">Network.</span>takeResponseBodyForInterceptionAsStream
+          <a href="#method-takeResponseBodyForInterceptionAsStream" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns a handle to the stream representing the response body. Note that after this command,
+the intercepted request can&#39;t be continued as is -- you either need to cancel it or to provide
+the response body. The stream only supports sequential read, IO.read will fail if the position
+is specified.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">interceptionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-InterceptionId class="param-type">InterceptionId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">stream</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">IO.StreamHandle</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-replayXHR">
+          <span class="domain-dot">Network.</span>replayXHR
+          <a href="#method-replayXHR" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This method sends a new XMLHttpRequest which is identical to the original one. The following
+parameters should be identical: method, url, async, request body, extra headers, withCredentials
+attribute, user, password.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Identifier of XHR to replay.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-searchInResponseBody">
+          <span class="domain-dot">Network.</span>searchInResponseBody
+          <a href="#method-searchInResponseBody" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Searches for given string in response content.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the network response to search.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">query</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>String to search for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">caseSensitive</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If true, search is case sensitive.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">isRegex</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If true, treats string parameter as regex.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">result</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>List of search matches.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setBlockedURLs">
+          <span class="domain-dot">Network.</span>setBlockedURLs
+          <a href="#method-setBlockedURLs" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Blocks URLs from loading.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">urls</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>URL patterns to block. Wildcards (&#39;*&#39;) are allowed.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setBypassServiceWorker">
+          <span class="domain-dot">Network.</span>setBypassServiceWorker
+          <a href="#method-setBypassServiceWorker" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Toggles ignoring of service worker for each request.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">bypass</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Bypass service worker and load from network.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setCacheDisabled">
+          <span class="domain-dot">Network.</span>setCacheDisabled
+          <a href="#method-setCacheDisabled" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Toggles ignoring cache for each request. If <code>true</code>, cache will not be used.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">cacheDisabled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Cache disabled state.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setCookie">
+          <span class="domain-dot">Network.</span>setCookie
+          <a href="#method-setCookie" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The request-URI to associate with the setting of the cookie. This value can affect the
+default domain and path values of the created cookie.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">domain</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie domain.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie path.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">secure</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is secure.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">httpOnly</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is http-only.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sameSite</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookieSameSite class="param-type">CookieSameSite</a>
+          
+      <div class="details-description">
+        <p>Cookie SameSite type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">expires</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Cookie expiration date, session cookie if not set</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">priority</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookiePriority class="param-type">CookiePriority</a>
+          
+      <div class="details-description">
+        <p>Cookie Priority type.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">success</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if successfully set cookie.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setCookies">
+          <span class="domain-dot">Network.</span>setCookies
+          <a href="#method-setCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets given cookies.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">cookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Cookies to be set.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setDataSizeLimitsForTest">
+          <span class="domain-dot">Network.</span>setDataSizeLimitsForTest
+          <a href="#method-setDataSizeLimitsForTest" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>For testing.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">maxTotalSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Maximum total buffer size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">maxResourceSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Maximum per-resource size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setExtraHTTPHeaders">
+          <span class="domain-dot">Network.</span>setExtraHTTPHeaders
+          <a href="#method-setExtraHTTPHeaders" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Specifies whether to always send extra HTTP headers with the requests from this page.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>Map with extra HTTP headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setRequestInterception">
+          <span class="domain-dot">Network.</span>setRequestInterception
+          <a href="#method-setRequestInterception" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets the requests to intercept that match the provided patterns and optionally resource types.
+Deprecated, please use Fetch.enable instead.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">patterns</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Requests matching any of these patterns will be forwarded and wait for the corresponding
+continueInterceptedRequest call.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setUserAgentOverride">
+          <span class="domain-dot">Network.</span>setUserAgentOverride
+          <a href="#method-setUserAgentOverride" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Allows overriding user agent with the given string.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">userAgent</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>User agent to use.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">acceptLanguage</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Browser langugage to emulate.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">platform</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The platform navigator.platform should return.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="events">Events</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="event-dataReceived">
+          <span class="domain-dot">Network.</span>dataReceived
+          <a href="#event-dataReceived" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when data chunk was received over the network.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">dataLength</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Data chunk length.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">encodedDataLength</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Actual bytes received (might be less than dataLength for compressed encodings).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-eventSourceMessageReceived">
+          <span class="domain-dot">Network.</span>eventSourceMessageReceived
+          <a href="#event-eventSourceMessageReceived" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when EventSource message is received.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">eventName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Message type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">eventId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Message identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">data</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Message content.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-loadingFailed">
+          <span class="domain-dot">Network.</span>loadingFailed
+          <a href="#event-loadingFailed" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when HTTP request has failed to load.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">type</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">ResourceType</a>
+          
+      <div class="details-description">
+        <p>Resource type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">errorText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>User friendly error message.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">canceled</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if loading was canceled.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">blockedReason</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-BlockedReason class="param-type">BlockedReason</a>
+          
+      <div class="details-description">
+        <p>The reason why loading was blocked, if any.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-loadingFinished">
+          <span class="domain-dot">Network.</span>loadingFinished
+          <a href="#event-loadingFinished" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when HTTP request has finished loading.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">encodedDataLength</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Total number of bytes received for this request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">shouldReportCorbBlocking</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Set when 1) response was blocked by Cross-Origin Read Blocking and also
+2) this needs to be reported to the DevTools console.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-requestIntercepted">
+          <span class="domain-dot">Network.</span>requestIntercepted
+          <a href="#event-requestIntercepted" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details of an intercepted HTTP request, which must be either allowed, blocked, modified or
+mocked.
+Deprecated, use Fetch.requestPaused instead.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">interceptionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-InterceptionId class="param-type">InterceptionId</a>
+          
+      <div class="details-description">
+        <p>Each request the page makes will have a unique id, however if any redirects are encountered
+while processing that fetch, they will be reported with the same id as the original fetch.
+Likewise if HTTP authentication is needed then the same fetch id will be used.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">request</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Request class="param-type">Request</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>The id of the frame that initiated the request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">resourceType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">ResourceType</a>
+          
+      <div class="details-description">
+        <p>How the requested resource will be used.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">isNavigationRequest</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether this is a navigation request, which can abort the navigation completely.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">isDownload</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Set if the request is a navigation that will result in a download.
+Only present after response is received from the server (i.e. HeadersReceived stage).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">redirectUrl</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Redirect location, only sent if a redirect was intercepted.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">authChallenge</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-AuthChallenge class="param-type">AuthChallenge</a>
+          
+      <div class="details-description">
+        <p>Details of the Authorization Challenge encountered. If this is set then
+continueInterceptedRequest must contain an authChallengeResponse.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">responseErrorReason</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ErrorReason class="param-type">ErrorReason</a>
+          
+      <div class="details-description">
+        <p>Response error if intercepted at response stage or if redirect occurred while intercepting
+request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">responseStatusCode</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Response code if intercepted at response stage or if redirect occurred while intercepting
+request or auth retry occurred.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">responseHeaders</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>Response headers if intercepted at the response stage or if redirect occurred while
+intercepting request or auth retry occurred.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>If the intercepted request had a corresponding requestWillBeSent event fired for it, then
+this requestId will be the same as the requestId present in the requestWillBeSent event.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-requestServedFromCache">
+          <span class="domain-dot">Network.</span>requestServedFromCache
+          <a href="#event-requestServedFromCache" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired if request ended up loading from cache.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-requestWillBeSent">
+          <span class="domain-dot">Network.</span>requestWillBeSent
+          <a href="#event-requestWillBeSent" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when page is about to send HTTP request.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">loaderId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-LoaderId class="param-type">LoaderId</a>
+          
+      <div class="details-description">
+        <p>Loader identifier. Empty string if the request is fetched from worker.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">documentURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the document this request is loaded for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">request</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Request class="param-type">Request</a>
+          
+      <div class="details-description">
+        <p>Request data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">wallTime</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">initiator</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Initiator class="param-type">Initiator</a>
+          
+      <div class="details-description">
+        <p>Request initiator.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">redirectResponse</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Response class="param-type">Response</a>
+          
+      <div class="details-description">
+        <p>Redirect response data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">type</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">ResourceType</a>
+          
+      <div class="details-description">
+        <p>Type of this resource.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Frame identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">hasUserGesture</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the request is initiated by a user gesture. Defaults to false.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-resourceChangedPriority">
+          <span class="domain-dot">Network.</span>resourceChangedPriority
+          <a href="#event-resourceChangedPriority" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when resource loading priority is changed</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">newPriority</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourcePriority class="param-type">ResourcePriority</a>
+          
+      <div class="details-description">
+        <p>New priority</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-signedExchangeReceived">
+          <span class="domain-dot">Network.</span>signedExchangeReceived
+          <a href="#event-signedExchangeReceived" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when a signed exchange was received over the network</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">info</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-SignedExchangeInfo class="param-type">SignedExchangeInfo</a>
+          
+      <div class="details-description">
+        <p>Information about the signed exchange response.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-responseReceived">
+          <span class="domain-dot">Network.</span>responseReceived
+          <a href="#event-responseReceived" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when HTTP response is available.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">loaderId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-LoaderId class="param-type">LoaderId</a>
+          
+      <div class="details-description">
+        <p>Loader identifier. Empty string if the request is fetched from worker.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">type</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">ResourceType</a>
+          
+      <div class="details-description">
+        <p>Resource type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">response</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Response class="param-type">Response</a>
+          
+      <div class="details-description">
+        <p>Response data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Frame identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketClosed">
+          <span class="domain-dot">Network.</span>webSocketClosed
+          <a href="#event-webSocketClosed" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when WebSocket is closed.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketCreated">
+          <span class="domain-dot">Network.</span>webSocketCreated
+          <a href="#event-webSocketCreated" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired upon WebSocket creation.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>WebSocket request URL.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">initiator</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Initiator class="param-type">Initiator</a>
+          
+      <div class="details-description">
+        <p>Request initiator.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketFrameError">
+          <span class="domain-dot">Network.</span>webSocketFrameError
+          <a href="#event-webSocketFrameError" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when WebSocket message error occurs.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">errorMessage</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>WebSocket error message.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketFrameReceived">
+          <span class="domain-dot">Network.</span>webSocketFrameReceived
+          <a href="#event-webSocketFrameReceived" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when WebSocket message is received.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">response</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-WebSocketFrame class="param-type">WebSocketFrame</a>
+          
+      <div class="details-description">
+        <p>WebSocket response data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketFrameSent">
+          <span class="domain-dot">Network.</span>webSocketFrameSent
+          <a href="#event-webSocketFrameSent" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when WebSocket message is sent.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">response</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-WebSocketFrame class="param-type">WebSocketFrame</a>
+          
+      <div class="details-description">
+        <p>WebSocket response data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketHandshakeResponseReceived">
+          <span class="domain-dot">Network.</span>webSocketHandshakeResponseReceived
+          <a href="#event-webSocketHandshakeResponseReceived" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when WebSocket handshake response becomes available.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">response</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-WebSocketResponse class="param-type">WebSocketResponse</a>
+          
+      <div class="details-description">
+        <p>WebSocket response data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-webSocketWillSendHandshakeRequest">
+          <span class="domain-dot">Network.</span>webSocketWillSendHandshakeRequest
+          <a href="#event-webSocketWillSendHandshakeRequest" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when WebSocket is about to initiate handshake.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
+          
+      <div class="details-description">
+        <p>Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">wallTime</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>UTC Timestamp.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">request</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-WebSocketRequest class="param-type">WebSocketRequest</a>
+          
+      <div class="details-description">
+        <p>WebSocket request data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-requestWillBeSentExtraInfo">
+          <span class="domain-dot">Network.</span>requestWillBeSentExtraInfo
+          <a href="#event-requestWillBeSentExtraInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when additional information about a requestWillBeSent event is available from the
+network stack. Not every requestWillBeSent event will have an additional
+requestWillBeSentExtraInfo fired for it, and there is no guarantee whether requestWillBeSent
+or requestWillBeSentExtraInfo will be fired first for the same request.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier. Used to match this information to an existing requestWillBeSent event.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">blockedCookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>A list of cookies which will not be sent with this request along with corresponding reasons
+for blocking.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>Raw request headers as they will be sent over the wire.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-responseReceivedExtraInfo">
+          <span class="domain-dot">Network.</span>responseReceivedExtraInfo
+          <a href="#event-responseReceivedExtraInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when additional information about a responseReceived event is available from the network
+stack. Not every responseReceived event will have an additional responseReceivedExtraInfo for
+it, and responseReceivedExtraInfo may be fired before or after responseReceived.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">RequestId</a>
+          
+      <div class="details-description">
+        <p>Request identifier. Used to match this information to another responseReceived event.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">blockedCookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>A list of cookies which were not stored from the response along with the corresponding
+reasons for blocking. The cookies here may not be valid due to syntax errors, which
+are represented by the invalid cookie line string instead of a proper cookie.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>Raw response headers as they were received over the wire.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headersText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Raw response header text as it was received over the wire. The raw text may not always be
+available, such as in the case of HTTP/2 or QUIC.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+      
+      <h3 id="types">Types</h3>
+      <div>
+        
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ResourceType">
+          <span class="domain-dot">Network.</span>ResourceType
+          <a href="#type-ResourceType" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Resource type as it was perceived by the rendering engine.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">Document, Stylesheet, Image, Media, Font, Script, TextTrack, XHR, Fetch, EventSource, WebSocket, Manifest, SignedExchange, Ping, CSPViolationReport, Other</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-LoaderId">
+          <span class="domain-dot">Network.</span>LoaderId
+          <a href="#type-LoaderId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Unique loader identifier.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-RequestId">
+          <span class="domain-dot">Network.</span>RequestId
+          <a href="#type-RequestId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Unique request identifier.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InterceptionId">
+          <span class="domain-dot">Network.</span>InterceptionId
+          <a href="#type-InterceptionId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Unique intercepted request identifier.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ErrorReason">
+          <span class="domain-dot">Network.</span>ErrorReason
+          <a href="#type-ErrorReason" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Network level fetch failure reason.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">Failed, Aborted, TimedOut, AccessDenied, ConnectionClosed, ConnectionReset, ConnectionRefused, ConnectionAborted, ConnectionFailed, NameNotResolved, InternetDisconnected, AddressUnreachable, BlockedByClient, BlockedByResponse</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TimeSinceEpoch">
+          <span class="domain-dot">Network.</span>TimeSinceEpoch
+          <a href="#type-TimeSinceEpoch" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>UTC time in seconds, counted from January 1, 1970.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>number</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MonotonicTime">
+          <span class="domain-dot">Network.</span>MonotonicTime
+          <a href="#type-MonotonicTime" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Monotonically increasing time in seconds since an arbitrary point in the past.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>number</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Headers">
+          <span class="domain-dot">Network.</span>Headers
+          <a href="#type-Headers" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Request / response headers as keys / values of JSON object.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ConnectionType">
+          <span class="domain-dot">Network.</span>ConnectionType
+          <a href="#type-ConnectionType" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>The underlying connection technology that the browser is supposedly using.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">none, cellular2g, cellular3g, cellular4g, bluetooth, ethernet, wifi, wimax, other</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CookieSameSite">
+          <span class="domain-dot">Network.</span>CookieSameSite
+          <a href="#type-CookieSameSite" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Represents the cookie&#39;s &#39;SameSite&#39; status:
+<a href="https://tools.ietf.org/html/draft-west-first-party-cookies">https://tools.ietf.org/html/draft-west-first-party-cookies</a></p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">Strict, Lax, None</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CookiePriority">
+          <span class="domain-dot">Network.</span>CookiePriority
+          <a href="#type-CookiePriority" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Represents the cookie&#39;s &#39;Priority&#39; status:
+<a href="https://tools.ietf.org/html/draft-west-cookie-priority-00">https://tools.ietf.org/html/draft-west-cookie-priority-00</a></p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">Low, Medium, High</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ResourceTiming">
+          <span class="domain-dot">Network.</span>ResourceTiming
+          <a href="#type-ResourceTiming" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Timing information for the request.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestTime</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Timing&#39;s requestTime is a baseline in seconds, while the other numbers are ticks in
+milliseconds relatively to this requestTime.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">proxyStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Started resolving proxy.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">proxyEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Finished resolving proxy.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">dnsStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Started DNS address resolve.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">dnsEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Finished DNS address resolve.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">connectStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Started connecting to the remote host.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">connectEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Connected to the remote host.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sslStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Started SSL handshake.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sslEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Finished SSL handshake.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">workerStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Started running ServiceWorker.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">workerReady</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Finished Starting ServiceWorker.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">sendStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Started sending request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sendEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Finished sending request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">pushStart</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Time the server started pushing request.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">pushEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Time the server finished pushing request.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name">receiveHeadersEnd</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Finished receiving response headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ResourcePriority">
+          <span class="domain-dot">Network.</span>ResourcePriority
+          <a href="#type-ResourcePriority" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Loading priority of a resource request.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">VeryLow, Low, Medium, High, VeryHigh</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Request">
+          <span class="domain-dot">Network.</span>Request
+          <a href="#type-Request" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>HTTP request data.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Request URL (without fragment).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">urlFragment</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Fragment of the requested URL starting with hash, if present.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">method</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP request method.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>HTTP request headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">postData</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP POST request data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">hasPostData</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True when the request has POST data. Note that postData might still be omitted when this flag is true when the data is too long.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">mixedContentType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Security/#type-MixedContentType class="param-type">Security.MixedContentType</a>
+          
+      <div class="details-description">
+        <p>The mixed content type of the request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">initialPriority</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourcePriority class="param-type">ResourcePriority</a>
+          
+      <div class="details-description">
+        <p>Priority of the resource request at the time request is sent.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">referrerPolicy</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The referrer policy of the request, as defined in <a href="https://www.w3.org/TR/referrer-policy/">https://www.w3.org/TR/referrer-policy/</a></p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">isLinkPreload</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether is loaded via link preload.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SignedCertificateTimestamp">
+          <span class="domain-dot">Network.</span>SignedCertificateTimestamp
+          <a href="#type-SignedCertificateTimestamp" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details of a signed certificate timestamp (SCT).</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">status</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Validation status.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">origin</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">logDescription</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Log name / description.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">logId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Log ID.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Issuance date.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">hashAlgorithm</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Hash algorithm.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">signatureAlgorithm</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signature algorithm.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">signatureData</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signature data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SecurityDetails">
+          <span class="domain-dot">Network.</span>SecurityDetails
+          <a href="#type-SecurityDetails" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Security details about a request.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">protocol</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Protocol name (e.g. &quot;TLS 1.2&quot; or &quot;QUIC&quot;).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">keyExchange</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Key Exchange used by the connection, or the empty string if not applicable.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">keyExchangeGroup</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>(EC)DH group used by the connection, if applicable.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cipher</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cipher name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">mac</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>TLS MAC. Note that AEAD ciphers do not have separate MACs.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">certificateId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Security/#type-CertificateId class="param-type">Security.CertificateId</a>
+          
+      <div class="details-description">
+        <p>Certificate ID value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">subjectName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Certificate subject name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sanList</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Subject Alternative Name (SAN) DNS names and IP addresses.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">issuer</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Name of the issuing CA.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">validFrom</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Certificate valid from date.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">validTo</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Certificate valid to (expiration) date</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">signedCertificateTimestampList</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>List of signed certificate timestamps (SCTs).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">certificateTransparencyCompliance</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CertificateTransparencyCompliance class="param-type">CertificateTransparencyCompliance</a>
+          
+      <div class="details-description">
+        <p>Whether the request complied with Certificate Transparency policy</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CertificateTransparencyCompliance">
+          <span class="domain-dot">Network.</span>CertificateTransparencyCompliance
+          <a href="#type-CertificateTransparencyCompliance" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Whether the request complied with Certificate Transparency policy.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">unknown, not-compliant, compliant</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-BlockedReason">
+          <span class="domain-dot">Network.</span>BlockedReason
+          <a href="#type-BlockedReason" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>The reason why request was blocked.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">other, csp, mixed-content, origin, inspector, subresource-filter, content-type, collapsed-by-client, coep-frame-resource-needs-coep-header, coop-sandboxed-iframe-cannot-navigate-to-coop-page, corp-not-same-origin, corp-not-same-origin-after-defaulted-to-same-origin-by-coep, corp-not-same-site</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Response">
+          <span class="domain-dot">Network.</span>Response
+          <a href="#type-Response" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>HTTP response data.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Response URL. This URL can be different from CachedResource.url in case of redirect.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">status</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>HTTP response status code.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">statusText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP response status text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>HTTP response headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headersText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP response headers text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">mimeType</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Resource mimeType as determined by the browser.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">requestHeaders</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>Refined HTTP request headers that were actually transmitted over the network.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">requestHeadersText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP request headers text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">connectionReused</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Specifies whether physical connection was actually reused for this request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">connectionId</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Physical connection id that was actually used for this request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">remoteIPAddress</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Remote IP address.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">remotePort</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Remote port.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fromDiskCache</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Specifies that the request was served from the disk cache.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fromServiceWorker</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Specifies that the request was served from the ServiceWorker.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">fromPrefetchCache</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Specifies that the request was served from the prefetch cache.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">encodedDataLength</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Total number of bytes received for this request so far.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">timing</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceTiming class="param-type">ResourceTiming</a>
+          
+      <div class="details-description">
+        <p>Timing information for the given request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">protocol</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Protocol used to fetch this request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">securityState</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Security/#type-SecurityState class="param-type">Security.SecurityState</a>
+          
+      <div class="details-description">
+        <p>Security state of the request resource.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">securityDetails</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-SecurityDetails class="param-type">SecurityDetails</a>
+          
+      <div class="details-description">
+        <p>Security details for the request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-WebSocketRequest">
+          <span class="domain-dot">Network.</span>WebSocketRequest
+          <a href="#type-WebSocketRequest" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>WebSocket request data.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>HTTP request headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-WebSocketResponse">
+          <span class="domain-dot">Network.</span>WebSocketResponse
+          <a href="#type-WebSocketResponse" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>WebSocket response data.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">status</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>HTTP response status code.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">statusText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP response status text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headers</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>HTTP response headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headersText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP response headers text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">requestHeaders</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>HTTP request headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">requestHeadersText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP request headers text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-WebSocketFrame">
+          <span class="domain-dot">Network.</span>WebSocketFrame
+          <a href="#type-WebSocketFrame" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>WebSocket message data. This represents an entire WebSocket message, not just a fragmented frame as the name suggests.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">opcode</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>WebSocket message opcode.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">mask</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>WebSocket message mask.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">payloadData</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>WebSocket message payload data.
+If the opcode is 1, this is a text message and payloadData is a UTF-8 string.
+If the opcode isn&#39;t 1, then payloadData is a base64 encoded string representing binary data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CachedResource">
+          <span class="domain-dot">Network.</span>CachedResource
+          <a href="#type-CachedResource" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about the cached resource.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Resource URL. This is the url of the original network request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">type</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">ResourceType</a>
+          
+      <div class="details-description">
+        <p>Type of this resource.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">response</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Response class="param-type">Response</a>
+          
+      <div class="details-description">
+        <p>Cached response data.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">bodySize</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Cached response body size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Initiator">
+          <span class="domain-dot">Network.</span>Initiator
+          <a href="#type-Initiator" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about the request initiator.</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Type of this initiator.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">stack</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
+          
+      <div class="details-description">
+        <p>Initiator JavaScript stack trace, set for Script only.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Initiator URL, set for Parser type or for Script type (when script is importing module) or for SignedExchange type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">lineNumber</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Initiator line number, set for Parser type or for Script type (when script is importing
+module) (0-based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Cookie">
+          <span class="domain-dot">Network.</span>Cookie
+          <a href="#type-Cookie" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Cookie object</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">domain</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie domain.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie path.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">expires</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Cookie expiration date as the number of seconds since the UNIX epoch.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">size</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Cookie size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">httpOnly</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is http-only.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">secure</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is secure.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">session</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True in case of session cookie.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sameSite</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookieSameSite class="param-type">CookieSameSite</a>
+          
+      <div class="details-description">
+        <p>Cookie SameSite type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">priority</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookiePriority class="param-type">CookiePriority</a>
+          
+      <div class="details-description">
+        <p>Cookie Priority</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SetCookieBlockedReason">
+          <span class="domain-dot">Network.</span>SetCookieBlockedReason
+          <a href="#type-SetCookieBlockedReason" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Types of reasons why a cookie may not be stored from a response.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">SecureOnly, SameSiteStrict, SameSiteLax, SameSiteUnspecifiedTreatedAsLax, SameSiteNoneInsecure, UserPreferences, SyntaxError, SchemeNotSupported, OverwriteSecure, InvalidDomain, InvalidPrefix, UnknownError</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CookieBlockedReason">
+          <span class="domain-dot">Network.</span>CookieBlockedReason
+          <a href="#type-CookieBlockedReason" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Types of reasons why a cookie may not be sent with a request.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">SecureOnly, NotOnPath, DomainMismatch, SameSiteStrict, SameSiteLax, SameSiteUnspecifiedTreatedAsLax, SameSiteNoneInsecure, UserPreferences, UnknownError</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-BlockedSetCookieWithReason">
+          <span class="domain-dot">Network.</span>BlockedSetCookieWithReason
+          <a href="#type-BlockedSetCookieWithReason" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>A cookie which was not stored from a response with the corresponding reason.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">blockedReasons</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The reason(s) this cookie was blocked.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cookieLine</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The string representing this individual cookie as it would appear in the header.
+This is not the entire &quot;cookie&quot; or &quot;set-cookie&quot; header which could have multiple cookies.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cookie</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Cookie class="param-type">Cookie</a>
+          
+      <div class="details-description">
+        <p>The cookie object which represents the cookie which was not stored. It is optional because
+sometimes complete cookie information is not available, such as in the case of parsing
+errors.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-BlockedCookieWithReason">
+          <span class="domain-dot">Network.</span>BlockedCookieWithReason
+          <a href="#type-BlockedCookieWithReason" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>A cookie with was not sent with a request with the corresponding reason.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">blockedReasons</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The reason(s) the cookie was blocked.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">cookie</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Cookie class="param-type">Cookie</a>
+          
+      <div class="details-description">
+        <p>The cookie object representing the cookie which was not sent.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CookieParam">
+          <span class="domain-dot">Network.</span>CookieParam
+          <a href="#type-CookieParam" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Cookie parameter object</p>
+
+      </div>
+    
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The request-URI to associate with the setting of the cookie. This value can affect the
+default domain and path values of the created cookie.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">domain</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie domain.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cookie path.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">secure</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is secure.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">httpOnly</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True if cookie is http-only.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">sameSite</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookieSameSite class="param-type">CookieSameSite</a>
+          
+      <div class="details-description">
+        <p>Cookie SameSite type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">expires</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Cookie expiration date, session cookie if not set</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">priority</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-CookiePriority class="param-type">CookiePriority</a>
+          
+      <div class="details-description">
+        <p>Cookie Priority.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-AuthChallenge">
+          <span class="domain-dot">Network.</span>AuthChallenge
+          <a href="#type-AuthChallenge" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Authorization challenge for HTTP status code 401 or 407.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">source</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Source of the authentication challenge.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">origin</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Origin of the challenger.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">scheme</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The authentication scheme used, such as basic or digest</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">realm</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The realm of the challenge. May be empty.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-AuthChallengeResponse">
+          <span class="domain-dot">Network.</span>AuthChallengeResponse
+          <a href="#type-AuthChallengeResponse" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Response to an AuthChallenge.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">response</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The decision on what to do in response to the authorization challenge.  Default means
+deferring to the default behavior of the net stack, which will likely either the Cancel
+authentication or display a popup dialog box.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">username</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The username to provide, possibly empty. Should only be set if response is
+ProvideCredentials.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">password</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The password to provide, possibly empty. Should only be set if response is
+ProvideCredentials.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InterceptionStage">
+          <span class="domain-dot">Network.</span>InterceptionStage
+          <a href="#type-InterceptionStage" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Stages of the interception to begin intercepting. Request will intercept before the request is
+sent. Response will intercept after the response is received.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">Request, HeadersReceived</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-RequestPattern">
+          <span class="domain-dot">Network.</span>RequestPattern
+          <a href="#type-RequestPattern" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Request pattern for interception.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">urlPattern</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Wildcards (&#39;<em>&#39; -&gt; zero or more, &#39;?&#39; -&gt; exactly one) are allowed. Escape character is
+backslash. Omitting is equivalent to &quot;</em>&quot;.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">resourceType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">ResourceType</a>
+          
+      <div class="details-description">
+        <p>If set, only requests for matching resource types will be intercepted.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">interceptionStage</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-InterceptionStage class="param-type">InterceptionStage</a>
+          
+      <div class="details-description">
+        <p>Stage at wich to begin intercepting requests. Default is Request.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SignedExchangeSignature">
+          <span class="domain-dot">Network.</span>SignedExchangeSignature
+          <a href="#type-SignedExchangeSignature" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about a signed exchange signature.
+<a href="https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#rfc.section.3.1">https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#rfc.section.3.1</a></p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">label</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signed exchange signature label.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">signature</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The hex string of signed exchange signature.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">integrity</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signed exchange signature integrity.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">certUrl</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signed exchange signature cert Url.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">certSha256</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The hex string of signed exchange signature cert sha256.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">validityUrl</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signed exchange signature validity Url.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">date</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Signed exchange signature date.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">expires</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Signed exchange signature expires.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">certificates</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The encoded certificates.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SignedExchangeHeader">
+          <span class="domain-dot">Network.</span>SignedExchangeHeader
+          <a href="#type-SignedExchangeHeader" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about a signed exchange header.
+<a href="https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#cbor-representation">https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#cbor-representation</a></p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">requestUrl</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signed exchange request URL.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">responseCode</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Signed exchange response code.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">responseHeaders</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Headers class="param-type">Headers</a>
+          
+      <div class="details-description">
+        <p>Signed exchange response headers.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">signatures</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Signed exchange response signature.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">headerIntegrity</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Signed exchange header integrity hash in the form of &quot;sha256-<base64-hash-value>&quot;.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SignedExchangeErrorField">
+          <span class="domain-dot">Network.</span>SignedExchangeErrorField
+          <a href="#type-SignedExchangeErrorField" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Field type for a signed exchange related error.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container">signatureSig, signatureIntegrity, signatureCertUrl, signatureCertSha256, signatureValidityUrl, signatureTimestamps</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SignedExchangeError">
+          <span class="domain-dot">Network.</span>SignedExchangeError
+          <a href="#type-SignedExchangeError" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about a signed exchange response.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">message</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Error message.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">signatureIndex</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The index of the signature which caused the error.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">errorField</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-SignedExchangeErrorField class="param-type">SignedExchangeErrorField</a>
+          
+      <div class="details-description">
+        <p>The field which caused the error.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SignedExchangeInfo">
+          <span class="domain-dot">Network.</span>SignedExchangeInfo
+          <a href="#type-SignedExchangeInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about a signed exchange response.</p>
+
+      </div>
+    
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name">outerResponse</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-Response class="param-type">Response</a>
+          
+      <div class="details-description">
+        <p>The outer response of signed HTTP exchange which was received from network.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">header</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-SignedExchangeHeader class="param-type">SignedExchangeHeader</a>
+          
+      <div class="details-description">
+        <p>Information about the signed exchange header.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">securityDetails</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-SecurityDetails class="param-type">SecurityDetails</a>
+          
+      <div class="details-description">
+        <p>Security details for the signed exchange header.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name">errors</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Errors occurred while handling the signed exchagne.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      </div>
+    
+    </div>
+    
+      </div>
+    </section>
+  </main>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-60854461-3', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
