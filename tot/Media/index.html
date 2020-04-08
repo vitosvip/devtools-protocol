@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,54 +117,54 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">Media.</span>enable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">Media.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">Media.</span>disable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">Media.</span>enable</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-playerPropertiesChanged"><span class="domain-dot">Media.</span>playerPropertiesChanged</a>
+        <a class="monospace" href="#event-playerEventsAdded"><span class="domain-dot">Media.</span>playerEventsAdded</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-playerEventsAdded"><span class="domain-dot">Media.</span>playerEventsAdded</a>
+        <a class="monospace" href="#event-playerPropertiesChanged"><span class="domain-dot">Media.</span>playerPropertiesChanged</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-playersCreated"><span class="domain-dot">Media.</span>playersCreated</a>
+        <a class="monospace" href="#event-playersCreated"><span class="domain-dot">Media.</span>playersCreated</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-PlayerId"><span class="domain-dot">Media.</span>PlayerId</a>
+        <a class="monospace" href="#type-PlayerEvent"><span class="domain-dot">Media.</span>PlayerEvent</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Timestamp"><span class="domain-dot">Media.</span>Timestamp</a>
+        <a class="monospace" href="#type-PlayerEventType"><span class="domain-dot">Media.</span>PlayerEventType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-PlayerProperty"><span class="domain-dot">Media.</span>PlayerProperty</a>
+        <a class="monospace" href="#type-PlayerId"><span class="domain-dot">Media.</span>PlayerId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-PlayerEventType"><span class="domain-dot">Media.</span>PlayerEventType</a>
+        <a class="monospace" href="#type-PlayerProperty"><span class="domain-dot">Media.</span>PlayerProperty</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-PlayerEvent"><span class="domain-dot">Media.</span>PlayerEvent</a>
+        <a class="monospace" href="#type-Timestamp"><span class="domain-dot">Media.</span>Timestamp</a>
         
       </div>
       
@@ -173,26 +175,9 @@
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="method-enable">
-          <span class="domain-dot">Media.</span>enable
-          <a href="#method-enable" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Enables the Media domain</p>
-
-      </div>
-    
-        
-        
-        
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">Media.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -202,6 +187,23 @@
       </div>
     
         
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-enable">
+          <span class="domain-dot">Media.</span>enable
+          
+          <a href="#method-enable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables the Media domain</p>
+
+      </div>
+    
         
         
         
@@ -215,31 +217,31 @@
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="event-playerPropertiesChanged">
-          <span class="domain-dot">Media.</span>playerPropertiesChanged
-          <a href="#event-playerPropertiesChanged" class="permalink">#</a>
+        <h4 class="details-name monospace" id="event-playerEventsAdded">
+          <span class="domain-dot">Media.</span>playerEventsAdded
+          
+          <a href="#event-playerEventsAdded" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>This can be called multiple times, and can be used to set / override /
-remove player properties. A null propValue indicates removal.</p>
+        <p>Send events as a list, allowing them to be batched on the browser for less
+congestion. If batched, events must ALWAYS be in chronological order.</p>
 
       </div>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">playerId</dt>
+        <dt class="param-name monospace">playerId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a>
           
           
         </dd>
       
-        <dt class="param-name">properties</dt>
+        <dt class="param-name monospace">events</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -253,31 +255,31 @@ remove player properties. A null propValue indicates removal.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="event-playerEventsAdded">
-          <span class="domain-dot">Media.</span>playerEventsAdded
-          <a href="#event-playerEventsAdded" class="permalink">#</a>
+        <h4 class="details-name monospace" id="event-playerPropertiesChanged">
+          <span class="domain-dot">Media.</span>playerPropertiesChanged
+          
+          <a href="#event-playerPropertiesChanged" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Send events as a list, allowing them to be batched on the browser for less
-congestion. If batched, events must ALWAYS be in chronological order.</p>
+        <p>This can be called multiple times, and can be used to set / override /
+remove player properties. A null propValue indicates removal.</p>
 
       </div>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">playerId</dt>
+        <dt class="param-name monospace">playerId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a>
           
           
         </dd>
       
-        <dt class="param-name">events</dt>
+        <dt class="param-name monospace">properties</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -293,6 +295,7 @@ congestion. If batched, events must ALWAYS be in chronological order.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-playersCreated">
           <span class="domain-dot">Media.</span>playersCreated
+          
           <a href="#event-playersCreated" class="permalink">#</a>
         </h4>
         
@@ -305,11 +308,10 @@ list of player ids and all events again.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">players</dt>
+        <dt class="param-name monospace">players</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -329,61 +331,45 @@ list of player ids and all events again.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-PlayerId">
-          <span class="domain-dot">Media.</span>PlayerId
-          <a href="#type-PlayerId" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-PlayerEvent">
+          <span class="domain-dot">Media.</span>PlayerEvent
+          
+          <a href="#type-PlayerEvent" class="permalink">#</a>
         </h4>
-        
-      <div class="details-description">
-        <p>Players will get an ID that is unique within the agent context.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-Timestamp">
-          <span class="domain-dot">Media.</span>Timestamp
-          <a href="#type-Timestamp" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>number</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-PlayerProperty">
-          <span class="domain-dot">Media.</span>PlayerProperty
-          <a href="#type-PlayerProperty" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Player Property type</p>
-
-      </div>
-    
         
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">type</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Media/#type-PlayerEventType class="param-type">PlayerEventType</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Media/#type-Timestamp class="param-type">Timestamp</a>
+          
+      <div class="details-description">
+        <p>Events are timestamped relative to the start of the player creation
+not relative to the start of playback.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">value</dt>
+        <dt class="param-name monospace">value</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -399,6 +385,7 @@ list of player ids and all events again.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-PlayerEventType">
           <span class="domain-dot">Media.</span>PlayerEventType
+          
           <a href="#type-PlayerEventType" class="permalink">#</a>
         </h4>
         
@@ -407,56 +394,58 @@ list of player ids and all events again.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">errorEvent, triggeredEvent, messageEvent</div>
+      <div class="enum-container monospace">errorEvent, triggeredEvent, messageEvent</div>
     
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-PlayerEvent">
-          <span class="domain-dot">Media.</span>PlayerEvent
-          <a href="#type-PlayerEvent" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-PlayerId">
+          <span class="domain-dot">Media.</span>PlayerId
+          
+          <a href="#type-PlayerId" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        <p>Players will get an ID that is unique within the agent context.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
         
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PlayerProperty">
+          <span class="domain-dot">Media.</span>PlayerProperty
+          
+          <a href="#type-PlayerProperty" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Player Property type</p>
+
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Media/#type-PlayerEventType class="param-type">PlayerEventType</a>
-          
-          
-        </dd>
-      
-        <dt class="param-name">timestamp</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Media/#type-Timestamp class="param-type">Timestamp</a>
-          
-      <div class="details-description">
-        <p>Events are timestamped relative to the start of the player creation
-not relative to the start of playback.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">value</dt>
+        <dt class="param-name monospace">value</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -465,6 +454,19 @@ not relative to the start of playback.</p>
       
       </dl>
     
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Timestamp">
+          <span class="domain-dot">Media.</span>Timestamp
+          
+          <a href="#type-Timestamp" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>number</strong></p>
+        
         
         
       </div>

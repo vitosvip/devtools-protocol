@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,84 +112,84 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-clearObjectStore"><span class="domain-dot">IndexedDB.</span>clearObjectStore</a>
+        <a class="monospace" href="#method-clearObjectStore"><span class="domain-dot">IndexedDB.</span>clearObjectStore</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-deleteDatabase"><span class="domain-dot">IndexedDB.</span>deleteDatabase</a>
+        <a class="monospace" href="#method-deleteDatabase"><span class="domain-dot">IndexedDB.</span>deleteDatabase</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-deleteObjectStoreEntries"><span class="domain-dot">IndexedDB.</span>deleteObjectStoreEntries</a>
+        <a class="monospace" href="#method-deleteObjectStoreEntries"><span class="domain-dot">IndexedDB.</span>deleteObjectStoreEntries</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">IndexedDB.</span>disable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">IndexedDB.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">IndexedDB.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">IndexedDB.</span>enable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-requestData"><span class="domain-dot">IndexedDB.</span>requestData</a>
+        <a class="monospace" href="#method-getMetadata"><span class="domain-dot">IndexedDB.</span>getMetadata</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getMetadata"><span class="domain-dot">IndexedDB.</span>getMetadata</a>
+        <a class="monospace" href="#method-requestData"><span class="domain-dot">IndexedDB.</span>requestData</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-requestDatabase"><span class="domain-dot">IndexedDB.</span>requestDatabase</a>
+        <a class="monospace" href="#method-requestDatabase"><span class="domain-dot">IndexedDB.</span>requestDatabase</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-requestDatabaseNames"><span class="domain-dot">IndexedDB.</span>requestDatabaseNames</a>
+        <a class="monospace" href="#method-requestDatabaseNames"><span class="domain-dot">IndexedDB.</span>requestDatabaseNames</a>
         
       </div>
       
         
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-DatabaseWithObjectStores"><span class="domain-dot">IndexedDB.</span>DatabaseWithObjectStores</a>
+        <a class="monospace" href="#type-DatabaseWithObjectStores"><span class="domain-dot">IndexedDB.</span>DatabaseWithObjectStores</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-ObjectStore"><span class="domain-dot">IndexedDB.</span>ObjectStore</a>
+        <a class="monospace" href="#type-DataEntry"><span class="domain-dot">IndexedDB.</span>DataEntry</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-ObjectStoreIndex"><span class="domain-dot">IndexedDB.</span>ObjectStoreIndex</a>
+        <a class="monospace" href="#type-Key"><span class="domain-dot">IndexedDB.</span>Key</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Key"><span class="domain-dot">IndexedDB.</span>Key</a>
+        <a class="monospace" href="#type-KeyPath"><span class="domain-dot">IndexedDB.</span>KeyPath</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-KeyRange"><span class="domain-dot">IndexedDB.</span>KeyRange</a>
+        <a class="monospace" href="#type-KeyRange"><span class="domain-dot">IndexedDB.</span>KeyRange</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-DataEntry"><span class="domain-dot">IndexedDB.</span>DataEntry</a>
+        <a class="monospace" href="#type-ObjectStore"><span class="domain-dot">IndexedDB.</span>ObjectStore</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-KeyPath"><span class="domain-dot">IndexedDB.</span>KeyPath</a>
+        <a class="monospace" href="#type-ObjectStoreIndex"><span class="domain-dot">IndexedDB.</span>ObjectStoreIndex</a>
         
       </div>
       
@@ -200,6 +202,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-clearObjectStore">
           <span class="domain-dot">IndexedDB.</span>clearObjectStore
+          
           <a href="#method-clearObjectStore" class="permalink">#</a>
         </h4>
         
@@ -210,11 +213,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -226,7 +228,7 @@
           
         </dd>
       
-        <dt class="param-name">databaseName</dt>
+        <dt class="param-name monospace">databaseName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -238,7 +240,7 @@
           
         </dd>
       
-        <dt class="param-name">objectStoreName</dt>
+        <dt class="param-name monospace">objectStoreName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -259,6 +261,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-deleteDatabase">
           <span class="domain-dot">IndexedDB.</span>deleteDatabase
+          
           <a href="#method-deleteDatabase" class="permalink">#</a>
         </h4>
         
@@ -269,11 +272,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -285,7 +287,7 @@
           
         </dd>
       
-        <dt class="param-name">databaseName</dt>
+        <dt class="param-name monospace">databaseName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -306,6 +308,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-deleteObjectStoreEntries">
           <span class="domain-dot">IndexedDB.</span>deleteObjectStoreEntries
+          
           <a href="#method-deleteObjectStoreEntries" class="permalink">#</a>
         </h4>
         
@@ -316,32 +319,31 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">databaseName</dt>
+        <dt class="param-name monospace">databaseName</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">objectStoreName</dt>
+        <dt class="param-name monospace">objectStoreName</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">keyRange</dt>
+        <dt class="param-name monospace">keyRange</dt>
         <dd>
           <a href=/devtools-protocol/tot/IndexedDB/#type-KeyRange class="param-type">KeyRange</a>
           
@@ -362,6 +364,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">IndexedDB.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -374,12 +377,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">IndexedDB.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -392,148 +395,12 @@
         
         
         
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-requestData">
-          <span class="domain-dot">IndexedDB.</span>requestData
-          <a href="#method-requestData" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Requests data from object store or index.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">securityOrigin</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Security origin.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">databaseName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Database name.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">objectStoreName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Object store name.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">indexName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Index name, empty string for object store data requests.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">skipCount</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Number of records to skip.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">pageSize</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Number of records to fetch.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">keyRange</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/IndexedDB/#type-KeyRange class="param-type">KeyRange</a>
-          
-      <div class="details-description">
-        <p>Key range.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">objectStoreDataEntries</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Array of object store data entries.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">hasMore</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>If true, there are more entries to fetch in the given range.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-getMetadata">
           <span class="domain-dot">IndexedDB.</span>getMetadata
+          
           <a href="#method-getMetadata" class="permalink">#</a>
         </h4>
         
@@ -544,11 +411,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -560,7 +426,7 @@
           
         </dd>
       
-        <dt class="param-name">databaseName</dt>
+        <dt class="param-name monospace">databaseName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -572,7 +438,7 @@
           
         </dd>
       
-        <dt class="param-name">objectStoreName</dt>
+        <dt class="param-name monospace">objectStoreName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -590,7 +456,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">entriesCount</dt>
+        <dt class="param-name monospace">entriesCount</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -602,7 +468,7 @@
           
         </dd>
       
-        <dt class="param-name">keyGeneratorValue</dt>
+        <dt class="param-name monospace">keyGeneratorValue</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -622,23 +488,23 @@ is true.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-requestDatabase">
-          <span class="domain-dot">IndexedDB.</span>requestDatabase
-          <a href="#method-requestDatabase" class="permalink">#</a>
+        <h4 class="details-name monospace" id="method-requestData">
+          <span class="domain-dot">IndexedDB.</span>requestData
+          
+          <a href="#method-requestData" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Requests database with given name in given frame.</p>
+        <p>Requests data from object store or index.</p>
 
       </div>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -650,7 +516,143 @@ is true.</p>
           
         </dd>
       
-        <dt class="param-name">databaseName</dt>
+        <dt class="param-name monospace">databaseName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Database name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">objectStoreName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Object store name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">indexName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Index name, empty string for object store data requests.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">skipCount</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Number of records to skip.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">pageSize</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Number of records to fetch.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">keyRange</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/IndexedDB/#type-KeyRange class="param-type">KeyRange</a>
+          
+      <div class="details-description">
+        <p>Key range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">objectStoreDataEntries</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Array of object store data entries.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">hasMore</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If true, there are more entries to fetch in the given range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-requestDatabase">
+          <span class="domain-dot">IndexedDB.</span>requestDatabase
+          
+          <a href="#method-requestDatabase" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests database with given name in given frame.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">securityOrigin</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Security origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">databaseName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -668,7 +670,7 @@ is true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">databaseWithObjectStores</dt>
+        <dt class="param-name monospace">databaseWithObjectStores</dt>
         <dd>
           <a href=/devtools-protocol/tot/IndexedDB/#type-DatabaseWithObjectStores class="param-type">DatabaseWithObjectStores</a>
           
@@ -688,6 +690,7 @@ is true.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-requestDatabaseNames">
           <span class="domain-dot">IndexedDB.</span>requestDatabaseNames
+          
           <a href="#method-requestDatabaseNames" class="permalink">#</a>
         </h4>
         
@@ -698,11 +701,10 @@ is true.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -720,7 +722,7 @@ is true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">databaseNames</dt>
+        <dt class="param-name monospace">databaseNames</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -747,6 +749,7 @@ is true.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-DatabaseWithObjectStores">
           <span class="domain-dot">IndexedDB.</span>DatabaseWithObjectStores
+          
           <a href="#type-DatabaseWithObjectStores" class="permalink">#</a>
         </h4>
         
@@ -755,13 +758,12 @@ is true.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -773,7 +775,7 @@ is true.</p>
           
         </dd>
       
-        <dt class="param-name">version</dt>
+        <dt class="param-name monospace">version</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -786,7 +788,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">objectStores</dt>
+        <dt class="param-name monospace">objectStores</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -805,135 +807,52 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-ObjectStore">
-          <span class="domain-dot">IndexedDB.</span>ObjectStore
-          <a href="#type-ObjectStore" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-DataEntry">
+          <span class="domain-dot">IndexedDB.</span>DataEntry
+          
+          <a href="#type-DataEntry" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Object store.</p>
+        <p>Data entry.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">key</dt>
         <dd>
-          <span class="param-type">string</span>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
-        <p>Object store name.</p>
+        <p>Key object.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">keyPath</dt>
+        <dt class="param-name monospace">primaryKey</dt>
         <dd>
-          <a href=/devtools-protocol/tot/IndexedDB/#type-KeyPath class="param-type">KeyPath</a>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
-        <p>Object store key path.</p>
+        <p>Primary key object.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">autoIncrement</dt>
+        <dt class="param-name monospace">value</dt>
         <dd>
-          <span class="param-type">boolean</span>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
-        <p>If true, object store has auto increment flag set.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">indexes</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Indexes in this object store.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-ObjectStoreIndex">
-          <span class="domain-dot">IndexedDB.</span>ObjectStoreIndex
-          <a href="#type-ObjectStoreIndex" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Object store index.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">name</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Index name.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">keyPath</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/IndexedDB/#type-KeyPath class="param-type">KeyPath</a>
-          
-      <div class="details-description">
-        <p>Index key path.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">unique</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>If true, index is unique.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">multiEntry</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>If true, index allows multiple entries for a key.</p>
+        <p>Value object.</p>
 
       </div>
     
@@ -949,6 +868,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-Key">
           <span class="domain-dot">IndexedDB.</span>Key
+          
           <a href="#type-Key" class="permalink">#</a>
         </h4>
         
@@ -957,13 +877,12 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -975,7 +894,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">number</dt>
+        <dt class="param-name monospace">number</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -987,7 +906,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">string</dt>
+        <dt class="param-name monospace">string</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -999,7 +918,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">date</dt>
+        <dt class="param-name monospace">date</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1011,7 +930,66 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">array</dt>
+        <dt class="param-name monospace">array</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Array value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-KeyPath">
+          <span class="domain-dot">IndexedDB.</span>KeyPath
+          
+          <a href="#type-KeyPath" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Key path.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Key path type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">string</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>String value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">array</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1032,6 +1010,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-KeyRange">
           <span class="domain-dot">IndexedDB.</span>KeyRange
+          
           <a href="#type-KeyRange" class="permalink">#</a>
         </h4>
         
@@ -1040,13 +1019,12 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">lower</dt>
+        <dt class="param-name monospace">lower</dt>
         <dd>
           <a href=/devtools-protocol/tot/IndexedDB/#type-Key class="param-type">Key</a>
           
@@ -1058,7 +1036,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">upper</dt>
+        <dt class="param-name monospace">upper</dt>
         <dd>
           <a href=/devtools-protocol/tot/IndexedDB/#type-Key class="param-type">Key</a>
           
@@ -1070,7 +1048,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">lowerOpen</dt>
+        <dt class="param-name monospace">lowerOpen</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1082,7 +1060,7 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
           
         </dd>
       
-        <dt class="param-name">upperOpen</dt>
+        <dt class="param-name monospace">upperOpen</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1101,52 +1079,64 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-DataEntry">
-          <span class="domain-dot">IndexedDB.</span>DataEntry
-          <a href="#type-DataEntry" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-ObjectStore">
+          <span class="domain-dot">IndexedDB.</span>ObjectStore
+          
+          <a href="#type-ObjectStore" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Data entry.</p>
+        <p>Object store.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">key</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
+          <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Key object.</p>
+        <p>Object store name.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">primaryKey</dt>
+        <dt class="param-name monospace">keyPath</dt>
         <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
+          <a href=/devtools-protocol/tot/IndexedDB/#type-KeyPath class="param-type">KeyPath</a>
           
       <div class="details-description">
-        <p>Primary key object.</p>
+        <p>Object store key path.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">value</dt>
+        <dt class="param-name monospace">autoIncrement</dt>
         <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
+          <span class="param-type">boolean</span>
           
       <div class="details-description">
-        <p>Value object.</p>
+        <p>If true, object store has auto increment flag set.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">indexes</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Indexes in this object store.</p>
 
       </div>
     
@@ -1160,52 +1150,64 @@ requires the version number to be &#39;unsigned long long&#39;)</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-KeyPath">
-          <span class="domain-dot">IndexedDB.</span>KeyPath
-          <a href="#type-KeyPath" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-ObjectStoreIndex">
+          <span class="domain-dot">IndexedDB.</span>ObjectStoreIndex
+          
+          <a href="#type-ObjectStoreIndex" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Key path.</p>
+        <p>Object store index.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Key path type.</p>
+        <p>Index name.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">string</dt>
+        <dt class="param-name monospace">keyPath</dt>
         <dd>
-          <span class="param-type">string</span>
+          <a href=/devtools-protocol/tot/IndexedDB/#type-KeyPath class="param-type">KeyPath</a>
           
       <div class="details-description">
-        <p>String value.</p>
+        <p>Index key path.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">array</dt>
+        <dt class="param-name monospace">unique</dt>
         <dd>
-          <span class="param-type">array</span>
+          <span class="param-type">boolean</span>
           
       <div class="details-description">
-        <p>Array value.</p>
+        <p>If true, index is unique.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">multiEntry</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If true, index allows multiple entries for a key.</p>
 
       </div>
     

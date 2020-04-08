@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-1-2">
+    <div id="domains" class="navs version-1-2">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,39 +117,39 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-setDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint</a>
+        <a class="monospace" href="#method-removeDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeDOMBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeDOMBreakpoint</a>
+        <a class="monospace" href="#method-removeEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeEventListenerBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint</a>
+        <a class="monospace" href="#method-removeXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeEventListenerBreakpoint</a>
+        <a class="monospace" href="#method-setDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint</a>
+        <a class="monospace" href="#method-setEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint</a>
+        <a class="monospace" href="#method-setXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint</a>
         
       </div>
       
         
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-DOMBreakpointType"><span class="domain-dot">DOMDebugger.</span>DOMBreakpointType</a>
+        <a class="monospace" href="#type-DOMBreakpointType"><span class="domain-dot">DOMDebugger.</span>DOMBreakpointType</a>
         
       </div>
       
@@ -158,55 +160,9 @@
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="method-setDOMBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint
-          <a href="#method-setDOMBreakpoint" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Sets breakpoint on particular operation with DOM.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/1-2/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
-          
-      <div class="details-description">
-        <p>Identifier of the node to set breakpoint on.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">type</dt>
-        <dd>
-          <a href=/devtools-protocol/1-2/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
-          
-      <div class="details-description">
-        <p>Type of the operation to stop upon.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-removeDOMBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>removeDOMBreakpoint
+          
           <a href="#method-removeDOMBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -217,11 +173,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/1-2/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
@@ -233,7 +188,7 @@
           
         </dd>
       
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <a href=/devtools-protocol/1-2/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
@@ -252,55 +207,9 @@
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setEventListenerBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint
-          <a href="#method-setEventListenerBreakpoint" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Sets breakpoint on particular DOM event.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">eventName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>DOM Event name to stop on (any DOM event will do).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">targetName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>EventTarget interface name to stop on. If equal to <code>"*"</code> or not provided, will stop on any EventTarget.</p>
-
-      </div>
-    
-          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-removeEventListenerBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>removeEventListenerBreakpoint
+          
           <a href="#method-removeEventListenerBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -311,11 +220,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">eventName</dt>
+        <dt class="param-name monospace">eventName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -327,7 +235,7 @@
           
         </dd>
       
-        <dt class="param-name">targetName</dt>
+        <dt class="param-name monospace">targetName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -346,28 +254,28 @@
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setXHRBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint
-          <a href="#method-setXHRBreakpoint" class="permalink">#</a>
+        <h4 class="details-name monospace" id="method-removeXHRBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint
+          
+          <a href="#method-removeXHRBreakpoint" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Sets breakpoint on XMLHttpRequest.</p>
+        <p>Removes breakpoint from XMLHttpRequest.</p>
 
       </div>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Resource URL substring. All XHRs having this substring in the URL will get stopped upon.</p>
+        <p>Resource URL substring.</p>
 
       </div>
     
@@ -381,28 +289,122 @@
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-removeXHRBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint
-          <a href="#method-removeXHRBreakpoint" class="permalink">#</a>
+        <h4 class="details-name monospace" id="method-setDOMBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint
+          
+          <a href="#method-setDOMBreakpoint" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Removes breakpoint from XMLHttpRequest.</p>
+        <p>Sets breakpoint on particular operation with DOM.</p>
 
       </div>
     
         
         
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/1-2/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node to set breakpoint on.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">type</dt>
+        <dd>
+          <a href=/devtools-protocol/1-2/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
+          
+      <div class="details-description">
+        <p>Type of the operation to stop upon.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setEventListenerBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint
+          
+          <a href="#method-setEventListenerBreakpoint" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets breakpoint on particular DOM event.</p>
+
+      </div>
+    
+        
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">eventName</dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Resource URL substring.</p>
+        <p>DOM Event name to stop on (any DOM event will do).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">targetName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>EventTarget interface name to stop on. If equal to <code>"*"</code> or not provided, will stop on any EventTarget.</p>
+
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setXHRBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint
+          
+          <a href="#method-setXHRBreakpoint" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets breakpoint on XMLHttpRequest.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Resource URL substring. All XHRs having this substring in the URL will get stopped upon.</p>
 
       </div>
     
@@ -425,6 +427,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="type-DOMBreakpointType">
           <span class="domain-dot">DOMDebugger.</span>DOMBreakpointType
+          
           <a href="#type-DOMBreakpointType" class="permalink">#</a>
         </h4>
         
@@ -433,13 +436,12 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">subtree-modified, attribute-modified, node-removed</div>
+      <div class="enum-container monospace">subtree-modified, attribute-modified, node-removed</div>
     
       </div>
     

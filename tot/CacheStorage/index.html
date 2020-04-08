@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,59 +112,59 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-deleteCache"><span class="domain-dot">CacheStorage.</span>deleteCache</a>
+        <a class="monospace" href="#method-deleteCache"><span class="domain-dot">CacheStorage.</span>deleteCache</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-deleteEntry"><span class="domain-dot">CacheStorage.</span>deleteEntry</a>
+        <a class="monospace" href="#method-deleteEntry"><span class="domain-dot">CacheStorage.</span>deleteEntry</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-requestCacheNames"><span class="domain-dot">CacheStorage.</span>requestCacheNames</a>
+        <a class="monospace" href="#method-requestCachedResponse"><span class="domain-dot">CacheStorage.</span>requestCachedResponse</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-requestCachedResponse"><span class="domain-dot">CacheStorage.</span>requestCachedResponse</a>
+        <a class="monospace" href="#method-requestCacheNames"><span class="domain-dot">CacheStorage.</span>requestCacheNames</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-requestEntries"><span class="domain-dot">CacheStorage.</span>requestEntries</a>
+        <a class="monospace" href="#method-requestEntries"><span class="domain-dot">CacheStorage.</span>requestEntries</a>
         
       </div>
       
         
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-CacheId"><span class="domain-dot">CacheStorage.</span>CacheId</a>
+        <a class="monospace" href="#type-Cache"><span class="domain-dot">CacheStorage.</span>Cache</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-CachedResponseType"><span class="domain-dot">CacheStorage.</span>CachedResponseType</a>
+        <a class="monospace" href="#type-CachedResponse"><span class="domain-dot">CacheStorage.</span>CachedResponse</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-DataEntry"><span class="domain-dot">CacheStorage.</span>DataEntry</a>
+        <a class="monospace" href="#type-CachedResponseType"><span class="domain-dot">CacheStorage.</span>CachedResponseType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Cache"><span class="domain-dot">CacheStorage.</span>Cache</a>
+        <a class="monospace" href="#type-CacheId"><span class="domain-dot">CacheStorage.</span>CacheId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Header"><span class="domain-dot">CacheStorage.</span>Header</a>
+        <a class="monospace" href="#type-DataEntry"><span class="domain-dot">CacheStorage.</span>DataEntry</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-CachedResponse"><span class="domain-dot">CacheStorage.</span>CachedResponse</a>
+        <a class="monospace" href="#type-Header"><span class="domain-dot">CacheStorage.</span>Header</a>
         
       </div>
       
@@ -175,6 +177,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-deleteCache">
           <span class="domain-dot">CacheStorage.</span>deleteCache
+          
           <a href="#method-deleteCache" class="permalink">#</a>
         </h4>
         
@@ -185,11 +188,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cacheId</dt>
+        <dt class="param-name monospace">cacheId</dt>
         <dd>
           <a href=/devtools-protocol/tot/CacheStorage/#type-CacheId class="param-type">CacheId</a>
           
@@ -210,6 +212,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-deleteEntry">
           <span class="domain-dot">CacheStorage.</span>deleteEntry
+          
           <a href="#method-deleteEntry" class="permalink">#</a>
         </h4>
         
@@ -220,11 +223,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cacheId</dt>
+        <dt class="param-name monospace">cacheId</dt>
         <dd>
           <a href=/devtools-protocol/tot/CacheStorage/#type-CacheId class="param-type">CacheId</a>
           
@@ -236,7 +238,7 @@
           
         </dd>
       
-        <dt class="param-name">request</dt>
+        <dt class="param-name monospace">request</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -255,60 +257,9 @@
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-requestCacheNames">
-          <span class="domain-dot">CacheStorage.</span>requestCacheNames
-          <a href="#method-requestCacheNames" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Requests cache names.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">securityOrigin</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Security origin.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">caches</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Caches for the security origin.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-requestCachedResponse">
           <span class="domain-dot">CacheStorage.</span>requestCachedResponse
+          
           <a href="#method-requestCachedResponse" class="permalink">#</a>
         </h4>
         
@@ -319,11 +270,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cacheId</dt>
+        <dt class="param-name monospace">cacheId</dt>
         <dd>
           <a href=/devtools-protocol/tot/CacheStorage/#type-CacheId class="param-type">CacheId</a>
           
@@ -335,7 +285,7 @@
           
         </dd>
       
-        <dt class="param-name">requestURL</dt>
+        <dt class="param-name monospace">requestURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -347,7 +297,7 @@
           
         </dd>
       
-        <dt class="param-name">requestHeaders</dt>
+        <dt class="param-name monospace">requestHeaders</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -365,7 +315,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">response</dt>
+        <dt class="param-name monospace">response</dt>
         <dd>
           <a href=/devtools-protocol/tot/CacheStorage/#type-CachedResponse class="param-type">CachedResponse</a>
           
@@ -383,8 +333,61 @@
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-requestCacheNames">
+          <span class="domain-dot">CacheStorage.</span>requestCacheNames
+          
+          <a href="#method-requestCacheNames" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests cache names.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">securityOrigin</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Security origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">caches</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Caches for the security origin.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-requestEntries">
           <span class="domain-dot">CacheStorage.</span>requestEntries
+          
           <a href="#method-requestEntries" class="permalink">#</a>
         </h4>
         
@@ -395,11 +398,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cacheId</dt>
+        <dt class="param-name monospace">cacheId</dt>
         <dd>
           <a href=/devtools-protocol/tot/CacheStorage/#type-CacheId class="param-type">CacheId</a>
           
@@ -411,7 +413,7 @@
           
         </dd>
       
-        <dt class="param-name">skipCount</dt>
+        <dt class="param-name monospace">skipCount</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -423,7 +425,7 @@
           
         </dd>
       
-        <dt class="param-name">pageSize</dt>
+        <dt class="param-name monospace">pageSize</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -435,7 +437,7 @@
           
         </dd>
       
-        <dt class="param-name">pathFilter</dt>
+        <dt class="param-name monospace">pathFilter</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -453,7 +455,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cacheDataEntries</dt>
+        <dt class="param-name monospace">cacheDataEntries</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -465,7 +467,7 @@
           
         </dd>
       
-        <dt class="param-name">returnCount</dt>
+        <dt class="param-name monospace">returnCount</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -491,166 +493,9 @@ is the count of all entries from this storage.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-CacheId">
-          <span class="domain-dot">CacheStorage.</span>CacheId
-          <a href="#type-CacheId" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Unique identifier of the Cache object.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-CachedResponseType">
-          <span class="domain-dot">CacheStorage.</span>CachedResponseType
-          <a href="#type-CachedResponseType" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>type of HTTP response cached</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">basic, cors, default, error, opaqueResponse, opaqueRedirect</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-DataEntry">
-          <span class="domain-dot">CacheStorage.</span>DataEntry
-          <a href="#type-DataEntry" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Data entry.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">requestURL</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Request URL.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">requestMethod</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Request method.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">requestHeaders</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Request headers</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">responseTime</dt>
-        <dd>
-          <span class="param-type">number</span>
-          
-      <div class="details-description">
-        <p>Number of seconds since epoch.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">responseStatus</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>HTTP response status code.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">responseStatusText</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>HTTP response status text.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">responseType</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/CacheStorage/#type-CachedResponseType class="param-type">CachedResponseType</a>
-          
-      <div class="details-description">
-        <p>HTTP response type</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">responseHeaders</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Response headers</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-Cache">
           <span class="domain-dot">CacheStorage.</span>Cache
+          
           <a href="#type-Cache" class="permalink">#</a>
         </h4>
         
@@ -659,13 +504,12 @@ is the count of all entries from this storage.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cacheId</dt>
+        <dt class="param-name monospace">cacheId</dt>
         <dd>
           <a href=/devtools-protocol/tot/CacheStorage/#type-CacheId class="param-type">CacheId</a>
           
@@ -677,7 +521,7 @@ is the count of all entries from this storage.</p>
           
         </dd>
       
-        <dt class="param-name">securityOrigin</dt>
+        <dt class="param-name monospace">securityOrigin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -689,7 +533,7 @@ is the count of all entries from this storage.</p>
           
         </dd>
       
-        <dt class="param-name">cacheName</dt>
+        <dt class="param-name monospace">cacheName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -708,28 +552,31 @@ is the count of all entries from this storage.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-Header">
-          <span class="domain-dot">CacheStorage.</span>Header
-          <a href="#type-Header" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-CachedResponse">
+          <span class="domain-dot">CacheStorage.</span>CachedResponse
+          
+          <a href="#type-CachedResponse" class="permalink">#</a>
         </h4>
         
-        
+      <div class="details-description">
+        <p>Cached response</p>
+
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">body</dt>
         <dd>
           <span class="param-type">string</span>
           
-          
-        </dd>
-      
-        <dt class="param-name">value</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
+      <div class="details-description">
+        <p>Entry content, base64-encoded.</p>
+
+      </div>
+    
           
         </dd>
       
@@ -740,31 +587,186 @@ is the count of all entries from this storage.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-CachedResponse">
-          <span class="domain-dot">CacheStorage.</span>CachedResponse
-          <a href="#type-CachedResponse" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-CachedResponseType">
+          <span class="domain-dot">CacheStorage.</span>CachedResponseType
+          
+          <a href="#type-CachedResponseType" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Cached response</p>
+        <p>type of HTTP response cached</p>
 
       </div>
     
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">basic, cors, default, error, opaqueResponse, opaqueRedirect</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-CacheId">
+          <span class="domain-dot">CacheStorage.</span>CacheId
+          
+          <a href="#type-CacheId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Unique identifier of the Cache object.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-DataEntry">
+          <span class="domain-dot">CacheStorage.</span>DataEntry
+          
+          <a href="#type-DataEntry" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Data entry.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">requestURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Request URL.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">requestMethod</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Request method.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">requestHeaders</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Request headers</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">responseTime</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Number of seconds since epoch.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">responseStatus</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>HTTP response status code.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">responseStatusText</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>HTTP response status text.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">responseType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/CacheStorage/#type-CachedResponseType class="param-type">CachedResponseType</a>
+          
+      <div class="details-description">
+        <p>HTTP response type</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">responseHeaders</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Response headers</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Header">
+          <span class="domain-dot">CacheStorage.</span>Header
+          
+          <a href="#type-Header" class="permalink">#</a>
+        </h4>
         
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">body</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
-      <div class="details-description">
-        <p>Entry content, base64-encoded.</p>
-
-      </div>
-    
+          
+        </dd>
+      
+        <dt class="param-name monospace">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
           
         </dd>
       

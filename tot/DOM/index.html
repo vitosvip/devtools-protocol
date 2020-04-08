@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -121,354 +123,354 @@ corresponding document elements as their child nodes.</p></p>
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-collectClassNamesFromSubtree"><span class="domain-dot">DOM.</span>collectClassNamesFromSubtree</a>
+        <a class="monospace" href="#method-describeNode"><span class="domain-dot">DOM.</span>describeNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-disable"><span class="domain-dot">DOM.</span>disable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-enable"><span class="domain-dot">DOM.</span>enable</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-focus"><span class="domain-dot">DOM.</span>focus</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getAttributes"><span class="domain-dot">DOM.</span>getAttributes</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getBoxModel"><span class="domain-dot">DOM.</span>getBoxModel</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getDocument"><span class="domain-dot">DOM.</span>getDocument</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getFlattenedDocument"><span class="domain-dot">DOM.</span>getFlattenedDocument</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getNodeForLocation"><span class="domain-dot">DOM.</span>getNodeForLocation</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getOuterHTML"><span class="domain-dot">DOM.</span>getOuterHTML</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-hideHighlight"><span class="domain-dot">DOM.</span>hideHighlight</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-highlightNode"><span class="domain-dot">DOM.</span>highlightNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-highlightRect"><span class="domain-dot">DOM.</span>highlightRect</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-moveTo"><span class="domain-dot">DOM.</span>moveTo</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-querySelector"><span class="domain-dot">DOM.</span>querySelector</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-querySelectorAll"><span class="domain-dot">DOM.</span>querySelectorAll</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-removeAttribute"><span class="domain-dot">DOM.</span>removeAttribute</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-removeNode"><span class="domain-dot">DOM.</span>removeNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-requestChildNodes"><span class="domain-dot">DOM.</span>requestChildNodes</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-requestNode"><span class="domain-dot">DOM.</span>requestNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-resolveNode"><span class="domain-dot">DOM.</span>resolveNode</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setAttributesAsText"><span class="domain-dot">DOM.</span>setAttributesAsText</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setAttributeValue"><span class="domain-dot">DOM.</span>setAttributeValue</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setFileInputFiles"><span class="domain-dot">DOM.</span>setFileInputFiles</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setNodeName"><span class="domain-dot">DOM.</span>setNodeName</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setNodeValue"><span class="domain-dot">DOM.</span>setNodeValue</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setOuterHTML"><span class="domain-dot">DOM.</span>setOuterHTML</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-collectClassNamesFromSubtree"><span class="domain-dot">DOM.</span>collectClassNamesFromSubtree</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-copyTo"><span class="domain-dot">DOM.</span>copyTo</a>
+        <a class="monospace" href="#method-copyTo"><span class="domain-dot">DOM.</span>copyTo</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-describeNode"><span class="domain-dot">DOM.</span>describeNode</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-scrollIntoViewIfNeeded"><span class="domain-dot">DOM.</span>scrollIntoViewIfNeeded</a>
+        <a class="monospace" href="#method-discardSearchResults"><span class="domain-dot">DOM.</span>discardSearchResults</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">DOM.</span>disable</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-discardSearchResults"><span class="domain-dot">DOM.</span>discardSearchResults</a>
+        <a class="monospace" href="#method-getContentQuads"><span class="domain-dot">DOM.</span>getContentQuads</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">DOM.</span>enable</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-focus"><span class="domain-dot">DOM.</span>focus</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getAttributes"><span class="domain-dot">DOM.</span>getAttributes</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getBoxModel"><span class="domain-dot">DOM.</span>getBoxModel</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getContentQuads"><span class="domain-dot">DOM.</span>getContentQuads</a>
+        <a class="monospace" href="#method-getFileInfo"><span class="domain-dot">DOM.</span>getFileInfo</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-getDocument"><span class="domain-dot">DOM.</span>getDocument</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getFlattenedDocument"><span class="domain-dot">DOM.</span>getFlattenedDocument</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getNodeForLocation"><span class="domain-dot">DOM.</span>getNodeForLocation</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getOuterHTML"><span class="domain-dot">DOM.</span>getOuterHTML</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getRelayoutBoundary"><span class="domain-dot">DOM.</span>getRelayoutBoundary</a>
+        <a class="monospace" href="#method-getFrameOwner"><span class="domain-dot">DOM.</span>getFrameOwner</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-getSearchResults"><span class="domain-dot">DOM.</span>getSearchResults</a>
+        <a class="monospace" href="#method-getNodeStackTraces"><span class="domain-dot">DOM.</span>getNodeStackTraces</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-hideHighlight"><span class="domain-dot">DOM.</span>hideHighlight</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-highlightNode"><span class="domain-dot">DOM.</span>highlightNode</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-highlightRect"><span class="domain-dot">DOM.</span>highlightRect</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-markUndoableState"><span class="domain-dot">DOM.</span>markUndoableState</a>
+        <a class="monospace" href="#method-getRelayoutBoundary"><span class="domain-dot">DOM.</span>getRelayoutBoundary</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-moveTo"><span class="domain-dot">DOM.</span>moveTo</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-performSearch"><span class="domain-dot">DOM.</span>performSearch</a>
+        <a class="monospace" href="#method-getSearchResults"><span class="domain-dot">DOM.</span>getSearchResults</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-pushNodeByPathToFrontend"><span class="domain-dot">DOM.</span>pushNodeByPathToFrontend</a>
+        <a class="monospace" href="#method-markUndoableState"><span class="domain-dot">DOM.</span>markUndoableState</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-pushNodesByBackendIdsToFrontend"><span class="domain-dot">DOM.</span>pushNodesByBackendIdsToFrontend</a>
+        <a class="monospace" href="#method-performSearch"><span class="domain-dot">DOM.</span>performSearch</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-querySelector"><span class="domain-dot">DOM.</span>querySelector</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-querySelectorAll"><span class="domain-dot">DOM.</span>querySelectorAll</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-redo"><span class="domain-dot">DOM.</span>redo</a>
+        <a class="monospace" href="#method-pushNodeByPathToFrontend"><span class="domain-dot">DOM.</span>pushNodeByPathToFrontend</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeAttribute"><span class="domain-dot">DOM.</span>removeAttribute</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-removeNode"><span class="domain-dot">DOM.</span>removeNode</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-requestChildNodes"><span class="domain-dot">DOM.</span>requestChildNodes</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-requestNode"><span class="domain-dot">DOM.</span>requestNode</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-resolveNode"><span class="domain-dot">DOM.</span>resolveNode</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setAttributeValue"><span class="domain-dot">DOM.</span>setAttributeValue</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setAttributesAsText"><span class="domain-dot">DOM.</span>setAttributesAsText</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setFileInputFiles"><span class="domain-dot">DOM.</span>setFileInputFiles</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setNodeStackTracesEnabled"><span class="domain-dot">DOM.</span>setNodeStackTracesEnabled</a>
+        <a class="monospace" href="#method-pushNodesByBackendIdsToFrontend"><span class="domain-dot">DOM.</span>pushNodesByBackendIdsToFrontend</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-getNodeStackTraces"><span class="domain-dot">DOM.</span>getNodeStackTraces</a>
+        <a class="monospace" href="#method-redo"><span class="domain-dot">DOM.</span>redo</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-getFileInfo"><span class="domain-dot">DOM.</span>getFileInfo</a>
+        <a class="monospace" href="#method-scrollIntoViewIfNeeded"><span class="domain-dot">DOM.</span>scrollIntoViewIfNeeded</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-setInspectedNode"><span class="domain-dot">DOM.</span>setInspectedNode</a>
+        <a class="monospace" href="#method-setInspectedNode"><span class="domain-dot">DOM.</span>setInspectedNode</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-setNodeName"><span class="domain-dot">DOM.</span>setNodeName</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setNodeValue"><span class="domain-dot">DOM.</span>setNodeValue</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setOuterHTML"><span class="domain-dot">DOM.</span>setOuterHTML</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-undo"><span class="domain-dot">DOM.</span>undo</a>
+        <a class="monospace" href="#method-setNodeStackTracesEnabled"><span class="domain-dot">DOM.</span>setNodeStackTracesEnabled</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-getFrameOwner"><span class="domain-dot">DOM.</span>getFrameOwner</a>
+        <a class="monospace" href="#method-undo"><span class="domain-dot">DOM.</span>undo</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-attributeModified"><span class="domain-dot">DOM.</span>attributeModified</a>
+        <a class="monospace" href="#event-attributeModified"><span class="domain-dot">DOM.</span>attributeModified</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-attributeRemoved"><span class="domain-dot">DOM.</span>attributeRemoved</a>
+        <a class="monospace" href="#event-attributeRemoved"><span class="domain-dot">DOM.</span>attributeRemoved</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-characterDataModified"><span class="domain-dot">DOM.</span>characterDataModified</a>
+        <a class="monospace" href="#event-characterDataModified"><span class="domain-dot">DOM.</span>characterDataModified</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-childNodeCountUpdated"><span class="domain-dot">DOM.</span>childNodeCountUpdated</a>
+        <a class="monospace" href="#event-childNodeCountUpdated"><span class="domain-dot">DOM.</span>childNodeCountUpdated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-childNodeInserted"><span class="domain-dot">DOM.</span>childNodeInserted</a>
+        <a class="monospace" href="#event-childNodeInserted"><span class="domain-dot">DOM.</span>childNodeInserted</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-childNodeRemoved"><span class="domain-dot">DOM.</span>childNodeRemoved</a>
+        <a class="monospace" href="#event-childNodeRemoved"><span class="domain-dot">DOM.</span>childNodeRemoved</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-distributedNodesUpdated"><span class="domain-dot">DOM.</span>distributedNodesUpdated</a>
+        <a class="monospace" href="#event-documentUpdated"><span class="domain-dot">DOM.</span>documentUpdated</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-setChildNodes"><span class="domain-dot">DOM.</span>setChildNodes</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-distributedNodesUpdated"><span class="domain-dot">DOM.</span>distributedNodesUpdated</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#event-documentUpdated"><span class="domain-dot">DOM.</span>documentUpdated</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-inlineStyleInvalidated"><span class="domain-dot">DOM.</span>inlineStyleInvalidated</a>
+        <a class="monospace" href="#event-inlineStyleInvalidated"><span class="domain-dot">DOM.</span>inlineStyleInvalidated</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#event-pseudoElementAdded"><span class="domain-dot">DOM.</span>pseudoElementAdded</a>
+        <a class="monospace" href="#event-pseudoElementAdded"><span class="domain-dot">DOM.</span>pseudoElementAdded</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#event-pseudoElementRemoved"><span class="domain-dot">DOM.</span>pseudoElementRemoved</a>
+        <a class="monospace" href="#event-pseudoElementRemoved"><span class="domain-dot">DOM.</span>pseudoElementRemoved</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#event-setChildNodes"><span class="domain-dot">DOM.</span>setChildNodes</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-shadowRootPopped"><span class="domain-dot">DOM.</span>shadowRootPopped</a>
+        <a class="monospace" href="#event-shadowRootPopped"><span class="domain-dot">DOM.</span>shadowRootPopped</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#event-shadowRootPushed"><span class="domain-dot">DOM.</span>shadowRootPushed</a>
+        <a class="monospace" href="#event-shadowRootPushed"><span class="domain-dot">DOM.</span>shadowRootPushed</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-NodeId"><span class="domain-dot">DOM.</span>NodeId</a>
+        <a class="monospace" href="#type-BackendNode"><span class="domain-dot">DOM.</span>BackendNode</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-BackendNodeId"><span class="domain-dot">DOM.</span>BackendNodeId</a>
+        <a class="monospace" href="#type-BackendNodeId"><span class="domain-dot">DOM.</span>BackendNodeId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-BackendNode"><span class="domain-dot">DOM.</span>BackendNode</a>
+        <a class="monospace" href="#type-BoxModel"><span class="domain-dot">DOM.</span>BoxModel</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-PseudoType"><span class="domain-dot">DOM.</span>PseudoType</a>
+        <a class="monospace" href="#type-Node"><span class="domain-dot">DOM.</span>Node</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-ShadowRootType"><span class="domain-dot">DOM.</span>ShadowRootType</a>
+        <a class="monospace" href="#type-NodeId"><span class="domain-dot">DOM.</span>NodeId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Node"><span class="domain-dot">DOM.</span>Node</a>
+        <a class="monospace" href="#type-PseudoType"><span class="domain-dot">DOM.</span>PseudoType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-RGBA"><span class="domain-dot">DOM.</span>RGBA</a>
+        <a class="monospace" href="#type-Quad"><span class="domain-dot">DOM.</span>Quad</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Quad"><span class="domain-dot">DOM.</span>Quad</a>
+        <a class="monospace" href="#type-Rect"><span class="domain-dot">DOM.</span>Rect</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-BoxModel"><span class="domain-dot">DOM.</span>BoxModel</a>
+        <a class="monospace" href="#type-RGBA"><span class="domain-dot">DOM.</span>RGBA</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-ShapeOutsideInfo"><span class="domain-dot">DOM.</span>ShapeOutsideInfo</a>
+        <a class="monospace" href="#type-ShadowRootType"><span class="domain-dot">DOM.</span>ShadowRootType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Rect"><span class="domain-dot">DOM.</span>Rect</a>
+        <a class="monospace" href="#type-ShapeOutsideInfo"><span class="domain-dot">DOM.</span>ShapeOutsideInfo</a>
         
       </div>
       
@@ -479,138 +481,9 @@ corresponding document elements as their child nodes.</p></p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="method-collectClassNamesFromSubtree">
-          <span class="domain-dot">DOM.</span>collectClassNamesFromSubtree
-          <a href="#method-collectClassNamesFromSubtree" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Collects class names for the node with given id and all of it&#39;s child nodes.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the node to collect class names.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">classNames</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Class name list.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-copyTo">
-          <span class="domain-dot">DOM.</span>copyTo
-          <a href="#method-copyTo" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Creates a deep copy of the specified node and places it into the target container before the
-given anchor.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the node to copy.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">targetNodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the element to drop the copy into.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">insertBeforeNodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Drop the copy before this node (if absent, the copy becomes the last child of
-<code>targetNodeId</code>).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the node clone.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-describeNode">
           <span class="domain-dot">DOM.</span>describeNode
+          
           <a href="#method-describeNode" class="permalink">#</a>
         </h4>
         
@@ -622,11 +495,10 @@ objects, can be used for automation.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -638,7 +510,7 @@ objects, can be used for automation.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -650,7 +522,7 @@ objects, can be used for automation.</p>
           
         </dd>
       
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
@@ -662,7 +534,7 @@ objects, can be used for automation.</p>
           
         </dd>
       
-        <dt class="param-name">depth</dt>
+        <dt class="param-name monospace">depth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -675,7 +547,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">pierce</dt>
+        <dt class="param-name monospace">pierce</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -694,7 +566,7 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">node</dt>
+        <dt class="param-name monospace">node</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
           
@@ -712,82 +584,9 @@ entire subtree or provide an integer larger than 0.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-scrollIntoViewIfNeeded">
-          <span class="domain-dot">DOM.</span>scrollIntoViewIfNeeded
-          <a href="#method-scrollIntoViewIfNeeded" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Scrolls the specified rect of the given node into view if not already visible.
-Note: exactly one between nodeId, backendNodeId and objectId should be passed
-to identify the node.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Identifier of the node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">backendNodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
-          
-      <div class="details-description">
-        <p>Identifier of the backend node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">objectId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
-          
-      <div class="details-description">
-        <p>JavaScript object id of the node wrapper.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">rect</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">Rect</a>
-          
-      <div class="details-description">
-        <p>The rect to be scrolled into view, relative to the node&#39;s border box, in CSS pixels.
-When omitted, center of the node will be used, similar to Element.scrollIntoView.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">DOM.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -800,48 +599,12 @@ When omitted, center of the node will be used, similar to Element.scrollIntoView
         
         
         
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-discardSearchResults">
-          <span class="domain-dot">DOM.</span>discardSearchResults
-          <a href="#method-discardSearchResults" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Discards search results from the session with the given id. <code>getSearchResults</code> should no longer
-be called for that search.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">searchId</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Unique search session identifier.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">DOM.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -854,12 +617,12 @@ be called for that search.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-focus">
           <span class="domain-dot">DOM.</span>focus
+          
           <a href="#method-focus" class="permalink">#</a>
         </h4>
         
@@ -870,11 +633,10 @@ be called for that search.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -886,7 +648,7 @@ be called for that search.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -898,7 +660,7 @@ be called for that search.</p>
           
         </dd>
       
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
@@ -919,6 +681,7 @@ be called for that search.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getAttributes">
           <span class="domain-dot">DOM.</span>getAttributes
+          
           <a href="#method-getAttributes" class="permalink">#</a>
         </h4>
         
@@ -929,11 +692,10 @@ be called for that search.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -951,7 +713,7 @@ be called for that search.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">attributes</dt>
+        <dt class="param-name monospace">attributes</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -971,6 +733,7 @@ be called for that search.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getBoxModel">
           <span class="domain-dot">DOM.</span>getBoxModel
+          
           <a href="#method-getBoxModel" class="permalink">#</a>
         </h4>
         
@@ -981,11 +744,10 @@ be called for that search.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -997,7 +759,7 @@ be called for that search.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -1009,7 +771,7 @@ be called for that search.</p>
           
         </dd>
       
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
@@ -1027,7 +789,7 @@ be called for that search.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">model</dt>
+        <dt class="param-name monospace">model</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BoxModel class="param-type">BoxModel</a>
           
@@ -1045,85 +807,9 @@ be called for that search.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-getContentQuads">
-          <span class="domain-dot">DOM.</span>getContentQuads
-          <a href="#method-getContentQuads" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns quads that describe node position on the page. This method
-might return multiple quads for inline nodes.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Identifier of the node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">backendNodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
-          
-      <div class="details-description">
-        <p>Identifier of the backend node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">objectId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
-          
-      <div class="details-description">
-        <p>JavaScript object id of the node wrapper.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">quads</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Quads that describe node layout relative to viewport.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-getDocument">
           <span class="domain-dot">DOM.</span>getDocument
+          
           <a href="#method-getDocument" class="permalink">#</a>
         </h4>
         
@@ -1134,11 +820,10 @@ might return multiple quads for inline nodes.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">depth</dt>
+        <dt class="param-name monospace">depth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1151,7 +836,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">pierce</dt>
+        <dt class="param-name monospace">pierce</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1170,7 +855,7 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">root</dt>
+        <dt class="param-name monospace">root</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
           
@@ -1190,6 +875,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getFlattenedDocument">
           <span class="domain-dot">DOM.</span>getFlattenedDocument
+          
           <a href="#method-getFlattenedDocument" class="permalink">#</a>
         </h4>
         
@@ -1200,11 +886,10 @@ entire subtree or provide an integer larger than 0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">depth</dt>
+        <dt class="param-name monospace">depth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1217,7 +902,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">pierce</dt>
+        <dt class="param-name monospace">pierce</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1236,7 +921,7 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodes</dt>
+        <dt class="param-name monospace">nodes</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1256,6 +941,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getNodeForLocation">
           <span class="domain-dot">DOM.</span>getNodeForLocation
+          
           <a href="#method-getNodeForLocation" class="permalink">#</a>
         </h4>
         
@@ -1267,11 +953,10 @@ either returned or not.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1283,7 +968,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1295,7 +980,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">includeUserAgentShadowDOM</dt>
+        <dt class="param-name monospace">includeUserAgentShadowDOM</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1307,7 +992,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">ignorePointerEventsNone</dt>
+        <dt class="param-name monospace">ignorePointerEventsNone</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1325,7 +1010,7 @@ either returned or not.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -1337,7 +1022,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">frameId</dt>
+        <dt class="param-name monospace">frameId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
@@ -1349,7 +1034,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1369,6 +1054,7 @@ either returned or not.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getOuterHTML">
           <span class="domain-dot">DOM.</span>getOuterHTML
+          
           <a href="#method-getOuterHTML" class="permalink">#</a>
         </h4>
         
@@ -1379,11 +1065,10 @@ either returned or not.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1395,7 +1080,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -1407,7 +1092,7 @@ either returned or not.</p>
           
         </dd>
       
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
@@ -1425,7 +1110,7 @@ either returned or not.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">outerHTML</dt>
+        <dt class="param-name monospace">outerHTML</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1443,137 +1128,9 @@ either returned or not.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-getRelayoutBoundary">
-          <span class="domain-dot">DOM.</span>getRelayoutBoundary
-          <a href="#method-getRelayoutBoundary" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns the id of the nearest ancestor that is a relayout boundary.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Relayout boundary node id for the given node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getSearchResults">
-          <span class="domain-dot">DOM.</span>getSearchResults
-          <a href="#method-getSearchResults" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns search results from given <code>fromIndex</code> to given <code>toIndex</code> from the search with the given
-identifier.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">searchId</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Unique search session identifier.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">fromIndex</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Start index of the search result to be returned.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">toIndex</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>End index of the search result to be returned.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeIds</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Ids of the search result nodes.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-hideHighlight">
           <span class="domain-dot">DOM.</span>hideHighlight
+          
           <a href="#method-hideHighlight" class="permalink">#</a>
         </h4>
         
@@ -1586,12 +1143,12 @@ identifier.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-highlightNode">
           <span class="domain-dot">DOM.</span>highlightNode
+          
           <a href="#method-highlightNode" class="permalink">#</a>
         </h4>
         
@@ -1604,12 +1161,12 @@ identifier.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-highlightRect">
           <span class="domain-dot">DOM.</span>highlightRect
+          
           <a href="#method-highlightRect" class="permalink">#</a>
         </h4>
         
@@ -1622,30 +1179,12 @@ identifier.</p>
         
         
         
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-markUndoableState">
-          <span class="domain-dot">DOM.</span>markUndoableState
-          <a href="#method-markUndoableState" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Marks last undoable state.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-        
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-moveTo">
           <span class="domain-dot">DOM.</span>moveTo
+          
           <a href="#method-moveTo" class="permalink">#</a>
         </h4>
         
@@ -1656,11 +1195,10 @@ identifier.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1672,7 +1210,7 @@ identifier.</p>
           
         </dd>
       
-        <dt class="param-name">targetNodeId</dt>
+        <dt class="param-name monospace">targetNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1684,7 +1222,7 @@ identifier.</p>
           
         </dd>
       
-        <dt class="param-name">insertBeforeNodeId</dt>
+        <dt class="param-name monospace">insertBeforeNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1703,7 +1241,7 @@ identifier.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1721,190 +1259,9 @@ identifier.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-performSearch">
-          <span class="domain-dot">DOM.</span>performSearch
-          <a href="#method-performSearch" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Searches for a given string in the DOM tree. Use <code>getSearchResults</code> to access search results or
-<code>cancelSearch</code> to end this search session.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">query</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Plain text or query selector or XPath search query.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">includeUserAgentShadowDOM</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>True to search in user agent shadow DOM.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">searchId</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Unique search session identifier.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">resultCount</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Number of search results.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-pushNodeByPathToFrontend">
-          <span class="domain-dot">DOM.</span>pushNodeByPathToFrontend
-          <a href="#method-pushNodeByPathToFrontend" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Requests that the node is sent to the caller given its path. // FIXME, use XPath</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">path</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Path to node in the proprietary format.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the node for given path.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-pushNodesByBackendIdsToFrontend">
-          <span class="domain-dot">DOM.</span>pushNodesByBackendIdsToFrontend
-          <a href="#method-pushNodesByBackendIdsToFrontend" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Requests that a batch of nodes is sent to the caller given their backend node ids.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">backendNodeIds</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>The array of backend node ids.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeIds</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>The array of ids of pushed nodes that correspond to the backend ids specified in
-backendNodeIds.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-querySelector">
           <span class="domain-dot">DOM.</span>querySelector
+          
           <a href="#method-querySelector" class="permalink">#</a>
         </h4>
         
@@ -1915,11 +1272,10 @@ backendNodeIds.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1931,7 +1287,7 @@ backendNodeIds.</p>
           
         </dd>
       
-        <dt class="param-name">selector</dt>
+        <dt class="param-name monospace">selector</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1949,7 +1305,7 @@ backendNodeIds.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1969,6 +1325,7 @@ backendNodeIds.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-querySelectorAll">
           <span class="domain-dot">DOM.</span>querySelectorAll
+          
           <a href="#method-querySelectorAll" class="permalink">#</a>
         </h4>
         
@@ -1979,11 +1336,10 @@ backendNodeIds.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -1995,7 +1351,7 @@ backendNodeIds.</p>
           
         </dd>
       
-        <dt class="param-name">selector</dt>
+        <dt class="param-name monospace">selector</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2013,7 +1369,7 @@ backendNodeIds.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeIds</dt>
+        <dt class="param-name monospace">nodeIds</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -2031,26 +1387,9 @@ backendNodeIds.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-redo">
-          <span class="domain-dot">DOM.</span>redo
-          <a href="#method-redo" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Re-does the last undone action.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-removeAttribute">
           <span class="domain-dot">DOM.</span>removeAttribute
+          
           <a href="#method-removeAttribute" class="permalink">#</a>
         </h4>
         
@@ -2061,11 +1400,10 @@ backendNodeIds.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2077,7 +1415,7 @@ backendNodeIds.</p>
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2098,6 +1436,7 @@ backendNodeIds.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-removeNode">
           <span class="domain-dot">DOM.</span>removeNode
+          
           <a href="#method-removeNode" class="permalink">#</a>
         </h4>
         
@@ -2108,11 +1447,10 @@ backendNodeIds.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2133,6 +1471,7 @@ backendNodeIds.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-requestChildNodes">
           <span class="domain-dot">DOM.</span>requestChildNodes
+          
           <a href="#method-requestChildNodes" class="permalink">#</a>
         </h4>
         
@@ -2145,11 +1484,10 @@ the specified depth.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2161,7 +1499,7 @@ the specified depth.</p>
           
         </dd>
       
-        <dt class="param-name">depth</dt>
+        <dt class="param-name monospace">depth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2174,7 +1512,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">pierce</dt>
+        <dt class="param-name monospace">pierce</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2196,6 +1534,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-requestNode">
           <span class="domain-dot">DOM.</span>requestNode
+          
           <a href="#method-requestNode" class="permalink">#</a>
         </h4>
         
@@ -2208,11 +1547,10 @@ nodes that form the path from the node to the root are also sent to the client a
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
@@ -2230,7 +1568,7 @@ nodes that form the path from the node to the root are also sent to the client a
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2250,6 +1588,7 @@ nodes that form the path from the node to the root are also sent to the client a
       <div class="details">
         <h4 class="details-name monospace" id="method-resolveNode">
           <span class="domain-dot">DOM.</span>resolveNode
+          
           <a href="#method-resolveNode" class="permalink">#</a>
         </h4>
         
@@ -2260,11 +1599,10 @@ nodes that form the path from the node to the root are also sent to the client a
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2276,7 +1614,7 @@ nodes that form the path from the node to the root are also sent to the client a
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
@@ -2288,7 +1626,7 @@ nodes that form the path from the node to the root are also sent to the client a
           
         </dd>
       
-        <dt class="param-name">objectGroup</dt>
+        <dt class="param-name monospace">objectGroup</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2300,7 +1638,7 @@ nodes that form the path from the node to the root are also sent to the client a
           
         </dd>
       
-        <dt class="param-name">executionContextId</dt>
+        <dt class="param-name monospace">executionContextId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ExecutionContextId class="param-type">Runtime.ExecutionContextId</a>
           
@@ -2318,7 +1656,7 @@ nodes that form the path from the node to the root are also sent to the client a
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">object</dt>
+        <dt class="param-name monospace">object</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -2336,67 +1674,9 @@ nodes that form the path from the node to the root are also sent to the client a
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setAttributeValue">
-          <span class="domain-dot">DOM.</span>setAttributeValue
-          <a href="#method-setAttributeValue" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Sets attribute for an element with given id.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the element to set attribute for.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">name</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Attribute name.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">value</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Attribute value.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-setAttributesAsText">
           <span class="domain-dot">DOM.</span>setAttributesAsText
+          
           <a href="#method-setAttributesAsText" class="permalink">#</a>
         </h4>
         
@@ -2408,11 +1688,10 @@ attribute value and types in several attribute name/value pairs.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2424,7 +1703,7 @@ attribute value and types in several attribute name/value pairs.</p>
           
         </dd>
       
-        <dt class="param-name">text</dt>
+        <dt class="param-name monospace">text</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2436,7 +1715,7 @@ attribute value and types in several attribute name/value pairs.</p>
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2456,8 +1735,68 @@ successfully.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setAttributeValue">
+          <span class="domain-dot">DOM.</span>setAttributeValue
+          
+          <a href="#method-setAttributeValue" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets attribute for an element with given id.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the element to set attribute for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Attribute name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Attribute value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setFileInputFiles">
           <span class="domain-dot">DOM.</span>setFileInputFiles
+          
           <a href="#method-setFileInputFiles" class="permalink">#</a>
         </h4>
         
@@ -2468,11 +1807,10 @@ successfully.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">files</dt>
+        <dt class="param-name monospace">files</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -2484,7 +1822,7 @@ successfully.</p>
           
         </dd>
       
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2496,7 +1834,7 @@ successfully.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -2508,183 +1846,12 @@ successfully.</p>
           
         </dd>
       
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>JavaScript object id of the node wrapper.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-setNodeStackTracesEnabled">
-          <span class="domain-dot">DOM.</span>setNodeStackTracesEnabled
-          <a href="#method-setNodeStackTracesEnabled" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Sets if stack traces should be captured for Nodes. See <code>Node.getNodeStackTraces</code>. Default is disabled.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">enable</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>Enable or disable.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getNodeStackTraces">
-          <span class="domain-dot">DOM.</span>getNodeStackTraces
-          <a href="#method-getNodeStackTraces" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Gets stack traces associated with a Node. As of now, only provides stack trace for Node creation.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Id of the node to get stack traces for.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">creation</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
-          
-      <div class="details-description">
-        <p>Creation stack trace, if available.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getFileInfo">
-          <span class="domain-dot">DOM.</span>getFileInfo
-          <a href="#method-getFileInfo" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns file information for the given
-File wrapper.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">objectId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
-          
-      <div class="details-description">
-        <p>JavaScript object id of the node wrapper.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">path</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-setInspectedNode">
-          <span class="domain-dot">DOM.</span>setInspectedNode
-          <a href="#method-setInspectedNode" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Enables console to refer to the node with given id via $x (see Command Line API for more details
-$x functions).</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>DOM node id to be accessible by means of $x command line API.</p>
 
       </div>
     
@@ -2700,6 +1867,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setNodeName">
           <span class="domain-dot">DOM.</span>setNodeName
+          
           <a href="#method-setNodeName" class="permalink">#</a>
         </h4>
         
@@ -2710,11 +1878,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2726,7 +1893,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2744,7 +1911,7 @@ $x functions).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2764,6 +1931,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setNodeValue">
           <span class="domain-dot">DOM.</span>setNodeValue
+          
           <a href="#method-setNodeValue" class="permalink">#</a>
         </h4>
         
@@ -2774,11 +1942,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2790,7 +1957,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">value</dt>
+        <dt class="param-name monospace">value</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2811,6 +1978,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setOuterHTML">
           <span class="domain-dot">DOM.</span>setOuterHTML
+          
           <a href="#method-setOuterHTML" class="permalink">#</a>
         </h4>
         
@@ -2821,11 +1989,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2837,7 +2004,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">outerHTML</dt>
+        <dt class="param-name monospace">outerHTML</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2856,26 +2023,300 @@ $x functions).</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-undo">
-          <span class="domain-dot">DOM.</span>undo
-          <a href="#method-undo" class="permalink">#</a>
+        <h4 class="details-name monospace" id="method-collectClassNamesFromSubtree">
+          <span class="domain-dot">DOM.</span>collectClassNamesFromSubtree
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-collectClassNamesFromSubtree" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Undoes the last performed action.</p>
+        <p>Collects class names for the node with given id and all of it&#39;s child nodes.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
         
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to collect class names.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">classNames</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Class name list.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-copyTo">
+          <span class="domain-dot">DOM.</span>copyTo
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-copyTo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Creates a deep copy of the specified node and places it into the target container before the
+given anchor.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to copy.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">targetNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the element to drop the copy into.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">insertBeforeNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Drop the copy before this node (if absent, the copy becomes the last child of
+<code>targetNodeId</code>).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node clone.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-discardSearchResults">
+          <span class="domain-dot">DOM.</span>discardSearchResults
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-discardSearchResults" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Discards search results from the session with the given id. <code>getSearchResults</code> should no longer
+be called for that search.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">searchId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Unique search session identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getContentQuads">
+          <span class="domain-dot">DOM.</span>getContentQuads
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getContentQuads" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns quads that describe node position on the page. This method
+might return multiple quads for inline nodes.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">backendNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the backend node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">objectId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
+          
+      <div class="details-description">
+        <p>JavaScript object id of the node wrapper.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">quads</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Quads that describe node layout relative to viewport.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getFileInfo">
+          <span class="domain-dot">DOM.</span>getFileInfo
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getFileInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns file information for the given
+File wrapper.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">objectId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
+          
+      <div class="details-description">
+        <p>JavaScript object id of the node wrapper.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-getFrameOwner">
           <span class="domain-dot">DOM.</span>getFrameOwner
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#method-getFrameOwner" class="permalink">#</a>
         </h4>
         
@@ -2884,13 +2325,12 @@ $x functions).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameId</dt>
+        <dt class="param-name monospace">frameId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
@@ -2903,7 +2343,7 @@ $x functions).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
           
@@ -2915,7 +2355,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2932,6 +2372,568 @@ $x functions).</p>
         
       </div>
     
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getNodeStackTraces">
+          <span class="domain-dot">DOM.</span>getNodeStackTraces
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getNodeStackTraces" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Gets stack traces associated with a Node. As of now, only provides stack trace for Node creation.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node to get stack traces for.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">creation</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
+          
+      <div class="details-description">
+        <p>Creation stack trace, if available.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getRelayoutBoundary">
+          <span class="domain-dot">DOM.</span>getRelayoutBoundary
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getRelayoutBoundary" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns the id of the nearest ancestor that is a relayout boundary.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Relayout boundary node id for the given node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getSearchResults">
+          <span class="domain-dot">DOM.</span>getSearchResults
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getSearchResults" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns search results from given <code>fromIndex</code> to given <code>toIndex</code> from the search with the given
+identifier.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">searchId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Unique search session identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">fromIndex</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Start index of the search result to be returned.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">toIndex</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>End index of the search result to be returned.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeIds</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Ids of the search result nodes.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-markUndoableState">
+          <span class="domain-dot">DOM.</span>markUndoableState
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-markUndoableState" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Marks last undoable state.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-performSearch">
+          <span class="domain-dot">DOM.</span>performSearch
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-performSearch" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Searches for a given string in the DOM tree. Use <code>getSearchResults</code> to access search results or
+<code>cancelSearch</code> to end this search session.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">query</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Plain text or query selector or XPath search query.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">includeUserAgentShadowDOM</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>True to search in user agent shadow DOM.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">searchId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Unique search session identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">resultCount</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Number of search results.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-pushNodeByPathToFrontend">
+          <span class="domain-dot">DOM.</span>pushNodeByPathToFrontend
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-pushNodeByPathToFrontend" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that the node is sent to the caller given its path. // FIXME, use XPath</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">path</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Path to node in the proprietary format.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Id of the node for given path.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-pushNodesByBackendIdsToFrontend">
+          <span class="domain-dot">DOM.</span>pushNodesByBackendIdsToFrontend
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-pushNodesByBackendIdsToFrontend" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Requests that a batch of nodes is sent to the caller given their backend node ids.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">backendNodeIds</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The array of backend node ids.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeIds</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>The array of ids of pushed nodes that correspond to the backend ids specified in
+backendNodeIds.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-redo">
+          <span class="domain-dot">DOM.</span>redo
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-redo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Re-does the last undone action.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-scrollIntoViewIfNeeded">
+          <span class="domain-dot">DOM.</span>scrollIntoViewIfNeeded
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-scrollIntoViewIfNeeded" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Scrolls the specified rect of the given node into view if not already visible.
+Note: exactly one between nodeId, backendNodeId and objectId should be passed
+to identify the node.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">backendNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the backend node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">objectId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
+          
+      <div class="details-description">
+        <p>JavaScript object id of the node wrapper.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">rect</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">Rect</a>
+          
+      <div class="details-description">
+        <p>The rect to be scrolled into view, relative to the node&#39;s border box, in CSS pixels.
+When omitted, center of the node will be used, similar to Element.scrollIntoView.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setInspectedNode">
+          <span class="domain-dot">DOM.</span>setInspectedNode
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-setInspectedNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables console to refer to the node with given id via $x (see Command Line API for more details
+$x functions).</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">nodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>DOM node id to be accessible by means of $x command line API.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-setNodeStackTracesEnabled">
+          <span class="domain-dot">DOM.</span>setNodeStackTracesEnabled
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-setNodeStackTracesEnabled" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets if stack traces should be captured for Nodes. See <code>Node.getNodeStackTraces</code>. Default is disabled.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">enable</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Enable or disable.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-undo">
+          <span class="domain-dot">DOM.</span>undo
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-undo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Undoes the last performed action.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      </div>
+    
       </div>
     
       
@@ -2941,6 +2943,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-attributeModified">
           <span class="domain-dot">DOM.</span>attributeModified
+          
           <a href="#event-attributeModified" class="permalink">#</a>
         </h4>
         
@@ -2951,11 +2954,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -2967,7 +2969,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2979,7 +2981,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">value</dt>
+        <dt class="param-name monospace">value</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -3000,6 +3002,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-attributeRemoved">
           <span class="domain-dot">DOM.</span>attributeRemoved
+          
           <a href="#event-attributeRemoved" class="permalink">#</a>
         </h4>
         
@@ -3010,11 +3013,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3026,7 +3028,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -3047,6 +3049,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-characterDataModified">
           <span class="domain-dot">DOM.</span>characterDataModified
+          
           <a href="#event-characterDataModified" class="permalink">#</a>
         </h4>
         
@@ -3057,11 +3060,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3073,7 +3075,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">characterData</dt>
+        <dt class="param-name monospace">characterData</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -3094,6 +3096,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-childNodeCountUpdated">
           <span class="domain-dot">DOM.</span>childNodeCountUpdated
+          
           <a href="#event-childNodeCountUpdated" class="permalink">#</a>
         </h4>
         
@@ -3104,11 +3107,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3120,7 +3122,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">childNodeCount</dt>
+        <dt class="param-name monospace">childNodeCount</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -3141,6 +3143,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-childNodeInserted">
           <span class="domain-dot">DOM.</span>childNodeInserted
+          
           <a href="#event-childNodeInserted" class="permalink">#</a>
         </h4>
         
@@ -3151,11 +3154,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">parentNodeId</dt>
+        <dt class="param-name monospace">parentNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3167,7 +3169,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">previousNodeId</dt>
+        <dt class="param-name monospace">previousNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3179,7 +3181,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">node</dt>
+        <dt class="param-name monospace">node</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
           
@@ -3200,6 +3202,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-childNodeRemoved">
           <span class="domain-dot">DOM.</span>childNodeRemoved
+          
           <a href="#event-childNodeRemoved" class="permalink">#</a>
         </h4>
         
@@ -3210,11 +3213,10 @@ $x functions).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">parentNodeId</dt>
+        <dt class="param-name monospace">parentNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3226,7 +3228,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3245,8 +3247,75 @@ $x functions).</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="event-documentUpdated">
+          <span class="domain-dot">DOM.</span>documentUpdated
+          
+          <a href="#event-documentUpdated" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when <code>Document</code> has been totally updated. Node ids are no longer valid.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-setChildNodes">
+          <span class="domain-dot">DOM.</span>setChildNodes
+          
+          <a href="#event-setChildNodes" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Fired when backend wants to provide client with the missing DOM structure. This happens upon
+most of the calls requesting node ids.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">parentId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
+          
+      <div class="details-description">
+        <p>Parent node id to populate with children.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">nodes</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Child nodes array.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="event-distributedNodesUpdated">
           <span class="domain-dot">DOM.</span>distributedNodesUpdated
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#event-distributedNodesUpdated" class="permalink">#</a>
         </h4>
         
@@ -3255,13 +3324,12 @@ $x functions).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">insertionPointId</dt>
+        <dt class="param-name monospace">insertionPointId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3273,7 +3341,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">distributedNodes</dt>
+        <dt class="param-name monospace">distributedNodes</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -3292,26 +3360,9 @@ $x functions).</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="event-documentUpdated">
-          <span class="domain-dot">DOM.</span>documentUpdated
-          <a href="#event-documentUpdated" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Fired when <code>Document</code> has been totally updated. Node ids are no longer valid.</p>
-
-      </div>
-    
-        
-        
-        
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="event-inlineStyleInvalidated">
           <span class="domain-dot">DOM.</span>inlineStyleInvalidated
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#event-inlineStyleInvalidated" class="permalink">#</a>
         </h4>
         
@@ -3320,13 +3371,12 @@ $x functions).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeIds</dt>
+        <dt class="param-name monospace">nodeIds</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -3347,6 +3397,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-pseudoElementAdded">
           <span class="domain-dot">DOM.</span>pseudoElementAdded
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#event-pseudoElementAdded" class="permalink">#</a>
         </h4>
         
@@ -3355,13 +3406,12 @@ $x functions).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">parentId</dt>
+        <dt class="param-name monospace">parentId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3373,7 +3423,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">pseudoElement</dt>
+        <dt class="param-name monospace">pseudoElement</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
           
@@ -3394,6 +3444,7 @@ $x functions).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-pseudoElementRemoved">
           <span class="domain-dot">DOM.</span>pseudoElementRemoved
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#event-pseudoElementRemoved" class="permalink">#</a>
         </h4>
         
@@ -3402,13 +3453,12 @@ $x functions).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">parentId</dt>
+        <dt class="param-name monospace">parentId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3420,7 +3470,7 @@ $x functions).</p>
           
         </dd>
       
-        <dt class="param-name">pseudoElementId</dt>
+        <dt class="param-name monospace">pseudoElementId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3439,56 +3489,9 @@ $x functions).</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="event-setChildNodes">
-          <span class="domain-dot">DOM.</span>setChildNodes
-          <a href="#event-setChildNodes" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Fired when backend wants to provide client with the missing DOM structure. This happens upon
-most of the calls requesting node ids.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">parentId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Parent node id to populate with children.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">nodes</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Child nodes array.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="event-shadowRootPopped">
           <span class="domain-dot">DOM.</span>shadowRootPopped
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#event-shadowRootPopped" class="permalink">#</a>
         </h4>
         
@@ -3497,13 +3500,12 @@ most of the calls requesting node ids.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">hostId</dt>
+        <dt class="param-name monospace">hostId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3515,7 +3517,7 @@ most of the calls requesting node ids.</p>
           
         </dd>
       
-        <dt class="param-name">rootId</dt>
+        <dt class="param-name monospace">rootId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3536,6 +3538,7 @@ most of the calls requesting node ids.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-shadowRootPushed">
           <span class="domain-dot">DOM.</span>shadowRootPushed
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#event-shadowRootPushed" class="permalink">#</a>
         </h4>
         
@@ -3544,13 +3547,12 @@ most of the calls requesting node ids.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">hostId</dt>
+        <dt class="param-name monospace">hostId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
@@ -3562,7 +3564,7 @@ most of the calls requesting node ids.</p>
           
         </dd>
       
-        <dt class="param-name">root</dt>
+        <dt class="param-name monospace">root</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
           
@@ -3587,19 +3589,55 @@ most of the calls requesting node ids.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-NodeId">
-          <span class="domain-dot">DOM.</span>NodeId
-          <a href="#type-NodeId" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-BackendNode">
+          <span class="domain-dot">DOM.</span>BackendNode
+          
+          <a href="#type-BackendNode" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Unique DOM node identifier.</p>
+        <p>Backend node with a friendly name.</p>
 
       </div>
     
+        <p class="type-type">Type: <strong>object</strong></p>
         
-        <p class="type-type">Type: <strong>integer</strong></p>
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
         
+        <dt class="param-name monospace">nodeType</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p><code>Node</code>&#39;s nodeType.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">nodeName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Node</code>&#39;s nodeName.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">backendNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
         
         
       </div>
@@ -3607,6 +3645,7 @@ most of the calls requesting node ids.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-BackendNodeId">
           <span class="domain-dot">DOM.</span>BackendNodeId
+          
           <a href="#type-BackendNodeId" class="permalink">#</a>
         </h4>
         
@@ -3616,555 +3655,7 @@ front-end.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>integer</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-BackendNode">
-          <span class="domain-dot">DOM.</span>BackendNode
-          <a href="#type-BackendNode" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Backend node with a friendly name.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeType</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p><code>Node</code>&#39;s nodeType.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">nodeName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Node</code>&#39;s nodeName.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">backendNodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-PseudoType">
-          <span class="domain-dot">DOM.</span>PseudoType
-          <a href="#type-PseudoType" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Pseudo element type.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">first-line, first-letter, before, after, marker, backdrop, selection, first-line-inherited, scrollbar, scrollbar-thumb, scrollbar-button, scrollbar-track, scrollbar-track-piece, scrollbar-corner, resizer, input-list-button</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-ShadowRootType">
-          <span class="domain-dot">DOM.</span>ShadowRootType
-          <a href="#type-ShadowRootType" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Shadow root type.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">user-agent, open, closed</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-Node">
-          <span class="domain-dot">DOM.</span>Node
-          <a href="#type-Node" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>DOM interaction is implemented in terms of mirror objects that represent the actual DOM nodes.
-DOMNode is a base node mirror type.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">nodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>Node identifier that is passed into the rest of the DOM messages as the <code>nodeId</code>. Backend
-will only push node with given <code>id</code> once. It is aware of all requested nodes and will only
-fire DOM events for nodes known to the client.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">parentId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
-          
-      <div class="details-description">
-        <p>The id of the parent node if any.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">backendNodeId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
-          
-      <div class="details-description">
-        <p>The BackendNodeId for this node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">nodeType</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p><code>Node</code>&#39;s nodeType.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">nodeName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Node</code>&#39;s nodeName.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">localName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Node</code>&#39;s localName.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">nodeValue</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Node</code>&#39;s nodeValue.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">childNodeCount</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Child count for <code>Container</code> nodes.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">children</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Child nodes of this node when requested with children.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">attributes</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Attributes of the <code>Element</code> node in the form of flat array <code>[name1, value1, name2, value2]</code>.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">documentURL</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Document URL that <code>Document</code> or <code>FrameOwner</code> node points to.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">baseURL</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Base URL that <code>Document</code> or <code>FrameOwner</code> node uses for URL completion.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">publicId</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>DocumentType</code>&#39;s publicId.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">systemId</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>DocumentType</code>&#39;s systemId.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">internalSubset</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>DocumentType</code>&#39;s internalSubset.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">xmlVersion</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Document</code>&#39;s XML version in case of XML documents.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">name</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Attr</code>&#39;s name.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">value</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p><code>Attr</code>&#39;s value.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">pseudoType</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-PseudoType class="param-type">PseudoType</a>
-          
-      <div class="details-description">
-        <p>Pseudo element type for this node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">shadowRootType</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-ShadowRootType class="param-type">ShadowRootType</a>
-          
-      <div class="details-description">
-        <p>Shadow root type.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">frameId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
-          
-      <div class="details-description">
-        <p>Frame ID for frame owner elements.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">contentDocument</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
-          
-      <div class="details-description">
-        <p>Content document for frame owner elements.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">shadowRoots</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Shadow root list for given element host.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">templateContent</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
-          
-      <div class="details-description">
-        <p>Content document fragment for template elements.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">pseudoElements</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Pseudo elements associated with this node.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">importedDocument</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
-          
-      <div class="details-description">
-        <p>Import document for the HTMLImport links.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">distributedNodes</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Distributed nodes for given insertion point.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">isSVG</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>Whether the node is SVG.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-RGBA">
-          <span class="domain-dot">DOM.</span>RGBA
-          <a href="#type-RGBA" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>A structure holding an RGBA color.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">r</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>The red component, in the [0-255] range.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">g</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>The green component, in the [0-255] range.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">b</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>The blue component, in the [0-255] range.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">a</dt>
-        <dd>
-          <span class="param-type">number</span>
-          
-      <div class="details-description">
-        <p>The alpha component, in the [0-1] range (default: 1).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-Quad">
-          <span class="domain-dot">DOM.</span>Quad
-          <a href="#type-Quad" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>An array of quad vertices, x immediately followed by y for each point, points clock-wise.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>array</strong></p>
         
         
         
@@ -4173,6 +3664,7 @@ fire DOM events for nodes known to the client.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-BoxModel">
           <span class="domain-dot">DOM.</span>BoxModel
+          
           <a href="#type-BoxModel" class="permalink">#</a>
         </h4>
         
@@ -4181,13 +3673,12 @@ fire DOM events for nodes known to the client.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">content</dt>
+        <dt class="param-name monospace">content</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">Quad</a>
           
@@ -4199,7 +3690,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">padding</dt>
+        <dt class="param-name monospace">padding</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">Quad</a>
           
@@ -4211,7 +3702,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">border</dt>
+        <dt class="param-name monospace">border</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">Quad</a>
           
@@ -4223,7 +3714,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">margin</dt>
+        <dt class="param-name monospace">margin</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">Quad</a>
           
@@ -4235,7 +3726,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">width</dt>
+        <dt class="param-name monospace">width</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -4247,7 +3738,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">height</dt>
+        <dt class="param-name monospace">height</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -4259,7 +3750,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">shapeOutside</dt>
+        <dt class="param-name monospace">shapeOutside</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-ShapeOutsideInfo class="param-type">ShapeOutsideInfo</a>
           
@@ -4278,52 +3769,355 @@ fire DOM events for nodes known to the client.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-ShapeOutsideInfo">
-          <span class="domain-dot">DOM.</span>ShapeOutsideInfo
-          <a href="#type-ShapeOutsideInfo" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-Node">
+          <span class="domain-dot">DOM.</span>Node
+          
+          <a href="#type-Node" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>CSS Shape Outside details.</p>
+        <p>DOM interaction is implemented in terms of mirror objects that represent the actual DOM nodes.
+DOMNode is a base node mirror type.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">bounds</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
-          <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">Quad</a>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
       <div class="details-description">
-        <p>Shape bounds</p>
+        <p>Node identifier that is passed into the rest of the DOM messages as the <code>nodeId</code>. Backend
+will only push node with given <code>id</code> once. It is aware of all requested nodes and will only
+fire DOM events for nodes known to the client.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">shape</dt>
+        <dt class="param-name monospace">parentId</dt>
         <dd>
-          <span class="param-type">array</span>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">NodeId</a>
           
       <div class="details-description">
-        <p>Shape coordinate details</p>
+        <p>The id of the parent node if any.</p>
 
       </div>
     
           
         </dd>
       
-        <dt class="param-name">marginShape</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">BackendNodeId</a>
+          
+      <div class="details-description">
+        <p>The BackendNodeId for this node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">nodeType</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p><code>Node</code>&#39;s nodeType.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">nodeName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Node</code>&#39;s nodeName.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">localName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Node</code>&#39;s localName.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">nodeValue</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Node</code>&#39;s nodeValue.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">childNodeCount</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Child count for <code>Container</code> nodes.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">children</dt>
         <dd>
           <span class="param-type">array</span>
           
       <div class="details-description">
-        <p>Margin shape bounds</p>
+        <p>Child nodes of this node when requested with children.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">attributes</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Attributes of the <code>Element</code> node in the form of flat array <code>[name1, value1, name2, value2]</code>.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">documentURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Document URL that <code>Document</code> or <code>FrameOwner</code> node points to.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">baseURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Base URL that <code>Document</code> or <code>FrameOwner</code> node uses for URL completion.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">publicId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>DocumentType</code>&#39;s publicId.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">systemId</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>DocumentType</code>&#39;s systemId.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">internalSubset</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>DocumentType</code>&#39;s internalSubset.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">xmlVersion</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Document</code>&#39;s XML version in case of XML documents.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Attr</code>&#39;s name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p><code>Attr</code>&#39;s value.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">pseudoType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-PseudoType class="param-type">PseudoType</a>
+          
+      <div class="details-description">
+        <p>Pseudo element type for this node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">shadowRootType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-ShadowRootType class="param-type">ShadowRootType</a>
+          
+      <div class="details-description">
+        <p>Shadow root type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+      <div class="details-description">
+        <p>Frame ID for frame owner elements.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">contentDocument</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
+          
+      <div class="details-description">
+        <p>Content document for frame owner elements.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">shadowRoots</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Shadow root list for given element host.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">templateContent</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
+          
+      <div class="details-description">
+        <p>Content document fragment for template elements.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">pseudoElements</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Pseudo elements associated with this node.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">importedDocument</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Node class="param-type">Node</a>
+          
+      <div class="details-description">
+        <p>Import document for the HTMLImport links.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">distributedNodes</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Distributed nodes for given insertion point.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">isSVG</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether the node is SVG.</p>
 
       </div>
     
@@ -4337,8 +4131,66 @@ fire DOM events for nodes known to the client.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-NodeId">
+          <span class="domain-dot">DOM.</span>NodeId
+          
+          <a href="#type-NodeId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Unique DOM node identifier.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>integer</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PseudoType">
+          <span class="domain-dot">DOM.</span>PseudoType
+          
+          <a href="#type-PseudoType" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Pseudo element type.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">first-line, first-letter, before, after, marker, backdrop, selection, first-line-inherited, scrollbar, scrollbar-thumb, scrollbar-button, scrollbar-track, scrollbar-track-piece, scrollbar-corner, resizer, input-list-button</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Quad">
+          <span class="domain-dot">DOM.</span>Quad
+          
+          <a href="#type-Quad" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>An array of quad vertices, x immediately followed by y for each point, points clock-wise.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>array</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-Rect">
           <span class="domain-dot">DOM.</span>Rect
+          
           <a href="#type-Rect" class="permalink">#</a>
         </h4>
         
@@ -4347,13 +4199,12 @@ fire DOM events for nodes known to the client.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -4365,7 +4216,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -4377,7 +4228,7 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">width</dt>
+        <dt class="param-name monospace">width</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -4389,12 +4240,163 @@ fire DOM events for nodes known to the client.</p>
           
         </dd>
       
-        <dt class="param-name">height</dt>
+        <dt class="param-name monospace">height</dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Rectangle height</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-RGBA">
+          <span class="domain-dot">DOM.</span>RGBA
+          
+          <a href="#type-RGBA" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>A structure holding an RGBA color.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">r</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The red component, in the [0-255] range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">g</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The green component, in the [0-255] range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">b</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The blue component, in the [0-255] range.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">a</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>The alpha component, in the [0-1] range (default: 1).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ShadowRootType">
+          <span class="domain-dot">DOM.</span>ShadowRootType
+          
+          <a href="#type-ShadowRootType" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Shadow root type.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">user-agent, open, closed</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ShapeOutsideInfo">
+          <span class="domain-dot">DOM.</span>ShapeOutsideInfo
+          
+          <a href="#type-ShapeOutsideInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>CSS Shape Outside details.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">bounds</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">Quad</a>
+          
+      <div class="details-description">
+        <p>Shape bounds</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">shape</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Shape coordinate details</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">marginShape</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Margin shape bounds</p>
 
       </div>
     

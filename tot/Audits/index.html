@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,64 +117,64 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-getEncodedResponse"><span class="domain-dot">Audits.</span>getEncodedResponse</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">Audits.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">Audits.</span>disable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">Audits.</span>enable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">Audits.</span>enable</a>
+        <a class="monospace" href="#method-getEncodedResponse"><span class="domain-dot">Audits.</span>getEncodedResponse</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-issueAdded"><span class="domain-dot">Audits.</span>issueAdded</a>
+        <a class="monospace" href="#event-issueAdded"><span class="domain-dot">Audits.</span>issueAdded</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-AffectedCookie"><span class="domain-dot">Audits.</span>AffectedCookie</a>
+        <a class="monospace" href="#type-AffectedCookie"><span class="domain-dot">Audits.</span>AffectedCookie</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SameSiteCookieExclusionReason"><span class="domain-dot">Audits.</span>SameSiteCookieExclusionReason</a>
+        <a class="monospace" href="#type-AffectedResources"><span class="domain-dot">Audits.</span>AffectedResources</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SameSiteCookieWarningReason"><span class="domain-dot">Audits.</span>SameSiteCookieWarningReason</a>
+        <a class="monospace" href="#type-InspectorIssue"><span class="domain-dot">Audits.</span>InspectorIssue</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SameSiteCookieIssueDetails"><span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails</a>
+        <a class="monospace" href="#type-InspectorIssueCode"><span class="domain-dot">Audits.</span>InspectorIssueCode</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-AffectedResources"><span class="domain-dot">Audits.</span>AffectedResources</a>
+        <a class="monospace" href="#type-InspectorIssueDetails"><span class="domain-dot">Audits.</span>InspectorIssueDetails</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-InspectorIssueCode"><span class="domain-dot">Audits.</span>InspectorIssueCode</a>
+        <a class="monospace" href="#type-SameSiteCookieExclusionReason"><span class="domain-dot">Audits.</span>SameSiteCookieExclusionReason</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-InspectorIssueDetails"><span class="domain-dot">Audits.</span>InspectorIssueDetails</a>
+        <a class="monospace" href="#type-SameSiteCookieIssueDetails"><span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-InspectorIssue"><span class="domain-dot">Audits.</span>InspectorIssue</a>
+        <a class="monospace" href="#type-SameSiteCookieWarningReason"><span class="domain-dot">Audits.</span>SameSiteCookieWarningReason</a>
         
       </div>
       
@@ -183,8 +185,46 @@
       <div>
         
       <div class="details">
+        <h4 class="details-name monospace" id="method-disable">
+          <span class="domain-dot">Audits.</span>disable
+          
+          <a href="#method-disable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Disables issues domain, prevents further issues from being reported to the client.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-enable">
+          <span class="domain-dot">Audits.</span>enable
+          
+          <a href="#method-enable" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enables issues domain, sends the issues collected so far to the client by means of the
+<code>issueAdded</code> event.</p>
+
+      </div>
+    
+        
+        
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-getEncodedResponse">
           <span class="domain-dot">Audits.</span>getEncodedResponse
+          
           <a href="#method-getEncodedResponse" class="permalink">#</a>
         </h4>
         
@@ -196,11 +236,10 @@ applies to images.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">requestId</dt>
+        <dt class="param-name monospace">requestId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">Network.RequestId</a>
           
@@ -212,7 +251,7 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name">encoding</dt>
+        <dt class="param-name monospace">encoding</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -224,7 +263,7 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name">quality</dt>
+        <dt class="param-name monospace">quality</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -236,7 +275,7 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name">sizeOnly</dt>
+        <dt class="param-name monospace">sizeOnly</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -254,7 +293,7 @@ applies to images.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">body</dt>
+        <dt class="param-name monospace">body</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -266,7 +305,7 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name">originalSize</dt>
+        <dt class="param-name monospace">originalSize</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -278,7 +317,7 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name">encodedSize</dt>
+        <dt class="param-name monospace">encodedSize</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -295,43 +334,6 @@ applies to images.</p>
         
       </div>
     
-      <div class="details">
-        <h4 class="details-name monospace" id="method-disable">
-          <span class="domain-dot">Audits.</span>disable
-          <a href="#method-disable" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Disables issues domain, prevents further issues from being reported to the client.</p>
-
-      </div>
-    
-        
-        
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-enable">
-          <span class="domain-dot">Audits.</span>enable
-          <a href="#method-enable" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Enables issues domain, sends the issues collected so far to the client by means of the
-<code>issueAdded</code> event.</p>
-
-      </div>
-    
-        
-        
-        
-        
-        
-      </div>
-    
       </div>
     
       
@@ -341,16 +343,16 @@ applies to images.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-issueAdded">
           <span class="domain-dot">Audits.</span>issueAdded
+          
           <a href="#event-issueAdded" class="permalink">#</a>
         </h4>
-        
         
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">issue</dt>
+        <dt class="param-name monospace">issue</dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-InspectorIssue class="param-type">InspectorIssue</a>
           
@@ -372,6 +374,7 @@ applies to images.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-AffectedCookie">
           <span class="domain-dot">Audits.</span>AffectedCookie
+          
           <a href="#type-AffectedCookie" class="permalink">#</a>
         </h4>
         
@@ -380,13 +383,12 @@ applies to images.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -398,21 +400,21 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name">path</dt>
+        <dt class="param-name monospace">path</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">domain</dt>
+        <dt class="param-name monospace">domain</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">siteForCookies</dt>
+        <dt class="param-name monospace">siteForCookies</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -432,147 +434,20 @@ front-end as additional context.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-SameSiteCookieExclusionReason">
-          <span class="domain-dot">Audits.</span>SameSiteCookieExclusionReason
-          <a href="#type-SameSiteCookieExclusionReason" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">ExcludeSameSiteUnspecifiedTreatedAsLax, ExcludeSameSiteNoneInsecure</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-SameSiteCookieWarningReason">
-          <span class="domain-dot">Audits.</span>SameSiteCookieWarningReason
-          <a href="#type-SameSiteCookieWarningReason" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">WarnSameSiteUnspecifiedCrossSiteContext, WarnSameSiteNoneInsecure, WarnSameSiteUnspecifiedLaxAllowUnsafe, WarnSameSiteCrossSchemeSecureUrlMethodUnsafe, WarnSameSiteCrossSchemeSecureUrlLax, WarnSameSiteCrossSchemeSecureUrlStrict, WarnSameSiteCrossSchemeInsecureUrlMethodUnsafe, WarnSameSiteCrossSchemeInsecureUrlLax, WarnSameSiteCrossSchemeInsecureUrlStrict</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-SameSiteCookieIssueDetails">
-          <span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails
-          <a href="#type-SameSiteCookieIssueDetails" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>This information is currently necessary, as the front-end has a difficult
-time finding a specific cookie. With this, we can convey specific error
-information without the cookie.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">cookieWarningReasons</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-          
-        </dd>
-      
-        <dt class="param-name">cookieExclusionReasons</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-AffectedResources">
           <span class="domain-dot">Audits.</span>AffectedResources
+          
           <a href="#type-AffectedResources" class="permalink">#</a>
         </h4>
         
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cookies</dt>
+        <dt class="param-name monospace">cookies</dt>
         <dd>
           <span class="param-type">array</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-InspectorIssueCode">
-          <span class="domain-dot">Audits.</span>InspectorIssueCode
-          <a href="#type-InspectorIssueCode" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>A unique identifier for the type of issue. Each type may use one of the
-optional fields in InspectorIssueDetails to convey more specific
-information about the kind of issue, and AffectedResources to identify
-resources that are affected by this issue.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">SameSiteCookieIssue</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-InspectorIssueDetails">
-          <span class="domain-dot">Audits.</span>InspectorIssueDetails
-          <a href="#type-InspectorIssueDetails" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>This struct holds a list of optional fields with additional information
-pertaining to the kind of issue. This is useful if there is a number of
-very similar issues that only differ in details.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">sameSiteCookieIssueDetails</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieIssueDetails class="param-type">SameSiteCookieIssueDetails</a>
           
           
         </dd>
@@ -586,6 +461,7 @@ very similar issues that only differ in details.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-InspectorIssue">
           <span class="domain-dot">Audits.</span>InspectorIssue
+          
           <a href="#type-InspectorIssue" class="permalink">#</a>
         </h4>
         
@@ -594,27 +470,26 @@ very similar issues that only differ in details.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">code</dt>
+        <dt class="param-name monospace">code</dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-InspectorIssueCode class="param-type">InspectorIssueCode</a>
           
           
         </dd>
       
-        <dt class="param-name">details</dt>
+        <dt class="param-name monospace">details</dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-InspectorIssueDetails class="param-type">InspectorIssueDetails</a>
           
           
         </dd>
       
-        <dt class="param-name">resources</dt>
+        <dt class="param-name monospace">resources</dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-AffectedResources class="param-type">AffectedResources</a>
           
@@ -625,6 +500,133 @@ very similar issues that only differ in details.</p>
     
         
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InspectorIssueCode">
+          <span class="domain-dot">Audits.</span>InspectorIssueCode
+          
+          <a href="#type-InspectorIssueCode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>A unique identifier for the type of issue. Each type may use one of the
+optional fields in InspectorIssueDetails to convey more specific
+information about the kind of issue, and AffectedResources to identify
+resources that are affected by this issue.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">SameSiteCookieIssue</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-InspectorIssueDetails">
+          <span class="domain-dot">Audits.</span>InspectorIssueDetails
+          
+          <a href="#type-InspectorIssueDetails" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This struct holds a list of optional fields with additional information
+pertaining to the kind of issue. This is useful if there is a number of
+very similar issues that only differ in details.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">sameSiteCookieIssueDetails</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieIssueDetails class="param-type">SameSiteCookieIssueDetails</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieExclusionReason">
+          <span class="domain-dot">Audits.</span>SameSiteCookieExclusionReason
+          
+          <a href="#type-SameSiteCookieExclusionReason" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">ExcludeSameSiteUnspecifiedTreatedAsLax, ExcludeSameSiteNoneInsecure</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieIssueDetails">
+          <span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails
+          
+          <a href="#type-SameSiteCookieIssueDetails" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This information is currently necessary, as the front-end has a difficult
+time finding a specific cookie. With this, we can convey specific error
+information without the cookie.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">cookieWarningReasons</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">cookieExclusionReasons</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieWarningReason">
+          <span class="domain-dot">Audits.</span>SameSiteCookieWarningReason
+          
+          <a href="#type-SameSiteCookieWarningReason" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">WarnSameSiteUnspecifiedCrossSiteContext, WarnSameSiteNoneInsecure, WarnSameSiteUnspecifiedLaxAllowUnsafe, WarnSameSiteCrossSchemeSecureUrlMethodUnsafe, WarnSameSiteCrossSchemeSecureUrlLax, WarnSameSiteCrossSchemeSecureUrlStrict, WarnSameSiteCrossSchemeInsecureUrlMethodUnsafe, WarnSameSiteCrossSchemeInsecureUrlLax, WarnSameSiteCrossSchemeInsecureUrlStrict</div>
+    
       </div>
     
       </div>

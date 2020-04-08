@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-v8">
+    <div id="domains" class="navs version-v8">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,29 +117,29 @@
         <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-clearMessages"><span class="domain-dot">Console.</span>clearMessages</a>
+        <a class="monospace" href="#method-clearMessages"><span class="domain-dot">Console.</span>clearMessages</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">Console.</span>disable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">Console.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">Console.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">Console.</span>enable</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-messageAdded"><span class="domain-dot">Console.</span>messageAdded</a>
+        <a class="monospace" href="#event-messageAdded"><span class="domain-dot">Console.</span>messageAdded</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-ConsoleMessage"><span class="domain-dot">Console.</span>ConsoleMessage</a>
+        <a class="monospace" href="#type-ConsoleMessage"><span class="domain-dot">Console.</span>ConsoleMessage</a>
         
       </div>
       
@@ -150,6 +152,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-clearMessages">
           <span class="domain-dot">Console.</span>clearMessages
+          
           <a href="#method-clearMessages" class="permalink">#</a>
         </h4>
         
@@ -162,12 +165,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">Console.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -180,12 +183,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">Console.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -195,7 +198,6 @@
 
       </div>
     
-        
         
         
         
@@ -211,6 +213,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-messageAdded">
           <span class="domain-dot">Console.</span>messageAdded
+          
           <a href="#event-messageAdded" class="permalink">#</a>
         </h4>
         
@@ -221,11 +224,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">message</dt>
+        <dt class="param-name monospace">message</dt>
         <dd>
           <a href=/devtools-protocol/v8/Console/#type-ConsoleMessage class="param-type">ConsoleMessage</a>
           
@@ -252,6 +254,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="type-ConsoleMessage">
           <span class="domain-dot">Console.</span>ConsoleMessage
+          
           <a href="#type-ConsoleMessage" class="permalink">#</a>
         </h4>
         
@@ -260,13 +263,12 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">source</dt>
+        <dt class="param-name monospace">source</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -278,7 +280,7 @@
           
         </dd>
       
-        <dt class="param-name">level</dt>
+        <dt class="param-name monospace">level</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -290,7 +292,7 @@
           
         </dd>
       
-        <dt class="param-name">text</dt>
+        <dt class="param-name monospace">text</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -302,7 +304,7 @@
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -314,7 +316,7 @@
           
         </dd>
       
-        <dt class="param-name">line</dt>
+        <dt class="param-name monospace">line</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -326,7 +328,7 @@
           
         </dd>
       
-        <dt class="param-name">column</dt>
+        <dt class="param-name monospace">column</dt>
         <dd>
           <span class="param-type">integer</span>
           

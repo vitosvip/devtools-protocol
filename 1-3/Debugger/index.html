@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-1-3">
+    <div id="domains" class="navs version-1-3">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -116,184 +118,184 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-continueToLocation"><span class="domain-dot">Debugger.</span>continueToLocation</a>
+        <a class="monospace" href="#method-continueToLocation"><span class="domain-dot">Debugger.</span>continueToLocation</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">Debugger.</span>disable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">Debugger.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">Debugger.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">Debugger.</span>enable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-evaluateOnCallFrame"><span class="domain-dot">Debugger.</span>evaluateOnCallFrame</a>
+        <a class="monospace" href="#method-evaluateOnCallFrame"><span class="domain-dot">Debugger.</span>evaluateOnCallFrame</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getPossibleBreakpoints"><span class="domain-dot">Debugger.</span>getPossibleBreakpoints</a>
+        <a class="monospace" href="#method-getPossibleBreakpoints"><span class="domain-dot">Debugger.</span>getPossibleBreakpoints</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getScriptSource"><span class="domain-dot">Debugger.</span>getScriptSource</a>
+        <a class="monospace" href="#method-getScriptSource"><span class="domain-dot">Debugger.</span>getScriptSource</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-pause"><span class="domain-dot">Debugger.</span>pause</a>
+        <a class="monospace" href="#method-pause"><span class="domain-dot">Debugger.</span>pause</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeBreakpoint"><span class="domain-dot">Debugger.</span>removeBreakpoint</a>
+        <a class="monospace" href="#method-removeBreakpoint"><span class="domain-dot">Debugger.</span>removeBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-restartFrame"><span class="domain-dot">Debugger.</span>restartFrame</a>
+        <a class="monospace" href="#method-restartFrame"><span class="domain-dot">Debugger.</span>restartFrame</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-resume"><span class="domain-dot">Debugger.</span>resume</a>
+        <a class="monospace" href="#method-resume"><span class="domain-dot">Debugger.</span>resume</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-searchInContent"><span class="domain-dot">Debugger.</span>searchInContent</a>
+        <a class="monospace" href="#method-searchInContent"><span class="domain-dot">Debugger.</span>searchInContent</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setAsyncCallStackDepth"><span class="domain-dot">Debugger.</span>setAsyncCallStackDepth</a>
+        <a class="monospace" href="#method-setAsyncCallStackDepth"><span class="domain-dot">Debugger.</span>setAsyncCallStackDepth</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setBreakpoint"><span class="domain-dot">Debugger.</span>setBreakpoint</a>
+        <a class="monospace" href="#method-setBreakpoint"><span class="domain-dot">Debugger.</span>setBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setInstrumentationBreakpoint"><span class="domain-dot">Debugger.</span>setInstrumentationBreakpoint</a>
+        <a class="monospace" href="#method-setBreakpointByUrl"><span class="domain-dot">Debugger.</span>setBreakpointByUrl</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setBreakpointByUrl"><span class="domain-dot">Debugger.</span>setBreakpointByUrl</a>
+        <a class="monospace" href="#method-setBreakpointsActive"><span class="domain-dot">Debugger.</span>setBreakpointsActive</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setBreakpointsActive"><span class="domain-dot">Debugger.</span>setBreakpointsActive</a>
+        <a class="monospace" href="#method-setInstrumentationBreakpoint"><span class="domain-dot">Debugger.</span>setInstrumentationBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setPauseOnExceptions"><span class="domain-dot">Debugger.</span>setPauseOnExceptions</a>
+        <a class="monospace" href="#method-setPauseOnExceptions"><span class="domain-dot">Debugger.</span>setPauseOnExceptions</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setScriptSource"><span class="domain-dot">Debugger.</span>setScriptSource</a>
+        <a class="monospace" href="#method-setScriptSource"><span class="domain-dot">Debugger.</span>setScriptSource</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setSkipAllPauses"><span class="domain-dot">Debugger.</span>setSkipAllPauses</a>
+        <a class="monospace" href="#method-setSkipAllPauses"><span class="domain-dot">Debugger.</span>setSkipAllPauses</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setVariableValue"><span class="domain-dot">Debugger.</span>setVariableValue</a>
+        <a class="monospace" href="#method-setVariableValue"><span class="domain-dot">Debugger.</span>setVariableValue</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-stepInto"><span class="domain-dot">Debugger.</span>stepInto</a>
+        <a class="monospace" href="#method-stepInto"><span class="domain-dot">Debugger.</span>stepInto</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-stepOut"><span class="domain-dot">Debugger.</span>stepOut</a>
+        <a class="monospace" href="#method-stepOut"><span class="domain-dot">Debugger.</span>stepOut</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-stepOver"><span class="domain-dot">Debugger.</span>stepOver</a>
+        <a class="monospace" href="#method-stepOver"><span class="domain-dot">Debugger.</span>stepOver</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-breakpointResolved"><span class="domain-dot">Debugger.</span>breakpointResolved</a>
+        <a class="monospace" href="#event-breakpointResolved"><span class="domain-dot">Debugger.</span>breakpointResolved</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-paused"><span class="domain-dot">Debugger.</span>paused</a>
+        <a class="monospace" href="#event-paused"><span class="domain-dot">Debugger.</span>paused</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-resumed"><span class="domain-dot">Debugger.</span>resumed</a>
+        <a class="monospace" href="#event-resumed"><span class="domain-dot">Debugger.</span>resumed</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-scriptFailedToParse"><span class="domain-dot">Debugger.</span>scriptFailedToParse</a>
+        <a class="monospace" href="#event-scriptFailedToParse"><span class="domain-dot">Debugger.</span>scriptFailedToParse</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-scriptParsed"><span class="domain-dot">Debugger.</span>scriptParsed</a>
+        <a class="monospace" href="#event-scriptParsed"><span class="domain-dot">Debugger.</span>scriptParsed</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-BreakpointId"><span class="domain-dot">Debugger.</span>BreakpointId</a>
+        <a class="monospace" href="#type-BreakLocation"><span class="domain-dot">Debugger.</span>BreakLocation</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-CallFrameId"><span class="domain-dot">Debugger.</span>CallFrameId</a>
+        <a class="monospace" href="#type-BreakpointId"><span class="domain-dot">Debugger.</span>BreakpointId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Location"><span class="domain-dot">Debugger.</span>Location</a>
+        <a class="monospace" href="#type-CallFrame"><span class="domain-dot">Debugger.</span>CallFrame</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-CallFrame"><span class="domain-dot">Debugger.</span>CallFrame</a>
+        <a class="monospace" href="#type-CallFrameId"><span class="domain-dot">Debugger.</span>CallFrameId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Scope"><span class="domain-dot">Debugger.</span>Scope</a>
+        <a class="monospace" href="#type-Location"><span class="domain-dot">Debugger.</span>Location</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SearchMatch"><span class="domain-dot">Debugger.</span>SearchMatch</a>
+        <a class="monospace" href="#type-Scope"><span class="domain-dot">Debugger.</span>Scope</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-BreakLocation"><span class="domain-dot">Debugger.</span>BreakLocation</a>
+        <a class="monospace" href="#type-ScriptLanguage"><span class="domain-dot">Debugger.</span>ScriptLanguage</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-ScriptLanguage"><span class="domain-dot">Debugger.</span>ScriptLanguage</a>
+        <a class="monospace" href="#type-SearchMatch"><span class="domain-dot">Debugger.</span>SearchMatch</a>
         
       </div>
       
@@ -306,6 +308,7 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-continueToLocation">
           <span class="domain-dot">Debugger.</span>continueToLocation
+          
           <a href="#method-continueToLocation" class="permalink">#</a>
         </h4>
         
@@ -316,11 +319,10 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">location</dt>
+        <dt class="param-name monospace">location</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -332,7 +334,7 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
           
         </dd>
       
-        <dt class="param-name">targetCallFrames</dt>
+        <dt class="param-name monospace">targetCallFrames</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -348,6 +350,7 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">Debugger.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -360,12 +363,12 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">Debugger.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -377,11 +380,10 @@ enabled until the result for this command is received.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">maxScriptsCacheSize</dt>
+        <dt class="param-name monospace">maxScriptsCacheSize</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -400,7 +402,7 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">debuggerId</dt>
+        <dt class="param-name monospace">debuggerId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-UniqueDebuggerId class="param-type">Runtime.UniqueDebuggerId</a>
           
@@ -420,6 +422,7 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-evaluateOnCallFrame">
           <span class="domain-dot">Debugger.</span>evaluateOnCallFrame
+          
           <a href="#method-evaluateOnCallFrame" class="permalink">#</a>
         </h4>
         
@@ -430,11 +433,10 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">callFrameId</dt>
+        <dt class="param-name monospace">callFrameId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
@@ -446,7 +448,7 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
           
         </dd>
       
-        <dt class="param-name">expression</dt>
+        <dt class="param-name monospace">expression</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -458,7 +460,7 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
           
         </dd>
       
-        <dt class="param-name">objectGroup</dt>
+        <dt class="param-name monospace">objectGroup</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -471,7 +473,7 @@ using <code>releaseObjectGroup</code>).</p>
           
         </dd>
       
-        <dt class="param-name">includeCommandLineAPI</dt>
+        <dt class="param-name monospace">includeCommandLineAPI</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -484,7 +486,7 @@ to false.</p>
           
         </dd>
       
-        <dt class="param-name">silent</dt>
+        <dt class="param-name monospace">silent</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -497,7 +499,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           
         </dd>
       
-        <dt class="param-name">returnByValue</dt>
+        <dt class="param-name monospace">returnByValue</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -509,7 +511,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           
         </dd>
       
-        <dt class="param-name">generatePreview</dt>
+        <dt class="param-name monospace">generatePreview</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -521,7 +523,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">throwOnSideEffect</dt>
+        <dt class="param-name monospace">throwOnSideEffect</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -533,7 +535,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           
         </dd>
       
-        <dt class="param-name">timeout</dt>
+        <dt class="param-name monospace">timeout</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-TimeDelta class="param-type">Runtime.TimeDelta</a>
           
@@ -551,7 +553,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">result</dt>
+        <dt class="param-name monospace">result</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -563,7 +565,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
           
         </dd>
       
-        <dt class="param-name">exceptionDetails</dt>
+        <dt class="param-name monospace">exceptionDetails</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">Runtime.ExceptionDetails</a>
           
@@ -583,6 +585,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getPossibleBreakpoints">
           <span class="domain-dot">Debugger.</span>getPossibleBreakpoints
+          
           <a href="#method-getPossibleBreakpoints" class="permalink">#</a>
         </h4>
         
@@ -594,11 +597,10 @@ the same.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">start</dt>
+        <dt class="param-name monospace">start</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -610,7 +612,7 @@ the same.</p>
           
         </dd>
       
-        <dt class="param-name">end</dt>
+        <dt class="param-name monospace">end</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -623,7 +625,7 @@ of scripts is used as end of range.</p>
           
         </dd>
       
-        <dt class="param-name">restrictToFunction</dt>
+        <dt class="param-name monospace">restrictToFunction</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -641,7 +643,7 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">locations</dt>
+        <dt class="param-name monospace">locations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -661,6 +663,7 @@ of scripts is used as end of range.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getScriptSource">
           <span class="domain-dot">Debugger.</span>getScriptSource
+          
           <a href="#method-getScriptSource" class="permalink">#</a>
         </h4>
         
@@ -671,11 +674,10 @@ of scripts is used as end of range.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -693,7 +695,7 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptSource</dt>
+        <dt class="param-name monospace">scriptSource</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -705,7 +707,7 @@ of scripts is used as end of range.</p>
           
         </dd>
       
-        <dt class="param-name">bytecode</dt>
+        <dt class="param-name monospace">bytecode</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -725,6 +727,7 @@ of scripts is used as end of range.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-pause">
           <span class="domain-dot">Debugger.</span>pause
+          
           <a href="#method-pause" class="permalink">#</a>
         </h4>
         
@@ -737,12 +740,12 @@ of scripts is used as end of range.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-removeBreakpoint">
           <span class="domain-dot">Debugger.</span>removeBreakpoint
+          
           <a href="#method-removeBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -753,11 +756,10 @@ of scripts is used as end of range.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">breakpointId</dt>
+        <dt class="param-name monospace">breakpointId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
@@ -773,6 +775,7 @@ of scripts is used as end of range.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-restartFrame">
           <span class="domain-dot">Debugger.</span>restartFrame
+          
           <a href="#method-restartFrame" class="permalink">#</a>
         </h4>
         
@@ -783,11 +786,10 @@ of scripts is used as end of range.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">callFrameId</dt>
+        <dt class="param-name monospace">callFrameId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
@@ -805,7 +807,7 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">callFrames</dt>
+        <dt class="param-name monospace">callFrames</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -817,7 +819,7 @@ of scripts is used as end of range.</p>
           
         </dd>
       
-        <dt class="param-name">asyncStackTrace</dt>
+        <dt class="param-name monospace">asyncStackTrace</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
@@ -829,7 +831,7 @@ of scripts is used as end of range.</p>
           
         </dd>
       
-        <dt class="param-name">asyncStackTraceId</dt>
+        <dt class="param-name monospace">asyncStackTraceId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
@@ -849,6 +851,7 @@ of scripts is used as end of range.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-resume">
           <span class="domain-dot">Debugger.</span>resume
+          
           <a href="#method-resume" class="permalink">#</a>
         </h4>
         
@@ -859,11 +862,10 @@ of scripts is used as end of range.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">terminateOnResume</dt>
+        <dt class="param-name monospace">terminateOnResume</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -888,6 +890,7 @@ If execution is currently not paused, this parameter has no effect.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-searchInContent">
           <span class="domain-dot">Debugger.</span>searchInContent
+          
           <a href="#method-searchInContent" class="permalink">#</a>
         </h4>
         
@@ -898,11 +901,10 @@ If execution is currently not paused, this parameter has no effect.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -914,7 +916,7 @@ If execution is currently not paused, this parameter has no effect.</p>
           
         </dd>
       
-        <dt class="param-name">query</dt>
+        <dt class="param-name monospace">query</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -926,7 +928,7 @@ If execution is currently not paused, this parameter has no effect.</p>
           
         </dd>
       
-        <dt class="param-name">caseSensitive</dt>
+        <dt class="param-name monospace">caseSensitive</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -938,7 +940,7 @@ If execution is currently not paused, this parameter has no effect.</p>
           
         </dd>
       
-        <dt class="param-name">isRegex</dt>
+        <dt class="param-name monospace">isRegex</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -956,7 +958,7 @@ If execution is currently not paused, this parameter has no effect.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">result</dt>
+        <dt class="param-name monospace">result</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -976,6 +978,7 @@ If execution is currently not paused, this parameter has no effect.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setAsyncCallStackDepth">
           <span class="domain-dot">Debugger.</span>setAsyncCallStackDepth
+          
           <a href="#method-setAsyncCallStackDepth" class="permalink">#</a>
         </h4>
         
@@ -986,11 +989,10 @@ If execution is currently not paused, this parameter has no effect.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">maxDepth</dt>
+        <dt class="param-name monospace">maxDepth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1012,6 +1014,7 @@ call stacks (default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setBreakpoint">
           <span class="domain-dot">Debugger.</span>setBreakpoint
+          
           <a href="#method-setBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -1022,11 +1025,10 @@ call stacks (default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">location</dt>
+        <dt class="param-name monospace">location</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -1038,7 +1040,7 @@ call stacks (default).</p>
           
         </dd>
       
-        <dt class="param-name">condition</dt>
+        <dt class="param-name monospace">condition</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1057,7 +1059,7 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">breakpointId</dt>
+        <dt class="param-name monospace">breakpointId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
@@ -1069,7 +1071,7 @@ breakpoint if this expression evaluates to true.</p>
           
         </dd>
       
-        <dt class="param-name">actualLocation</dt>
+        <dt class="param-name monospace">actualLocation</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -1087,60 +1089,9 @@ breakpoint if this expression evaluates to true.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setInstrumentationBreakpoint">
-          <span class="domain-dot">Debugger.</span>setInstrumentationBreakpoint
-          <a href="#method-setInstrumentationBreakpoint" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Sets instrumentation breakpoint.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">instrumentation</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Instrumentation name.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">breakpointId</dt>
-        <dd>
-          <a href=/devtools-protocol/1-3/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
-          
-      <div class="details-description">
-        <p>Id of the created breakpoint for further reference.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-setBreakpointByUrl">
           <span class="domain-dot">Debugger.</span>setBreakpointByUrl
+          
           <a href="#method-setBreakpointByUrl" class="permalink">#</a>
         </h4>
         
@@ -1154,11 +1105,10 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">lineNumber</dt>
+        <dt class="param-name monospace">lineNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1170,7 +1120,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1182,7 +1132,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
           
         </dd>
       
-        <dt class="param-name">urlRegex</dt>
+        <dt class="param-name monospace">urlRegex</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1195,7 +1145,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
           
         </dd>
       
-        <dt class="param-name">scriptHash</dt>
+        <dt class="param-name monospace">scriptHash</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1207,7 +1157,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
           
         </dd>
       
-        <dt class="param-name">columnNumber</dt>
+        <dt class="param-name monospace">columnNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1219,7 +1169,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
           
         </dd>
       
-        <dt class="param-name">condition</dt>
+        <dt class="param-name monospace">condition</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1238,7 +1188,7 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">breakpointId</dt>
+        <dt class="param-name monospace">breakpointId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
@@ -1250,7 +1200,7 @@ breakpoint if this expression evaluates to true.</p>
           
         </dd>
       
-        <dt class="param-name">locations</dt>
+        <dt class="param-name monospace">locations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1270,6 +1220,7 @@ breakpoint if this expression evaluates to true.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setBreakpointsActive">
           <span class="domain-dot">Debugger.</span>setBreakpointsActive
+          
           <a href="#method-setBreakpointsActive" class="permalink">#</a>
         </h4>
         
@@ -1280,11 +1231,10 @@ breakpoint if this expression evaluates to true.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">active</dt>
+        <dt class="param-name monospace">active</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1303,8 +1253,61 @@ breakpoint if this expression evaluates to true.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setInstrumentationBreakpoint">
+          <span class="domain-dot">Debugger.</span>setInstrumentationBreakpoint
+          
+          <a href="#method-setInstrumentationBreakpoint" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets instrumentation breakpoint.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">instrumentation</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Instrumentation name.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">breakpointId</dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
+          
+      <div class="details-description">
+        <p>Id of the created breakpoint for further reference.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setPauseOnExceptions">
           <span class="domain-dot">Debugger.</span>setPauseOnExceptions
+          
           <a href="#method-setPauseOnExceptions" class="permalink">#</a>
         </h4>
         
@@ -1316,11 +1319,10 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">state</dt>
+        <dt class="param-name monospace">state</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1341,6 +1343,7 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setScriptSource">
           <span class="domain-dot">Debugger.</span>setScriptSource
+          
           <a href="#method-setScriptSource" class="permalink">#</a>
         </h4>
         
@@ -1351,11 +1354,10 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -1367,7 +1369,7 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
           
         </dd>
       
-        <dt class="param-name">scriptSource</dt>
+        <dt class="param-name monospace">scriptSource</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1379,7 +1381,7 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
           
         </dd>
       
-        <dt class="param-name">dryRun</dt>
+        <dt class="param-name monospace">dryRun</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1398,7 +1400,7 @@ description without actually modifying the code.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">callFrames</dt>
+        <dt class="param-name monospace">callFrames</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1410,7 +1412,7 @@ description without actually modifying the code.</p>
           
         </dd>
       
-        <dt class="param-name">stackChanged</dt>
+        <dt class="param-name monospace">stackChanged</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1422,7 +1424,7 @@ description without actually modifying the code.</p>
           
         </dd>
       
-        <dt class="param-name">asyncStackTrace</dt>
+        <dt class="param-name monospace">asyncStackTrace</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
@@ -1434,7 +1436,7 @@ description without actually modifying the code.</p>
           
         </dd>
       
-        <dt class="param-name">asyncStackTraceId</dt>
+        <dt class="param-name monospace">asyncStackTraceId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
@@ -1446,7 +1448,7 @@ description without actually modifying the code.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">exceptionDetails</dt>
+        <dt class="param-name monospace">exceptionDetails</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">Runtime.ExceptionDetails</a>
           
@@ -1466,6 +1468,7 @@ description without actually modifying the code.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setSkipAllPauses">
           <span class="domain-dot">Debugger.</span>setSkipAllPauses
+          
           <a href="#method-setSkipAllPauses" class="permalink">#</a>
         </h4>
         
@@ -1476,11 +1479,10 @@ description without actually modifying the code.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">skip</dt>
+        <dt class="param-name monospace">skip</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1501,6 +1503,7 @@ description without actually modifying the code.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setVariableValue">
           <span class="domain-dot">Debugger.</span>setVariableValue
+          
           <a href="#method-setVariableValue" class="permalink">#</a>
         </h4>
         
@@ -1512,11 +1515,10 @@ mutated manually.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scopeNumber</dt>
+        <dt class="param-name monospace">scopeNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1529,7 +1531,7 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
           
         </dd>
       
-        <dt class="param-name">variableName</dt>
+        <dt class="param-name monospace">variableName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1541,7 +1543,7 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
           
         </dd>
       
-        <dt class="param-name">newValue</dt>
+        <dt class="param-name monospace">newValue</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-CallArgument class="param-type">Runtime.CallArgument</a>
           
@@ -1553,7 +1555,7 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
           
         </dd>
       
-        <dt class="param-name">callFrameId</dt>
+        <dt class="param-name monospace">callFrameId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
@@ -1574,6 +1576,7 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-stepInto">
           <span class="domain-dot">Debugger.</span>stepInto
+          
           <a href="#method-stepInto" class="permalink">#</a>
         </h4>
         
@@ -1584,11 +1587,10 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">breakOnAsyncCall</dt>
+        <dt class="param-name monospace">breakOnAsyncCall</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1610,6 +1612,7 @@ before next pause.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-stepOut">
           <span class="domain-dot">Debugger.</span>stepOut
+          
           <a href="#method-stepOut" class="permalink">#</a>
         </h4>
         
@@ -1622,12 +1625,12 @@ before next pause.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-stepOver">
           <span class="domain-dot">Debugger.</span>stepOver
+          
           <a href="#method-stepOver" class="permalink">#</a>
         </h4>
         
@@ -1636,7 +1639,6 @@ before next pause.</p>
 
       </div>
     
-        
         
         
         
@@ -1652,6 +1654,7 @@ before next pause.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-breakpointResolved">
           <span class="domain-dot">Debugger.</span>breakpointResolved
+          
           <a href="#event-breakpointResolved" class="permalink">#</a>
         </h4>
         
@@ -1662,11 +1665,10 @@ before next pause.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">breakpointId</dt>
+        <dt class="param-name monospace">breakpointId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
@@ -1678,7 +1680,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">location</dt>
+        <dt class="param-name monospace">location</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -1699,6 +1701,7 @@ before next pause.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-paused">
           <span class="domain-dot">Debugger.</span>paused
+          
           <a href="#event-paused" class="permalink">#</a>
         </h4>
         
@@ -1709,11 +1712,10 @@ before next pause.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">callFrames</dt>
+        <dt class="param-name monospace">callFrames</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1725,7 +1727,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">reason</dt>
+        <dt class="param-name monospace">reason</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1737,7 +1739,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">data</dt>
+        <dt class="param-name monospace">data</dt>
         <dd>
           <span class="param-type">object</span>
           
@@ -1749,7 +1751,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">hitBreakpoints</dt>
+        <dt class="param-name monospace">hitBreakpoints</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1761,7 +1763,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">asyncStackTrace</dt>
+        <dt class="param-name monospace">asyncStackTrace</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
@@ -1773,7 +1775,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">asyncStackTraceId</dt>
+        <dt class="param-name monospace">asyncStackTraceId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
@@ -1785,7 +1787,7 @@ before next pause.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">asyncCallStackTraceId</dt>
+        <dt class="param-name monospace">asyncCallStackTraceId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
@@ -1806,6 +1808,7 @@ before next pause.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-resumed">
           <span class="domain-dot">Debugger.</span>resumed
+          
           <a href="#event-resumed" class="permalink">#</a>
         </h4>
         
@@ -1818,12 +1821,12 @@ before next pause.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="event-scriptFailedToParse">
           <span class="domain-dot">Debugger.</span>scriptFailedToParse
+          
           <a href="#event-scriptFailedToParse" class="permalink">#</a>
         </h4>
         
@@ -1834,11 +1837,10 @@ before next pause.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -1850,7 +1852,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1862,7 +1864,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">startLine</dt>
+        <dt class="param-name monospace">startLine</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1874,7 +1876,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">startColumn</dt>
+        <dt class="param-name monospace">startColumn</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1886,7 +1888,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">endLine</dt>
+        <dt class="param-name monospace">endLine</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1898,7 +1900,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">endColumn</dt>
+        <dt class="param-name monospace">endColumn</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1910,7 +1912,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">executionContextId</dt>
+        <dt class="param-name monospace">executionContextId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">Runtime.ExecutionContextId</a>
           
@@ -1922,7 +1924,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">hash</dt>
+        <dt class="param-name monospace">hash</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1934,7 +1936,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">executionContextAuxData</dt>
+        <dt class="param-name monospace">executionContextAuxData</dt>
         <dd>
           <span class="param-type">object</span>
           
@@ -1946,7 +1948,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">sourceMapURL</dt>
+        <dt class="param-name monospace">sourceMapURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1958,7 +1960,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">hasSourceURL</dt>
+        <dt class="param-name monospace">hasSourceURL</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1970,7 +1972,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">isModule</dt>
+        <dt class="param-name monospace">isModule</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1982,7 +1984,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">length</dt>
+        <dt class="param-name monospace">length</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1994,7 +1996,7 @@ before next pause.</p>
           
         </dd>
       
-        <dt class="param-name">stackTrace</dt>
+        <dt class="param-name monospace">stackTrace</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
@@ -2006,7 +2008,7 @@ before next pause.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">codeOffset</dt>
+        <dt class="param-name monospace">codeOffset</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2018,7 +2020,7 @@ before next pause.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">scriptLanguage</dt>
+        <dt class="param-name monospace">scriptLanguage</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-ScriptLanguage class="param-type">Debugger.ScriptLanguage</a>
           
@@ -2039,6 +2041,7 @@ before next pause.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-scriptParsed">
           <span class="domain-dot">Debugger.</span>scriptParsed
+          
           <a href="#event-scriptParsed" class="permalink">#</a>
         </h4>
         
@@ -2050,11 +2053,10 @@ scripts upon enabling debugger.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -2066,7 +2068,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2078,7 +2080,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">startLine</dt>
+        <dt class="param-name monospace">startLine</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2090,7 +2092,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">startColumn</dt>
+        <dt class="param-name monospace">startColumn</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2102,7 +2104,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">endLine</dt>
+        <dt class="param-name monospace">endLine</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2114,7 +2116,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">endColumn</dt>
+        <dt class="param-name monospace">endColumn</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2126,7 +2128,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">executionContextId</dt>
+        <dt class="param-name monospace">executionContextId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">Runtime.ExecutionContextId</a>
           
@@ -2138,7 +2140,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">hash</dt>
+        <dt class="param-name monospace">hash</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2150,7 +2152,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">executionContextAuxData</dt>
+        <dt class="param-name monospace">executionContextAuxData</dt>
         <dd>
           <span class="param-type">object</span>
           
@@ -2162,7 +2164,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">isLiveEdit</dt>
+        <dt class="param-name monospace">isLiveEdit</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2174,7 +2176,7 @@ scripts upon enabling debugger.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">sourceMapURL</dt>
+        <dt class="param-name monospace">sourceMapURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2186,7 +2188,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">hasSourceURL</dt>
+        <dt class="param-name monospace">hasSourceURL</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2198,7 +2200,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">isModule</dt>
+        <dt class="param-name monospace">isModule</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2210,7 +2212,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">length</dt>
+        <dt class="param-name monospace">length</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2222,7 +2224,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">stackTrace</dt>
+        <dt class="param-name monospace">stackTrace</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
@@ -2234,7 +2236,7 @@ scripts upon enabling debugger.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">codeOffset</dt>
+        <dt class="param-name monospace">codeOffset</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2246,7 +2248,7 @@ scripts upon enabling debugger.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">scriptLanguage</dt>
+        <dt class="param-name monospace">scriptLanguage</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-ScriptLanguage class="param-type">Debugger.ScriptLanguage</a>
           
@@ -2271,59 +2273,18 @@ scripts upon enabling debugger.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-BreakpointId">
-          <span class="domain-dot">Debugger.</span>BreakpointId
-          <a href="#type-BreakpointId" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-BreakLocation">
+          <span class="domain-dot">Debugger.</span>BreakLocation
+          
+          <a href="#type-BreakLocation" class="permalink">#</a>
         </h4>
-        
-      <div class="details-description">
-        <p>Breakpoint identifier.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-CallFrameId">
-          <span class="domain-dot">Debugger.</span>CallFrameId
-          <a href="#type-CallFrameId" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Call frame identifier.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-Location">
-          <span class="domain-dot">Debugger.</span>Location
-          <a href="#type-Location" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Location in the source code.</p>
-
-      </div>
-    
         
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -2335,7 +2296,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">lineNumber</dt>
+        <dt class="param-name monospace">lineNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2347,7 +2308,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">columnNumber</dt>
+        <dt class="param-name monospace">columnNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -2359,6 +2320,13 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
+        <dt class="param-name monospace">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
       </dl>
     
         
@@ -2366,8 +2334,27 @@ scripts upon enabling debugger.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-BreakpointId">
+          <span class="domain-dot">Debugger.</span>BreakpointId
+          
+          <a href="#type-BreakpointId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Breakpoint identifier.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-CallFrame">
           <span class="domain-dot">Debugger.</span>CallFrame
+          
           <a href="#type-CallFrame" class="permalink">#</a>
         </h4>
         
@@ -2376,13 +2363,12 @@ scripts upon enabling debugger.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">callFrameId</dt>
+        <dt class="param-name monospace">callFrameId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
@@ -2394,7 +2380,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">functionName</dt>
+        <dt class="param-name monospace">functionName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2406,7 +2392,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">functionLocation</dt>
+        <dt class="param-name monospace">functionLocation</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -2418,7 +2404,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">location</dt>
+        <dt class="param-name monospace">location</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -2430,7 +2416,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2442,7 +2428,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">scopeChain</dt>
+        <dt class="param-name monospace">scopeChain</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -2454,7 +2440,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">this</dt>
+        <dt class="param-name monospace">this</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -2466,7 +2452,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">returnValue</dt>
+        <dt class="param-name monospace">returnValue</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -2485,8 +2471,86 @@ scripts upon enabling debugger.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-CallFrameId">
+          <span class="domain-dot">Debugger.</span>CallFrameId
+          
+          <a href="#type-CallFrameId" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Call frame identifier.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-Location">
+          <span class="domain-dot">Debugger.</span>Location
+          
+          <a href="#type-Location" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Location in the source code.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">scriptId</dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
+          
+      <div class="details-description">
+        <p>Script identifier as reported in the <code>Debugger.scriptParsed</code>.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">lineNumber</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Line number in the script (0-based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">columnNumber</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Column number in the script (0-based).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-Scope">
           <span class="domain-dot">Debugger.</span>Scope
+          
           <a href="#type-Scope" class="permalink">#</a>
         </h4>
         
@@ -2495,13 +2559,12 @@ scripts upon enabling debugger.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2513,7 +2576,7 @@ scripts upon enabling debugger.</p>
           
         </dd>
       
-        <dt class="param-name">object</dt>
+        <dt class="param-name monospace">object</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -2527,14 +2590,14 @@ variables as its properties.</p>
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">startLocation</dt>
+        <dt class="param-name monospace">startLocation</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -2546,7 +2609,7 @@ variables as its properties.</p>
           
         </dd>
       
-        <dt class="param-name">endLocation</dt>
+        <dt class="param-name monospace">endLocation</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Location</a>
           
@@ -2565,8 +2628,30 @@ variables as its properties.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-ScriptLanguage">
+          <span class="domain-dot">Debugger.</span>ScriptLanguage
+          
+          <a href="#type-ScriptLanguage" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enum of possible script languages.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">JavaScript, WebAssembly</div>
+    
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-SearchMatch">
           <span class="domain-dot">Debugger.</span>SearchMatch
+          
           <a href="#type-SearchMatch" class="permalink">#</a>
         </h4>
         
@@ -2575,13 +2660,12 @@ variables as its properties.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">lineNumber</dt>
+        <dt class="param-name monospace">lineNumber</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -2593,7 +2677,7 @@ variables as its properties.</p>
           
         </dd>
       
-        <dt class="param-name">lineContent</dt>
+        <dt class="param-name monospace">lineContent</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2609,88 +2693,6 @@ variables as its properties.</p>
     
         
         
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-BreakLocation">
-          <span class="domain-dot">Debugger.</span>BreakLocation
-          <a href="#type-BreakLocation" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">scriptId</dt>
-        <dd>
-          <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
-          
-      <div class="details-description">
-        <p>Script identifier as reported in the <code>Debugger.scriptParsed</code>.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">lineNumber</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Line number in the script (0-based).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">columnNumber</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Column number in the script (0-based).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">type</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-ScriptLanguage">
-          <span class="domain-dot">Debugger.</span>ScriptLanguage
-          <a href="#type-ScriptLanguage" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Enum of possible script languages.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">JavaScript, WebAssembly</div>
-    
       </div>
     
       </div>

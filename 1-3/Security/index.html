@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-1-3">
+    <div id="domains" class="navs version-1-3">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,44 +117,44 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">Security.</span>disable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">Security.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">Security.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">Security.</span>enable</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-securityStateChanged"><span class="domain-dot">Security.</span>securityStateChanged</a>
+        <a class="monospace" href="#event-securityStateChanged"><span class="domain-dot">Security.</span>securityStateChanged</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-CertificateId"><span class="domain-dot">Security.</span>CertificateId</a>
+        <a class="monospace" href="#type-CertificateErrorAction"><span class="domain-dot">Security.</span>CertificateErrorAction</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-MixedContentType"><span class="domain-dot">Security.</span>MixedContentType</a>
+        <a class="monospace" href="#type-CertificateId"><span class="domain-dot">Security.</span>CertificateId</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SecurityState"><span class="domain-dot">Security.</span>SecurityState</a>
+        <a class="monospace" href="#type-MixedContentType"><span class="domain-dot">Security.</span>MixedContentType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SecurityStateExplanation"><span class="domain-dot">Security.</span>SecurityStateExplanation</a>
+        <a class="monospace" href="#type-SecurityState"><span class="domain-dot">Security.</span>SecurityState</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-CertificateErrorAction"><span class="domain-dot">Security.</span>CertificateErrorAction</a>
+        <a class="monospace" href="#type-SecurityStateExplanation"><span class="domain-dot">Security.</span>SecurityStateExplanation</a>
         
       </div>
       
@@ -165,6 +167,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">Security.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -177,12 +180,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">Security.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -191,7 +194,6 @@
 
       </div>
     
-        
         
         
         
@@ -207,6 +209,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-securityStateChanged">
           <span class="domain-dot">Security.</span>securityStateChanged
+          
           <a href="#event-securityStateChanged" class="permalink">#</a>
         </h4>
         
@@ -217,11 +220,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityState</dt>
+        <dt class="param-name monospace">securityState</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-SecurityState class="param-type">SecurityState</a>
           
@@ -233,7 +235,7 @@
           
         </dd>
       
-        <dt class="param-name">schemeIsCryptographic</dt>
+        <dt class="param-name monospace">schemeIsCryptographic</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -245,7 +247,7 @@
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name">explanations</dt>
+        <dt class="param-name monospace">explanations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -258,7 +260,7 @@
           
         </dd>
       
-        <dt class="param-name">insecureContentStatus</dt>
+        <dt class="param-name monospace">insecureContentStatus</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-InsecureContentStatus class="param-type">InsecureContentStatus</a>
           
@@ -270,7 +272,7 @@
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name">summary</dt>
+        <dt class="param-name monospace">summary</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -295,8 +297,31 @@
       <div>
         
       <div class="details">
+        <h4 class="details-name monospace" id="type-CertificateErrorAction">
+          <span class="domain-dot">Security.</span>CertificateErrorAction
+          
+          <a href="#type-CertificateErrorAction" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>The action to take when a certificate error occurs. continue will continue processing the
+request and cancel will cancel the request.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">continue, cancel</div>
+    
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-CertificateId">
           <span class="domain-dot">Security.</span>CertificateId
+          
           <a href="#type-CertificateId" class="permalink">#</a>
         </h4>
         
@@ -305,7 +330,6 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>integer</strong></p>
         
         
@@ -315,6 +339,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="type-MixedContentType">
           <span class="domain-dot">Security.</span>MixedContentType
+          
           <a href="#type-MixedContentType" class="permalink">#</a>
         </h4>
         
@@ -324,19 +349,19 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">blockable, optionally-blockable, none</div>
+      <div class="enum-container monospace">blockable, optionally-blockable, none</div>
     
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="type-SecurityState">
           <span class="domain-dot">Security.</span>SecurityState
+          
           <a href="#type-SecurityState" class="permalink">#</a>
         </h4>
         
@@ -345,19 +370,19 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">unknown, neutral, insecure, secure, info, insecure-broken</div>
+      <div class="enum-container monospace">unknown, neutral, insecure, secure, info, insecure-broken</div>
     
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="type-SecurityStateExplanation">
           <span class="domain-dot">Security.</span>SecurityStateExplanation
+          
           <a href="#type-SecurityStateExplanation" class="permalink">#</a>
         </h4>
         
@@ -366,13 +391,12 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">securityState</dt>
+        <dt class="param-name monospace">securityState</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-SecurityState class="param-type">SecurityState</a>
           
@@ -384,7 +408,7 @@
           
         </dd>
       
-        <dt class="param-name">title</dt>
+        <dt class="param-name monospace">title</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -396,7 +420,7 @@
           
         </dd>
       
-        <dt class="param-name">summary</dt>
+        <dt class="param-name monospace">summary</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -408,7 +432,7 @@
           
         </dd>
       
-        <dt class="param-name">description</dt>
+        <dt class="param-name monospace">description</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -420,7 +444,7 @@
           
         </dd>
       
-        <dt class="param-name">mixedContentType</dt>
+        <dt class="param-name monospace">mixedContentType</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-MixedContentType class="param-type">MixedContentType</a>
           
@@ -432,7 +456,7 @@
           
         </dd>
       
-        <dt class="param-name">certificate</dt>
+        <dt class="param-name monospace">certificate</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -444,7 +468,7 @@
           
         </dd>
       
-        <dt class="param-name">recommendations</dt>
+        <dt class="param-name monospace">recommendations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -460,28 +484,6 @@
     
         
         
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-CertificateErrorAction">
-          <span class="domain-dot">Security.</span>CertificateErrorAction
-          <a href="#type-CertificateErrorAction" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>The action to take when a certificate error occurs. continue will continue processing the
-request and cancel will cancel the request.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">continue, cancel</div>
-    
       </div>
     
       </div>

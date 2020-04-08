@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -116,59 +118,59 @@ execution will stop on these operations as if there was a regular breakpoint set
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-getEventListeners"><span class="domain-dot">DOMDebugger.</span>getEventListeners</a>
+        <a class="monospace" href="#method-getEventListeners"><span class="domain-dot">DOMDebugger.</span>getEventListeners</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeDOMBreakpoint</a>
+        <a class="monospace" href="#method-removeDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeDOMBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeEventListenerBreakpoint</a>
+        <a class="monospace" href="#method-removeEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeEventListenerBreakpoint</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeInstrumentationBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeInstrumentationBreakpoint</a>
+        <a class="monospace" href="#method-removeXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-removeInstrumentationBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeInstrumentationBreakpoint</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-removeXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setDOMBreakpoint"><span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setEventListenerBreakpoint"><span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setInstrumentationBreakpoint"><span class="domain-dot">DOMDebugger.</span>setInstrumentationBreakpoint</a>
+        <a class="monospace" href="#method-setInstrumentationBreakpoint"><span class="domain-dot">DOMDebugger.</span>setInstrumentationBreakpoint</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setXHRBreakpoint"><span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint</a>
-        
       </div>
       
         
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-DOMBreakpointType"><span class="domain-dot">DOMDebugger.</span>DOMBreakpointType</a>
+        <a class="monospace" href="#type-DOMBreakpointType"><span class="domain-dot">DOMDebugger.</span>DOMBreakpointType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-EventListener"><span class="domain-dot">DOMDebugger.</span>EventListener</a>
+        <a class="monospace" href="#type-EventListener"><span class="domain-dot">DOMDebugger.</span>EventListener</a>
         
       </div>
       
@@ -181,6 +183,7 @@ execution will stop on these operations as if there was a regular breakpoint set
       <div class="details">
         <h4 class="details-name monospace" id="method-getEventListeners">
           <span class="domain-dot">DOMDebugger.</span>getEventListeners
+          
           <a href="#method-getEventListeners" class="permalink">#</a>
         </h4>
         
@@ -191,11 +194,10 @@ execution will stop on these operations as if there was a regular breakpoint set
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">objectId</dt>
+        <dt class="param-name monospace">objectId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
@@ -207,7 +209,7 @@ execution will stop on these operations as if there was a regular breakpoint set
           
         </dd>
       
-        <dt class="param-name">depth</dt>
+        <dt class="param-name monospace">depth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -220,7 +222,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">pierce</dt>
+        <dt class="param-name monospace">pierce</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -239,7 +241,7 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">listeners</dt>
+        <dt class="param-name monospace">listeners</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -259,6 +261,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-removeDOMBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>removeDOMBreakpoint
+          
           <a href="#method-removeDOMBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -269,11 +272,10 @@ entire subtree or provide an integer larger than 0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
@@ -285,7 +287,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
@@ -306,6 +308,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-removeEventListenerBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>removeEventListenerBreakpoint
+          
           <a href="#method-removeEventListenerBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -316,11 +319,10 @@ entire subtree or provide an integer larger than 0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">eventName</dt>
+        <dt class="param-name monospace">eventName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -332,7 +334,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">targetName</dt>
+        <dt class="param-name monospace">targetName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -351,43 +353,9 @@ entire subtree or provide an integer larger than 0.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-removeInstrumentationBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>removeInstrumentationBreakpoint
-          <a href="#method-removeInstrumentationBreakpoint" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Removes breakpoint on particular native event.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">eventName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Instrumentation name to stop on.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-removeXHRBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>removeXHRBreakpoint
+          
           <a href="#method-removeXHRBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -398,11 +366,10 @@ entire subtree or provide an integer larger than 0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -423,6 +390,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setDOMBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>setDOMBreakpoint
+          
           <a href="#method-setDOMBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -433,11 +401,10 @@ entire subtree or provide an integer larger than 0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">nodeId</dt>
+        <dt class="param-name monospace">nodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
@@ -449,7 +416,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
@@ -470,6 +437,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setEventListenerBreakpoint">
           <span class="domain-dot">DOMDebugger.</span>setEventListenerBreakpoint
+          
           <a href="#method-setEventListenerBreakpoint" class="permalink">#</a>
         </h4>
         
@@ -480,11 +448,10 @@ entire subtree or provide an integer larger than 0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">eventName</dt>
+        <dt class="param-name monospace">eventName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -496,7 +463,7 @@ entire subtree or provide an integer larger than 0.</p>
           
         </dd>
       
-        <dt class="param-name">targetName</dt>
+        <dt class="param-name monospace">targetName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -516,23 +483,58 @@ EventTarget.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setInstrumentationBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>setInstrumentationBreakpoint
-          <a href="#method-setInstrumentationBreakpoint" class="permalink">#</a>
+        <h4 class="details-name monospace" id="method-setXHRBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint
+          
+          <a href="#method-setXHRBreakpoint" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Sets breakpoint on particular native event.</p>
+        <p>Sets breakpoint on XMLHttpRequest.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">eventName</dt>
+        <dt class="param-name monospace">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Resource URL substring. All XHRs having this substring in the URL will get stopped upon.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-removeInstrumentationBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>removeInstrumentationBreakpoint
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-removeInstrumentationBreakpoint" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Removes breakpoint on particular native event.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">eventName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -551,28 +553,28 @@ EventTarget.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setXHRBreakpoint">
-          <span class="domain-dot">DOMDebugger.</span>setXHRBreakpoint
-          <a href="#method-setXHRBreakpoint" class="permalink">#</a>
+        <h4 class="details-name monospace" id="method-setInstrumentationBreakpoint">
+          <span class="domain-dot">DOMDebugger.</span>setInstrumentationBreakpoint
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-setInstrumentationBreakpoint" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Sets breakpoint on XMLHttpRequest.</p>
+        <p>Sets breakpoint on particular native event.</p>
 
       </div>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">eventName</dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Resource URL substring. All XHRs having this substring in the URL will get stopped upon.</p>
+        <p>Instrumentation name to stop on.</p>
 
       </div>
     
@@ -595,6 +597,7 @@ EventTarget.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-DOMBreakpointType">
           <span class="domain-dot">DOMDebugger.</span>DOMBreakpointType
+          
           <a href="#type-DOMBreakpointType" class="permalink">#</a>
         </h4>
         
@@ -603,19 +606,19 @@ EventTarget.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">subtree-modified, attribute-modified, node-removed</div>
+      <div class="enum-container monospace">subtree-modified, attribute-modified, node-removed</div>
     
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="type-EventListener">
           <span class="domain-dot">DOMDebugger.</span>EventListener
+          
           <a href="#type-EventListener" class="permalink">#</a>
         </h4>
         
@@ -624,13 +627,12 @@ EventTarget.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -642,7 +644,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">useCapture</dt>
+        <dt class="param-name monospace">useCapture</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -654,7 +656,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">passive</dt>
+        <dt class="param-name monospace">passive</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -666,7 +668,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">once</dt>
+        <dt class="param-name monospace">once</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -678,7 +680,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">scriptId</dt>
+        <dt class="param-name monospace">scriptId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
@@ -690,7 +692,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">lineNumber</dt>
+        <dt class="param-name monospace">lineNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -702,7 +704,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">columnNumber</dt>
+        <dt class="param-name monospace">columnNumber</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -714,7 +716,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">handler</dt>
+        <dt class="param-name monospace">handler</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -726,7 +728,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">originalHandler</dt>
+        <dt class="param-name monospace">originalHandler</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -738,7 +740,7 @@ EventTarget.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           

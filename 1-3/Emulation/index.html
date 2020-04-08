@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-1-3">
+    <div id="domains" class="navs version-1-3">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,64 +117,64 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-canEmulate"><span class="domain-dot">Emulation.</span>canEmulate</a>
+        <a class="monospace" href="#method-canEmulate"><span class="domain-dot">Emulation.</span>canEmulate</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-clearDeviceMetricsOverride"><span class="domain-dot">Emulation.</span>clearDeviceMetricsOverride</a>
+        <a class="monospace" href="#method-clearDeviceMetricsOverride"><span class="domain-dot">Emulation.</span>clearDeviceMetricsOverride</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-clearGeolocationOverride"><span class="domain-dot">Emulation.</span>clearGeolocationOverride</a>
+        <a class="monospace" href="#method-clearGeolocationOverride"><span class="domain-dot">Emulation.</span>clearGeolocationOverride</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setDefaultBackgroundColorOverride"><span class="domain-dot">Emulation.</span>setDefaultBackgroundColorOverride</a>
+        <a class="monospace" href="#method-setDefaultBackgroundColorOverride"><span class="domain-dot">Emulation.</span>setDefaultBackgroundColorOverride</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setDeviceMetricsOverride"><span class="domain-dot">Emulation.</span>setDeviceMetricsOverride</a>
+        <a class="monospace" href="#method-setDeviceMetricsOverride"><span class="domain-dot">Emulation.</span>setDeviceMetricsOverride</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setEmulatedMedia"><span class="domain-dot">Emulation.</span>setEmulatedMedia</a>
+        <a class="monospace" href="#method-setEmulatedMedia"><span class="domain-dot">Emulation.</span>setEmulatedMedia</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setGeolocationOverride"><span class="domain-dot">Emulation.</span>setGeolocationOverride</a>
+        <a class="monospace" href="#method-setGeolocationOverride"><span class="domain-dot">Emulation.</span>setGeolocationOverride</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setScriptExecutionDisabled"><span class="domain-dot">Emulation.</span>setScriptExecutionDisabled</a>
+        <a class="monospace" href="#method-setScriptExecutionDisabled"><span class="domain-dot">Emulation.</span>setScriptExecutionDisabled</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setTouchEmulationEnabled"><span class="domain-dot">Emulation.</span>setTouchEmulationEnabled</a>
+        <a class="monospace" href="#method-setTouchEmulationEnabled"><span class="domain-dot">Emulation.</span>setTouchEmulationEnabled</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setUserAgentOverride"><span class="domain-dot">Emulation.</span>setUserAgentOverride</a>
+        <a class="monospace" href="#method-setUserAgentOverride"><span class="domain-dot">Emulation.</span>setUserAgentOverride</a>
         
       </div>
       
         <h3>Events</h3>
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-ScreenOrientation"><span class="domain-dot">Emulation.</span>ScreenOrientation</a>
+        <a class="monospace" href="#type-MediaFeature"><span class="domain-dot">Emulation.</span>MediaFeature</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-MediaFeature"><span class="domain-dot">Emulation.</span>MediaFeature</a>
+        <a class="monospace" href="#type-ScreenOrientation"><span class="domain-dot">Emulation.</span>ScreenOrientation</a>
         
       </div>
       
@@ -185,6 +187,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-canEmulate">
           <span class="domain-dot">Emulation.</span>canEmulate
+          
           <a href="#method-canEmulate" class="permalink">#</a>
         </h4>
         
@@ -196,11 +199,10 @@
         
         
         
-        
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">result</dt>
+        <dt class="param-name monospace">result</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -220,6 +222,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-clearDeviceMetricsOverride">
           <span class="domain-dot">Emulation.</span>clearDeviceMetricsOverride
+          
           <a href="#method-clearDeviceMetricsOverride" class="permalink">#</a>
         </h4>
         
@@ -232,12 +235,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-clearGeolocationOverride">
           <span class="domain-dot">Emulation.</span>clearGeolocationOverride
+          
           <a href="#method-clearGeolocationOverride" class="permalink">#</a>
         </h4>
         
@@ -250,12 +253,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-setDefaultBackgroundColorOverride">
           <span class="domain-dot">Emulation.</span>setDefaultBackgroundColorOverride
+          
           <a href="#method-setDefaultBackgroundColorOverride" class="permalink">#</a>
         </h4>
         
@@ -267,11 +270,10 @@ if the content does not specify one.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">color</dt>
+        <dt class="param-name monospace">color</dt>
         <dd>
           <a href=/devtools-protocol/1-3/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
@@ -293,6 +295,7 @@ cleared.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setDeviceMetricsOverride">
           <span class="domain-dot">Emulation.</span>setDeviceMetricsOverride
+          
           <a href="#method-setDeviceMetricsOverride" class="permalink">#</a>
         </h4>
         
@@ -305,11 +308,10 @@ query results).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">width</dt>
+        <dt class="param-name monospace">width</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -321,7 +323,7 @@ query results).</p>
           
         </dd>
       
-        <dt class="param-name">height</dt>
+        <dt class="param-name monospace">height</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -333,7 +335,7 @@ query results).</p>
           
         </dd>
       
-        <dt class="param-name">deviceScaleFactor</dt>
+        <dt class="param-name monospace">deviceScaleFactor</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -345,7 +347,7 @@ query results).</p>
           
         </dd>
       
-        <dt class="param-name">mobile</dt>
+        <dt class="param-name monospace">mobile</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -358,7 +360,7 @@ autosizing and more.</p>
           
         </dd>
       
-        <dt class="param-name">scale</dt>
+        <dt class="param-name monospace">scale</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -370,7 +372,7 @@ autosizing and more.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">screenWidth</dt>
+        <dt class="param-name monospace">screenWidth</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -382,7 +384,7 @@ autosizing and more.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">screenHeight</dt>
+        <dt class="param-name monospace">screenHeight</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -394,7 +396,7 @@ autosizing and more.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">positionX</dt>
+        <dt class="param-name monospace">positionX</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -406,7 +408,7 @@ autosizing and more.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">positionY</dt>
+        <dt class="param-name monospace">positionY</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -418,7 +420,7 @@ autosizing and more.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">dontSetVisibleSize</dt>
+        <dt class="param-name monospace">dontSetVisibleSize</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -430,7 +432,7 @@ autosizing and more.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">screenOrientation</dt>
+        <dt class="param-name monospace">screenOrientation</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Emulation/#type-ScreenOrientation class="param-type">ScreenOrientation</a>
           
@@ -442,7 +444,7 @@ autosizing and more.</p>
           
         </dd>
       
-        <dt class="param-name">viewport</dt>
+        <dt class="param-name monospace">viewport</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Page/#type-Viewport class="param-type">Page.Viewport</a>
           
@@ -464,6 +466,7 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
       <div class="details">
         <h4 class="details-name monospace" id="method-setEmulatedMedia">
           <span class="domain-dot">Emulation.</span>setEmulatedMedia
+          
           <a href="#method-setEmulatedMedia" class="permalink">#</a>
         </h4>
         
@@ -474,11 +477,10 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">media</dt>
+        <dt class="param-name monospace">media</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -490,7 +492,7 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
           
         </dd>
       
-        <dt class="param-name">features</dt>
+        <dt class="param-name monospace">features</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -511,6 +513,7 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
       <div class="details">
         <h4 class="details-name monospace" id="method-setGeolocationOverride">
           <span class="domain-dot">Emulation.</span>setGeolocationOverride
+          
           <a href="#method-setGeolocationOverride" class="permalink">#</a>
         </h4>
         
@@ -522,11 +525,10 @@ unavailable.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">latitude</dt>
+        <dt class="param-name monospace">latitude</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -538,7 +540,7 @@ unavailable.</p>
           
         </dd>
       
-        <dt class="param-name">longitude</dt>
+        <dt class="param-name monospace">longitude</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -550,7 +552,7 @@ unavailable.</p>
           
         </dd>
       
-        <dt class="param-name">accuracy</dt>
+        <dt class="param-name monospace">accuracy</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -571,6 +573,7 @@ unavailable.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setScriptExecutionDisabled">
           <span class="domain-dot">Emulation.</span>setScriptExecutionDisabled
+          
           <a href="#method-setScriptExecutionDisabled" class="permalink">#</a>
         </h4>
         
@@ -581,11 +584,10 @@ unavailable.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">value</dt>
+        <dt class="param-name monospace">value</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -606,6 +608,7 @@ unavailable.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setTouchEmulationEnabled">
           <span class="domain-dot">Emulation.</span>setTouchEmulationEnabled
+          
           <a href="#method-setTouchEmulationEnabled" class="permalink">#</a>
         </h4>
         
@@ -616,11 +619,10 @@ unavailable.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">enabled</dt>
+        <dt class="param-name monospace">enabled</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -632,7 +634,7 @@ unavailable.</p>
           
         </dd>
       
-        <dt class="param-name">maxTouchPoints</dt>
+        <dt class="param-name monospace">maxTouchPoints</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -653,6 +655,7 @@ unavailable.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setUserAgentOverride">
           <span class="domain-dot">Emulation.</span>setUserAgentOverride
+          
           <a href="#method-setUserAgentOverride" class="permalink">#</a>
         </h4>
         
@@ -663,11 +666,10 @@ unavailable.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">userAgent</dt>
+        <dt class="param-name monospace">userAgent</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -679,7 +681,7 @@ unavailable.</p>
           
         </dd>
       
-        <dt class="param-name">acceptLanguage</dt>
+        <dt class="param-name monospace">acceptLanguage</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -691,7 +693,7 @@ unavailable.</p>
           
         </dd>
       
-        <dt class="param-name">platform</dt>
+        <dt class="param-name monospace">platform</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -717,8 +719,41 @@ unavailable.</p>
       <div>
         
       <div class="details">
+        <h4 class="details-name monospace" id="type-MediaFeature">
+          <span class="domain-dot">Emulation.</span>MediaFeature
+          
+          <a href="#type-MediaFeature" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">name</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">value</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-ScreenOrientation">
           <span class="domain-dot">Emulation.</span>ScreenOrientation
+          
           <a href="#type-ScreenOrientation" class="permalink">#</a>
         </h4>
         
@@ -727,13 +762,12 @@ unavailable.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -745,7 +779,7 @@ unavailable.</p>
           
         </dd>
       
-        <dt class="param-name">angle</dt>
+        <dt class="param-name monospace">angle</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -754,38 +788,6 @@ unavailable.</p>
 
       </div>
     
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-MediaFeature">
-          <span class="domain-dot">Emulation.</span>MediaFeature
-          <a href="#type-MediaFeature" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">name</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-          
-        </dd>
-      
-        <dt class="param-name">value</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
           
         </dd>
       

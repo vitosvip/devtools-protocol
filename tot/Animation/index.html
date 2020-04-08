@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,89 +112,89 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">Animation.</span>disable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">Animation.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">Animation.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">Animation.</span>enable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getCurrentTime"><span class="domain-dot">Animation.</span>getCurrentTime</a>
+        <a class="monospace" href="#method-getCurrentTime"><span class="domain-dot">Animation.</span>getCurrentTime</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getPlaybackRate"><span class="domain-dot">Animation.</span>getPlaybackRate</a>
+        <a class="monospace" href="#method-getPlaybackRate"><span class="domain-dot">Animation.</span>getPlaybackRate</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-releaseAnimations"><span class="domain-dot">Animation.</span>releaseAnimations</a>
+        <a class="monospace" href="#method-releaseAnimations"><span class="domain-dot">Animation.</span>releaseAnimations</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-resolveAnimation"><span class="domain-dot">Animation.</span>resolveAnimation</a>
+        <a class="monospace" href="#method-resolveAnimation"><span class="domain-dot">Animation.</span>resolveAnimation</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-seekAnimations"><span class="domain-dot">Animation.</span>seekAnimations</a>
+        <a class="monospace" href="#method-seekAnimations"><span class="domain-dot">Animation.</span>seekAnimations</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setPaused"><span class="domain-dot">Animation.</span>setPaused</a>
+        <a class="monospace" href="#method-setPaused"><span class="domain-dot">Animation.</span>setPaused</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setPlaybackRate"><span class="domain-dot">Animation.</span>setPlaybackRate</a>
+        <a class="monospace" href="#method-setPlaybackRate"><span class="domain-dot">Animation.</span>setPlaybackRate</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setTiming"><span class="domain-dot">Animation.</span>setTiming</a>
+        <a class="monospace" href="#method-setTiming"><span class="domain-dot">Animation.</span>setTiming</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-animationCanceled"><span class="domain-dot">Animation.</span>animationCanceled</a>
+        <a class="monospace" href="#event-animationCanceled"><span class="domain-dot">Animation.</span>animationCanceled</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-animationCreated"><span class="domain-dot">Animation.</span>animationCreated</a>
+        <a class="monospace" href="#event-animationCreated"><span class="domain-dot">Animation.</span>animationCreated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-animationStarted"><span class="domain-dot">Animation.</span>animationStarted</a>
+        <a class="monospace" href="#event-animationStarted"><span class="domain-dot">Animation.</span>animationStarted</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-Animation"><span class="domain-dot">Animation.</span>Animation</a>
+        <a class="monospace" href="#type-Animation"><span class="domain-dot">Animation.</span>Animation</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-AnimationEffect"><span class="domain-dot">Animation.</span>AnimationEffect</a>
+        <a class="monospace" href="#type-AnimationEffect"><span class="domain-dot">Animation.</span>AnimationEffect</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-KeyframesRule"><span class="domain-dot">Animation.</span>KeyframesRule</a>
+        <a class="monospace" href="#type-KeyframesRule"><span class="domain-dot">Animation.</span>KeyframesRule</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-KeyframeStyle"><span class="domain-dot">Animation.</span>KeyframeStyle</a>
+        <a class="monospace" href="#type-KeyframeStyle"><span class="domain-dot">Animation.</span>KeyframeStyle</a>
         
       </div>
       
@@ -205,6 +207,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">Animation.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -217,12 +220,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">Animation.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -235,12 +238,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-getCurrentTime">
           <span class="domain-dot">Animation.</span>getCurrentTime
+          
           <a href="#method-getCurrentTime" class="permalink">#</a>
         </h4>
         
@@ -251,11 +254,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">id</dt>
+        <dt class="param-name monospace">id</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -273,7 +275,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">currentTime</dt>
+        <dt class="param-name monospace">currentTime</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -293,6 +295,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-getPlaybackRate">
           <span class="domain-dot">Animation.</span>getPlaybackRate
+          
           <a href="#method-getPlaybackRate" class="permalink">#</a>
         </h4>
         
@@ -304,11 +307,10 @@
         
         
         
-        
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">playbackRate</dt>
+        <dt class="param-name monospace">playbackRate</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -328,6 +330,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-releaseAnimations">
           <span class="domain-dot">Animation.</span>releaseAnimations
+          
           <a href="#method-releaseAnimations" class="permalink">#</a>
         </h4>
         
@@ -338,11 +341,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">animations</dt>
+        <dt class="param-name monospace">animations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -363,6 +365,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-resolveAnimation">
           <span class="domain-dot">Animation.</span>resolveAnimation
+          
           <a href="#method-resolveAnimation" class="permalink">#</a>
         </h4>
         
@@ -373,11 +376,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">animationId</dt>
+        <dt class="param-name monospace">animationId</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -395,7 +397,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">remoteObject</dt>
+        <dt class="param-name monospace">remoteObject</dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -415,6 +417,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-seekAnimations">
           <span class="domain-dot">Animation.</span>seekAnimations
+          
           <a href="#method-seekAnimations" class="permalink">#</a>
         </h4>
         
@@ -425,11 +428,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">animations</dt>
+        <dt class="param-name monospace">animations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -441,7 +443,7 @@
           
         </dd>
       
-        <dt class="param-name">currentTime</dt>
+        <dt class="param-name monospace">currentTime</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -462,6 +464,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-setPaused">
           <span class="domain-dot">Animation.</span>setPaused
+          
           <a href="#method-setPaused" class="permalink">#</a>
         </h4>
         
@@ -472,11 +475,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">animations</dt>
+        <dt class="param-name monospace">animations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -488,7 +490,7 @@
           
         </dd>
       
-        <dt class="param-name">paused</dt>
+        <dt class="param-name monospace">paused</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -509,6 +511,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-setPlaybackRate">
           <span class="domain-dot">Animation.</span>setPlaybackRate
+          
           <a href="#method-setPlaybackRate" class="permalink">#</a>
         </h4>
         
@@ -519,11 +522,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">playbackRate</dt>
+        <dt class="param-name monospace">playbackRate</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -544,6 +546,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-setTiming">
           <span class="domain-dot">Animation.</span>setTiming
+          
           <a href="#method-setTiming" class="permalink">#</a>
         </h4>
         
@@ -554,11 +557,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">animationId</dt>
+        <dt class="param-name monospace">animationId</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -570,7 +572,7 @@
           
         </dd>
       
-        <dt class="param-name">duration</dt>
+        <dt class="param-name monospace">duration</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -582,7 +584,7 @@
           
         </dd>
       
-        <dt class="param-name">delay</dt>
+        <dt class="param-name monospace">delay</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -609,6 +611,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-animationCanceled">
           <span class="domain-dot">Animation.</span>animationCanceled
+          
           <a href="#event-animationCanceled" class="permalink">#</a>
         </h4>
         
@@ -619,11 +622,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">id</dt>
+        <dt class="param-name monospace">id</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -644,6 +646,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-animationCreated">
           <span class="domain-dot">Animation.</span>animationCreated
+          
           <a href="#event-animationCreated" class="permalink">#</a>
         </h4>
         
@@ -654,11 +657,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">id</dt>
+        <dt class="param-name monospace">id</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -679,6 +681,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-animationStarted">
           <span class="domain-dot">Animation.</span>animationStarted
+          
           <a href="#event-animationStarted" class="permalink">#</a>
         </h4>
         
@@ -689,11 +692,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">animation</dt>
+        <dt class="param-name monospace">animation</dt>
         <dd>
           <a href=/devtools-protocol/tot/Animation/#type-Animation class="param-type">Animation</a>
           
@@ -720,6 +722,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="type-Animation">
           <span class="domain-dot">Animation.</span>Animation
+          
           <a href="#type-Animation" class="permalink">#</a>
         </h4>
         
@@ -728,13 +731,12 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">id</dt>
+        <dt class="param-name monospace">id</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -746,7 +748,7 @@
           
         </dd>
       
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -758,7 +760,7 @@
           
         </dd>
       
-        <dt class="param-name">pausedState</dt>
+        <dt class="param-name monospace">pausedState</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -770,7 +772,7 @@
           
         </dd>
       
-        <dt class="param-name">playState</dt>
+        <dt class="param-name monospace">playState</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -782,7 +784,7 @@
           
         </dd>
       
-        <dt class="param-name">playbackRate</dt>
+        <dt class="param-name monospace">playbackRate</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -794,7 +796,7 @@
           
         </dd>
       
-        <dt class="param-name">startTime</dt>
+        <dt class="param-name monospace">startTime</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -806,7 +808,7 @@
           
         </dd>
       
-        <dt class="param-name">currentTime</dt>
+        <dt class="param-name monospace">currentTime</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -818,7 +820,7 @@
           
         </dd>
       
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -830,7 +832,7 @@
           
         </dd>
       
-        <dt class="param-name">source</dt>
+        <dt class="param-name monospace">source</dt>
         <dd>
           <a href=/devtools-protocol/tot/Animation/#type-AnimationEffect class="param-type">AnimationEffect</a>
           
@@ -842,7 +844,7 @@
           
         </dd>
       
-        <dt class="param-name">cssId</dt>
+        <dt class="param-name monospace">cssId</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -864,6 +866,7 @@ animation/transition.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-AnimationEffect">
           <span class="domain-dot">Animation.</span>AnimationEffect
+          
           <a href="#type-AnimationEffect" class="permalink">#</a>
         </h4>
         
@@ -872,13 +875,12 @@ animation/transition.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">delay</dt>
+        <dt class="param-name monospace">delay</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -890,7 +892,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">endDelay</dt>
+        <dt class="param-name monospace">endDelay</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -902,7 +904,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">iterationStart</dt>
+        <dt class="param-name monospace">iterationStart</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -914,7 +916,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">iterations</dt>
+        <dt class="param-name monospace">iterations</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -926,7 +928,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">duration</dt>
+        <dt class="param-name monospace">duration</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -938,7 +940,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">direction</dt>
+        <dt class="param-name monospace">direction</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -950,7 +952,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">fill</dt>
+        <dt class="param-name monospace">fill</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -962,7 +964,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">backendNodeId</dt>
+        <dt class="param-name monospace">backendNodeId</dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
@@ -974,7 +976,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">keyframesRule</dt>
+        <dt class="param-name monospace">keyframesRule</dt>
         <dd>
           <a href=/devtools-protocol/tot/Animation/#type-KeyframesRule class="param-type">KeyframesRule</a>
           
@@ -986,7 +988,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">easing</dt>
+        <dt class="param-name monospace">easing</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1007,6 +1009,7 @@ animation/transition.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-KeyframesRule">
           <span class="domain-dot">Animation.</span>KeyframesRule
+          
           <a href="#type-KeyframesRule" class="permalink">#</a>
         </h4>
         
@@ -1015,13 +1018,12 @@ animation/transition.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1033,7 +1035,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">keyframes</dt>
+        <dt class="param-name monospace">keyframes</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1054,6 +1056,7 @@ animation/transition.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-KeyframeStyle">
           <span class="domain-dot">Animation.</span>KeyframeStyle
+          
           <a href="#type-KeyframeStyle" class="permalink">#</a>
         </h4>
         
@@ -1062,13 +1065,12 @@ animation/transition.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">offset</dt>
+        <dt class="param-name monospace">offset</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1080,7 +1082,7 @@ animation/transition.</p>
           
         </dd>
       
-        <dt class="param-name">easing</dt>
+        <dt class="param-name monospace">easing</dt>
         <dd>
           <span class="param-type">string</span>
           

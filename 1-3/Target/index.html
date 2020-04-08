@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-1-3">
+    <div id="domains" class="navs version-1-3">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,79 +117,79 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-activateTarget"><span class="domain-dot">Target.</span>activateTarget</a>
+        <a class="monospace" href="#method-activateTarget"><span class="domain-dot">Target.</span>activateTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-attachToTarget"><span class="domain-dot">Target.</span>attachToTarget</a>
+        <a class="monospace" href="#method-attachToTarget"><span class="domain-dot">Target.</span>attachToTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-closeTarget"><span class="domain-dot">Target.</span>closeTarget</a>
+        <a class="monospace" href="#method-closeTarget"><span class="domain-dot">Target.</span>closeTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-createTarget"><span class="domain-dot">Target.</span>createTarget</a>
+        <a class="monospace" href="#method-createTarget"><span class="domain-dot">Target.</span>createTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-detachFromTarget"><span class="domain-dot">Target.</span>detachFromTarget</a>
+        <a class="monospace" href="#method-detachFromTarget"><span class="domain-dot">Target.</span>detachFromTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getTargets"><span class="domain-dot">Target.</span>getTargets</a>
+        <a class="monospace" href="#method-getTargets"><span class="domain-dot">Target.</span>getTargets</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setDiscoverTargets"><span class="domain-dot">Target.</span>setDiscoverTargets</a>
+        <a class="monospace" href="#method-setDiscoverTargets"><span class="domain-dot">Target.</span>setDiscoverTargets</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-receivedMessageFromTarget"><span class="domain-dot">Target.</span>receivedMessageFromTarget</a>
+        <a class="monospace" href="#event-receivedMessageFromTarget"><span class="domain-dot">Target.</span>receivedMessageFromTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-targetCreated"><span class="domain-dot">Target.</span>targetCreated</a>
+        <a class="monospace" href="#event-targetCrashed"><span class="domain-dot">Target.</span>targetCrashed</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-targetDestroyed"><span class="domain-dot">Target.</span>targetDestroyed</a>
+        <a class="monospace" href="#event-targetCreated"><span class="domain-dot">Target.</span>targetCreated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-targetCrashed"><span class="domain-dot">Target.</span>targetCrashed</a>
+        <a class="monospace" href="#event-targetDestroyed"><span class="domain-dot">Target.</span>targetDestroyed</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-targetInfoChanged"><span class="domain-dot">Target.</span>targetInfoChanged</a>
+        <a class="monospace" href="#event-targetInfoChanged"><span class="domain-dot">Target.</span>targetInfoChanged</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-TargetID"><span class="domain-dot">Target.</span>TargetID</a>
+        <a class="monospace" href="#type-SessionID"><span class="domain-dot">Target.</span>SessionID</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SessionID"><span class="domain-dot">Target.</span>SessionID</a>
+        <a class="monospace" href="#type-TargetID"><span class="domain-dot">Target.</span>TargetID</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-TargetInfo"><span class="domain-dot">Target.</span>TargetInfo</a>
+        <a class="monospace" href="#type-TargetInfo"><span class="domain-dot">Target.</span>TargetInfo</a>
         
       </div>
       
@@ -200,6 +202,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-activateTarget">
           <span class="domain-dot">Target.</span>activateTarget
+          
           <a href="#method-activateTarget" class="permalink">#</a>
         </h4>
         
@@ -210,11 +213,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -230,6 +232,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-attachToTarget">
           <span class="domain-dot">Target.</span>attachToTarget
+          
           <a href="#method-attachToTarget" class="permalink">#</a>
         </h4>
         
@@ -240,18 +243,17 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
           
         </dd>
       
-        <dt class="param-name">flatten</dt>
+        <dt class="param-name monospace">flatten</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -271,7 +273,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -291,6 +293,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-closeTarget">
           <span class="domain-dot">Target.</span>closeTarget
+          
           <a href="#method-closeTarget" class="permalink">#</a>
         </h4>
         
@@ -301,11 +304,10 @@ and eventually retire it. See crbug.com/991325.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -318,7 +320,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">success</dt>
+        <dt class="param-name monospace">success</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -333,6 +335,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-createTarget">
           <span class="domain-dot">Target.</span>createTarget
+          
           <a href="#method-createTarget" class="permalink">#</a>
         </h4>
         
@@ -343,11 +346,10 @@ and eventually retire it. See crbug.com/991325.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -359,7 +361,7 @@ and eventually retire it. See crbug.com/991325.</p>
           
         </dd>
       
-        <dt class="param-name">width</dt>
+        <dt class="param-name monospace">width</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -371,7 +373,7 @@ and eventually retire it. See crbug.com/991325.</p>
           
         </dd>
       
-        <dt class="param-name">height</dt>
+        <dt class="param-name monospace">height</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -383,7 +385,7 @@ and eventually retire it. See crbug.com/991325.</p>
           
         </dd>
       
-        <dt class="param-name">browserContextId</dt>
+        <dt class="param-name monospace">browserContextId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
@@ -395,7 +397,7 @@ and eventually retire it. See crbug.com/991325.</p>
           
         </dd>
       
-        <dt class="param-name">enableBeginFrameControl</dt>
+        <dt class="param-name monospace">enableBeginFrameControl</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -408,7 +410,7 @@ not supported on MacOS yet, false by default).</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">newWindow</dt>
+        <dt class="param-name monospace">newWindow</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -420,7 +422,7 @@ not supported on MacOS yet, false by default).</p>
           
         </dd>
       
-        <dt class="param-name">background</dt>
+        <dt class="param-name monospace">background</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -439,7 +441,7 @@ false by default).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -459,6 +461,7 @@ false by default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-detachFromTarget">
           <span class="domain-dot">Target.</span>detachFromTarget
+          
           <a href="#method-detachFromTarget" class="permalink">#</a>
         </h4>
         
@@ -469,11 +472,10 @@ false by default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -485,7 +487,7 @@ false by default).</p>
           
         </dd>
       
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -506,6 +508,7 @@ false by default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getTargets">
           <span class="domain-dot">Target.</span>getTargets
+          
           <a href="#method-getTargets" class="permalink">#</a>
         </h4>
         
@@ -517,11 +520,10 @@ false by default).</p>
         
         
         
-        
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetInfos</dt>
+        <dt class="param-name monospace">targetInfos</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -541,6 +543,7 @@ false by default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-setDiscoverTargets">
           <span class="domain-dot">Target.</span>setDiscoverTargets
+          
           <a href="#method-setDiscoverTargets" class="permalink">#</a>
         </h4>
         
@@ -552,11 +555,10 @@ false by default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">discover</dt>
+        <dt class="param-name monospace">discover</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -583,6 +585,7 @@ false by default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-receivedMessageFromTarget">
           <span class="domain-dot">Target.</span>receivedMessageFromTarget
+          
           <a href="#event-receivedMessageFromTarget" class="permalink">#</a>
         </h4>
         
@@ -594,11 +597,10 @@ false by default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -610,14 +612,14 @@ false by default).</p>
           
         </dd>
       
-        <dt class="param-name">message</dt>
+        <dt class="param-name monospace">message</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -636,68 +638,9 @@ false by default).</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="event-targetCreated">
-          <span class="domain-dot">Target.</span>targetCreated
-          <a href="#event-targetCreated" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Issued when a possible inspection target is created.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetInfo</dt>
-        <dd>
-          <a href=/devtools-protocol/1-3/Target/#type-TargetInfo class="param-type">TargetInfo</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="event-targetDestroyed">
-          <span class="domain-dot">Target.</span>targetDestroyed
-          <a href="#event-targetDestroyed" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Issued when a target is destroyed.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetId</dt>
-        <dd>
-          <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="event-targetCrashed">
           <span class="domain-dot">Target.</span>targetCrashed
+          
           <a href="#event-targetCrashed" class="permalink">#</a>
         </h4>
         
@@ -708,18 +651,17 @@ false by default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
           
         </dd>
       
-        <dt class="param-name">status</dt>
+        <dt class="param-name monospace">status</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -731,7 +673,7 @@ false by default).</p>
           
         </dd>
       
-        <dt class="param-name">errorCode</dt>
+        <dt class="param-name monospace">errorCode</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -750,8 +692,69 @@ false by default).</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="event-targetCreated">
+          <span class="domain-dot">Target.</span>targetCreated
+          
+          <a href="#event-targetCreated" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Issued when a possible inspection target is created.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetInfo</dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Target/#type-TargetInfo class="param-type">TargetInfo</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-targetDestroyed">
+          <span class="domain-dot">Target.</span>targetDestroyed
+          
+          <a href="#event-targetDestroyed" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Issued when a target is destroyed.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetId</dt>
+        <dd>
+          <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="event-targetInfoChanged">
           <span class="domain-dot">Target.</span>targetInfoChanged
+          
           <a href="#event-targetInfoChanged" class="permalink">#</a>
         </h4>
         
@@ -763,11 +766,10 @@ false by default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetInfo</dt>
+        <dt class="param-name monospace">targetInfo</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetInfo class="param-type">TargetInfo</a>
           
@@ -787,21 +789,9 @@ false by default).</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-TargetID">
-          <span class="domain-dot">Target.</span>TargetID
-          <a href="#type-TargetID" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-SessionID">
           <span class="domain-dot">Target.</span>SessionID
+          
           <a href="#type-SessionID" class="permalink">#</a>
         </h4>
         
@@ -810,6 +800,18 @@ false by default).</p>
 
       </div>
     
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TargetID">
+          <span class="domain-dot">Target.</span>TargetID
+          
+          <a href="#type-TargetID" class="permalink">#</a>
+        </h4>
         
         <p class="type-type">Type: <strong>string</strong></p>
         
@@ -820,44 +822,44 @@ false by default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-TargetInfo">
           <span class="domain-dot">Target.</span>TargetInfo
+          
           <a href="#type-TargetInfo" class="permalink">#</a>
         </h4>
-        
         
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
           
         </dd>
       
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">title</dt>
+        <dt class="param-name monospace">title</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">attached</dt>
+        <dt class="param-name monospace">attached</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -869,7 +871,7 @@ false by default).</p>
           
         </dd>
       
-        <dt class="param-name">openerId</dt>
+        <dt class="param-name monospace">openerId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -881,7 +883,7 @@ false by default).</p>
           
         </dd>
       
-        <dt class="param-name">browserContextId</dt>
+        <dt class="param-name monospace">browserContextId</dt>
         <dd>
           <a href=/devtools-protocol/1-3/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           

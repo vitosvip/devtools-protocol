@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,74 +112,74 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-getDOMCounters"><span class="domain-dot">Memory.</span>getDOMCounters</a>
+        <a class="monospace" href="#method-forciblyPurgeJavaScriptMemory"><span class="domain-dot">Memory.</span>forciblyPurgeJavaScriptMemory</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-prepareForLeakDetection"><span class="domain-dot">Memory.</span>prepareForLeakDetection</a>
+        <a class="monospace" href="#method-getAllTimeSamplingProfile"><span class="domain-dot">Memory.</span>getAllTimeSamplingProfile</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-forciblyPurgeJavaScriptMemory"><span class="domain-dot">Memory.</span>forciblyPurgeJavaScriptMemory</a>
+        <a class="monospace" href="#method-getBrowserSamplingProfile"><span class="domain-dot">Memory.</span>getBrowserSamplingProfile</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setPressureNotificationsSuppressed"><span class="domain-dot">Memory.</span>setPressureNotificationsSuppressed</a>
+        <a class="monospace" href="#method-getDOMCounters"><span class="domain-dot">Memory.</span>getDOMCounters</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-simulatePressureNotification"><span class="domain-dot">Memory.</span>simulatePressureNotification</a>
+        <a class="monospace" href="#method-getSamplingProfile"><span class="domain-dot">Memory.</span>getSamplingProfile</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-startSampling"><span class="domain-dot">Memory.</span>startSampling</a>
+        <a class="monospace" href="#method-prepareForLeakDetection"><span class="domain-dot">Memory.</span>prepareForLeakDetection</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-stopSampling"><span class="domain-dot">Memory.</span>stopSampling</a>
+        <a class="monospace" href="#method-setPressureNotificationsSuppressed"><span class="domain-dot">Memory.</span>setPressureNotificationsSuppressed</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getAllTimeSamplingProfile"><span class="domain-dot">Memory.</span>getAllTimeSamplingProfile</a>
+        <a class="monospace" href="#method-simulatePressureNotification"><span class="domain-dot">Memory.</span>simulatePressureNotification</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getBrowserSamplingProfile"><span class="domain-dot">Memory.</span>getBrowserSamplingProfile</a>
+        <a class="monospace" href="#method-startSampling"><span class="domain-dot">Memory.</span>startSampling</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getSamplingProfile"><span class="domain-dot">Memory.</span>getSamplingProfile</a>
+        <a class="monospace" href="#method-stopSampling"><span class="domain-dot">Memory.</span>stopSampling</a>
         
       </div>
       
         
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-PressureLevel"><span class="domain-dot">Memory.</span>PressureLevel</a>
+        <a class="monospace" href="#type-Module"><span class="domain-dot">Memory.</span>Module</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SamplingProfileNode"><span class="domain-dot">Memory.</span>SamplingProfileNode</a>
+        <a class="monospace" href="#type-PressureLevel"><span class="domain-dot">Memory.</span>PressureLevel</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SamplingProfile"><span class="domain-dot">Memory.</span>SamplingProfile</a>
+        <a class="monospace" href="#type-SamplingProfile"><span class="domain-dot">Memory.</span>SamplingProfile</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-Module"><span class="domain-dot">Memory.</span>Module</a>
+        <a class="monospace" href="#type-SamplingProfileNode"><span class="domain-dot">Memory.</span>SamplingProfileNode</a>
         
       </div>
       
@@ -188,60 +190,9 @@
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="method-getDOMCounters">
-          <span class="domain-dot">Memory.</span>getDOMCounters
-          <a href="#method-getDOMCounters" class="permalink">#</a>
-        </h4>
-        
-        
-        
-        
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">documents</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-          
-        </dd>
-      
-        <dt class="param-name">nodes</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-          
-        </dd>
-      
-        <dt class="param-name">jsEventListeners</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-prepareForLeakDetection">
-          <span class="domain-dot">Memory.</span>prepareForLeakDetection
-          <a href="#method-prepareForLeakDetection" class="permalink">#</a>
-        </h4>
-        
-        
-        
-        
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-forciblyPurgeJavaScriptMemory">
           <span class="domain-dot">Memory.</span>forciblyPurgeJavaScriptMemory
+          
           <a href="#method-forciblyPurgeJavaScriptMemory" class="permalink">#</a>
         </h4>
         
@@ -254,12 +205,157 @@
         
         
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getAllTimeSamplingProfile">
+          <span class="domain-dot">Memory.</span>getAllTimeSamplingProfile
+          
+          <a href="#method-getAllTimeSamplingProfile" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Retrieve native memory allocations profile
+collected since renderer process startup.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">profile</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Memory/#type-SamplingProfile class="param-type">SamplingProfile</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getBrowserSamplingProfile">
+          <span class="domain-dot">Memory.</span>getBrowserSamplingProfile
+          
+          <a href="#method-getBrowserSamplingProfile" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Retrieve native memory allocations profile
+collected since browser process startup.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">profile</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Memory/#type-SamplingProfile class="param-type">SamplingProfile</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getDOMCounters">
+          <span class="domain-dot">Memory.</span>getDOMCounters
+          
+          <a href="#method-getDOMCounters" class="permalink">#</a>
+        </h4>
+        
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">documents</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">nodes</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">jsEventListeners</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getSamplingProfile">
+          <span class="domain-dot">Memory.</span>getSamplingProfile
+          
+          <a href="#method-getSamplingProfile" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Retrieve native memory allocations profile collected since last
+<code>startSampling</code> call.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">profile</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Memory/#type-SamplingProfile class="param-type">SamplingProfile</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-prepareForLeakDetection">
+          <span class="domain-dot">Memory.</span>prepareForLeakDetection
+          
+          <a href="#method-prepareForLeakDetection" class="permalink">#</a>
+        </h4>
+        
+        
+        
+        
         
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-setPressureNotificationsSuppressed">
           <span class="domain-dot">Memory.</span>setPressureNotificationsSuppressed
+          
           <a href="#method-setPressureNotificationsSuppressed" class="permalink">#</a>
         </h4>
         
@@ -270,11 +366,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">suppressed</dt>
+        <dt class="param-name monospace">suppressed</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -295,6 +390,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-simulatePressureNotification">
           <span class="domain-dot">Memory.</span>simulatePressureNotification
+          
           <a href="#method-simulatePressureNotification" class="permalink">#</a>
         </h4>
         
@@ -305,11 +401,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">level</dt>
+        <dt class="param-name monospace">level</dt>
         <dd>
           <a href=/devtools-protocol/tot/Memory/#type-PressureLevel class="param-type">PressureLevel</a>
           
@@ -330,6 +425,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-startSampling">
           <span class="domain-dot">Memory.</span>startSampling
+          
           <a href="#method-startSampling" class="permalink">#</a>
         </h4>
         
@@ -340,11 +436,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">samplingInterval</dt>
+        <dt class="param-name monospace">samplingInterval</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -356,7 +451,7 @@
           
         </dd>
       
-        <dt class="param-name">suppressRandomness</dt>
+        <dt class="param-name monospace">suppressRandomness</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -377,6 +472,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-stopSampling">
           <span class="domain-dot">Memory.</span>stopSampling
+          
           <a href="#method-stopSampling" class="permalink">#</a>
         </h4>
         
@@ -389,100 +485,6 @@
         
         
         
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getAllTimeSamplingProfile">
-          <span class="domain-dot">Memory.</span>getAllTimeSamplingProfile
-          <a href="#method-getAllTimeSamplingProfile" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Retrieve native memory allocations profile
-collected since renderer process startup.</p>
-
-      </div>
-    
-        
-        
-        
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">profile</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Memory/#type-SamplingProfile class="param-type">SamplingProfile</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getBrowserSamplingProfile">
-          <span class="domain-dot">Memory.</span>getBrowserSamplingProfile
-          <a href="#method-getBrowserSamplingProfile" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Retrieve native memory allocations profile
-collected since browser process startup.</p>
-
-      </div>
-    
-        
-        
-        
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">profile</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Memory/#type-SamplingProfile class="param-type">SamplingProfile</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getSamplingProfile">
-          <span class="domain-dot">Memory.</span>getSamplingProfile
-          <a href="#method-getSamplingProfile" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Retrieve native memory allocations profile collected since last
-<code>startSampling</code> call.</p>
-
-      </div>
-    
-        
-        
-        
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">profile</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Memory/#type-SamplingProfile class="param-type">SamplingProfile</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
       </div>
     
       </div>
@@ -493,125 +495,9 @@ collected since browser process startup.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-PressureLevel">
-          <span class="domain-dot">Memory.</span>PressureLevel
-          <a href="#type-PressureLevel" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Memory pressure level.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">moderate, critical</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-SamplingProfileNode">
-          <span class="domain-dot">Memory.</span>SamplingProfileNode
-          <a href="#type-SamplingProfileNode" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Heap profile sample.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">size</dt>
-        <dd>
-          <span class="param-type">number</span>
-          
-      <div class="details-description">
-        <p>Size of the sampled allocation.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">total</dt>
-        <dd>
-          <span class="param-type">number</span>
-          
-      <div class="details-description">
-        <p>Total bytes attributed to this sample.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">stack</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Execution stack at the point of allocation.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-SamplingProfile">
-          <span class="domain-dot">Memory.</span>SamplingProfile
-          <a href="#type-SamplingProfile" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Array of heap profile samples.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">samples</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-          
-        </dd>
-      
-        <dt class="param-name">modules</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-Module">
           <span class="domain-dot">Memory.</span>Module
+          
           <a href="#type-Module" class="permalink">#</a>
         </h4>
         
@@ -620,13 +506,12 @@ collected since browser process startup.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">name</dt>
+        <dt class="param-name monospace">name</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -638,7 +523,7 @@ collected since browser process startup.</p>
           
         </dd>
       
-        <dt class="param-name">uuid</dt>
+        <dt class="param-name monospace">uuid</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -650,7 +535,7 @@ collected since browser process startup.</p>
           
         </dd>
       
-        <dt class="param-name">baseAddress</dt>
+        <dt class="param-name monospace">baseAddress</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -663,12 +548,129 @@ or hexadecimal (0x prefixed) string.</p>
           
         </dd>
       
-        <dt class="param-name">size</dt>
+        <dt class="param-name monospace">size</dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Size of the module in bytes.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PressureLevel">
+          <span class="domain-dot">Memory.</span>PressureLevel
+          
+          <a href="#type-PressureLevel" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Memory pressure level.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">moderate, critical</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SamplingProfile">
+          <span class="domain-dot">Memory.</span>SamplingProfile
+          
+          <a href="#type-SamplingProfile" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Array of heap profile samples.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">samples</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">modules</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SamplingProfileNode">
+          <span class="domain-dot">Memory.</span>SamplingProfileNode
+          
+          <a href="#type-SamplingProfileNode" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Heap profile sample.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">size</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Size of the sampled allocation.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">total</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Total bytes attributed to this sample.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">stack</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Execution stack at the point of allocation.</p>
 
       </div>
     

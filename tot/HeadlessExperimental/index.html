@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,29 +117,29 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-beginFrame"><span class="domain-dot">HeadlessExperimental.</span>beginFrame</a>
+        <a class="monospace" href="#method-beginFrame"><span class="domain-dot">HeadlessExperimental.</span>beginFrame</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disable"><span class="domain-dot">HeadlessExperimental.</span>disable</a>
+        <a class="monospace" href="#method-disable"><span class="domain-dot">HeadlessExperimental.</span>disable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">HeadlessExperimental.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">HeadlessExperimental.</span>enable</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-needsBeginFramesChanged"><span class="domain-dot">HeadlessExperimental.</span>needsBeginFramesChanged</a>
+        <a class="monospace" href="#event-needsBeginFramesChanged"><span class="domain-dot">HeadlessExperimental.</span>needsBeginFramesChanged</a>
         <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-ScreenshotParams"><span class="domain-dot">HeadlessExperimental.</span>ScreenshotParams</a>
+        <a class="monospace" href="#type-ScreenshotParams"><span class="domain-dot">HeadlessExperimental.</span>ScreenshotParams</a>
         
       </div>
       
@@ -150,6 +152,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-beginFrame">
           <span class="domain-dot">HeadlessExperimental.</span>beginFrame
+          
           <a href="#method-beginFrame" class="permalink">#</a>
         </h4>
         
@@ -163,11 +166,10 @@ BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameTimeTicks</dt>
+        <dt class="param-name monospace">frameTimeTicks</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -180,7 +182,7 @@ the current time will be used.</p>
           
         </dd>
       
-        <dt class="param-name">interval</dt>
+        <dt class="param-name monospace">interval</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -193,7 +195,7 @@ Defaults to a 60 frames/second interval, i.e. about 16.666 milliseconds.</p>
           
         </dd>
       
-        <dt class="param-name">noDisplayUpdates</dt>
+        <dt class="param-name monospace">noDisplayUpdates</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -207,7 +209,7 @@ any visual updates may not be visible on the display or in screenshots.</p>
           
         </dd>
       
-        <dt class="param-name">screenshot</dt>
+        <dt class="param-name monospace">screenshot</dt>
         <dd>
           <a href=/devtools-protocol/tot/HeadlessExperimental/#type-ScreenshotParams class="param-type">ScreenshotParams</a>
           
@@ -227,7 +229,7 @@ during renderer initialization. In such a case, no screenshot data will be retur
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">hasDamage</dt>
+        <dt class="param-name monospace">hasDamage</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -240,7 +242,7 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
           
         </dd>
       
-        <dt class="param-name">screenshotData</dt>
+        <dt class="param-name monospace">screenshotData</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -260,6 +262,7 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-disable">
           <span class="domain-dot">HeadlessExperimental.</span>disable
+          
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
@@ -272,12 +275,12 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">HeadlessExperimental.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -286,7 +289,6 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
 
       </div>
     
-        
         
         
         
@@ -302,6 +304,7 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-needsBeginFramesChanged">
           <span class="domain-dot">HeadlessExperimental.</span>needsBeginFramesChanged
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
           <a href="#event-needsBeginFramesChanged" class="permalink">#</a>
         </h4>
         
@@ -312,13 +315,12 @@ beginFrame to detect whether the frames were suppressed.</p>
 
       </div>
     
-        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">needsBeginFrames</dt>
+        <dt class="param-name monospace">needsBeginFrames</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -345,6 +347,7 @@ beginFrame to detect whether the frames were suppressed.</p>
       <div class="details">
         <h4 class="details-name monospace" id="type-ScreenshotParams">
           <span class="domain-dot">HeadlessExperimental.</span>ScreenshotParams
+          
           <a href="#type-ScreenshotParams" class="permalink">#</a>
         </h4>
         
@@ -353,13 +356,12 @@ beginFrame to detect whether the frames were suppressed.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">format</dt>
+        <dt class="param-name monospace">format</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -371,7 +373,7 @@ beginFrame to detect whether the frames were suppressed.</p>
           
         </dd>
       
-        <dt class="param-name">quality</dt>
+        <dt class="param-name monospace">quality</dt>
         <dd>
           <span class="param-type">integer</span>
           

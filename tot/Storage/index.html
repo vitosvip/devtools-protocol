@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,79 +112,79 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-clearDataForOrigin"><span class="domain-dot">Storage.</span>clearDataForOrigin</a>
+        <a class="monospace" href="#method-clearCookies"><span class="domain-dot">Storage.</span>clearCookies</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getCookies"><span class="domain-dot">Storage.</span>getCookies</a>
+        <a class="monospace" href="#method-clearDataForOrigin"><span class="domain-dot">Storage.</span>clearDataForOrigin</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setCookies"><span class="domain-dot">Storage.</span>setCookies</a>
+        <a class="monospace" href="#method-getCookies"><span class="domain-dot">Storage.</span>getCookies</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-clearCookies"><span class="domain-dot">Storage.</span>clearCookies</a>
+        <a class="monospace" href="#method-getUsageAndQuota"><span class="domain-dot">Storage.</span>getUsageAndQuota</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getUsageAndQuota"><span class="domain-dot">Storage.</span>getUsageAndQuota</a>
+        <a class="monospace" href="#method-setCookies"><span class="domain-dot">Storage.</span>setCookies</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-trackCacheStorageForOrigin"><span class="domain-dot">Storage.</span>trackCacheStorageForOrigin</a>
+        <a class="monospace" href="#method-trackCacheStorageForOrigin"><span class="domain-dot">Storage.</span>trackCacheStorageForOrigin</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-trackIndexedDBForOrigin"><span class="domain-dot">Storage.</span>trackIndexedDBForOrigin</a>
+        <a class="monospace" href="#method-trackIndexedDBForOrigin"><span class="domain-dot">Storage.</span>trackIndexedDBForOrigin</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-untrackCacheStorageForOrigin"><span class="domain-dot">Storage.</span>untrackCacheStorageForOrigin</a>
+        <a class="monospace" href="#method-untrackCacheStorageForOrigin"><span class="domain-dot">Storage.</span>untrackCacheStorageForOrigin</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-untrackIndexedDBForOrigin"><span class="domain-dot">Storage.</span>untrackIndexedDBForOrigin</a>
+        <a class="monospace" href="#method-untrackIndexedDBForOrigin"><span class="domain-dot">Storage.</span>untrackIndexedDBForOrigin</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-cacheStorageContentUpdated"><span class="domain-dot">Storage.</span>cacheStorageContentUpdated</a>
+        <a class="monospace" href="#event-cacheStorageContentUpdated"><span class="domain-dot">Storage.</span>cacheStorageContentUpdated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-cacheStorageListUpdated"><span class="domain-dot">Storage.</span>cacheStorageListUpdated</a>
+        <a class="monospace" href="#event-cacheStorageListUpdated"><span class="domain-dot">Storage.</span>cacheStorageListUpdated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-indexedDBContentUpdated"><span class="domain-dot">Storage.</span>indexedDBContentUpdated</a>
+        <a class="monospace" href="#event-indexedDBContentUpdated"><span class="domain-dot">Storage.</span>indexedDBContentUpdated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-indexedDBListUpdated"><span class="domain-dot">Storage.</span>indexedDBListUpdated</a>
+        <a class="monospace" href="#event-indexedDBListUpdated"><span class="domain-dot">Storage.</span>indexedDBListUpdated</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-StorageType"><span class="domain-dot">Storage.</span>StorageType</a>
+        <a class="monospace" href="#type-StorageType"><span class="domain-dot">Storage.</span>StorageType</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-UsageForType"><span class="domain-dot">Storage.</span>UsageForType</a>
+        <a class="monospace" href="#type-UsageForType"><span class="domain-dot">Storage.</span>UsageForType</a>
         
       </div>
       
@@ -193,8 +195,44 @@
       <div>
         
       <div class="details">
+        <h4 class="details-name monospace" id="method-clearCookies">
+          <span class="domain-dot">Storage.</span>clearCookies
+          
+          <a href="#method-clearCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Clears cookies.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">browserContextId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
+          
+      <div class="details-description">
+        <p>Browser context to use when called on the browser endpoint.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-clearDataForOrigin">
           <span class="domain-dot">Storage.</span>clearDataForOrigin
+          
           <a href="#method-clearDataForOrigin" class="permalink">#</a>
         </h4>
         
@@ -205,11 +243,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -221,7 +258,7 @@
           
         </dd>
       
-        <dt class="param-name">storageTypes</dt>
+        <dt class="param-name monospace">storageTypes</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -242,6 +279,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-getCookies">
           <span class="domain-dot">Storage.</span>getCookies
+          
           <a href="#method-getCookies" class="permalink">#</a>
         </h4>
         
@@ -252,11 +290,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">browserContextId</dt>
+        <dt class="param-name monospace">browserContextId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
@@ -274,7 +311,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">cookies</dt>
+        <dt class="param-name monospace">cookies</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -292,90 +329,9 @@
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setCookies">
-          <span class="domain-dot">Storage.</span>setCookies
-          <a href="#method-setCookies" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Sets given cookies.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">cookies</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>Cookies to be set.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">browserContextId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
-          
-      <div class="details-description">
-        <p>Browser context to use when called on the browser endpoint.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-clearCookies">
-          <span class="domain-dot">Storage.</span>clearCookies
-          <a href="#method-clearCookies" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Clears cookies.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">browserContextId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
-          
-      <div class="details-description">
-        <p>Browser context to use when called on the browser endpoint.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-getUsageAndQuota">
           <span class="domain-dot">Storage.</span>getUsageAndQuota
+          
           <a href="#method-getUsageAndQuota" class="permalink">#</a>
         </h4>
         
@@ -386,11 +342,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -408,7 +363,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">usage</dt>
+        <dt class="param-name monospace">usage</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -420,7 +375,7 @@
           
         </dd>
       
-        <dt class="param-name">quota</dt>
+        <dt class="param-name monospace">quota</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -432,7 +387,7 @@
           
         </dd>
       
-        <dt class="param-name">usageBreakdown</dt>
+        <dt class="param-name monospace">usageBreakdown</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -450,8 +405,56 @@
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setCookies">
+          <span class="domain-dot">Storage.</span>setCookies
+          
+          <a href="#method-setCookies" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Sets given cookies.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">cookies</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>Cookies to be set.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">browserContextId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
+          
+      <div class="details-description">
+        <p>Browser context to use when called on the browser endpoint.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-trackCacheStorageForOrigin">
           <span class="domain-dot">Storage.</span>trackCacheStorageForOrigin
+          
           <a href="#method-trackCacheStorageForOrigin" class="permalink">#</a>
         </h4>
         
@@ -462,11 +465,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -487,6 +489,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-trackIndexedDBForOrigin">
           <span class="domain-dot">Storage.</span>trackIndexedDBForOrigin
+          
           <a href="#method-trackIndexedDBForOrigin" class="permalink">#</a>
         </h4>
         
@@ -497,11 +500,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -522,6 +524,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-untrackCacheStorageForOrigin">
           <span class="domain-dot">Storage.</span>untrackCacheStorageForOrigin
+          
           <a href="#method-untrackCacheStorageForOrigin" class="permalink">#</a>
         </h4>
         
@@ -532,11 +535,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -557,6 +559,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-untrackIndexedDBForOrigin">
           <span class="domain-dot">Storage.</span>untrackIndexedDBForOrigin
+          
           <a href="#method-untrackIndexedDBForOrigin" class="permalink">#</a>
         </h4>
         
@@ -567,11 +570,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -598,6 +600,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-cacheStorageContentUpdated">
           <span class="domain-dot">Storage.</span>cacheStorageContentUpdated
+          
           <a href="#event-cacheStorageContentUpdated" class="permalink">#</a>
         </h4>
         
@@ -608,11 +611,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -624,7 +626,7 @@
           
         </dd>
       
-        <dt class="param-name">cacheName</dt>
+        <dt class="param-name monospace">cacheName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -645,6 +647,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-cacheStorageListUpdated">
           <span class="domain-dot">Storage.</span>cacheStorageListUpdated
+          
           <a href="#event-cacheStorageListUpdated" class="permalink">#</a>
         </h4>
         
@@ -655,11 +658,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -680,6 +682,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-indexedDBContentUpdated">
           <span class="domain-dot">Storage.</span>indexedDBContentUpdated
+          
           <a href="#event-indexedDBContentUpdated" class="permalink">#</a>
         </h4>
         
@@ -690,11 +693,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -706,7 +708,7 @@
           
         </dd>
       
-        <dt class="param-name">databaseName</dt>
+        <dt class="param-name monospace">databaseName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -718,7 +720,7 @@
           
         </dd>
       
-        <dt class="param-name">objectStoreName</dt>
+        <dt class="param-name monospace">objectStoreName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -739,6 +741,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-indexedDBListUpdated">
           <span class="domain-dot">Storage.</span>indexedDBListUpdated
+          
           <a href="#event-indexedDBListUpdated" class="permalink">#</a>
         </h4>
         
@@ -749,11 +752,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">origin</dt>
+        <dt class="param-name monospace">origin</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -780,6 +782,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="type-StorageType">
           <span class="domain-dot">Storage.</span>StorageType
+          
           <a href="#type-StorageType" class="permalink">#</a>
         </h4>
         
@@ -788,19 +791,19 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">appcache, cookies, file_systems, indexeddb, local_storage, shader_cache, websql, service_workers, cache_storage, all, other</div>
+      <div class="enum-container monospace">appcache, cookies, file_systems, indexeddb, local_storage, shader_cache, websql, service_workers, cache_storage, all, other</div>
     
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="type-UsageForType">
           <span class="domain-dot">Storage.</span>UsageForType
+          
           <a href="#type-UsageForType" class="permalink">#</a>
         </h4>
         
@@ -809,13 +812,12 @@
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">storageType</dt>
+        <dt class="param-name monospace">storageType</dt>
         <dd>
           <a href=/devtools-protocol/tot/Storage/#type-StorageType class="param-type">StorageType</a>
           
@@ -827,7 +829,7 @@
           
         </dd>
       
-        <dt class="param-name">usage</dt>
+        <dt class="param-name monospace">usage</dt>
         <dd>
           <span class="param-type">number</span>
           

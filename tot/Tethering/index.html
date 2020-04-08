@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,18 +117,18 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-bind"><span class="domain-dot">Tethering.</span>bind</a>
+        <a class="monospace" href="#method-bind"><span class="domain-dot">Tethering.</span>bind</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-unbind"><span class="domain-dot">Tethering.</span>unbind</a>
+        <a class="monospace" href="#method-unbind"><span class="domain-dot">Tethering.</span>unbind</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-accepted"><span class="domain-dot">Tethering.</span>accepted</a>
+        <a class="monospace" href="#event-accepted"><span class="domain-dot">Tethering.</span>accepted</a>
         
       </div>
       
@@ -140,6 +142,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-bind">
           <span class="domain-dot">Tethering.</span>bind
+          
           <a href="#method-bind" class="permalink">#</a>
         </h4>
         
@@ -150,11 +153,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">port</dt>
+        <dt class="param-name monospace">port</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -175,6 +177,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-unbind">
           <span class="domain-dot">Tethering.</span>unbind
+          
           <a href="#method-unbind" class="permalink">#</a>
         </h4>
         
@@ -185,11 +188,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">port</dt>
+        <dt class="param-name monospace">port</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -216,6 +218,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="event-accepted">
           <span class="domain-dot">Tethering.</span>accepted
+          
           <a href="#event-accepted" class="permalink">#</a>
         </h4>
         
@@ -226,11 +229,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">port</dt>
+        <dt class="param-name monospace">port</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -242,7 +244,7 @@
           
         </dd>
       
-        <dt class="param-name">connectionId</dt>
+        <dt class="param-name monospace">connectionId</dt>
         <dd>
           <span class="param-type">string</span>
           

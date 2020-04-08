@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,12 +112,12 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-clearDeviceOrientationOverride"><span class="domain-dot">DeviceOrientation.</span>clearDeviceOrientationOverride</a>
+        <a class="monospace" href="#method-clearDeviceOrientationOverride"><span class="domain-dot">DeviceOrientation.</span>clearDeviceOrientationOverride</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-setDeviceOrientationOverride"><span class="domain-dot">DeviceOrientation.</span>setDeviceOrientationOverride</a>
+        <a class="monospace" href="#method-setDeviceOrientationOverride"><span class="domain-dot">DeviceOrientation.</span>setDeviceOrientationOverride</a>
         
       </div>
       
@@ -130,6 +132,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-clearDeviceOrientationOverride">
           <span class="domain-dot">DeviceOrientation.</span>clearDeviceOrientationOverride
+          
           <a href="#method-clearDeviceOrientationOverride" class="permalink">#</a>
         </h4>
         
@@ -142,12 +145,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-setDeviceOrientationOverride">
           <span class="domain-dot">DeviceOrientation.</span>setDeviceOrientationOverride
+          
           <a href="#method-setDeviceOrientationOverride" class="permalink">#</a>
         </h4>
         
@@ -158,11 +161,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">alpha</dt>
+        <dt class="param-name monospace">alpha</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -174,7 +176,7 @@
           
         </dd>
       
-        <dt class="param-name">beta</dt>
+        <dt class="param-name monospace">beta</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -186,7 +188,7 @@
           
         </dd>
       
-        <dt class="param-name">gamma</dt>
+        <dt class="param-name monospace">gamma</dt>
         <dd>
           <span class="param-type">number</span>
           

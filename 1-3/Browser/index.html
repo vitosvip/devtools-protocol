@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-1-3">
+    <div id="domains" class="navs version-1-3">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,12 +117,12 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-close"><span class="domain-dot">Browser.</span>close</a>
+        <a class="monospace" href="#method-close"><span class="domain-dot">Browser.</span>close</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getVersion"><span class="domain-dot">Browser.</span>getVersion</a>
+        <a class="monospace" href="#method-getVersion"><span class="domain-dot">Browser.</span>getVersion</a>
         
       </div>
       
@@ -135,6 +137,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-close">
           <span class="domain-dot">Browser.</span>close
+          
           <a href="#method-close" class="permalink">#</a>
         </h4>
         
@@ -147,12 +150,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-getVersion">
           <span class="domain-dot">Browser.</span>getVersion
+          
           <a href="#method-getVersion" class="permalink">#</a>
         </h4>
         
@@ -164,11 +167,10 @@
         
         
         
-        
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">protocolVersion</dt>
+        <dt class="param-name monospace">protocolVersion</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -180,7 +182,7 @@
           
         </dd>
       
-        <dt class="param-name">product</dt>
+        <dt class="param-name monospace">product</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -192,7 +194,7 @@
           
         </dd>
       
-        <dt class="param-name">revision</dt>
+        <dt class="param-name monospace">revision</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -204,7 +206,7 @@
           
         </dd>
       
-        <dt class="param-name">userAgent</dt>
+        <dt class="param-name monospace">userAgent</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -216,7 +218,7 @@
           
         </dd>
       
-        <dt class="param-name">jsVersion</dt>
+        <dt class="param-name monospace">jsVersion</dt>
         <dd>
           <span class="param-type">string</span>
           

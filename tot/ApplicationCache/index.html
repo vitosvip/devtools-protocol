@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,49 +112,49 @@
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-enable"><span class="domain-dot">ApplicationCache.</span>enable</a>
+        <a class="monospace" href="#method-enable"><span class="domain-dot">ApplicationCache.</span>enable</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getApplicationCacheForFrame"><span class="domain-dot">ApplicationCache.</span>getApplicationCacheForFrame</a>
+        <a class="monospace" href="#method-getApplicationCacheForFrame"><span class="domain-dot">ApplicationCache.</span>getApplicationCacheForFrame</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getFramesWithManifests"><span class="domain-dot">ApplicationCache.</span>getFramesWithManifests</a>
+        <a class="monospace" href="#method-getFramesWithManifests"><span class="domain-dot">ApplicationCache.</span>getFramesWithManifests</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-getManifestForFrame"><span class="domain-dot">ApplicationCache.</span>getManifestForFrame</a>
+        <a class="monospace" href="#method-getManifestForFrame"><span class="domain-dot">ApplicationCache.</span>getManifestForFrame</a>
         
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-applicationCacheStatusUpdated"><span class="domain-dot">ApplicationCache.</span>applicationCacheStatusUpdated</a>
+        <a class="monospace" href="#event-applicationCacheStatusUpdated"><span class="domain-dot">ApplicationCache.</span>applicationCacheStatusUpdated</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#event-networkStateUpdated"><span class="domain-dot">ApplicationCache.</span>networkStateUpdated</a>
+        <a class="monospace" href="#event-networkStateUpdated"><span class="domain-dot">ApplicationCache.</span>networkStateUpdated</a>
         
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-ApplicationCacheResource"><span class="domain-dot">ApplicationCache.</span>ApplicationCacheResource</a>
+        <a class="monospace" href="#type-ApplicationCache"><span class="domain-dot">ApplicationCache.</span>ApplicationCache</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-ApplicationCache"><span class="domain-dot">ApplicationCache.</span>ApplicationCache</a>
+        <a class="monospace" href="#type-ApplicationCacheResource"><span class="domain-dot">ApplicationCache.</span>ApplicationCacheResource</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-FrameWithManifest"><span class="domain-dot">ApplicationCache.</span>FrameWithManifest</a>
+        <a class="monospace" href="#type-FrameWithManifest"><span class="domain-dot">ApplicationCache.</span>FrameWithManifest</a>
         
       </div>
       
@@ -165,6 +167,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-enable">
           <span class="domain-dot">ApplicationCache.</span>enable
+          
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
@@ -177,12 +180,12 @@
         
         
         
-        
       </div>
     
       <div class="details">
         <h4 class="details-name monospace" id="method-getApplicationCacheForFrame">
           <span class="domain-dot">ApplicationCache.</span>getApplicationCacheForFrame
+          
           <a href="#method-getApplicationCacheForFrame" class="permalink">#</a>
         </h4>
         
@@ -193,11 +196,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameId</dt>
+        <dt class="param-name monospace">frameId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
@@ -215,7 +217,7 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">applicationCache</dt>
+        <dt class="param-name monospace">applicationCache</dt>
         <dd>
           <a href=/devtools-protocol/tot/ApplicationCache/#type-ApplicationCache class="param-type">ApplicationCache</a>
           
@@ -235,6 +237,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-getFramesWithManifests">
           <span class="domain-dot">ApplicationCache.</span>getFramesWithManifests
+          
           <a href="#method-getFramesWithManifests" class="permalink">#</a>
         </h4>
         
@@ -247,11 +250,10 @@ associated with some application cache.</p>
         
         
         
-        
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameIds</dt>
+        <dt class="param-name monospace">frameIds</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -272,6 +274,7 @@ associated with some application cache.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-getManifestForFrame">
           <span class="domain-dot">ApplicationCache.</span>getManifestForFrame
+          
           <a href="#method-getManifestForFrame" class="permalink">#</a>
         </h4>
         
@@ -282,11 +285,10 @@ associated with some application cache.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameId</dt>
+        <dt class="param-name monospace">frameId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
@@ -304,7 +306,7 @@ associated with some application cache.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">manifestURL</dt>
+        <dt class="param-name monospace">manifestURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -330,16 +332,16 @@ associated with some application cache.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-applicationCacheStatusUpdated">
           <span class="domain-dot">ApplicationCache.</span>applicationCacheStatusUpdated
+          
           <a href="#event-applicationCacheStatusUpdated" class="permalink">#</a>
         </h4>
-        
         
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameId</dt>
+        <dt class="param-name monospace">frameId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
@@ -351,7 +353,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">manifestURL</dt>
+        <dt class="param-name monospace">manifestURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -363,7 +365,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">status</dt>
+        <dt class="param-name monospace">status</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -384,16 +386,16 @@ associated with some application cache.</p>
       <div class="details">
         <h4 class="details-name monospace" id="event-networkStateUpdated">
           <span class="domain-dot">ApplicationCache.</span>networkStateUpdated
+          
           <a href="#event-networkStateUpdated" class="permalink">#</a>
         </h4>
-        
         
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">isNowOnline</dt>
+        <dt class="param-name monospace">isNowOnline</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -413,67 +415,9 @@ associated with some application cache.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-ApplicationCacheResource">
-          <span class="domain-dot">ApplicationCache.</span>ApplicationCacheResource
-          <a href="#type-ApplicationCacheResource" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Detailed application cache resource information.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">url</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Resource url.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">size</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Resource size.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">type</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Resource type.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-ApplicationCache">
           <span class="domain-dot">ApplicationCache.</span>ApplicationCache
+          
           <a href="#type-ApplicationCache" class="permalink">#</a>
         </h4>
         
@@ -482,13 +426,12 @@ associated with some application cache.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">manifestURL</dt>
+        <dt class="param-name monospace">manifestURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -500,7 +443,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">size</dt>
+        <dt class="param-name monospace">size</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -512,7 +455,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">creationTime</dt>
+        <dt class="param-name monospace">creationTime</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -524,7 +467,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">updateTime</dt>
+        <dt class="param-name monospace">updateTime</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -536,7 +479,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">resources</dt>
+        <dt class="param-name monospace">resources</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -555,8 +498,68 @@ associated with some application cache.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-ApplicationCacheResource">
+          <span class="domain-dot">ApplicationCache.</span>ApplicationCacheResource
+          
+          <a href="#type-ApplicationCacheResource" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Detailed application cache resource information.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">url</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Resource url.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">size</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Resource size.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Resource type.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-FrameWithManifest">
           <span class="domain-dot">ApplicationCache.</span>FrameWithManifest
+          
           <a href="#type-FrameWithManifest" class="permalink">#</a>
         </h4>
         
@@ -565,13 +568,12 @@ associated with some application cache.</p>
 
       </div>
     
-        
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">frameId</dt>
+        <dt class="param-name monospace">frameId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
@@ -583,7 +585,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">manifestURL</dt>
+        <dt class="param-name monospace">manifestURL</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -595,7 +597,7 @@ associated with some application cache.</p>
           
         </dd>
       
-        <dt class="param-name">status</dt>
+        <dt class="param-name monospace">status</dt>
         <dd>
           <span class="param-type">integer</span>
           

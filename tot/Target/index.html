@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -115,139 +117,139 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-activateTarget"><span class="domain-dot">Target.</span>activateTarget</a>
+        <a class="monospace" href="#method-activateTarget"><span class="domain-dot">Target.</span>activateTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-attachToTarget"><span class="domain-dot">Target.</span>attachToTarget</a>
+        <a class="monospace" href="#method-attachToTarget"><span class="domain-dot">Target.</span>attachToTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-attachToBrowserTarget"><span class="domain-dot">Target.</span>attachToBrowserTarget</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-closeTarget"><span class="domain-dot">Target.</span>closeTarget</a>
+        <a class="monospace" href="#method-closeTarget"><span class="domain-dot">Target.</span>closeTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-exposeDevToolsProtocol"><span class="domain-dot">Target.</span>exposeDevToolsProtocol</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-createBrowserContext"><span class="domain-dot">Target.</span>createBrowserContext</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getBrowserContexts"><span class="domain-dot">Target.</span>getBrowserContexts</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-createTarget"><span class="domain-dot">Target.</span>createTarget</a>
+        <a class="monospace" href="#method-createTarget"><span class="domain-dot">Target.</span>createTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-detachFromTarget"><span class="domain-dot">Target.</span>detachFromTarget</a>
+        <a class="monospace" href="#method-detachFromTarget"><span class="domain-dot">Target.</span>detachFromTarget</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-disposeBrowserContext"><span class="domain-dot">Target.</span>disposeBrowserContext</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getTargetInfo"><span class="domain-dot">Target.</span>getTargetInfo</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-getTargets"><span class="domain-dot">Target.</span>getTargets</a>
+        <a class="monospace" href="#method-getTargets"><span class="domain-dot">Target.</span>getTargets</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-sendMessageToTarget"><span class="domain-dot">Target.</span>sendMessageToTarget</a>
+        <a class="monospace" href="#method-setDiscoverTargets"><span class="domain-dot">Target.</span>setDiscoverTargets</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-sendMessageToTarget"><span class="domain-dot">Target.</span>sendMessageToTarget</a>
         <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-setAutoAttach"><span class="domain-dot">Target.</span>setAutoAttach</a>
+        <a class="monospace" href="#method-attachToBrowserTarget"><span class="domain-dot">Target.</span>attachToBrowserTarget</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-setDiscoverTargets"><span class="domain-dot">Target.</span>setDiscoverTargets</a>
-        
+        <a class="monospace" href="#method-createBrowserContext"><span class="domain-dot">Target.</span>createBrowserContext</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-setRemoteLocations"><span class="domain-dot">Target.</span>setRemoteLocations</a>
+        <a class="monospace" href="#method-disposeBrowserContext"><span class="domain-dot">Target.</span>disposeBrowserContext</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-exposeDevToolsProtocol"><span class="domain-dot">Target.</span>exposeDevToolsProtocol</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getBrowserContexts"><span class="domain-dot">Target.</span>getBrowserContexts</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-getTargetInfo"><span class="domain-dot">Target.</span>getTargetInfo</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setAutoAttach"><span class="domain-dot">Target.</span>setAutoAttach</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setRemoteLocations"><span class="domain-dot">Target.</span>setRemoteLocations</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
         <h3>Events</h3>
       <div class="toc-link">
-        <a href="#event-attachedToTarget"><span class="domain-dot">Target.</span>attachedToTarget</a>
+        <a class="monospace" href="#event-receivedMessageFromTarget"><span class="domain-dot">Target.</span>receivedMessageFromTarget</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-targetCrashed"><span class="domain-dot">Target.</span>targetCrashed</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-targetCreated"><span class="domain-dot">Target.</span>targetCreated</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-targetDestroyed"><span class="domain-dot">Target.</span>targetDestroyed</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-targetInfoChanged"><span class="domain-dot">Target.</span>targetInfoChanged</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-attachedToTarget"><span class="domain-dot">Target.</span>attachedToTarget</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#event-detachedFromTarget"><span class="domain-dot">Target.</span>detachedFromTarget</a>
+        <a class="monospace" href="#event-detachedFromTarget"><span class="domain-dot">Target.</span>detachedFromTarget</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-receivedMessageFromTarget"><span class="domain-dot">Target.</span>receivedMessageFromTarget</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-targetCreated"><span class="domain-dot">Target.</span>targetCreated</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-targetDestroyed"><span class="domain-dot">Target.</span>targetDestroyed</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-targetCrashed"><span class="domain-dot">Target.</span>targetCrashed</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#event-targetInfoChanged"><span class="domain-dot">Target.</span>targetInfoChanged</a>
-        
       </div>
       
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-TargetID"><span class="domain-dot">Target.</span>TargetID</a>
+        <a class="monospace" href="#type-SessionID"><span class="domain-dot">Target.</span>SessionID</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-SessionID"><span class="domain-dot">Target.</span>SessionID</a>
+        <a class="monospace" href="#type-TargetID"><span class="domain-dot">Target.</span>TargetID</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-TargetInfo"><span class="domain-dot">Target.</span>TargetInfo</a>
+        <a class="monospace" href="#type-TargetInfo"><span class="domain-dot">Target.</span>TargetInfo</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-RemoteLocation"><span class="domain-dot">Target.</span>RemoteLocation</a>
+        <a class="monospace" href="#type-RemoteLocation"><span class="domain-dot">Target.</span>RemoteLocation</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
@@ -260,6 +262,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-activateTarget">
           <span class="domain-dot">Target.</span>activateTarget
+          
           <a href="#method-activateTarget" class="permalink">#</a>
         </h4>
         
@@ -270,11 +273,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -290,6 +292,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-attachToTarget">
           <span class="domain-dot">Target.</span>attachToTarget
+          
           <a href="#method-attachToTarget" class="permalink">#</a>
         </h4>
         
@@ -300,18 +303,17 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
           
         </dd>
       
-        <dt class="param-name">flatten</dt>
+        <dt class="param-name monospace">flatten</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -331,42 +333,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">sessionId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
-          
-      <div class="details-description">
-        <p>Id assigned to the session.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-attachToBrowserTarget">
-          <span class="domain-dot">Target.</span>attachToBrowserTarget
-          <a href="#method-attachToBrowserTarget" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Attaches to the browser target, only uses flat sessionId mode.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -386,6 +353,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-closeTarget">
           <span class="domain-dot">Target.</span>closeTarget
+          
           <a href="#method-closeTarget" class="permalink">#</a>
         </h4>
         
@@ -396,11 +364,10 @@ and eventually retire it. See crbug.com/991325.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -413,147 +380,10 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">success</dt>
+        <dt class="param-name monospace">success</dt>
         <dd>
           <span class="param-type">boolean</span>
           
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-exposeDevToolsProtocol">
-          <span class="domain-dot">Target.</span>exposeDevToolsProtocol
-          <a href="#method-exposeDevToolsProtocol" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Inject object to the target&#39;s main frame that provides a communication
-channel with browser target.</p>
-<p>Injected object will be available as <code>window[bindingName]</code>.</p>
-<p>The object has the follwing API:</p>
-<ul>
-<li><code>binding.send(json)</code> - a method to send messages over the remote debugging protocol</li>
-<li><code>binding.onmessage = json =&gt; handleMessage(json)</code> - a callback that will be called for the protocol notifications and command responses.</li>
-</ul>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
-          
-          
-        </dd>
-      
-        <dt class="param-name">bindingName</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Binding name, &#39;cdp&#39; if not specified.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-createBrowserContext">
-          <span class="domain-dot">Target.</span>createBrowserContext
-          <a href="#method-createBrowserContext" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
-one.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">disposeOnDetach</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>If specified, disposes this context when debugging session disconnects.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">browserContextId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
-          
-      <div class="details-description">
-        <p>The id of the context created.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getBrowserContexts">
-          <span class="domain-dot">Target.</span>getBrowserContexts
-          <a href="#method-getBrowserContexts" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns all browser contexts created with <code>Target.createBrowserContext</code> method.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">browserContextIds</dt>
-        <dd>
-          <span class="param-type">array</span>
-          
-      <div class="details-description">
-        <p>An array of browser context ids.</p>
-
-      </div>
-    
           
         </dd>
       
@@ -565,6 +395,7 @@ one.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-createTarget">
           <span class="domain-dot">Target.</span>createTarget
+          
           <a href="#method-createTarget" class="permalink">#</a>
         </h4>
         
@@ -575,11 +406,10 @@ one.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -591,7 +421,7 @@ one.</p>
           
         </dd>
       
-        <dt class="param-name">width</dt>
+        <dt class="param-name monospace">width</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -603,7 +433,7 @@ one.</p>
           
         </dd>
       
-        <dt class="param-name">height</dt>
+        <dt class="param-name monospace">height</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -615,7 +445,7 @@ one.</p>
           
         </dd>
       
-        <dt class="param-name">browserContextId</dt>
+        <dt class="param-name monospace">browserContextId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
@@ -627,7 +457,7 @@ one.</p>
           
         </dd>
       
-        <dt class="param-name">enableBeginFrameControl</dt>
+        <dt class="param-name monospace">enableBeginFrameControl</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -640,7 +470,7 @@ not supported on MacOS yet, false by default).</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name">newWindow</dt>
+        <dt class="param-name monospace">newWindow</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -652,7 +482,7 @@ not supported on MacOS yet, false by default).</p>
           
         </dd>
       
-        <dt class="param-name">background</dt>
+        <dt class="param-name monospace">background</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -671,7 +501,7 @@ false by default).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -691,6 +521,7 @@ false by default).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-detachFromTarget">
           <span class="domain-dot">Target.</span>detachFromTarget
+          
           <a href="#method-detachFromTarget" class="permalink">#</a>
         </h4>
         
@@ -701,11 +532,10 @@ false by default).</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -717,7 +547,7 @@ false by default).</p>
           
         </dd>
       
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -736,81 +566,9 @@ false by default).</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-disposeBrowserContext">
-          <span class="domain-dot">Target.</span>disposeBrowserContext
-          <a href="#method-disposeBrowserContext" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Deletes a BrowserContext. All the belonging pages will be closed without calling their
-beforeunload hooks.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">browserContextId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="method-getTargetInfo">
-          <span class="domain-dot">Target.</span>getTargetInfo
-          <a href="#method-getTargetInfo" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Returns information about a target.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-      <h5 class="properties-name">Return Object</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetInfo</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-getTargets">
           <span class="domain-dot">Target.</span>getTargets
+          
           <a href="#method-getTargets" class="permalink">#</a>
         </h4>
         
@@ -822,11 +580,10 @@ beforeunload hooks.</p>
         
         
         
-        
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetInfos</dt>
+        <dt class="param-name monospace">targetInfos</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -844,8 +601,45 @@ beforeunload hooks.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setDiscoverTargets">
+          <span class="domain-dot">Target.</span>setDiscoverTargets
+          
+          <a href="#method-setDiscoverTargets" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Controls whether to discover available targets and notify via
+<code>targetCreated/targetInfoChanged/targetDestroyed</code> events.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">discover</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether to discover available targets.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-sendMessageToTarget">
           <span class="domain-dot">Target.</span>sendMessageToTarget
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
           <a href="#method-sendMessageToTarget" class="permalink">#</a>
         </h4>
         
@@ -856,20 +650,19 @@ and crbug.com/991325.</p>
 
       </div>
     
-        <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">message</dt>
+        <dt class="param-name monospace">message</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -881,7 +674,7 @@ and crbug.com/991325.</p>
           
         </dd>
       
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -900,8 +693,254 @@ and crbug.com/991325.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-attachToBrowserTarget">
+          <span class="domain-dot">Target.</span>attachToBrowserTarget
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-attachToBrowserTarget" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Attaches to the browser target, only uses flat sessionId mode.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">sessionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
+          
+      <div class="details-description">
+        <p>Id assigned to the session.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-createBrowserContext">
+          <span class="domain-dot">Target.</span>createBrowserContext
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-createBrowserContext" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
+one.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">disposeOnDetach</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>If specified, disposes this context when debugging session disconnects.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">browserContextId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
+          
+      <div class="details-description">
+        <p>The id of the context created.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-disposeBrowserContext">
+          <span class="domain-dot">Target.</span>disposeBrowserContext
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-disposeBrowserContext" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Deletes a BrowserContext. All the belonging pages will be closed without calling their
+beforeunload hooks.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">browserContextId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-exposeDevToolsProtocol">
+          <span class="domain-dot">Target.</span>exposeDevToolsProtocol
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-exposeDevToolsProtocol" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Inject object to the target&#39;s main frame that provides a communication
+channel with browser target.</p>
+<p>Injected object will be available as <code>window[bindingName]</code>.</p>
+<p>The object has the follwing API:</p>
+<ul>
+<li><code>binding.send(json)</code> - a method to send messages over the remote debugging protocol</li>
+<li><code>binding.onmessage = json =&gt; handleMessage(json)</code> - a callback that will be called for the protocol notifications and command responses.</li>
+</ul>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">bindingName</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Binding name, &#39;cdp&#39; if not specified.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getBrowserContexts">
+          <span class="domain-dot">Target.</span>getBrowserContexts
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getBrowserContexts" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns all browser contexts created with <code>Target.createBrowserContext</code> method.</p>
+
+      </div>
+    
+        
+        
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">browserContextIds</dt>
+        <dd>
+          <span class="param-type">array</span>
+          
+      <div class="details-description">
+        <p>An array of browser context ids.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getTargetInfo">
+          <span class="domain-dot">Target.</span>getTargetInfo
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-getTargetInfo" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Returns information about a target.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetInfo</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setAutoAttach">
           <span class="domain-dot">Target.</span>setAutoAttach
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#method-setAutoAttach" class="permalink">#</a>
         </h4>
         
@@ -912,13 +951,12 @@ automatically detaches from all currently attached targets.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">autoAttach</dt>
+        <dt class="param-name monospace">autoAttach</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -930,7 +968,7 @@ automatically detaches from all currently attached targets.</p>
           
         </dd>
       
-        <dt class="param-name">waitForDebuggerOnStart</dt>
+        <dt class="param-name monospace">waitForDebuggerOnStart</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -943,7 +981,7 @@ to run paused targets.</p>
           
         </dd>
       
-        <dt class="param-name">flatten</dt>
+        <dt class="param-name monospace">flatten</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -964,44 +1002,9 @@ and eventually retire it. See crbug.com/991325.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-setDiscoverTargets">
-          <span class="domain-dot">Target.</span>setDiscoverTargets
-          <a href="#method-setDiscoverTargets" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Controls whether to discover available targets and notify via
-<code>targetCreated/targetInfoChanged/targetDestroyed</code> events.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">discover</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-      <div class="details-description">
-        <p>Whether to discover available targets.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-setRemoteLocations">
           <span class="domain-dot">Target.</span>setRemoteLocations
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#method-setRemoteLocations" class="permalink">#</a>
         </h4>
         
@@ -1011,13 +1014,12 @@ and eventually retire it. See crbug.com/991325.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">locations</dt>
+        <dt class="param-name monospace">locations</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -1042,105 +1044,9 @@ and eventually retire it. See crbug.com/991325.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="event-attachedToTarget">
-          <span class="domain-dot">Target.</span>attachedToTarget
-          <a href="#event-attachedToTarget" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Issued when attached to target because of auto-attach or <code>attachToTarget</code> command.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">sessionId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
-          
-      <div class="details-description">
-        <p>Identifier assigned to the session used to send/receive messages.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">targetInfo</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
-          
-          
-        </dd>
-      
-        <dt class="param-name">waitingForDebugger</dt>
-        <dd>
-          <span class="param-type">boolean</span>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="event-detachedFromTarget">
-          <span class="domain-dot">Target.</span>detachedFromTarget
-          <a href="#event-detachedFromTarget" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Issued when detached from target for any reason (including <code>detachFromTarget</code> command). Can be
-issued multiple times per target if multiple sessions have been attached to it.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">sessionId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
-          
-      <div class="details-description">
-        <p>Detached session identifier.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">targetId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
-          
-      <div class="details-description">
-        <p>Deprecated.</p>
-
-      </div>
-    
-          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="event-receivedMessageFromTarget">
           <span class="domain-dot">Target.</span>receivedMessageFromTarget
+          
           <a href="#event-receivedMessageFromTarget" class="permalink">#</a>
         </h4>
         
@@ -1152,11 +1058,10 @@ issued multiple times per target if multiple sessions have been attached to it.<
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">sessionId</dt>
+        <dt class="param-name monospace">sessionId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
           
@@ -1168,14 +1073,14 @@ issued multiple times per target if multiple sessions have been attached to it.<
           
         </dd>
       
-        <dt class="param-name">message</dt>
+        <dt class="param-name monospace">message</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -1194,68 +1099,9 @@ issued multiple times per target if multiple sessions have been attached to it.<
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="event-targetCreated">
-          <span class="domain-dot">Target.</span>targetCreated
-          <a href="#event-targetCreated" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Issued when a possible inspection target is created.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetInfo</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="event-targetDestroyed">
-          <span class="domain-dot">Target.</span>targetDestroyed
-          <a href="#event-targetDestroyed" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Issued when a target is destroyed.</p>
-
-      </div>
-    
-        
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">targetId</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
-          
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="event-targetCrashed">
           <span class="domain-dot">Target.</span>targetCrashed
+          
           <a href="#event-targetCrashed" class="permalink">#</a>
         </h4>
         
@@ -1266,18 +1112,17 @@ issued multiple times per target if multiple sessions have been attached to it.<
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
           
         </dd>
       
-        <dt class="param-name">status</dt>
+        <dt class="param-name monospace">status</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1289,7 +1134,7 @@ issued multiple times per target if multiple sessions have been attached to it.<
           
         </dd>
       
-        <dt class="param-name">errorCode</dt>
+        <dt class="param-name monospace">errorCode</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1308,8 +1153,69 @@ issued multiple times per target if multiple sessions have been attached to it.<
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="event-targetCreated">
+          <span class="domain-dot">Target.</span>targetCreated
+          
+          <a href="#event-targetCreated" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Issued when a possible inspection target is created.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetInfo</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-targetDestroyed">
+          <span class="domain-dot">Target.</span>targetDestroyed
+          
+          <a href="#event-targetDestroyed" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Issued when a target is destroyed.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">targetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="event-targetInfoChanged">
           <span class="domain-dot">Target.</span>targetInfoChanged
+          
           <a href="#event-targetInfoChanged" class="permalink">#</a>
         </h4>
         
@@ -1321,15 +1227,111 @@ issued multiple times per target if multiple sessions have been attached to it.<
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetInfo</dt>
+        <dt class="param-name monospace">targetInfo</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
           
           
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-attachedToTarget">
+          <span class="domain-dot">Target.</span>attachedToTarget
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-attachedToTarget" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Issued when attached to target because of auto-attach or <code>attachToTarget</code> command.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">sessionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
+          
+      <div class="details-description">
+        <p>Identifier assigned to the session used to send/receive messages.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">targetInfo</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetInfo class="param-type">TargetInfo</a>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">waitingForDebugger</dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-detachedFromTarget">
+          <span class="domain-dot">Target.</span>detachedFromTarget
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#event-detachedFromTarget" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Issued when detached from target for any reason (including <code>detachFromTarget</code> command). Can be
+issued multiple times per target if multiple sessions have been attached to it.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">sessionId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-SessionID class="param-type">SessionID</a>
+          
+      <div class="details-description">
+        <p>Detached session identifier.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">targetId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
+          
+      <div class="details-description">
+        <p>Deprecated.</p>
+
+      </div>
+    
+          <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
       </dl>
@@ -1345,21 +1347,9 @@ issued multiple times per target if multiple sessions have been attached to it.<
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-TargetID">
-          <span class="domain-dot">Target.</span>TargetID
-          <a href="#type-TargetID" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-SessionID">
           <span class="domain-dot">Target.</span>SessionID
+          
           <a href="#type-SessionID" class="permalink">#</a>
         </h4>
         
@@ -1368,6 +1358,18 @@ issued multiple times per target if multiple sessions have been attached to it.<
 
       </div>
     
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TargetID">
+          <span class="domain-dot">Target.</span>TargetID
+          
+          <a href="#type-TargetID" class="permalink">#</a>
+        </h4>
         
         <p class="type-type">Type: <strong>string</strong></p>
         
@@ -1378,44 +1380,44 @@ issued multiple times per target if multiple sessions have been attached to it.<
       <div class="details">
         <h4 class="details-name monospace" id="type-TargetInfo">
           <span class="domain-dot">Target.</span>TargetInfo
+          
           <a href="#type-TargetInfo" class="permalink">#</a>
         </h4>
-        
         
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">targetId</dt>
+        <dt class="param-name monospace">targetId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
           
         </dd>
       
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">title</dt>
+        <dt class="param-name monospace">title</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">url</dt>
+        <dt class="param-name monospace">url</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">attached</dt>
+        <dt class="param-name monospace">attached</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1427,7 +1429,7 @@ issued multiple times per target if multiple sessions have been attached to it.<
           
         </dd>
       
-        <dt class="param-name">openerId</dt>
+        <dt class="param-name monospace">openerId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">TargetID</a>
           
@@ -1439,7 +1441,7 @@ issued multiple times per target if multiple sessions have been attached to it.<
           
         </dd>
       
-        <dt class="param-name">browserContextId</dt>
+        <dt class="param-name monospace">browserContextId</dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
@@ -1455,23 +1457,23 @@ issued multiple times per target if multiple sessions have been attached to it.<
       <div class="details">
         <h4 class="details-name monospace" id="type-RemoteLocation">
           <span class="domain-dot">Target.</span>RemoteLocation
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#type-RemoteLocation" class="permalink">#</a>
         </h4>
         
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">host</dt>
+        <dt class="param-name monospace">host</dt>
         <dd>
           <span class="param-type">string</span>
           
           
         </dd>
       
-        <dt class="param-name">port</dt>
+        <dt class="param-name monospace">port</dt>
         <dd>
           <span class="param-type">integer</span>
           

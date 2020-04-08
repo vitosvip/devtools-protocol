@@ -20,28 +20,30 @@
 </head>
 <body>
   <aside>
-    <div id="versions">
+    <div id="home" class="navs">
+      <nav>
+        <a href="/devtools-protocol/">Home</a>
+      </nav>
+    </div>
+    <div id="versions" class="navs">
       <header>Versions</header>
       <nav>
-        <a href="/devtools-protocol/1-2" name="1-2">
-          stable (1.2)
-        </a>
-        <a href="/devtools-protocol/1-3" name="1-3">
-          stable RC (1.3)
-        </a>
         <a href="/devtools-protocol/tot" name="tot">
           latest (tip-of-tree)
         </a>
         <a href="/devtools-protocol/v8" name="v8">
           v8-inspector (node)
         </a>
-        <a href="/devtools-protocol/" name="" class="homelink">
-          Home
+        <a href="/devtools-protocol/1-3" name="1-3">
+          stable RC (1.3)
+        </a>
+        <a href="/devtools-protocol/1-2" name="1-2">
+          stable (1.2)
         </a>
       </nav>
     </div>
 
-    <div id="domains" class="version-tot">
+    <div id="domains" class="navs version-tot">
       <header>Domains</header>
       <div class="scroller">
         <nav>
@@ -110,70 +112,70 @@
         
         <h3>Methods</h3>
       <div class="toc-link">
-        <a href="#method-dispatchKeyEvent"><span class="domain-dot">Input.</span>dispatchKeyEvent</a>
+        <a class="monospace" href="#method-dispatchKeyEvent"><span class="domain-dot">Input.</span>dispatchKeyEvent</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-insertText"><span class="domain-dot">Input.</span>insertText</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-dispatchMouseEvent"><span class="domain-dot">Input.</span>dispatchMouseEvent</a>
+        <a class="monospace" href="#method-dispatchMouseEvent"><span class="domain-dot">Input.</span>dispatchMouseEvent</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-dispatchTouchEvent"><span class="domain-dot">Input.</span>dispatchTouchEvent</a>
+        <a class="monospace" href="#method-dispatchTouchEvent"><span class="domain-dot">Input.</span>dispatchTouchEvent</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-emulateTouchFromMouseEvent"><span class="domain-dot">Input.</span>emulateTouchFromMouseEvent</a>
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#method-setIgnoreInputEvents"><span class="domain-dot">Input.</span>setIgnoreInputEvents</a>
+        <a class="monospace" href="#method-setIgnoreInputEvents"><span class="domain-dot">Input.</span>setIgnoreInputEvents</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#method-synthesizePinchGesture"><span class="domain-dot">Input.</span>synthesizePinchGesture</a>
+        <a class="monospace" href="#method-emulateTouchFromMouseEvent"><span class="domain-dot">Input.</span>emulateTouchFromMouseEvent</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-synthesizeScrollGesture"><span class="domain-dot">Input.</span>synthesizeScrollGesture</a>
+        <a class="monospace" href="#method-insertText"><span class="domain-dot">Input.</span>insertText</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
       <div class="toc-link">
-        <a href="#method-synthesizeTapGesture"><span class="domain-dot">Input.</span>synthesizeTapGesture</a>
+        <a class="monospace" href="#method-synthesizePinchGesture"><span class="domain-dot">Input.</span>synthesizePinchGesture</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-synthesizeScrollGesture"><span class="domain-dot">Input.</span>synthesizeScrollGesture</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-synthesizeTapGesture"><span class="domain-dot">Input.</span>synthesizeTapGesture</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
       
         
         <h3>Types</h3>
       <div class="toc-link">
-        <a href="#type-TouchPoint"><span class="domain-dot">Input.</span>TouchPoint</a>
+        <a class="monospace" href="#type-MouseButton"><span class="domain-dot">Input.</span>MouseButton</a>
         
       </div>
       
       <div class="toc-link">
-        <a href="#type-GestureSourceType"><span class="domain-dot">Input.</span>GestureSourceType</a>
+        <a class="monospace" href="#type-TimeSinceEpoch"><span class="domain-dot">Input.</span>TimeSinceEpoch</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-TouchPoint"><span class="domain-dot">Input.</span>TouchPoint</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-GestureSourceType"><span class="domain-dot">Input.</span>GestureSourceType</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-      </div>
-      
-      <div class="toc-link">
-        <a href="#type-MouseButton"><span class="domain-dot">Input.</span>MouseButton</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a href="#type-TimeSinceEpoch"><span class="domain-dot">Input.</span>TimeSinceEpoch</a>
-        
       </div>
       
       </div>
@@ -185,6 +187,7 @@
       <div class="details">
         <h4 class="details-name monospace" id="method-dispatchKeyEvent">
           <span class="domain-dot">Input.</span>dispatchKeyEvent
+          
           <a href="#method-dispatchKeyEvent" class="permalink">#</a>
         </h4>
         
@@ -195,11 +198,10 @@
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -211,7 +213,7 @@
           
         </dd>
       
-        <dt class="param-name">modifiers</dt>
+        <dt class="param-name monospace">modifiers</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -224,7 +226,7 @@
           
         </dd>
       
-        <dt class="param-name">timestamp</dt>
+        <dt class="param-name monospace">timestamp</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
@@ -236,7 +238,7 @@
           
         </dd>
       
-        <dt class="param-name">text</dt>
+        <dt class="param-name monospace">text</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -249,7 +251,7 @@ for <code>keyUp</code> and <code>rawKeyDown</code> events (default: &quot;&quot;
           
         </dd>
       
-        <dt class="param-name">unmodifiedText</dt>
+        <dt class="param-name monospace">unmodifiedText</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -262,7 +264,7 @@ shift). Useful for shortcut (accelerator) key handling (default: &quot;&quot;).<
           
         </dd>
       
-        <dt class="param-name">keyIdentifier</dt>
+        <dt class="param-name monospace">keyIdentifier</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -274,7 +276,7 @@ shift). Useful for shortcut (accelerator) key handling (default: &quot;&quot;).<
           
         </dd>
       
-        <dt class="param-name">code</dt>
+        <dt class="param-name monospace">code</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -286,7 +288,7 @@ shift). Useful for shortcut (accelerator) key handling (default: &quot;&quot;).<
           
         </dd>
       
-        <dt class="param-name">key</dt>
+        <dt class="param-name monospace">key</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -299,7 +301,7 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
           
         </dd>
       
-        <dt class="param-name">windowsVirtualKeyCode</dt>
+        <dt class="param-name monospace">windowsVirtualKeyCode</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -311,7 +313,7 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
           
         </dd>
       
-        <dt class="param-name">nativeVirtualKeyCode</dt>
+        <dt class="param-name monospace">nativeVirtualKeyCode</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -323,7 +325,7 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
           
         </dd>
       
-        <dt class="param-name">autoRepeat</dt>
+        <dt class="param-name monospace">autoRepeat</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -335,7 +337,7 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
           
         </dd>
       
-        <dt class="param-name">isKeypad</dt>
+        <dt class="param-name monospace">isKeypad</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -347,7 +349,7 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
           
         </dd>
       
-        <dt class="param-name">isSystemKey</dt>
+        <dt class="param-name monospace">isSystemKey</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -359,7 +361,7 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
           
         </dd>
       
-        <dt class="param-name">location</dt>
+        <dt class="param-name monospace">location</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -379,44 +381,9 @@ modifiers, keyboard layout, etc (e.g., &#39;AltGr&#39;) (default: &quot;&quot;).
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-insertText">
-          <span class="domain-dot">Input.</span>insertText
-          <a href="#method-insertText" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>This method emulates inserting text that doesn&#39;t come from a key press,
-for example an emoji keyboard or an IME.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">text</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>The text to insert.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-dispatchMouseEvent">
           <span class="domain-dot">Input.</span>dispatchMouseEvent
+          
           <a href="#method-dispatchMouseEvent" class="permalink">#</a>
         </h4>
         
@@ -427,11 +394,10 @@ for example an emoji keyboard or an IME.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -443,7 +409,7 @@ for example an emoji keyboard or an IME.</p>
           
         </dd>
       
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -455,7 +421,7 @@ for example an emoji keyboard or an IME.</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -468,7 +434,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">modifiers</dt>
+        <dt class="param-name monospace">modifiers</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -481,7 +447,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">timestamp</dt>
+        <dt class="param-name monospace">timestamp</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
@@ -493,7 +459,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">button</dt>
+        <dt class="param-name monospace">button</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-MouseButton class="param-type">MouseButton</a>
           
@@ -505,7 +471,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">buttons</dt>
+        <dt class="param-name monospace">buttons</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -518,7 +484,7 @@ Left=1, Right=2, Middle=4, Back=8, Forward=16, None=0.</p>
           
         </dd>
       
-        <dt class="param-name">clickCount</dt>
+        <dt class="param-name monospace">clickCount</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -530,7 +496,7 @@ Left=1, Right=2, Middle=4, Back=8, Forward=16, None=0.</p>
           
         </dd>
       
-        <dt class="param-name">deltaX</dt>
+        <dt class="param-name monospace">deltaX</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -542,7 +508,7 @@ Left=1, Right=2, Middle=4, Back=8, Forward=16, None=0.</p>
           
         </dd>
       
-        <dt class="param-name">deltaY</dt>
+        <dt class="param-name monospace">deltaY</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -554,7 +520,7 @@ Left=1, Right=2, Middle=4, Back=8, Forward=16, None=0.</p>
           
         </dd>
       
-        <dt class="param-name">pointerType</dt>
+        <dt class="param-name monospace">pointerType</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -575,6 +541,7 @@ Left=1, Right=2, Middle=4, Back=8, Forward=16, None=0.</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-dispatchTouchEvent">
           <span class="domain-dot">Input.</span>dispatchTouchEvent
+          
           <a href="#method-dispatchTouchEvent" class="permalink">#</a>
         </h4>
         
@@ -585,11 +552,10 @@ Left=1, Right=2, Middle=4, Back=8, Forward=16, None=0.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">type</dt>
+        <dt class="param-name monospace">type</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -602,7 +568,7 @@ TouchStart and TouchMove must contains at least one.</p>
           
         </dd>
       
-        <dt class="param-name">touchPoints</dt>
+        <dt class="param-name monospace">touchPoints</dt>
         <dd>
           <span class="param-type">array</span>
           
@@ -616,7 +582,7 @@ one by one.</p>
           
         </dd>
       
-        <dt class="param-name">modifiers</dt>
+        <dt class="param-name monospace">modifiers</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -629,7 +595,7 @@ one by one.</p>
           
         </dd>
       
-        <dt class="param-name">timestamp</dt>
+        <dt class="param-name monospace">timestamp</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
@@ -648,140 +614,9 @@ one by one.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="method-emulateTouchFromMouseEvent">
-          <span class="domain-dot">Input.</span>emulateTouchFromMouseEvent
-          <a href="#method-emulateTouchFromMouseEvent" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>Emulates touch event from the mouse event parameters.</p>
-
-      </div>
-    
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
-        
-        
-      <h5 class="properties-name">parameters</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name">type</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Type of the mouse event.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">x</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>X coordinate of the mouse pointer in DIP.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">y</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Y coordinate of the mouse pointer in DIP.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">button</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Input/#type-MouseButton class="param-type">MouseButton</a>
-          
-      <div class="details-description">
-        <p>Mouse button. Only &quot;none&quot;, &quot;left&quot;, &quot;right&quot; are supported.</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">timestamp</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Input/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
-          
-      <div class="details-description">
-        <p>Time at which the event occurred (default: current time).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">deltaX</dt>
-        <dd>
-          <span class="param-type">number</span>
-          
-      <div class="details-description">
-        <p>X delta in DIP for mouse wheel event (default: 0).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">deltaY</dt>
-        <dd>
-          <span class="param-type">number</span>
-          
-      <div class="details-description">
-        <p>Y delta in DIP for mouse wheel event (default: 0).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">modifiers</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8
-(default: 0).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name">clickCount</dt>
-        <dd>
-          <span class="param-type">integer</span>
-          
-      <div class="details-description">
-        <p>Number of times the mouse button was clicked (default: 0).</p>
-
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="method-setIgnoreInputEvents">
           <span class="domain-dot">Input.</span>setIgnoreInputEvents
+          
           <a href="#method-setIgnoreInputEvents" class="permalink">#</a>
         </h4>
         
@@ -792,11 +627,10 @@ one by one.</p>
     
         
         
-        
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">ignore</dt>
+        <dt class="param-name monospace">ignore</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -815,8 +649,177 @@ one by one.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-emulateTouchFromMouseEvent">
+          <span class="domain-dot">Input.</span>emulateTouchFromMouseEvent
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-emulateTouchFromMouseEvent" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Emulates touch event from the mouse event parameters.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">type</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Type of the mouse event.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">x</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>X coordinate of the mouse pointer in DIP.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">y</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Y coordinate of the mouse pointer in DIP.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">button</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Input/#type-MouseButton class="param-type">MouseButton</a>
+          
+      <div class="details-description">
+        <p>Mouse button. Only &quot;none&quot;, &quot;left&quot;, &quot;right&quot; are supported.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">timestamp</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Input/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>Time at which the event occurred (default: current time).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">deltaX</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>X delta in DIP for mouse wheel event (default: 0).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">deltaY</dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>Y delta in DIP for mouse wheel event (default: 0).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">modifiers</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8
+(default: 0).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">clickCount</dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>Number of times the mouse button was clicked (default: 0).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-insertText">
+          <span class="domain-dot">Input.</span>insertText
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-insertText" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>This method emulates inserting text that doesn&#39;t come from a key press,
+for example an emoji keyboard or an IME.</p>
+
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">text</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The text to insert.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-synthesizePinchGesture">
           <span class="domain-dot">Input.</span>synthesizePinchGesture
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#method-synthesizePinchGesture" class="permalink">#</a>
         </h4>
         
@@ -825,13 +828,12 @@ one by one.</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -843,7 +845,7 @@ one by one.</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -855,7 +857,7 @@ one by one.</p>
           
         </dd>
       
-        <dt class="param-name">scaleFactor</dt>
+        <dt class="param-name monospace">scaleFactor</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -867,7 +869,7 @@ one by one.</p>
           
         </dd>
       
-        <dt class="param-name">relativeSpeed</dt>
+        <dt class="param-name monospace">relativeSpeed</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -879,7 +881,7 @@ one by one.</p>
           
         </dd>
       
-        <dt class="param-name">gestureSourceType</dt>
+        <dt class="param-name monospace">gestureSourceType</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-GestureSourceType class="param-type">GestureSourceType</a>
           
@@ -901,6 +903,7 @@ for the preferred input type).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-synthesizeScrollGesture">
           <span class="domain-dot">Input.</span>synthesizeScrollGesture
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#method-synthesizeScrollGesture" class="permalink">#</a>
         </h4>
         
@@ -909,13 +912,12 @@ for the preferred input type).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -927,7 +929,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -939,7 +941,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">xDistance</dt>
+        <dt class="param-name monospace">xDistance</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -951,7 +953,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">yDistance</dt>
+        <dt class="param-name monospace">yDistance</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -963,7 +965,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">xOverscroll</dt>
+        <dt class="param-name monospace">xOverscroll</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -976,7 +978,7 @@ distance.</p>
           
         </dd>
       
-        <dt class="param-name">yOverscroll</dt>
+        <dt class="param-name monospace">yOverscroll</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -989,7 +991,7 @@ distance.</p>
           
         </dd>
       
-        <dt class="param-name">preventFling</dt>
+        <dt class="param-name monospace">preventFling</dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1001,7 +1003,7 @@ distance.</p>
           
         </dd>
       
-        <dt class="param-name">speed</dt>
+        <dt class="param-name monospace">speed</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1013,7 +1015,7 @@ distance.</p>
           
         </dd>
       
-        <dt class="param-name">gestureSourceType</dt>
+        <dt class="param-name monospace">gestureSourceType</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-GestureSourceType class="param-type">GestureSourceType</a>
           
@@ -1026,7 +1028,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">repeatCount</dt>
+        <dt class="param-name monospace">repeatCount</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1038,7 +1040,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">repeatDelayMs</dt>
+        <dt class="param-name monospace">repeatDelayMs</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1050,7 +1052,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">interactionMarkerName</dt>
+        <dt class="param-name monospace">interactionMarkerName</dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1071,6 +1073,7 @@ for the preferred input type).</p>
       <div class="details">
         <h4 class="details-name monospace" id="method-synthesizeTapGesture">
           <span class="domain-dot">Input.</span>synthesizeTapGesture
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#method-synthesizeTapGesture" class="permalink">#</a>
         </h4>
         
@@ -1079,13 +1082,12 @@ for the preferred input type).</p>
 
       </div>
     
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1097,7 +1099,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1109,7 +1111,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">duration</dt>
+        <dt class="param-name monospace">duration</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1121,7 +1123,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">tapCount</dt>
+        <dt class="param-name monospace">tapCount</dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1133,7 +1135,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">gestureSourceType</dt>
+        <dt class="param-name monospace">gestureSourceType</dt>
         <dd>
           <a href=/devtools-protocol/tot/Input/#type-GestureSourceType class="param-type">GestureSourceType</a>
           
@@ -1160,18 +1162,52 @@ for the preferred input type).</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-TouchPoint">
-          <span class="domain-dot">Input.</span>TouchPoint
-          <a href="#type-TouchPoint" class="permalink">#</a>
+        <h4 class="details-name monospace" id="type-MouseButton">
+          <span class="domain-dot">Input.</span>MouseButton
+          
+          <a href="#type-MouseButton" class="permalink">#</a>
         </h4>
         
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">none, left, middle, right, back, forward</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TimeSinceEpoch">
+          <span class="domain-dot">Input.</span>TimeSinceEpoch
+          
+          <a href="#type-TimeSinceEpoch" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>UTC time in seconds, counted from January 1, 1970.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>number</strong></p>
+        
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-TouchPoint">
+          <span class="domain-dot">Input.</span>TouchPoint
+          
+          <a href="#type-TouchPoint" class="permalink">#</a>
+        </h4>
         
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name">x</dt>
+        <dt class="param-name monospace">x</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1183,7 +1219,7 @@ for the preferred input type).</p>
           
         </dd>
       
-        <dt class="param-name">y</dt>
+        <dt class="param-name monospace">y</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1196,7 +1232,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">radiusX</dt>
+        <dt class="param-name monospace">radiusX</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1208,7 +1244,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">radiusY</dt>
+        <dt class="param-name monospace">radiusY</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1220,7 +1256,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">rotationAngle</dt>
+        <dt class="param-name monospace">rotationAngle</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1232,7 +1268,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">force</dt>
+        <dt class="param-name monospace">force</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1244,7 +1280,7 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
           
         </dd>
       
-        <dt class="param-name">id</dt>
+        <dt class="param-name monospace">id</dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1265,51 +1301,17 @@ the top of the viewport and Y increases as it proceeds towards the bottom of the
       <div class="details">
         <h4 class="details-name monospace" id="type-GestureSourceType">
           <span class="domain-dot">Input.</span>GestureSourceType
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
           <a href="#type-GestureSourceType" class="permalink">#</a>
         </h4>
         
-        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <p class="type-type">Type: <strong>string</strong></p>
         
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">default, touch, mouse</div>
+      <div class="enum-container monospace">default, touch, mouse</div>
     
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-MouseButton">
-          <span class="domain-dot">Input.</span>MouseButton
-          <a href="#type-MouseButton" class="permalink">#</a>
-        </h4>
-        
-        
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container">none, left, middle, right, back, forward</div>
-    
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-TimeSinceEpoch">
-          <span class="domain-dot">Input.</span>TimeSinceEpoch
-          <a href="#type-TimeSinceEpoch" class="permalink">#</a>
-        </h4>
-        
-      <div class="details-description">
-        <p>UTC time in seconds, counted from January 1, 1970.</p>
-
-      </div>
-    
-        
-        <p class="type-type">Type: <strong>number</strong></p>
-        
-        
-        
       </div>
     
       </div>
