@@ -144,7 +144,7 @@
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#type-AffectedResources"><span class="domain-dot">Audits.</span>AffectedResources</a>
+        <a class="monospace" href="#type-AffectedRequest"><span class="domain-dot">Audits.</span>AffectedRequest</a>
         
       </div>
       
@@ -170,6 +170,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-SameSiteCookieIssueDetails"><span class="domain-dot">Audits.</span>SameSiteCookieIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-SameSiteCookieOperation"><span class="domain-dot">Audits.</span>SameSiteCookieOperation</a>
         
       </div>
       
@@ -414,19 +419,6 @@ applies to images.</p>
           
         </dd>
       
-        <dt class="param-name monospace">siteForCookies</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Optionally identifies the site-for-cookies, which may be used by the
-front-end as additional context.</p>
-
-      </div>
-    
-          
-        </dd>
-      
       </dl>
     
         
@@ -434,20 +426,37 @@ front-end as additional context.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-AffectedResources">
-          <span class="domain-dot">Audits.</span>AffectedResources
+        <h4 class="details-name monospace" id="type-AffectedRequest">
+          <span class="domain-dot">Audits.</span>AffectedRequest
           
-          <a href="#type-AffectedResources" class="permalink">#</a>
+          <a href="#type-AffectedRequest" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        <p>Information about a request that is affected by an inspector issue.</p>
+
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace">requestId</dt>
         <dd>
-          <span class="param-type">array</span>
+          <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">Network.RequestId</a>
+          
+      <div class="details-description">
+        <p>The unique request id.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">url</dt>
+        <dd>
+          <span class="param-type">string</span>
           
           
         </dd>
@@ -489,13 +498,6 @@ front-end as additional context.</p>
           
         </dd>
       
-        <dt class="param-name monospace">resources</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Audits/#type-AffectedResources class="param-type">AffectedResources</a>
-          
-          
-        </dd>
-      
       </dl>
     
         
@@ -512,8 +514,7 @@ front-end as additional context.</p>
       <div class="details-description">
         <p>A unique identifier for the type of issue. Each type may use one of the
 optional fields in InspectorIssueDetails to convey more specific
-information about the kind of issue, and AffectedResources to identify
-resources that are affected by this issue.</p>
+information about the kind of issue.</p>
 
       </div>
     
@@ -535,8 +536,8 @@ resources that are affected by this issue.</p>
         
       <div class="details-description">
         <p>This struct holds a list of optional fields with additional information
-pertaining to the kind of issue. This is useful if there is a number of
-very similar issues that only differ in details.</p>
+specific to the kind of issue. When adding a new issue code, please also
+add a new optional field to this type.</p>
 
       </div>
     
@@ -593,6 +594,13 @@ information without the cookie.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
+        <dt class="param-name monospace">cookie</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedCookie class="param-type">AffectedCookie</a>
+          
+          
+        </dd>
+      
         <dt class="param-name monospace">cookieWarningReasons</dt>
         <dd>
           <span class="param-type">array</span>
@@ -607,10 +615,60 @@ information without the cookie.</p>
           
         </dd>
       
+        <dt class="param-name monospace">operation</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieOperation class="param-type">SameSiteCookieOperation</a>
+          
+      <div class="details-description">
+        <p>Optionally identifies the site-for-cookies and the cookie url, which
+may be used by the front-end as additional context.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">siteForCookies</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">cookieUrl</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+          
+        </dd>
+      
+        <dt class="param-name monospace">request</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
+          
+          
+        </dd>
+      
       </dl>
     
         
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-SameSiteCookieOperation">
+          <span class="domain-dot">Audits.</span>SameSiteCookieOperation
+          
+          <a href="#type-SameSiteCookieOperation" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">SetCookie, ReadCookie</div>
+    
       </div>
     
       <div class="details">
