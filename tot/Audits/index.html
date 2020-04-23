@@ -144,6 +144,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-AffectedFrame"><span class="domain-dot">Audits.</span>AffectedFrame</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-AffectedRequest"><span class="domain-dot">Audits.</span>AffectedRequest</a>
         
       </div>
@@ -160,6 +165,21 @@
       
       <div class="toc-link">
         <a class="monospace" href="#type-InspectorIssueDetails"><span class="domain-dot">Audits.</span>InspectorIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-MixedContentIssueDetails"><span class="domain-dot">Audits.</span>MixedContentIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-MixedContentResolutionStatus"><span class="domain-dot">Audits.</span>MixedContentResolutionStatus</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-MixedContentResourceType"><span class="domain-dot">Audits.</span>MixedContentResourceType</a>
         
       </div>
       
@@ -426,6 +446,36 @@ applies to images.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-AffectedFrame">
+          <span class="domain-dot">Audits.</span>AffectedFrame
+          
+          <a href="#type-AffectedFrame" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about the frame affected by an inspector issue.</p>
+
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">frameId</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
+          
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-AffectedRequest">
           <span class="domain-dot">Audits.</span>AffectedRequest
           
@@ -523,7 +573,7 @@ information about the kind of issue.</p>
         
         
       <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">SameSiteCookieIssue</div>
+      <div class="enum-container monospace">SameSiteCookieIssue, MixedContentIssue</div>
     
       </div>
     
@@ -553,10 +603,143 @@ add a new optional field to this type.</p>
           
         </dd>
       
+        <dt class="param-name monospace">mixedContentIssueDetails</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-MixedContentIssueDetails class="param-type">MixedContentIssueDetails</a>
+          
+          
+        </dd>
+      
       </dl>
     
         
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MixedContentIssueDetails">
+          <span class="domain-dot">Audits.</span>MixedContentIssueDetails
+          
+          <a href="#type-MixedContentIssueDetails" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace">resourceType</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-MixedContentResourceType class="param-type">MixedContentResourceType</a>
+          
+      <div class="details-description">
+        <p>The type of resource causing the mixed content issue (css, js, iframe,
+form,...). Marked as optional because it is mapped to from
+blink::mojom::RequestContextType, which will be replaced
+by network::mojom::RequestDestination</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">resolutionStatus</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-MixedContentResolutionStatus class="param-type">MixedContentResolutionStatus</a>
+          
+      <div class="details-description">
+        <p>The way the mixed content issue is being resolved.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">insecureURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The unsafe http url causing the mixed content issue.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">mainResourceURL</dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The url responsible for the call to an unsafe url.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">request</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
+          
+      <div class="details-description">
+        <p>The mixed content request.
+Does not always exist (e.g. for unsafe form submission urls).</p>
+
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace">frame</dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedFrame class="param-type">AffectedFrame</a>
+          
+      <div class="details-description">
+        <p>Optional because not every mixed content issue is necessarily linked to a frame.</p>
+
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MixedContentResolutionStatus">
+          <span class="domain-dot">Audits.</span>MixedContentResolutionStatus
+          
+          <a href="#type-MixedContentResolutionStatus" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">MixedContentBlocked, MixedContentAutomaticallyUpgraded, MixedContentWarning</div>
+    
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-MixedContentResourceType">
+          <span class="domain-dot">Audits.</span>MixedContentResourceType
+          
+          <a href="#type-MixedContentResourceType" class="permalink">#</a>
+        </h4>
+        
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+        
+      <h5 class="properties-name">Allowed Values</h5>
+      <div class="enum-container monospace">Audio, Beacon, CSPReport, Download, EventSource, Favicon, Font, Form, Frame, Image, Import, Manifest, Ping, PluginData, PluginResource, Prefetch, Resource, Script, ServiceWorker, SharedWorker, Stylesheet, Track, Video, Worker, XMLHttpRequest, XSLT</div>
+    
       </div>
     
       <div class="details">
