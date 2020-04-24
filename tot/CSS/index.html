@@ -117,6 +117,7 @@ CSS objects can be loaded using the <code>get*ForNode()</code> calls (which acce
 can also keep track of stylesheets via the <code>styleSheetAdded</code>/<code>styleSheetRemoved</code> events and
 subsequently load the required stylesheet contents using the <code>getStyleSheet[Text]()</code> methods.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -390,6 +391,7 @@ subsequently load the required stylesheet contents using the <code>getStyleSheet
         <p>Inserts a new rule with the given <code>ruleText</code> in a stylesheet with given <code>styleSheetId</code>, at the
 position specified by <code>location</code>.</p>
 
+        
       </div>
     
         
@@ -397,37 +399,46 @@ position specified by <code>location</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
       <div class="details-description">
         <p>The css style sheet identifier where a new rule should be inserted.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ruleText</dt>
+        <dt class="param-name monospace ">
+          ruleText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The text of a new rule.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
       <div class="details-description">
         <p>Text position of a new rule in the target style sheet.</p>
 
+        
       </div>
     
           
@@ -439,13 +450,16 @@ position specified by <code>location</code>.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">rule</dt>
+        <dt class="param-name monospace ">
+          rule
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSRule class="param-type">CSSRule</a>
           
       <div class="details-description">
         <p>The newly created rule.</p>
 
+        
       </div>
     
           
@@ -453,7 +467,6 @@ position specified by <code>location</code>.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -466,6 +479,7 @@ position specified by <code>location</code>.</p>
       <div class="details-description">
         <p>Returns all class names from specified stylesheet.</p>
 
+        
       </div>
     
         
@@ -473,10 +487,17 @@ position specified by <code>location</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -486,13 +507,16 @@ position specified by <code>location</code>.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">classNames</dt>
+        <dt class="param-name monospace ">
+          classNames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Class name list.</p>
 
+        
       </div>
     
           
@@ -500,7 +524,6 @@ position specified by <code>location</code>.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -513,6 +536,7 @@ position specified by <code>location</code>.</p>
       <div class="details-description">
         <p>Creates a new special &quot;via-inspector&quot; stylesheet in the frame with given <code>frameId</code>.</p>
 
+        
       </div>
     
         
@@ -520,13 +544,16 @@ position specified by <code>location</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Identifier of the frame where &quot;via-inspector&quot; stylesheet should be created.</p>
 
+        
       </div>
     
           
@@ -538,13 +565,16 @@ position specified by <code>location</code>.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
       <div class="details-description">
         <p>Identifier of the created &quot;via-inspector&quot; stylesheet.</p>
 
+        
       </div>
     
           
@@ -552,7 +582,6 @@ position specified by <code>location</code>.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -565,9 +594,9 @@ position specified by <code>location</code>.</p>
       <div class="details-description">
         <p>Disables the CSS agent for the given page.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -584,9 +613,9 @@ position specified by <code>location</code>.</p>
         <p>Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been
 enabled until the result of this command is received.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -603,6 +632,7 @@ enabled until the result of this command is received.</p>
         <p>Ensures that the given node will have specified pseudo-classes whenever its style is computed by
 the browser.</p>
 
+        
       </div>
     
         
@@ -610,25 +640,31 @@ the browser.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>The element id for which to force the pseudo state.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">forcedPseudoClasses</dt>
+        <dt class="param-name monospace ">
+          forcedPseudoClasses
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Element pseudo classes to force when computing the element&#39;s style.</p>
 
+        
       </div>
     
           
@@ -636,7 +672,6 @@ the browser.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -647,18 +682,26 @@ the browser.</p>
           <a href="#method-getBackgroundColors" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Id of the node to get background colors for.</p>
 
+        
       </div>
     
           
@@ -670,7 +713,9 @@ the browser.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">backgroundColors</dt>
+        <dt class="param-name monospace optional">
+          backgroundColors
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
@@ -681,24 +726,30 @@ this will consist of simply that color. In the case of a gradient, this will con
 of the color stops. For anything more complicated, this will be an empty array. Images will
 be ignored (as if the image had failed to load).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">computedFontSize</dt>
+        <dt class="param-name monospace optional">
+          computedFontSize
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The computed font size for this node, as a CSS computed value string (e.g. &#39;12px&#39;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">computedFontWeight</dt>
+        <dt class="param-name monospace optional">
+          computedFontWeight
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -706,6 +757,7 @@ be ignored (as if the image had failed to load).</p>
         <p>The computed font weight for this node, as a CSS computed value string (e.g. &#39;normal&#39; or
 &#39;100&#39;).</p>
 
+        
       </div>
     
           
@@ -713,7 +765,6 @@ be ignored (as if the image had failed to load).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -726,6 +777,7 @@ be ignored (as if the image had failed to load).</p>
       <div class="details-description">
         <p>Returns the computed style for a DOM node identified by <code>nodeId</code>.</p>
 
+        
       </div>
     
         
@@ -733,10 +785,17 @@ be ignored (as if the image had failed to load).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -746,13 +805,16 @@ be ignored (as if the image had failed to load).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">computedStyle</dt>
+        <dt class="param-name monospace ">
+          computedStyle
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSComputedStyleProperty class="param-type">CSSComputedStyleProperty</a> ]</span></span>
           
       <div class="details-description">
         <p>Computed style for the specified DOM node.</p>
 
+        
       </div>
     
           
@@ -760,7 +822,6 @@ be ignored (as if the image had failed to load).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -774,6 +835,7 @@ be ignored (as if the image had failed to load).</p>
         <p>Returns the styles defined inline (explicitly in the &quot;style&quot; attribute and implicitly, using DOM
 attributes) for a DOM node identified by <code>nodeId</code>.</p>
 
+        
       </div>
     
         
@@ -781,10 +843,17 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -794,25 +863,31 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">inlineStyle</dt>
+        <dt class="param-name monospace optional">
+          inlineStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>Inline style for the specified DOM node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">attributesStyle</dt>
+        <dt class="param-name monospace optional">
+          attributesStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>Attribute-defined element style (e.g. resulting from &quot;width=20 height=100%&quot;).</p>
 
+        
       </div>
     
           
@@ -820,7 +895,6 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -833,6 +907,7 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <div class="details-description">
         <p>Returns requested styles for a DOM node identified by <code>nodeId</code>.</p>
 
+        
       </div>
     
         
@@ -840,10 +915,17 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -853,73 +935,91 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">inlineStyle</dt>
+        <dt class="param-name monospace optional">
+          inlineStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>Inline style for the specified DOM node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">attributesStyle</dt>
+        <dt class="param-name monospace optional">
+          attributesStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>Attribute-defined element style (e.g. resulting from &quot;width=20 height=100%&quot;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">matchedCSSRules</dt>
+        <dt class="param-name monospace optional">
+          matchedCSSRules
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-RuleMatch class="param-type">RuleMatch</a> ]</span></span>
           
       <div class="details-description">
         <p>CSS rules matching this node, from all applicable stylesheets.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pseudoElements</dt>
+        <dt class="param-name monospace optional">
+          pseudoElements
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-PseudoElementMatches class="param-type">PseudoElementMatches</a> ]</span></span>
           
       <div class="details-description">
         <p>Pseudo style matches for this node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">inherited</dt>
+        <dt class="param-name monospace optional">
+          inherited
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-InheritedStyleEntry class="param-type">InheritedStyleEntry</a> ]</span></span>
           
       <div class="details-description">
         <p>A chain of inherited styles (from the immediate node parent up to the DOM tree root).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cssKeyframesRules</dt>
+        <dt class="param-name monospace optional">
+          cssKeyframesRules
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSKeyframesRule class="param-type">CSSKeyframesRule</a> ]</span></span>
           
       <div class="details-description">
         <p>A list of CSS keyframed animations matching this node.</p>
 
+        
       </div>
     
           
@@ -927,7 +1027,6 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -940,6 +1039,7 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <div class="details-description">
         <p>Returns all media queries parsed by the rendering engine.</p>
 
+        
       </div>
     
         
@@ -948,16 +1048,22 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">medias</dt>
+        <dt class="param-name monospace ">
+          medias
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSMedia class="param-type">CSSMedia</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -971,6 +1077,7 @@ attributes) for a DOM node identified by <code>nodeId</code>.</p>
         <p>Requests information about platform fonts which we used to render child TextNodes in the given
 node.</p>
 
+        
       </div>
     
         
@@ -978,10 +1085,17 @@ node.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -991,13 +1105,16 @@ node.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">fonts</dt>
+        <dt class="param-name monospace ">
+          fonts
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-PlatformFontUsage class="param-type">PlatformFontUsage</a> ]</span></span>
           
       <div class="details-description">
         <p>Usage statistics for every employed platform font.</p>
 
+        
       </div>
     
           
@@ -1005,7 +1122,6 @@ node.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1018,6 +1134,7 @@ node.</p>
       <div class="details-description">
         <p>Returns the current textual content for a stylesheet.</p>
 
+        
       </div>
     
         
@@ -1025,10 +1142,17 @@ node.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1038,13 +1162,16 @@ node.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The stylesheet text.</p>
 
+        
       </div>
     
           
@@ -1052,7 +1179,6 @@ node.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1066,6 +1192,7 @@ node.</p>
         <p>Find a rule with the given active property for the given node and set the new value for this
 property</p>
 
+        
       </div>
     
         
@@ -1073,35 +1200,51 @@ property</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>The element id for which to set property.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">propertyName</dt>
+        <dt class="param-name monospace ">
+          propertyName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1115,6 +1258,7 @@ property</p>
       <div class="details-description">
         <p>Modifies the keyframe rule key text.</p>
 
+        
       </div>
     
         
@@ -1122,24 +1266,45 @@ property</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace ">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">keyText</dt>
+        <dt class="param-name monospace ">
+          keyText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1149,13 +1314,16 @@ property</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">keyText</dt>
+        <dt class="param-name monospace ">
+          keyText
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a>
           
       <div class="details-description">
         <p>The resulting key text after modification.</p>
 
+        
       </div>
     
           
@@ -1163,7 +1331,6 @@ property</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1176,6 +1343,7 @@ property</p>
       <div class="details-description">
         <p>Modifies the rule selector.</p>
 
+        
       </div>
     
         
@@ -1183,24 +1351,45 @@ property</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace ">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1210,13 +1399,16 @@ property</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">media</dt>
+        <dt class="param-name monospace ">
+          media
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSMedia class="param-type">CSSMedia</a>
           
       <div class="details-description">
         <p>The resulting CSS media rule after modification.</p>
 
+        
       </div>
     
           
@@ -1224,7 +1416,6 @@ property</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1237,6 +1428,7 @@ property</p>
       <div class="details-description">
         <p>Modifies the rule selector.</p>
 
+        
       </div>
     
         
@@ -1244,24 +1436,45 @@ property</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace ">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">selector</dt>
+        <dt class="param-name monospace ">
+          selector
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1271,13 +1484,16 @@ property</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">selectorList</dt>
+        <dt class="param-name monospace ">
+          selectorList
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SelectorList class="param-type">SelectorList</a>
           
       <div class="details-description">
         <p>The resulting selector list after modification.</p>
 
+        
       </div>
     
           
@@ -1285,7 +1501,6 @@ property</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1298,6 +1513,7 @@ property</p>
       <div class="details-description">
         <p>Sets the new stylesheet text.</p>
 
+        
       </div>
     
         
@@ -1305,17 +1521,31 @@ property</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1325,13 +1555,16 @@ property</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">sourceMapURL</dt>
+        <dt class="param-name monospace optional">
+          sourceMapURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of source map associated with script (if any).</p>
 
+        
       </div>
     
           
@@ -1339,7 +1572,6 @@ property</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1352,6 +1584,7 @@ property</p>
       <div class="details-description">
         <p>Applies specified style edits one after another in the given order.</p>
 
+        
       </div>
     
         
@@ -1359,10 +1592,17 @@ property</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">edits</dt>
+        <dt class="param-name monospace ">
+          edits
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-StyleDeclarationEdit class="param-type">StyleDeclarationEdit</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1372,13 +1612,16 @@ property</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styles</dt>
+        <dt class="param-name monospace ">
+          styles
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a> ]</span></span>
           
       <div class="details-description">
         <p>The resulting styles after modification.</p>
 
+        
       </div>
     
           
@@ -1386,7 +1629,6 @@ property</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1399,9 +1641,9 @@ property</p>
       <div class="details-description">
         <p>Enables the selector recording.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1418,6 +1660,7 @@ property</p>
         <p>Stop tracking rule usage and return the list of rules that were used since last call to
 <code>takeCoverageDelta</code> (or since start of coverage instrumentation)</p>
 
+        
       </div>
     
         
@@ -1426,16 +1669,22 @@ property</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">ruleUsage</dt>
+        <dt class="param-name monospace ">
+          ruleUsage
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-RuleUsage class="param-type">RuleUsage</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1449,6 +1698,7 @@ property</p>
         <p>Obtain list of rules that became used since last call to this method (or since start of coverage
 instrumentation)</p>
 
+        
       </div>
     
         
@@ -1457,20 +1707,30 @@ instrumentation)</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">coverage</dt>
+        <dt class="param-name monospace ">
+          coverage
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-RuleUsage class="param-type">RuleUsage</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Monotonically increasing time, in seconds.</p>
 
+        
       </div>
     
           
@@ -1478,7 +1738,6 @@ instrumentation)</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -1498,6 +1757,7 @@ instrumentation)</p>
         <p>Fires whenever a web font is updated.  A non-empty font parameter indicates a successfully loaded
 web font</p>
 
+        
       </div>
     
         
@@ -1505,13 +1765,16 @@ web font</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">font</dt>
+        <dt class="param-name monospace optional">
+          font
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-FontFace class="param-type">FontFace</a>
           
       <div class="details-description">
         <p>The web font that has loaded.</p>
 
+        
       </div>
     
           
@@ -1519,7 +1782,6 @@ web font</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1534,9 +1796,9 @@ web font</p>
         <p>Fires whenever a MediaQuery result changes (for example, after a browser window has been
 resized.) The current implementation considers only viewport-dependent media features.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1552,6 +1814,7 @@ resized.) The current implementation considers only viewport-dependent media fea
       <div class="details-description">
         <p>Fired whenever an active document stylesheet is added.</p>
 
+        
       </div>
     
         
@@ -1559,13 +1822,16 @@ resized.) The current implementation considers only viewport-dependent media fea
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">header</dt>
+        <dt class="param-name monospace ">
+          header
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyleSheetHeader class="param-type">CSSStyleSheetHeader</a>
           
       <div class="details-description">
         <p>Added stylesheet metainfo.</p>
 
+        
       </div>
     
           
@@ -1573,7 +1839,6 @@ resized.) The current implementation considers only viewport-dependent media fea
       
       </dl>
     
-        
         
       </div>
     
@@ -1587,6 +1852,7 @@ resized.) The current implementation considers only viewport-dependent media fea
       <div class="details-description">
         <p>Fired whenever a stylesheet is changed as a result of the client operation.</p>
 
+        
       </div>
     
         
@@ -1594,16 +1860,22 @@ resized.) The current implementation considers only viewport-dependent media fea
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1617,6 +1889,7 @@ resized.) The current implementation considers only viewport-dependent media fea
       <div class="details-description">
         <p>Fired whenever an active document stylesheet is removed.</p>
 
+        
       </div>
     
         
@@ -1624,13 +1897,16 @@ resized.) The current implementation considers only viewport-dependent media fea
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
       <div class="details-description">
         <p>Identifier of the removed stylesheet.</p>
 
+        
       </div>
     
           
@@ -1638,7 +1914,6 @@ resized.) The current implementation considers only viewport-dependent media fea
       
       </dl>
     
-        
         
       </div>
     
@@ -1655,30 +1930,41 @@ resized.) The current implementation considers only viewport-dependent media fea
           <a href="#type-CSSComputedStyleProperty" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Computed style property name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Computed style property value.</p>
 
+        
       </div>
     
           
@@ -1686,7 +1972,6 @@ resized.) The current implementation considers only viewport-dependent media fea
       
       </dl>
     
-        
         
       </div>
     
@@ -1700,6 +1985,7 @@ resized.) The current implementation considers only viewport-dependent media fea
       <div class="details-description">
         <p>CSS keyframe rule representation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1707,7 +1993,9 @@ resized.) The current implementation considers only viewport-dependent media fea
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace optional">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
@@ -1715,42 +2003,52 @@ resized.) The current implementation considers only viewport-dependent media fea
         <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
 stylesheet rules) this rule came from.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetOrigin class="param-type">StyleSheetOrigin</a>
           
       <div class="details-description">
         <p>Parent stylesheet&#39;s origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyText</dt>
+        <dt class="param-name monospace ">
+          keyText
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a>
           
       <div class="details-description">
         <p>Associated key text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">style</dt>
+        <dt class="param-name monospace ">
+          style
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>Associated style declaration.</p>
 
+        
       </div>
     
           
@@ -1758,7 +2056,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1772,6 +2069,7 @@ stylesheet rules) this rule came from.</p>
       <div class="details-description">
         <p>CSS keyframes rule representation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1779,25 +2077,31 @@ stylesheet rules) this rule came from.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">animationName</dt>
+        <dt class="param-name monospace ">
+          animationName
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a>
           
       <div class="details-description">
         <p>Animation name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyframes</dt>
+        <dt class="param-name monospace ">
+          keyframes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSKeyframeRule class="param-type">CSSKeyframeRule</a> ]</span></span>
           
       <div class="details-description">
         <p>List of keyframes.</p>
 
+        
       </div>
     
           
@@ -1805,7 +2109,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1819,6 +2122,7 @@ stylesheet rules) this rule came from.</p>
       <div class="details-description">
         <p>CSS media rule descriptor.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1826,19 +2130,24 @@ stylesheet rules) this rule came from.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Media query text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">source</dt>
+        <dt class="param-name monospace ">
+          source
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1848,24 +2157,32 @@ specified by an @import rule, &quot;linkedSheet&quot; if specified by a &quot;me
 stylesheet&#39;s LINK tag, &quot;inlineSheet&quot; if specified by a &quot;media&quot; attribute in an inline
 stylesheet&#39;s STYLE tag.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>mediaRule</code>, <code>importRule</code>, <code>linkedSheet</code>, <code>inlineSheet</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sourceURL</dt>
+        <dt class="param-name monospace optional">
+          sourceURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the document containing the media query description.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace optional">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
@@ -1873,30 +2190,37 @@ stylesheet&#39;s STYLE tag.</p>
         <p>The associated rule (@media or @import) header range in the enclosing stylesheet (if
 available).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace optional">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
       <div class="details-description">
         <p>Identifier of the stylesheet containing this object (if exists).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mediaList</dt>
+        <dt class="param-name monospace optional">
+          mediaList
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-MediaQuery class="param-type">MediaQuery</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of media queries.</p>
 
+        
       </div>
     
           
@@ -1904,7 +2228,6 @@ available).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1918,6 +2241,7 @@ available).</p>
       <div class="details-description">
         <p>CSS property declaration data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1925,97 +2249,121 @@ available).</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The property name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The property value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">important</dt>
+        <dt class="param-name monospace optional">
+          important
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the property has &quot;!important&quot; annotation (implies <code>false</code> if absent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">implicit</dt>
+        <dt class="param-name monospace optional">
+          implicit
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the property is implicit (implies <code>false</code> if absent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace optional">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The full property text as specified in the style.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parsedOk</dt>
+        <dt class="param-name monospace optional">
+          parsedOk
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the property is understood by the browser (implies <code>true</code> if absent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">disabled</dt>
+        <dt class="param-name monospace optional">
+          disabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the property is disabled by the user (present for source-based properties only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace optional">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
       <div class="details-description">
         <p>The entire property range in the enclosing style declaration (if available).</p>
 
+        
       </div>
     
           
@@ -2023,7 +2371,6 @@ available).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2037,6 +2384,7 @@ available).</p>
       <div class="details-description">
         <p>CSS rule representation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2044,7 +2392,9 @@ available).</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace optional">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
@@ -2052,48 +2402,60 @@ available).</p>
         <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
 stylesheet rules) this rule came from.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">selectorList</dt>
+        <dt class="param-name monospace ">
+          selectorList
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SelectorList class="param-type">SelectorList</a>
           
       <div class="details-description">
         <p>Rule selector data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetOrigin class="param-type">StyleSheetOrigin</a>
           
       <div class="details-description">
         <p>Parent stylesheet&#39;s origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">style</dt>
+        <dt class="param-name monospace ">
+          style
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>Associated style declaration.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">media</dt>
+        <dt class="param-name monospace optional">
+          media
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSMedia class="param-type">CSSMedia</a> ]</span></span>
           
@@ -2101,6 +2463,7 @@ stylesheet rules) this rule came from.</p>
         <p>Media list array (for rules involving media queries). The array enumerates media queries
 starting with the innermost one, going outwards.</p>
 
+        
       </div>
     
           
@@ -2108,7 +2471,6 @@ starting with the innermost one, going outwards.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2122,6 +2484,7 @@ starting with the innermost one, going outwards.</p>
       <div class="details-description">
         <p>CSS style representation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2129,7 +2492,9 @@ starting with the innermost one, going outwards.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace optional">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
@@ -2137,54 +2502,67 @@ starting with the innermost one, going outwards.</p>
         <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
 stylesheet rules) this rule came from.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cssProperties</dt>
+        <dt class="param-name monospace ">
+          cssProperties
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-CSSProperty class="param-type">CSSProperty</a> ]</span></span>
           
       <div class="details-description">
         <p>CSS properties in the style.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">shorthandEntries</dt>
+        <dt class="param-name monospace ">
+          shorthandEntries
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-ShorthandEntry class="param-type">ShorthandEntry</a> ]</span></span>
           
       <div class="details-description">
         <p>Computed values for all shorthands found in the style.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cssText</dt>
+        <dt class="param-name monospace optional">
+          cssText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Style declaration text (if available).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace optional">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
       <div class="details-description">
         <p>Style declaration range in the enclosing stylesheet (if available).</p>
 
+        
       </div>
     
           
@@ -2192,7 +2570,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2206,6 +2583,7 @@ stylesheet rules) this rule came from.</p>
       <div class="details-description">
         <p>CSS stylesheet metainformation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2213,115 +2591,144 @@ stylesheet rules) this rule came from.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
       <div class="details-description">
         <p>The stylesheet identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Owner frame identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sourceURL</dt>
+        <dt class="param-name monospace ">
+          sourceURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Stylesheet resource URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sourceMapURL</dt>
+        <dt class="param-name monospace optional">
+          sourceMapURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of source map associated with the stylesheet (if any).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetOrigin class="param-type">StyleSheetOrigin</a>
           
       <div class="details-description">
         <p>Stylesheet origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace ">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Stylesheet title.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ownerNode</dt>
+        <dt class="param-name monospace optional">
+          ownerNode
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>The backend id for the owner node of the stylesheet.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">disabled</dt>
+        <dt class="param-name monospace ">
+          disabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Denotes whether the stylesheet is disabled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hasSourceURL</dt>
+        <dt class="param-name monospace optional">
+          hasSourceURL
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the sourceURL field value comes from the sourceURL comment.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isInline</dt>
+        <dt class="param-name monospace ">
+          isInline
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2329,66 +2736,82 @@ stylesheet rules) this rule came from.</p>
         <p>Whether this stylesheet is created for STYLE tag by parser. This flag is not set for
 document.written STYLE tags.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startLine</dt>
+        <dt class="param-name monospace ">
+          startLine
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Line offset of the stylesheet within the resource (zero based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startColumn</dt>
+        <dt class="param-name monospace ">
+          startColumn
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Column offset of the stylesheet within the resource (zero based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">length</dt>
+        <dt class="param-name monospace ">
+          length
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Size of the content (in characters).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endLine</dt>
+        <dt class="param-name monospace ">
+          endLine
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Line offset of the end of the stylesheet within the resource (zero based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endColumn</dt>
+        <dt class="param-name monospace ">
+          endColumn
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Column offset of the end of the stylesheet within the resource (zero based).</p>
 
+        
       </div>
     
           
@@ -2396,7 +2819,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2410,6 +2832,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>Properties of a web font: <a href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions">https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions</a></p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2417,97 +2840,121 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">fontFamily</dt>
+        <dt class="param-name monospace ">
+          fontFamily
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fontStyle</dt>
+        <dt class="param-name monospace ">
+          fontStyle
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The font-style.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fontVariant</dt>
+        <dt class="param-name monospace ">
+          fontVariant
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The font-variant.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fontWeight</dt>
+        <dt class="param-name monospace ">
+          fontWeight
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The font-weight.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fontStretch</dt>
+        <dt class="param-name monospace ">
+          fontStretch
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The font-stretch.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">unicodeRange</dt>
+        <dt class="param-name monospace ">
+          unicodeRange
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The unicode-range.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">src</dt>
+        <dt class="param-name monospace ">
+          src
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The src.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">platformFontFamily</dt>
+        <dt class="param-name monospace ">
+          platformFontFamily
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The resolved platform font family</p>
 
+        
       </div>
     
           
@@ -2515,7 +2962,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2529,6 +2975,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>Inherited CSS rule collection from ancestor node.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2536,25 +2983,31 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">inlineStyle</dt>
+        <dt class="param-name monospace optional">
+          inlineStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSStyle class="param-type">CSSStyle</a>
           
       <div class="details-description">
         <p>The ancestor node&#39;s inline style, if any, in the style inheritance chain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">matchedCSSRules</dt>
+        <dt class="param-name monospace ">
+          matchedCSSRules
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-RuleMatch class="param-type">RuleMatch</a> ]</span></span>
           
       <div class="details-description">
         <p>Matches of CSS rules matching the ancestor node in the style inheritance chain.</p>
 
+        
       </div>
     
           
@@ -2562,7 +3015,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2576,6 +3028,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>Media query descriptor.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2583,25 +3036,31 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">expressions</dt>
+        <dt class="param-name monospace ">
+          expressions
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-MediaQueryExpression class="param-type">MediaQueryExpression</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of media query expressions.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">active</dt>
+        <dt class="param-name monospace ">
+          active
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the media query condition is satisfied.</p>
 
+        
       </div>
     
           
@@ -2609,7 +3068,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2623,6 +3081,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>Media query expression descriptor.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2630,61 +3089,76 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Media query expression value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">unit</dt>
+        <dt class="param-name monospace ">
+          unit
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Media query expression units.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">feature</dt>
+        <dt class="param-name monospace ">
+          feature
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Media query expression feature.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">valueRange</dt>
+        <dt class="param-name monospace optional">
+          valueRange
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
       <div class="details-description">
         <p>The associated range of the value text in the enclosing stylesheet (if available).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">computedLength</dt>
+        <dt class="param-name monospace optional">
+          computedLength
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Computed length of media query expression (if applicable).</p>
 
+        
       </div>
     
           
@@ -2692,7 +3166,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2706,6 +3179,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>Information about amount of glyphs that were rendered with given font.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2713,37 +3187,46 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">familyName</dt>
+        <dt class="param-name monospace ">
+          familyName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Font&#39;s family name reported by platform.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isCustomFont</dt>
+        <dt class="param-name monospace ">
+          isCustomFont
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Indicates if the font was downloaded or resolved locally.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">glyphCount</dt>
+        <dt class="param-name monospace ">
+          glyphCount
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Amount of glyphs that were rendered with this font.</p>
 
+        
       </div>
     
           
@@ -2751,7 +3234,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2765,6 +3247,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>CSS rule collection for a single pseudo style.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2772,25 +3255,31 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">pseudoType</dt>
+        <dt class="param-name monospace ">
+          pseudoType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-PseudoType class="param-type">DOM.PseudoType</a>
           
       <div class="details-description">
         <p>Pseudo element type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">matches</dt>
+        <dt class="param-name monospace ">
+          matches
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-RuleMatch class="param-type">RuleMatch</a> ]</span></span>
           
       <div class="details-description">
         <p>Matches of CSS rules applicable to the pseudo style.</p>
 
+        
       </div>
     
           
@@ -2798,7 +3287,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2812,6 +3300,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>Match data for a CSS rule.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2819,25 +3308,31 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">rule</dt>
+        <dt class="param-name monospace ">
+          rule
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-CSSRule class="param-type">CSSRule</a>
           
       <div class="details-description">
         <p>CSS rule in the match.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">matchingSelectors</dt>
+        <dt class="param-name monospace ">
+          matchingSelectors
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Matching selector indices in the rule&#39;s selectorList selectors (0-based).</p>
 
+        
       </div>
     
           
@@ -2845,7 +3340,6 @@ document.written STYLE tags.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2859,6 +3353,7 @@ document.written STYLE tags.</p>
       <div class="details-description">
         <p>CSS coverage information.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2866,7 +3361,9 @@ document.written STYLE tags.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
@@ -2874,42 +3371,52 @@ document.written STYLE tags.</p>
         <p>The css style sheet identifier (absent for user agent stylesheet and user-specified
 stylesheet rules) this rule came from.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startOffset</dt>
+        <dt class="param-name monospace ">
+          startOffset
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Offset of the start of the rule (including selector) from the beginning of the stylesheet.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endOffset</dt>
+        <dt class="param-name monospace ">
+          endOffset
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Offset of the end of the rule body from the beginning of the stylesheet.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">used</dt>
+        <dt class="param-name monospace ">
+          used
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Indicates whether the rule was actually used by some element in the page.</p>
 
+        
       </div>
     
           
@@ -2917,7 +3424,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2931,6 +3437,7 @@ stylesheet rules) this rule came from.</p>
       <div class="details-description">
         <p>Selector list data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2938,25 +3445,31 @@ stylesheet rules) this rule came from.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">selectors</dt>
+        <dt class="param-name monospace ">
+          selectors
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-Value class="param-type">Value</a> ]</span></span>
           
       <div class="details-description">
         <p>Selectors in the list.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Rule selector text.</p>
 
+        
       </div>
     
           
@@ -2964,7 +3477,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2975,42 +3487,56 @@ stylesheet rules) this rule came from.</p>
           <a href="#type-ShorthandEntry" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Shorthand name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Shorthand value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">important</dt>
+        <dt class="param-name monospace optional">
+          important
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the property has &quot;!important&quot; annotation (implies <code>false</code> if absent).</p>
 
+        
       </div>
     
           
@@ -3018,7 +3544,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3032,6 +3557,7 @@ stylesheet rules) this rule came from.</p>
       <div class="details-description">
         <p>Text range within a resource. All numbers are zero-based.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3039,49 +3565,61 @@ stylesheet rules) this rule came from.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">startLine</dt>
+        <dt class="param-name monospace ">
+          startLine
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Start line of range.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startColumn</dt>
+        <dt class="param-name monospace ">
+          startColumn
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Start column of range (inclusive).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endLine</dt>
+        <dt class="param-name monospace ">
+          endLine
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>End line of range</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endColumn</dt>
+        <dt class="param-name monospace ">
+          endColumn
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>End column of range (exclusive).</p>
 
+        
       </div>
     
           
@@ -3089,7 +3627,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3103,6 +3640,7 @@ stylesheet rules) this rule came from.</p>
       <div class="details-description">
         <p>A descriptor of operation to mutate style declaration text.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3110,37 +3648,46 @@ stylesheet rules) this rule came from.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">styleSheetId</dt>
+        <dt class="param-name monospace ">
+          styleSheetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-StyleSheetId class="param-type">StyleSheetId</a>
           
       <div class="details-description">
         <p>The css style sheet identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace ">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
       <div class="details-description">
         <p>The range of the style text in the enclosing stylesheet.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>New style text.</p>
 
+        
       </div>
     
           
@@ -3148,7 +3695,6 @@ stylesheet rules) this rule came from.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3159,8 +3705,12 @@ stylesheet rules) this rule came from.</p>
           <a href="#type-StyleSheetId" class="permalink">#</a>
         </h4>
         
-        <p class="type-type">Type: <strong>string</strong></p>
+      <div class="details-description">
         
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
         
         
       </div>
@@ -3177,15 +3727,14 @@ stylesheet rules) this rule came from.</p>
 stylesheets, &quot;inspector&quot; for stylesheets created by the inspector (i.e. those holding the &quot;via
 inspector&quot; rules), &quot;regular&quot; for regular stylesheets.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>injected</code>, <code>user-agent</code>, <code>inspector</code>, <code>regular</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">injected, user-agent, inspector, regular</div>
-    
       </div>
     
       <div class="details">
@@ -3198,6 +3747,7 @@ inspector&quot; rules), &quot;regular&quot; for regular stylesheets.</p>
       <div class="details-description">
         <p>Data for a simple selector (these are delimited by commas in a selector list).</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3205,25 +3755,31 @@ inspector&quot; rules), &quot;regular&quot; for regular stylesheets.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Value text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">range</dt>
+        <dt class="param-name monospace optional">
+          range
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/CSS/#type-SourceRange class="param-type">SourceRange</a>
           
       <div class="details-description">
         <p>Value range in the underlying resource (if available).</p>
 
+        
       </div>
     
           
@@ -3231,7 +3787,6 @@ inspector&quot; rules), &quot;regular&quot; for regular stylesheets.</p>
       
       </dl>
     
-        
         
       </div>
     

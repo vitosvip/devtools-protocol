@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">ApplicationCache Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
@@ -174,9 +179,9 @@
       <div class="details-description">
         <p>Enables application cache domain notifications.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -192,6 +197,7 @@
       <div class="details-description">
         <p>Returns relevant application cache data for the document in given frame.</p>
 
+        
       </div>
     
         
@@ -199,13 +205,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Identifier of the frame containing document whose application cache is retrieved.</p>
 
+        
       </div>
     
           
@@ -217,13 +226,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">applicationCache</dt>
+        <dt class="param-name monospace ">
+          applicationCache
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/ApplicationCache/#type-ApplicationCache class="param-type">ApplicationCache</a>
           
       <div class="details-description">
         <p>Relevant application cache data for the document in given frame.</p>
 
+        
       </div>
     
           
@@ -231,7 +243,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -245,6 +256,7 @@
         <p>Returns array of frame identifiers with manifest urls for each frame containing a document
 associated with some application cache.</p>
 
+        
       </div>
     
         
@@ -253,7 +265,9 @@ associated with some application cache.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameIds</dt>
+        <dt class="param-name monospace ">
+          frameIds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/ApplicationCache/#type-FrameWithManifest class="param-type">FrameWithManifest</a> ]</span></span>
           
@@ -261,6 +275,7 @@ associated with some application cache.</p>
         <p>Array of frame identifiers with manifest urls for each frame containing a document
 associated with some application cache.</p>
 
+        
       </div>
     
           
@@ -268,7 +283,6 @@ associated with some application cache.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -281,6 +295,7 @@ associated with some application cache.</p>
       <div class="details-description">
         <p>Returns manifest URL for document in the given frame.</p>
 
+        
       </div>
     
         
@@ -288,13 +303,16 @@ associated with some application cache.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Identifier of the frame containing document whose manifest is retrieved.</p>
 
+        
       </div>
     
           
@@ -306,13 +324,16 @@ associated with some application cache.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">manifestURL</dt>
+        <dt class="param-name monospace ">
+          manifestURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Manifest URL for document in the given frame.</p>
 
+        
       </div>
     
           
@@ -320,7 +341,6 @@ associated with some application cache.</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -336,42 +356,56 @@ associated with some application cache.</p>
           <a href="#event-applicationCacheStatusUpdated" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Identifier of the frame containing document whose application cache updated status.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">manifestURL</dt>
+        <dt class="param-name monospace ">
+          manifestURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Manifest URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Updated application cache status.</p>
 
+        
       </div>
     
           
@@ -379,7 +413,6 @@ associated with some application cache.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -390,21 +423,32 @@ associated with some application cache.</p>
           <a href="#event-networkStateUpdated" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">isNowOnline</dt>
+        <dt class="param-name monospace ">
+          isNowOnline
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -424,6 +468,7 @@ associated with some application cache.</p>
       <div class="details-description">
         <p>Detailed application cache information.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -431,61 +476,76 @@ associated with some application cache.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">manifestURL</dt>
+        <dt class="param-name monospace ">
+          manifestURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Manifest URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">size</dt>
+        <dt class="param-name monospace ">
+          size
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Application cache size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">creationTime</dt>
+        <dt class="param-name monospace ">
+          creationTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Application cache creation time.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">updateTime</dt>
+        <dt class="param-name monospace ">
+          updateTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Application cache update time.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">resources</dt>
+        <dt class="param-name monospace ">
+          resources
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/ApplicationCache/#type-ApplicationCacheResource class="param-type">ApplicationCacheResource</a> ]</span></span>
           
       <div class="details-description">
         <p>Application cache resources.</p>
 
+        
       </div>
     
           
@@ -493,7 +553,6 @@ associated with some application cache.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -507,6 +566,7 @@ associated with some application cache.</p>
       <div class="details-description">
         <p>Detailed application cache resource information.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -514,37 +574,46 @@ associated with some application cache.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource url.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">size</dt>
+        <dt class="param-name monospace ">
+          size
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Resource size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource type.</p>
 
+        
       </div>
     
           
@@ -552,7 +621,6 @@ associated with some application cache.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -566,6 +634,7 @@ associated with some application cache.</p>
       <div class="details-description">
         <p>Frame identifier - manifest URL pair.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -573,37 +642,46 @@ associated with some application cache.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Frame identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">manifestURL</dt>
+        <dt class="param-name monospace ">
+          manifestURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Manifest URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Application cache status.</p>
 
+        
       </div>
     
           
@@ -611,7 +689,6 @@ associated with some application cache.</p>
       
       </dl>
     
-        
         
       </div>
     

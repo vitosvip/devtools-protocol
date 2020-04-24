@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain facilitates obtaining document snapshots with DOM, layout, and style information.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -232,6 +233,7 @@ template contents, and imported documents) in a flattened array, as well as layo
 white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
 flattened.</p>
 
+        
       </div>
     
         
@@ -239,37 +241,46 @@ flattened.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">computedStyles</dt>
+        <dt class="param-name monospace ">
+          computedStyles
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Whitelist of computed styles to return.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includePaintOrder</dt>
+        <dt class="param-name monospace optional">
+          includePaintOrder
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to include layout object paint orders into the snapshot.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeDOMRects</dt>
+        <dt class="param-name monospace optional">
+          includeDOMRects
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to include DOM rectangles (offsetRects, clientRects, scrollRects) into the snapshot</p>
 
+        
       </div>
     
           
@@ -281,25 +292,31 @@ flattened.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">documents</dt>
+        <dt class="param-name monospace ">
+          documents
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-DocumentSnapshot class="param-type">DocumentSnapshot</a> ]</span></span>
           
       <div class="details-description">
         <p>The nodes in the DOM tree. The DOMNode at index 0 corresponds to the root document.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">strings</dt>
+        <dt class="param-name monospace ">
+          strings
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Shared string table that all string properties refer to with indexes.</p>
 
+        
       </div>
     
           
@@ -307,7 +324,6 @@ flattened.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -320,9 +336,9 @@ flattened.</p>
       <div class="details-description">
         <p>Disables DOM snapshot agent for the given page.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -338,9 +354,9 @@ flattened.</p>
       <div class="details-description">
         <p>Enables DOM snapshot agent for the given page.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -359,6 +375,7 @@ template contents, and imported documents) in a flattened array, as well as layo
 white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
 flattened.</p>
 
+        
       </div>
     
         
@@ -366,49 +383,61 @@ flattened.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">computedStyleWhitelist</dt>
+        <dt class="param-name monospace ">
+          computedStyleWhitelist
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Whitelist of computed styles to return.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeEventListeners</dt>
+        <dt class="param-name monospace optional">
+          includeEventListeners
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether or not to retrieve details of DOM listeners (default false).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includePaintOrder</dt>
+        <dt class="param-name monospace optional">
+          includePaintOrder
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to determine and include the paint order index of LayoutTreeNodes (default false).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeUserAgentShadowTree</dt>
+        <dt class="param-name monospace optional">
+          includeUserAgentShadowTree
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to include UA shadow tree in the snapshot (default false).</p>
 
+        
       </div>
     
           
@@ -420,37 +449,46 @@ flattened.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">domNodes</dt>
+        <dt class="param-name monospace ">
+          domNodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-DOMNode class="param-type">DOMNode</a> ]</span></span>
           
       <div class="details-description">
         <p>The nodes in the DOM tree. The DOMNode at index 0 corresponds to the root document.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">layoutTreeNodes</dt>
+        <dt class="param-name monospace ">
+          layoutTreeNodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-LayoutTreeNode class="param-type">LayoutTreeNode</a> ]</span></span>
           
       <div class="details-description">
         <p>The nodes in the layout tree.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">computedStyles</dt>
+        <dt class="param-name monospace ">
+          computedStyles
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-ComputedStyle class="param-type">ComputedStyle</a> ]</span></span>
           
       <div class="details-description">
         <p>Whitelisted ComputedStyle properties for each node in the layout tree.</p>
 
+        
       </div>
     
           
@@ -458,7 +496,6 @@ flattened.</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -478,10 +515,10 @@ flattened.</p>
       <div class="details-description">
         <p>Index of the string in the strings table.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>array</strong></p>
-        
         
         
       </div>
@@ -496,6 +533,7 @@ flattened.</p>
       <div class="details-description">
         <p>A subset of the full ComputedStyle as defined by the request whitelist.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -503,13 +541,16 @@ flattened.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">properties</dt>
+        <dt class="param-name monospace ">
+          properties
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-NameValue class="param-type">NameValue</a> ]</span></span>
           
       <div class="details-description">
         <p>Name/value pairs of computed style properties.</p>
 
+        
       </div>
     
           
@@ -517,7 +558,6 @@ flattened.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -531,6 +571,7 @@ flattened.</p>
       <div class="details-description">
         <p>Document snapshot.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -538,181 +579,226 @@ flattened.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">documentURL</dt>
+        <dt class="param-name monospace ">
+          documentURL
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p>Document URL that <code>Document</code> or <code>FrameOwner</code> node points to.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace ">
+          title
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p>Document title.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">baseURL</dt>
+        <dt class="param-name monospace ">
+          baseURL
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p>Base URL that <code>Document</code> or <code>FrameOwner</code> node uses for URL completion.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentLanguage</dt>
+        <dt class="param-name monospace ">
+          contentLanguage
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p>Contains the document&#39;s content language.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodingName</dt>
+        <dt class="param-name monospace ">
+          encodingName
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p>Contains the document&#39;s character set encoding.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">publicId</dt>
+        <dt class="param-name monospace ">
+          publicId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p><code>DocumentType</code> node&#39;s publicId.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">systemId</dt>
+        <dt class="param-name monospace ">
+          systemId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p><code>DocumentType</code> node&#39;s systemId.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a>
           
       <div class="details-description">
         <p>Frame ID for frame owner elements and also for the document node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodes</dt>
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-NodeTreeSnapshot class="param-type">NodeTreeSnapshot</a>
           
       <div class="details-description">
         <p>A table with dom nodes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">layout</dt>
+        <dt class="param-name monospace ">
+          layout
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-LayoutTreeSnapshot class="param-type">LayoutTreeSnapshot</a>
           
       <div class="details-description">
         <p>The nodes in the layout tree.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">textBoxes</dt>
+        <dt class="param-name monospace ">
+          textBoxes
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-TextBoxSnapshot class="param-type">TextBoxSnapshot</a>
           
       <div class="details-description">
         <p>The post-layout inline text nodes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollOffsetX</dt>
+        <dt class="param-name monospace optional">
+          scrollOffsetX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Horizontal scroll offset.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollOffsetY</dt>
+        <dt class="param-name monospace optional">
+          scrollOffsetY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Vertical scroll offset.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentWidth</dt>
+        <dt class="param-name monospace optional">
+          contentWidth
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Document content width.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentHeight</dt>
+        <dt class="param-name monospace optional">
+          contentHeight
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Document content height.</p>
 
+        
       </div>
     
           
@@ -720,7 +806,6 @@ flattened.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -734,6 +819,7 @@ flattened.</p>
       <div class="details-description">
         <p>A Node in the DOM tree.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -741,103 +827,129 @@ flattened.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeType</dt>
+        <dt class="param-name monospace ">
+          nodeType
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s nodeType.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeName</dt>
+        <dt class="param-name monospace ">
+          nodeName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s nodeName.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeValue</dt>
+        <dt class="param-name monospace ">
+          nodeValue
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s nodeValue.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">textValue</dt>
+        <dt class="param-name monospace optional">
+          textValue
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Only set for textarea elements, contains the text value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">inputValue</dt>
+        <dt class="param-name monospace optional">
+          inputValue
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Only set for input elements, contains the input&#39;s associated text value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">inputChecked</dt>
+        <dt class="param-name monospace optional">
+          inputChecked
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Only set for radio and checkbox input elements, indicates if the element has been checked</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">optionSelected</dt>
+        <dt class="param-name monospace optional">
+          optionSelected
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Only set for option elements, indicates if the element has been selected</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace ">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s id, corresponds to DOM.Node.backendNodeId.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">childNodeIndexes</dt>
+        <dt class="param-name monospace optional">
+          childNodeIndexes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -845,24 +957,30 @@ flattened.</p>
         <p>The indexes of the node&#39;s child nodes in the <code>domNodes</code> array returned by <code>getSnapshot</code>, if
 any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">attributes</dt>
+        <dt class="param-name monospace optional">
+          attributes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-NameValue class="param-type">NameValue</a> ]</span></span>
           
       <div class="details-description">
         <p>Attributes of an <code>Element</code> node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pseudoElementIndexes</dt>
+        <dt class="param-name monospace optional">
+          pseudoElementIndexes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -870,12 +988,15 @@ any.</p>
         <p>Indexes of pseudo elements associated with this node in the <code>domNodes</code> array returned by
 <code>getSnapshot</code>, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">layoutNodeIndex</dt>
+        <dt class="param-name monospace optional">
+          layoutNodeIndex
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -883,96 +1004,120 @@ any.</p>
         <p>The index of the node&#39;s related layout tree node in the <code>layoutTreeNodes</code> array returned by
 <code>getSnapshot</code>, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">documentURL</dt>
+        <dt class="param-name monospace optional">
+          documentURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Document URL that <code>Document</code> or <code>FrameOwner</code> node points to.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">baseURL</dt>
+        <dt class="param-name monospace optional">
+          baseURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base URL that <code>Document</code> or <code>FrameOwner</code> node uses for URL completion.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentLanguage</dt>
+        <dt class="param-name monospace optional">
+          contentLanguage
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Only set for documents, contains the document&#39;s content language.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">documentEncoding</dt>
+        <dt class="param-name monospace optional">
+          documentEncoding
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Only set for documents, contains the document&#39;s character set encoding.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">publicId</dt>
+        <dt class="param-name monospace optional">
+          publicId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p><code>DocumentType</code> node&#39;s publicId.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">systemId</dt>
+        <dt class="param-name monospace optional">
+          systemId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p><code>DocumentType</code> node&#39;s systemId.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace optional">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Frame ID for frame owner elements and also for the document node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentDocumentIndex</dt>
+        <dt class="param-name monospace optional">
+          contentDocumentIndex
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -980,36 +1125,45 @@ any.</p>
         <p>The index of a frame owner element&#39;s content document in the <code>domNodes</code> array returned by
 <code>getSnapshot</code>, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pseudoType</dt>
+        <dt class="param-name monospace optional">
+          pseudoType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-PseudoType class="param-type">DOM.PseudoType</a>
           
       <div class="details-description">
         <p>Type of a pseudo element node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">shadowRootType</dt>
+        <dt class="param-name monospace optional">
+          shadowRootType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-ShadowRootType class="param-type">DOM.ShadowRootType</a>
           
       <div class="details-description">
         <p>Shadow root type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isClickable</dt>
+        <dt class="param-name monospace optional">
+          isClickable
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1018,69 +1172,88 @@ any.</p>
 event listeners attached via JavaScript as well as anchor tags that naturally navigate when
 clicked.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">eventListeners</dt>
+        <dt class="param-name monospace optional">
+          eventListeners
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMDebugger/#type-EventListener class="param-type">DOMDebugger.EventListener</a> ]</span></span>
           
       <div class="details-description">
         <p>Details of the node&#39;s event listeners, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">currentSourceURL</dt>
+        <dt class="param-name monospace optional">
+          currentSourceURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The selected url for nodes with a srcset attribute.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">originURL</dt>
+        <dt class="param-name monospace optional">
+          originURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The url of the script (if any) that generates this node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollOffsetX</dt>
+        <dt class="param-name monospace optional">
+          scrollOffsetX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Scroll offsets, set when this node is a Document.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollOffsetY</dt>
+        <dt class="param-name monospace optional">
+          scrollOffsetY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1095,6 +1268,7 @@ clicked.</p>
         <p>Details of post layout rendered text positions. The exact layout should not be regarded as
 stable and may change between versions.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1102,19 +1276,24 @@ stable and may change between versions.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">boundingBox</dt>
+        <dt class="param-name monospace ">
+          boundingBox
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>The bounding box in document coordinates. Note that scroll offset of the document is ignored.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startCharacterIndex</dt>
+        <dt class="param-name monospace ">
+          startCharacterIndex
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1122,12 +1301,15 @@ stable and may change between versions.</p>
         <p>The starting index in characters, for this post layout textbox substring. Characters that
 would be represented as a surrogate pair in UTF-16 have length 2.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">numCharacters</dt>
+        <dt class="param-name monospace ">
+          numCharacters
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1135,6 +1317,7 @@ would be represented as a surrogate pair in UTF-16 have length 2.</p>
         <p>The number of characters in this post layout textbox substring. Characters that would be
 represented as a surrogate pair in UTF-16 have length 2.</p>
 
+        
       </div>
     
           
@@ -1142,7 +1325,6 @@ represented as a surrogate pair in UTF-16 have length 2.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1156,6 +1338,7 @@ represented as a surrogate pair in UTF-16 have length 2.</p>
       <div class="details-description">
         <p>Details of an element in the DOM tree with a LayoutObject.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1163,67 +1346,84 @@ represented as a surrogate pair in UTF-16 have length 2.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">domNodeIndex</dt>
+        <dt class="param-name monospace ">
+          domNodeIndex
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The index of the related DOM node in the <code>domNodes</code> array returned by <code>getSnapshot</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">boundingBox</dt>
+        <dt class="param-name monospace ">
+          boundingBox
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>The bounding box in document coordinates. Note that scroll offset of the document is ignored.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">layoutText</dt>
+        <dt class="param-name monospace optional">
+          layoutText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Contents of the LayoutText, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">inlineTextNodes</dt>
+        <dt class="param-name monospace optional">
+          inlineTextNodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-InlineTextBox class="param-type">InlineTextBox</a> ]</span></span>
           
       <div class="details-description">
         <p>The post-layout inline text nodes, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">styleIndex</dt>
+        <dt class="param-name monospace optional">
+          styleIndex
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Index into the <code>computedStyles</code> array returned by <code>getSnapshot</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">paintOrder</dt>
+        <dt class="param-name monospace optional">
+          paintOrder
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1232,18 +1432,22 @@ represented as a surrogate pair in UTF-16 have length 2.</p>
 that are painted together will have the same index. Only provided if includePaintOrder in
 getSnapshot was true.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isStackingContext</dt>
+        <dt class="param-name monospace optional">
+          isStackingContext
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Set to true to indicate the element begins a new stacking context.</p>
 
+        
       </div>
     
           
@@ -1251,7 +1455,6 @@ getSnapshot was true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1265,6 +1468,7 @@ getSnapshot was true.</p>
       <div class="details-description">
         <p>Table of details of an element in the DOM tree with a LayoutObject.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1272,67 +1476,84 @@ getSnapshot was true.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeIndex</dt>
+        <dt class="param-name monospace ">
+          nodeIndex
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Index of the corresponding node in the <code>NodeTreeSnapshot</code> array returned by <code>captureSnapshot</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">styles</dt>
+        <dt class="param-name monospace ">
+          styles
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-ArrayOfStrings class="param-type">ArrayOfStrings</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of indexes specifying computed style strings, filtered according to the <code>computedStyles</code> parameter passed to <code>captureSnapshot</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bounds</dt>
+        <dt class="param-name monospace ">
+          bounds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-Rectangle class="param-type">Rectangle</a> ]</span></span>
           
       <div class="details-description">
         <p>The absolute position bounding box.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a> ]</span></span>
           
       <div class="details-description">
         <p>Contents of the LayoutText, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackingContexts</dt>
+        <dt class="param-name monospace ">
+          stackingContexts
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareBooleanData class="param-type">RareBooleanData</a>
           
       <div class="details-description">
         <p>Stacking context information.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">paintOrders</dt>
+        <dt class="param-name monospace optional">
+          paintOrders
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -1341,42 +1562,52 @@ getSnapshot was true.</p>
 that are painted together will have the same index. Only provided if includePaintOrder in
 captureSnapshot was true.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">offsetRects</dt>
+        <dt class="param-name monospace optional">
+          offsetRects
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-Rectangle class="param-type">Rectangle</a> ]</span></span>
           
       <div class="details-description">
         <p>The offset rect of nodes. Only available when includeDOMRects is set to true</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollRects</dt>
+        <dt class="param-name monospace optional">
+          scrollRects
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-Rectangle class="param-type">Rectangle</a> ]</span></span>
           
       <div class="details-description">
         <p>The scroll rect of nodes. Only available when includeDOMRects is set to true</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clientRects</dt>
+        <dt class="param-name monospace optional">
+          clientRects
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-Rectangle class="param-type">Rectangle</a> ]</span></span>
           
       <div class="details-description">
         <p>The client rect of nodes. Only available when includeDOMRects is set to true</p>
 
+        
       </div>
     
           
@@ -1384,7 +1615,6 @@ captureSnapshot was true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1398,6 +1628,7 @@ captureSnapshot was true.</p>
       <div class="details-description">
         <p>A name/value pair.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1405,25 +1636,31 @@ captureSnapshot was true.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Attribute/property name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Attribute/property value.</p>
 
+        
       </div>
     
           
@@ -1431,7 +1668,6 @@ captureSnapshot was true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1445,6 +1681,7 @@ captureSnapshot was true.</p>
       <div class="details-description">
         <p>Table containing nodes.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1452,151 +1689,189 @@ captureSnapshot was true.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">parentIndex</dt>
+        <dt class="param-name monospace optional">
+          parentIndex
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Parent node index.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeType</dt>
+        <dt class="param-name monospace optional">
+          nodeType
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s nodeType.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeName</dt>
+        <dt class="param-name monospace optional">
+          nodeName
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a> ]</span></span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s nodeName.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeValue</dt>
+        <dt class="param-name monospace optional">
+          nodeValue
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a> ]</span></span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s nodeValue.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a> ]</span></span>
           
       <div class="details-description">
         <p><code>Node</code>&#39;s id, corresponds to DOM.Node.backendNodeId.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">attributes</dt>
+        <dt class="param-name monospace optional">
+          attributes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-ArrayOfStrings class="param-type">ArrayOfStrings</a> ]</span></span>
           
       <div class="details-description">
         <p>Attributes of an <code>Element</code> node. Flatten name, value pairs.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">textValue</dt>
+        <dt class="param-name monospace optional">
+          textValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareStringData class="param-type">RareStringData</a>
           
       <div class="details-description">
         <p>Only set for textarea elements, contains the text value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">inputValue</dt>
+        <dt class="param-name monospace optional">
+          inputValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareStringData class="param-type">RareStringData</a>
           
       <div class="details-description">
         <p>Only set for input elements, contains the input&#39;s associated text value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">inputChecked</dt>
+        <dt class="param-name monospace optional">
+          inputChecked
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareBooleanData class="param-type">RareBooleanData</a>
           
       <div class="details-description">
         <p>Only set for radio and checkbox input elements, indicates if the element has been checked</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">optionSelected</dt>
+        <dt class="param-name monospace optional">
+          optionSelected
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareBooleanData class="param-type">RareBooleanData</a>
           
       <div class="details-description">
         <p>Only set for option elements, indicates if the element has been selected</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentDocumentIndex</dt>
+        <dt class="param-name monospace optional">
+          contentDocumentIndex
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareIntegerData class="param-type">RareIntegerData</a>
           
       <div class="details-description">
         <p>The index of the document in the list of the snapshot documents.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pseudoType</dt>
+        <dt class="param-name monospace optional">
+          pseudoType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareStringData class="param-type">RareStringData</a>
           
       <div class="details-description">
         <p>Type of a pseudo element node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isClickable</dt>
+        <dt class="param-name monospace optional">
+          isClickable
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareBooleanData class="param-type">RareBooleanData</a>
           
@@ -1605,30 +1880,37 @@ captureSnapshot was true.</p>
 event listeners attached via JavaScript as well as anchor tags that naturally navigate when
 clicked.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">currentSourceURL</dt>
+        <dt class="param-name monospace optional">
+          currentSourceURL
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareStringData class="param-type">RareStringData</a>
           
       <div class="details-description">
         <p>The selected url for nodes with a srcset attribute.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">originURL</dt>
+        <dt class="param-name monospace optional">
+          originURL
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOMSnapshot/#type-RareStringData class="param-type">RareStringData</a>
           
       <div class="details-description">
         <p>The url of the script (if any) that generates this node.</p>
 
+        
       </div>
     
           
@@ -1636,7 +1918,6 @@ clicked.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1647,21 +1928,32 @@ clicked.</p>
           <a href="#type-RareBooleanData" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">index</dt>
+        <dt class="param-name monospace ">
+          index
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1672,28 +1964,46 @@ clicked.</p>
           <a href="#type-RareIntegerData" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">index</dt>
+        <dt class="param-name monospace ">
+          index
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1707,6 +2017,7 @@ clicked.</p>
       <div class="details-description">
         <p>Data that is only present on rare nodes.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1714,23 +2025,36 @@ clicked.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">index</dt>
+        <dt class="param-name monospace ">
+          index
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-StringIndex class="param-type">StringIndex</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1741,8 +2065,12 @@ clicked.</p>
           <a href="#type-Rectangle" class="permalink">#</a>
         </h4>
         
-        <p class="type-type">Type: <strong>array</strong></p>
+      <div class="details-description">
         
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>array</strong></p>
         
         
       </div>
@@ -1757,10 +2085,10 @@ clicked.</p>
       <div class="details-description">
         <p>Index of the string in the strings table.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>integer</strong></p>
-        
         
         
       </div>
@@ -1776,6 +2104,7 @@ clicked.</p>
         <p>Table of details of the post layout rendered text positions. The exact layout should not be regarded as
 stable and may change between versions.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1783,31 +2112,39 @@ stable and may change between versions.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layoutIndex</dt>
+        <dt class="param-name monospace ">
+          layoutIndex
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Index of the layout tree node that owns this box collection.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bounds</dt>
+        <dt class="param-name monospace ">
+          bounds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOMSnapshot/#type-Rectangle class="param-type">Rectangle</a> ]</span></span>
           
       <div class="details-description">
         <p>The absolute position bounding box.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">start</dt>
+        <dt class="param-name monospace ">
+          start
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -1815,12 +2152,15 @@ stable and may change between versions.</p>
         <p>The starting index in characters, for this post layout textbox substring. Characters that
 would be represented as a surrogate pair in UTF-16 have length 2.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">length</dt>
+        <dt class="param-name monospace ">
+          length
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -1828,6 +2168,7 @@ would be represented as a surrogate pair in UTF-16 have length 2.</p>
         <p>The number of characters in this post layout textbox substring. Characters that would be
 represented as a surrogate pair in UTF-16 have length 2.</p>
 
+        
       </div>
     
           
@@ -1835,7 +2176,6 @@ represented as a surrogate pair in UTF-16 have length 2.</p>
       
       </dl>
     
-        
         
       </div>
     

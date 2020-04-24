@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">HeapProfiler Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
@@ -235,6 +240,7 @@
         <p>Enables console to refer to the node with given id via $x (see Command Line API for more details
 $x functions).</p>
 
+        
       </div>
     
         
@@ -242,13 +248,16 @@ $x functions).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">heapObjectId</dt>
+        <dt class="param-name monospace ">
+          heapObjectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/HeapProfiler/#type-HeapSnapshotObjectId class="param-type">HeapSnapshotObjectId</a>
           
       <div class="details-description">
         <p>Heap snapshot object id to be accessible by means of $x command line API.</p>
 
+        
       </div>
     
           
@@ -256,7 +265,6 @@ $x functions).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -267,7 +275,11 @@ $x functions).</p>
           <a href="#method-collectGarbage" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -280,7 +292,11 @@ $x functions).</p>
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -293,7 +309,11 @@ $x functions).</p>
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -306,18 +326,26 @@ $x functions).</p>
           <a href="#method-getHeapObjectId" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>Identifier of the object to get heap object id for.</p>
 
+        
       </div>
     
           
@@ -329,13 +357,16 @@ $x functions).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">heapSnapshotObjectId</dt>
+        <dt class="param-name monospace ">
+          heapSnapshotObjectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/HeapProfiler/#type-HeapSnapshotObjectId class="param-type">HeapSnapshotObjectId</a>
           
       <div class="details-description">
         <p>Id of the heap snapshot object corresponding to the passed remote object id.</p>
 
+        
       </div>
     
           
@@ -343,7 +374,6 @@ $x functions).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -353,25 +383,40 @@ $x functions).</p>
           <a href="#method-getObjectByHeapObjectId" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/HeapProfiler/#type-HeapSnapshotObjectId class="param-type">HeapSnapshotObjectId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace optional">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Symbolic group name that can be used to release multiple objects.</p>
 
+        
       </div>
     
           
@@ -383,13 +428,16 @@ $x functions).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
         <p>Evaluation result.</p>
 
+        
       </div>
     
           
@@ -397,7 +445,6 @@ $x functions).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -407,19 +454,27 @@ $x functions).</p>
           <a href="#method-getSamplingProfile" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/HeapProfiler/#type-SamplingHeapProfile class="param-type">SamplingHeapProfile</a>
           
       <div class="details-description">
         <p>Return the sampling profile being collected.</p>
 
+        
       </div>
     
           
@@ -427,7 +482,6 @@ $x functions).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -437,12 +491,19 @@ $x functions).</p>
           <a href="#method-startSampling" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">samplingInterval</dt>
+        <dt class="param-name monospace optional">
+          samplingInterval
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -450,6 +511,7 @@ $x functions).</p>
         <p>Average sample interval in bytes. Poisson distribution is used for the intervals. The
 default value is 32768 bytes.</p>
 
+        
       </div>
     
           
@@ -457,7 +519,6 @@ default value is 32768 bytes.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -468,21 +529,32 @@ default value is 32768 bytes.</p>
           <a href="#method-startTrackingHeapObjects" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">trackAllocations</dt>
+        <dt class="param-name monospace optional">
+          trackAllocations
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -493,19 +565,27 @@ default value is 32768 bytes.</p>
           <a href="#method-stopSampling" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/HeapProfiler/#type-SamplingHeapProfile class="param-type">SamplingHeapProfile</a>
           
       <div class="details-description">
         <p>Recorded sampling heap profile.</p>
 
+        
       </div>
     
           
@@ -513,7 +593,6 @@ default value is 32768 bytes.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -523,12 +602,19 @@ default value is 32768 bytes.</p>
           <a href="#method-stopTrackingHeapObjects" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">reportProgress</dt>
+        <dt class="param-name monospace optional">
+          reportProgress
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -536,21 +622,28 @@ default value is 32768 bytes.</p>
         <p>If true &#39;reportHeapSnapshotProgress&#39; events will be generated while snapshot is being taken
 when the tracking is stopped.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">treatGlobalObjectsAsRoots</dt>
+        <dt class="param-name monospace optional">
+          treatGlobalObjectsAsRoots
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -561,30 +654,41 @@ when the tracking is stopped.</p>
           <a href="#method-takeHeapSnapshot" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">reportProgress</dt>
+        <dt class="param-name monospace optional">
+          reportProgress
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true &#39;reportHeapSnapshotProgress&#39; events will be generated while snapshot is being taken.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">treatGlobalObjectsAsRoots</dt>
+        <dt class="param-name monospace optional">
+          treatGlobalObjectsAsRoots
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, a raw snapshot without artifical roots will be generated</p>
 
+        
       </div>
     
           
@@ -592,7 +696,6 @@ when the tracking is stopped.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -609,21 +712,32 @@ when the tracking is stopped.</p>
           <a href="#event-addHeapSnapshotChunk" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">chunk</dt>
+        <dt class="param-name monospace ">
+          chunk
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -637,6 +751,7 @@ when the tracking is stopped.</p>
       <div class="details-description">
         <p>If heap objects tracking has been started then backend may send update for one or more fragments</p>
 
+        
       </div>
     
         
@@ -644,7 +759,9 @@ when the tracking is stopped.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">statsUpdate</dt>
+        <dt class="param-name monospace ">
+          statsUpdate
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -653,6 +770,7 @@ when the tracking is stopped.</p>
 index, the second integer is a total count of objects for the fragment, the third integer is
 a total size of the objects for the fragment.</p>
 
+        
       </div>
     
           
@@ -660,7 +778,6 @@ a total size of the objects for the fragment.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -676,6 +793,7 @@ a total size of the objects for the fragment.</p>
 seen object id and corresponding timestamp. If the were changes in the heap since last event
 then one or more heapStatsUpdate events will be sent before a new lastSeenObjectId event.</p>
 
+        
       </div>
     
         
@@ -683,23 +801,36 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">lastSeenObjectId</dt>
+        <dt class="param-name monospace ">
+          lastSeenObjectId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -710,35 +841,60 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
           <a href="#event-reportHeapSnapshotProgress" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">done</dt>
+        <dt class="param-name monospace ">
+          done
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">total</dt>
+        <dt class="param-name monospace ">
+          total
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">finished</dt>
+        <dt class="param-name monospace optional">
+          finished
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -749,7 +905,11 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
           <a href="#event-resetProfiles" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -771,10 +931,10 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <div class="details-description">
         <p>Heap snapshot object id.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -789,6 +949,7 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <div class="details-description">
         <p>Sampling profile.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -796,23 +957,36 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">head</dt>
+        <dt class="param-name monospace ">
+          head
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/HeapProfiler/#type-SamplingHeapProfileNode class="param-type">SamplingHeapProfileNode</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">samples</dt>
+        <dt class="param-name monospace ">
+          samples
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/v8/HeapProfiler/#type-SamplingHeapProfileSample class="param-type">SamplingHeapProfileSample</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -826,6 +1000,7 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <div class="details-description">
         <p>Sampling Heap Profile node. Holds callsite information, allocation statistics and child nodes.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -833,49 +1008,61 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrame</dt>
+        <dt class="param-name monospace ">
+          callFrame
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/Runtime/#type-CallFrame class="param-type">Runtime.CallFrame</a>
           
       <div class="details-description">
         <p>Function location.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">selfSize</dt>
+        <dt class="param-name monospace ">
+          selfSize
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Allocations size in bytes for the node excluding children.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Node id. Ids are unique across all profiles collected between startSampling and stopSampling.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">children</dt>
+        <dt class="param-name monospace ">
+          children
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/v8/HeapProfiler/#type-SamplingHeapProfileNode class="param-type">SamplingHeapProfileNode</a> ]</span></span>
           
       <div class="details-description">
         <p>Child nodes.</p>
 
+        
       </div>
     
           
@@ -883,7 +1070,6 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       
       </dl>
     
-        
         
       </div>
     
@@ -897,6 +1083,7 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <div class="details-description">
         <p>A single sample from a sampling profile.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -904,31 +1091,39 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">size</dt>
+        <dt class="param-name monospace ">
+          size
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Allocation size in bytes attributed to the sample.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Id of the corresponding profile tree node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ordinal</dt>
+        <dt class="param-name monospace ">
+          ordinal
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -936,6 +1131,7 @@ then one or more heapStatsUpdate events will be sent before a new lastSeenObject
         <p>Time-ordered sample ordinal number. It is unique across all profiles retrieved
 between startSampling and stopSampling.</p>
 
+        
       </div>
     
           
@@ -943,7 +1139,6 @@ between startSampling and stopSampling.</p>
       
       </dl>
     
-        
         
       </div>
     

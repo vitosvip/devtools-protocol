@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Network domain allows tracking network activities of the page. It exposes information about http, file, data and other requests and responses, their headers, bodies, timing, etc.</p>
 
+        
       </div>
     
         
@@ -289,6 +290,7 @@
       <div class="details-description">
         <p>Tells whether clearing browser cache is supported.</p>
 
+        
       </div>
     
         
@@ -297,13 +299,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if browser cache can be cleared.</p>
 
+        
       </div>
     
           
@@ -311,7 +316,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -324,6 +328,7 @@
       <div class="details-description">
         <p>Tells whether clearing browser cookies is supported.</p>
 
+        
       </div>
     
         
@@ -332,13 +337,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if browser cookies can be cleared.</p>
 
+        
       </div>
     
           
@@ -346,7 +354,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -359,9 +366,9 @@
       <div class="details-description">
         <p>Clears browser cache.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -377,9 +384,9 @@
       <div class="details-description">
         <p>Clears browser cookies.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -395,9 +402,9 @@
       <div class="details-description">
         <p>Disables network tracking, prevents network events from being sent to the client.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -413,6 +420,7 @@
       <div class="details-description">
         <p>Activates emulation of network conditions.</p>
 
+        
       </div>
     
         
@@ -420,61 +428,76 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">offline</dt>
+        <dt class="param-name monospace ">
+          offline
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True to emulate internet disconnection.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">latency</dt>
+        <dt class="param-name monospace ">
+          latency
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Additional latency (ms).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">downloadThroughput</dt>
+        <dt class="param-name monospace ">
+          downloadThroughput
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Maximal aggregated download throughput.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">uploadThroughput</dt>
+        <dt class="param-name monospace ">
+          uploadThroughput
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Maximal aggregated upload throughput.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectionType</dt>
+        <dt class="param-name monospace optional">
+          connectionType
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-ConnectionType class="param-type">ConnectionType</a>
           
       <div class="details-description">
         <p>Connection type if known.</p>
 
+        
       </div>
     
           
@@ -482,7 +505,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -496,6 +518,7 @@
       <div class="details-description">
         <p>Enables network tracking, network events will now be delivered to the client.</p>
 
+        
       </div>
     
         
@@ -503,25 +526,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">maxTotalBufferSize</dt>
+        <dt class="param-name monospace optional">
+          maxTotalBufferSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Buffer size in bytes to use when preserving network payloads (XHRs, etc).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">maxResourceBufferSize</dt>
+        <dt class="param-name monospace optional">
+          maxResourceBufferSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Per-resource buffer size in bytes to use when preserving network payloads (XHRs, etc).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -529,7 +558,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -543,6 +571,7 @@
       <div class="details-description">
         <p>Returns content served for the given request.</p>
 
+        
       </div>
     
         
@@ -550,13 +579,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Identifier of the network request to get content for.</p>
 
+        
       </div>
     
           
@@ -568,25 +600,31 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">body</dt>
+        <dt class="param-name monospace ">
+          body
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Response body.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">base64Encoded</dt>
+        <dt class="param-name monospace ">
+          base64Encoded
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if content was sent as base64.</p>
 
+        
       </div>
     
           
@@ -594,7 +632,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -607,6 +644,7 @@
       <div class="details-description">
         <p>Toggles ignoring cache for each request. If <code>true</code>, cache will not be used.</p>
 
+        
       </div>
     
         
@@ -614,13 +652,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cacheDisabled</dt>
+        <dt class="param-name monospace ">
+          cacheDisabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Cache disabled state.</p>
 
+        
       </div>
     
           
@@ -628,7 +669,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -642,6 +682,7 @@
       <div class="details-description">
         <p>Specifies whether to always send extra HTTP headers with the requests from this page.</p>
 
+        
       </div>
     
         
@@ -649,13 +690,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>Map with extra HTTP headers.</p>
 
+        
       </div>
     
           
@@ -663,7 +707,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -677,6 +720,7 @@
       <div class="details-description">
         <p>Allows overriding user agent with the given string.</p>
 
+        
       </div>
     
         
@@ -684,13 +728,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">userAgent</dt>
+        <dt class="param-name monospace ">
+          userAgent
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User agent to use.</p>
 
+        
       </div>
     
           
@@ -698,7 +745,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -718,6 +764,7 @@
       <div class="details-description">
         <p>Fired when data chunk was received over the network.</p>
 
+        
       </div>
     
         
@@ -725,49 +772,61 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dataLength</dt>
+        <dt class="param-name monospace ">
+          dataLength
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Data chunk length.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedDataLength</dt>
+        <dt class="param-name monospace ">
+          encodedDataLength
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Actual bytes received (might be less than dataLength for compressed encodings).</p>
 
+        
       </div>
     
           
@@ -775,7 +834,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -789,6 +847,7 @@
       <div class="details-description">
         <p>Fired when HTTP request has failed to load.</p>
 
+        
       </div>
     
         
@@ -796,73 +855,91 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Page/#type-ResourceType class="param-type">Page.ResourceType</a>
           
       <div class="details-description">
         <p>Resource type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorText</dt>
+        <dt class="param-name monospace ">
+          errorText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User friendly error message.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">canceled</dt>
+        <dt class="param-name monospace optional">
+          canceled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if loading was canceled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">blockedReason</dt>
+        <dt class="param-name monospace optional">
+          blockedReason
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-BlockedReason class="param-type">BlockedReason</a>
           
       <div class="details-description">
         <p>The reason why loading was blocked, if any.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -870,7 +947,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -884,6 +960,7 @@
       <div class="details-description">
         <p>Fired when HTTP request has finished loading.</p>
 
+        
       </div>
     
         
@@ -891,37 +968,46 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedDataLength</dt>
+        <dt class="param-name monospace ">
+          encodedDataLength
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Total number of bytes received for this request.</p>
 
+        
       </div>
     
           
@@ -929,7 +1015,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -943,6 +1028,7 @@
       <div class="details-description">
         <p>Fired if request ended up loading from cache.</p>
 
+        
       </div>
     
         
@@ -950,13 +1036,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
@@ -964,7 +1053,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -978,6 +1066,7 @@
       <div class="details-description">
         <p>Fired when page is about to send HTTP request.</p>
 
+        
       </div>
     
         
@@ -985,121 +1074,151 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Frame identifier.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace ">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-LoaderId class="param-type">LoaderId</a>
           
       <div class="details-description">
         <p>Loader identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">documentURL</dt>
+        <dt class="param-name monospace ">
+          documentURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the document this request is loaded for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace ">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Request class="param-type">Request</a>
           
       <div class="details-description">
         <p>Request data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">wallTime</dt>
+        <dt class="param-name monospace ">
+          wallTime
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>UTC Timestamp.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">initiator</dt>
+        <dt class="param-name monospace ">
+          initiator
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Initiator class="param-type">Initiator</a>
           
       <div class="details-description">
         <p>Request initiator.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">redirectResponse</dt>
+        <dt class="param-name monospace optional">
+          redirectResponse
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Response class="param-type">Response</a>
           
       <div class="details-description">
         <p>Redirect response data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace optional">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Page/#type-ResourceType class="param-type">Page.ResourceType</a>
           
       <div class="details-description">
         <p>Type of this resource.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1107,7 +1226,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -1121,6 +1239,7 @@
       <div class="details-description">
         <p>Fired when HTTP response is available.</p>
 
+        
       </div>
     
         
@@ -1128,73 +1247,91 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Frame identifier.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace ">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-LoaderId class="param-type">LoaderId</a>
           
       <div class="details-description">
         <p>Loader identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Page/#type-ResourceType class="param-type">Page.ResourceType</a>
           
       <div class="details-description">
         <p>Resource type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace ">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Response class="param-type">Response</a>
           
       <div class="details-description">
         <p>Response data.</p>
 
+        
       </div>
     
           
@@ -1202,7 +1339,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -1222,6 +1358,7 @@
       <div class="details-description">
         <p>Information about the cached resource.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1229,49 +1366,61 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL. This is the url of the original network request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Page/#type-ResourceType class="param-type">Page.ResourceType</a>
           
       <div class="details-description">
         <p>Type of this resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace optional">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Response class="param-type">Response</a>
           
       <div class="details-description">
         <p>Cached response data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bodySize</dt>
+        <dt class="param-name monospace ">
+          bodySize
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Cached response body size.</p>
 
+        
       </div>
     
           
@@ -1279,7 +1428,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -1293,15 +1441,14 @@
       <div class="details-description">
         <p>Loading priority of a resource request.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>none</code>, <code>cellular2g</code>, <code>cellular3g</code>, <code>cellular4g</code>, <code>bluetooth</code>, <code>ethernet</code>, <code>wifi</code>, <code>wimax</code>, <code>other</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">none, cellular2g, cellular3g, cellular4g, bluetooth, ethernet, wifi, wimax, other</div>
-    
       </div>
     
       <div class="details">
@@ -1314,15 +1461,14 @@
       <div class="details-description">
         <p>Represents the cookie&#39;s &#39;SameSite&#39; status: <a href="https://tools.ietf.org/html/draft-west-first-party-cookies">https://tools.ietf.org/html/draft-west-first-party-cookies</a></p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Strict</code>, <code>Lax</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">Strict, Lax</div>
-    
       </div>
     
       <div class="details">
@@ -1335,10 +1481,10 @@
       <div class="details-description">
         <p>Request / response headers as keys / values of JSON object.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
-        
         
         
       </div>
@@ -1353,6 +1499,7 @@
       <div class="details-description">
         <p>Information about the request initiator.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1360,49 +1507,63 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Type of this initiator.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>parser</code>, <code>script</code>, <code>other</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stack</dt>
+        <dt class="param-name monospace optional">
+          stack
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>Initiator JavaScript stack trace, set for Script only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Initiator URL, set for Parser type only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace optional">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Initiator line number, set for Parser type only (0-based).</p>
 
+        
       </div>
     
           
@@ -1410,7 +1571,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -1424,10 +1584,10 @@
       <div class="details-description">
         <p>Unique loader identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -1442,6 +1602,7 @@
       <div class="details-description">
         <p>HTTP request data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1449,73 +1610,93 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Request URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">method</dt>
+        <dt class="param-name monospace ">
+          method
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP request method.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP request headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">postData</dt>
+        <dt class="param-name monospace optional">
+          postData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP POST request data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mixedContentType</dt>
+        <dt class="param-name monospace optional">
+          mixedContentType
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The mixed content status of the request, as defined in <a href="http://www.w3.org/TR/mixed-content/">http://www.w3.org/TR/mixed-content/</a></p>
 
+        
+      <div class="enum-container">Allowed Values: <code>blockable</code>, <code>optionally-blockable</code>, <code>none</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">initialPriority</dt>
+        <dt class="param-name monospace ">
+          initialPriority
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-ResourcePriority class="param-type">ResourcePriority</a>
           
       <div class="details-description">
         <p>Priority of the resource request at the time request is sent.</p>
 
+        
       </div>
     
           
@@ -1523,7 +1704,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -1537,10 +1717,10 @@
       <div class="details-description">
         <p>Unique request identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -1555,15 +1735,14 @@
       <div class="details-description">
         <p>Loading priority of a resource request.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>VeryLow</code>, <code>Low</code>, <code>Medium</code>, <code>High</code>, <code>VeryHigh</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">VeryLow, Low, Medium, High, VeryHigh</div>
-    
       </div>
     
       <div class="details">
@@ -1576,6 +1755,7 @@
       <div class="details-description">
         <p>Timing information for the request.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1583,193 +1763,241 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestTime</dt>
+        <dt class="param-name monospace ">
+          requestTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Timing&#39;s requestTime is a baseline in seconds, while the other numbers are ticks in milliseconds relatively to this requestTime.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">proxyStart</dt>
+        <dt class="param-name monospace ">
+          proxyStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started resolving proxy.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">proxyEnd</dt>
+        <dt class="param-name monospace ">
+          proxyEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished resolving proxy.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dnsStart</dt>
+        <dt class="param-name monospace ">
+          dnsStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started DNS address resolve.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dnsEnd</dt>
+        <dt class="param-name monospace ">
+          dnsEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished DNS address resolve.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectStart</dt>
+        <dt class="param-name monospace ">
+          connectStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started connecting to the remote host.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectEnd</dt>
+        <dt class="param-name monospace ">
+          connectEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Connected to the remote host.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sslStart</dt>
+        <dt class="param-name monospace ">
+          sslStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started SSL handshake.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sslEnd</dt>
+        <dt class="param-name monospace ">
+          sslEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished SSL handshake.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">workerStart</dt>
+        <dt class="param-name monospace ">
+          workerStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started running ServiceWorker.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">workerReady</dt>
+        <dt class="param-name monospace ">
+          workerReady
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished Starting ServiceWorker.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">sendStart</dt>
+        <dt class="param-name monospace ">
+          sendStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started sending request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sendEnd</dt>
+        <dt class="param-name monospace ">
+          sendEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished sending request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pushStart</dt>
+        <dt class="param-name monospace ">
+          pushStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Time the server started pushing request.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">pushEnd</dt>
+        <dt class="param-name monospace ">
+          pushEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Time the server finished pushing request.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">receiveHeadersEnd</dt>
+        <dt class="param-name monospace ">
+          receiveHeadersEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished receiving response headers.</p>
 
+        
       </div>
     
           
@@ -1777,7 +2005,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -1791,6 +2018,7 @@
       <div class="details-description">
         <p>HTTP response data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1798,229 +2026,286 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Response URL. This URL can be different from CachedResource.url in case of redirect.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>HTTP response status code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">statusText</dt>
+        <dt class="param-name monospace ">
+          statusText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP response status text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP response headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headersText</dt>
+        <dt class="param-name monospace optional">
+          headersText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP response headers text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mimeType</dt>
+        <dt class="param-name monospace ">
+          mimeType
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource mimeType as determined by the browser.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestHeaders</dt>
+        <dt class="param-name monospace optional">
+          requestHeaders
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>Refined HTTP request headers that were actually transmitted over the network.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestHeadersText</dt>
+        <dt class="param-name monospace optional">
+          requestHeadersText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP request headers text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectionReused</dt>
+        <dt class="param-name monospace ">
+          connectionReused
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies whether physical connection was actually reused for this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectionId</dt>
+        <dt class="param-name monospace ">
+          connectionId
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Physical connection id that was actually used for this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">remoteIPAddress</dt>
+        <dt class="param-name monospace optional">
+          remoteIPAddress
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Remote IP address.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">remotePort</dt>
+        <dt class="param-name monospace optional">
+          remotePort
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Remote port.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">fromDiskCache</dt>
+        <dt class="param-name monospace optional">
+          fromDiskCache
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies that the request was served from the disk cache.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fromServiceWorker</dt>
+        <dt class="param-name monospace optional">
+          fromServiceWorker
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies that the request was served from the ServiceWorker.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedDataLength</dt>
+        <dt class="param-name monospace ">
+          encodedDataLength
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Total number of bytes received for this request so far.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timing</dt>
+        <dt class="param-name monospace optional">
+          timing
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-ResourceTiming class="param-type">ResourceTiming</a>
           
       <div class="details-description">
         <p>Timing information for the given request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">protocol</dt>
+        <dt class="param-name monospace optional">
+          protocol
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Protocol used to fetch this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">securityState</dt>
+        <dt class="param-name monospace ">
+          securityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Security/#type-SecurityState class="param-type">Security.SecurityState</a>
           
       <div class="details-description">
         <p>Security state of the request resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">securityDetails</dt>
+        <dt class="param-name monospace optional">
+          securityDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-SecurityDetails class="param-type">SecurityDetails</a>
           
       <div class="details-description">
         <p>Security details for the request.</p>
 
+        
       </div>
     
           
@@ -2028,7 +2313,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -2042,6 +2326,7 @@
       <div class="details-description">
         <p>Security details about a request.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2049,145 +2334,181 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">protocol</dt>
+        <dt class="param-name monospace ">
+          protocol
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Protocol name (e.g. &quot;TLS 1.2&quot; or &quot;QUIC&quot;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyExchange</dt>
+        <dt class="param-name monospace ">
+          keyExchange
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Key Exchange used by the connection.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyExchangeGroup</dt>
+        <dt class="param-name monospace optional">
+          keyExchangeGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>(EC)DH group used by the connection, if applicable.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cipher</dt>
+        <dt class="param-name monospace ">
+          cipher
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cipher name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mac</dt>
+        <dt class="param-name monospace optional">
+          mac
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>TLS MAC. Note that AEAD ciphers do not have separate MACs.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateId</dt>
+        <dt class="param-name monospace ">
+          certificateId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Security/#type-CertificateId class="param-type">Security.CertificateId</a>
           
       <div class="details-description">
         <p>Certificate ID value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">subjectName</dt>
+        <dt class="param-name monospace ">
+          subjectName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Certificate subject name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sanList</dt>
+        <dt class="param-name monospace ">
+          sanList
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Subject Alternative Name (SAN) DNS names and IP addresses.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">issuer</dt>
+        <dt class="param-name monospace ">
+          issuer
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of the issuing CA.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">validFrom</dt>
+        <dt class="param-name monospace ">
+          validFrom
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Certificate valid from date.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">validTo</dt>
+        <dt class="param-name monospace ">
+          validTo
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Certificate valid to (expiration) date</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">signedCertificateTimestampList</dt>
+        <dt class="param-name monospace ">
+          signedCertificateTimestampList
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-2/Network/#type-SignedCertificateTimestamp class="param-type">SignedCertificateTimestamp</a> ]</span></span>
           
       <div class="details-description">
         <p>List of signed certificate timestamps (SCTs).</p>
 
+        
       </div>
     
           
@@ -2195,7 +2516,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -2209,6 +2529,7 @@
       <div class="details-description">
         <p>Details of a signed certificate timestamp (SCT).</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2216,97 +2537,121 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Validation status.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">logDescription</dt>
+        <dt class="param-name monospace ">
+          logDescription
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Log name / description.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">logId</dt>
+        <dt class="param-name monospace ">
+          logId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Log ID.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Network/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Issuance date.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hashAlgorithm</dt>
+        <dt class="param-name monospace ">
+          hashAlgorithm
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Hash algorithm.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">signatureAlgorithm</dt>
+        <dt class="param-name monospace ">
+          signatureAlgorithm
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Signature algorithm.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">signatureData</dt>
+        <dt class="param-name monospace ">
+          signatureData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Signature data.</p>
 
+        
       </div>
     
           
@@ -2314,7 +2659,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -2328,10 +2672,10 @@
       <div class="details-description">
         <p>Number of seconds since epoch.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>number</strong></p>
-        
         
         
       </div>

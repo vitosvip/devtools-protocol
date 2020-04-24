@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">Profiler Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         <h3>Methods</h3>
       <div class="toc-link">
@@ -171,7 +176,11 @@
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -184,7 +193,11 @@
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -200,6 +213,7 @@
       <div class="details-description">
         <p>Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.</p>
 
+        
       </div>
     
         
@@ -207,13 +221,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">interval</dt>
+        <dt class="param-name monospace ">
+          interval
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>New sampling interval in microseconds.</p>
 
+        
       </div>
     
           
@@ -221,7 +238,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -232,7 +248,11 @@
           <a href="#method-start" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -245,19 +265,27 @@
           <a href="#method-stop" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Profiler/#type-Profile class="param-type">Profile</a>
           
       <div class="details-description">
         <p>Recorded profile.</p>
 
+        
       </div>
     
           
@@ -265,7 +293,6 @@
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -281,44 +308,69 @@
           <a href="#event-consoleProfileFinished" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Debugger/#type-Location class="param-type">Debugger.Location</a>
           
       <div class="details-description">
         <p>Location of console.profileEnd().</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Profiler/#type-Profile class="param-type">Profile</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace optional">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Profile title passed as an argument to console.profile().</p>
 
+        
       </div>
     
           
@@ -326,7 +378,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -340,6 +391,7 @@
       <div class="details-description">
         <p>Sent when new profile recodring is started using console.profile() call.</p>
 
+        
       </div>
     
         
@@ -347,32 +399,45 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Debugger/#type-Location class="param-type">Debugger.Location</a>
           
       <div class="details-description">
         <p>Location of console.profile().</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace optional">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Profile title passed as an argument to console.profile().</p>
 
+        
       </div>
     
           
@@ -380,7 +445,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -400,6 +464,7 @@
       <div class="details-description">
         <p>Profile.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -407,61 +472,76 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodes</dt>
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-2/Profiler/#type-ProfileNode class="param-type">ProfileNode</a> ]</span></span>
           
       <div class="details-description">
         <p>The list of profile nodes. First item is the root node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startTime</dt>
+        <dt class="param-name monospace ">
+          startTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Profiling start timestamp in microseconds.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endTime</dt>
+        <dt class="param-name monospace ">
+          endTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Profiling end timestamp in microseconds.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">samples</dt>
+        <dt class="param-name monospace optional">
+          samples
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Ids of samples top nodes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timeDeltas</dt>
+        <dt class="param-name monospace optional">
+          timeDeltas
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Time intervals between adjacent samples in microseconds. The first delta is relative to the profile startTime.</p>
 
+        
       </div>
     
           
@@ -469,7 +549,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -483,6 +562,7 @@
       <div class="details-description">
         <p>Profile node. Holds callsite information, execution statistics and child nodes.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -490,73 +570,91 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Unique id of the node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">callFrame</dt>
+        <dt class="param-name monospace ">
+          callFrame
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Runtime/#type-CallFrame class="param-type">Runtime.CallFrame</a>
           
       <div class="details-description">
         <p>Function location.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hitCount</dt>
+        <dt class="param-name monospace optional">
+          hitCount
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Number of samples where this node was on top of the call stack.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">children</dt>
+        <dt class="param-name monospace optional">
+          children
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Child node ids.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deoptReason</dt>
+        <dt class="param-name monospace optional">
+          deoptReason
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The reason of being not optimized. The function may be deoptimized or marked as don&#39;t optimize.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">positionTicks</dt>
+        <dt class="param-name monospace optional">
+          positionTicks
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-2/Profiler/#type-PositionTickInfo class="param-type">PositionTickInfo</a> ]</span></span>
           
       <div class="details-description">
         <p>An array of source position ticks.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -564,7 +662,6 @@
       
       </dl>
     
-        
         
       </div>
     

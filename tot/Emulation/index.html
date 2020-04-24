@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain emulates different environments for the page.</p>
 
+        
       </div>
     
         
@@ -269,6 +270,7 @@
       <div class="details-description">
         <p>Tells whether emulation is supported.</p>
 
+        
       </div>
     
         
@@ -277,13 +279,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if emulation is supported.</p>
 
+        
       </div>
     
           
@@ -291,7 +296,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -304,9 +308,9 @@
       <div class="details-description">
         <p>Clears the overriden device metrics.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -322,9 +326,9 @@
       <div class="details-description">
         <p>Clears the overriden Geolocation Position and Error.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -341,6 +345,7 @@
         <p>Sets or clears an override of the default background color of the frame. This override is used
 if the content does not specify one.</p>
 
+        
       </div>
     
         
@@ -348,7 +353,9 @@ if the content does not specify one.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">color</dt>
+        <dt class="param-name monospace optional">
+          color
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
@@ -356,6 +363,7 @@ if the content does not specify one.</p>
         <p>RGBA of the default background color. If not specified, any existing override will be
 cleared.</p>
 
+        
       </div>
     
           
@@ -363,7 +371,6 @@ cleared.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -379,6 +386,7 @@ cleared.</p>
 window.innerWidth, window.innerHeight, and &quot;device-width&quot;/&quot;device-height&quot;-related CSS media
 query results).</p>
 
+        
       </div>
     
         
@@ -386,43 +394,54 @@ query results).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding width value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding height value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceScaleFactor</dt>
+        <dt class="param-name monospace ">
+          deviceScaleFactor
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Overriding device scale factor value. 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mobile</dt>
+        <dt class="param-name monospace ">
+          mobile
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -430,96 +449,120 @@ query results).</p>
         <p>Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text
 autosizing and more.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace optional">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Scale to apply to resulting view image.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">screenWidth</dt>
+        <dt class="param-name monospace optional">
+          screenWidth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding screen width value in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">screenHeight</dt>
+        <dt class="param-name monospace optional">
+          screenHeight
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding screen height value in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">positionX</dt>
+        <dt class="param-name monospace optional">
+          positionX
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding view X position on screen in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">positionY</dt>
+        <dt class="param-name monospace optional">
+          positionY
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding view Y position on screen in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">dontSetVisibleSize</dt>
+        <dt class="param-name monospace optional">
+          dontSetVisibleSize
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Do not set visible view size, rely upon explicit setVisibleSize call.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">screenOrientation</dt>
+        <dt class="param-name monospace optional">
+          screenOrientation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Emulation/#type-ScreenOrientation class="param-type">ScreenOrientation</a>
           
       <div class="details-description">
         <p>Screen orientation override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">viewport</dt>
+        <dt class="param-name monospace optional">
+          viewport
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Viewport class="param-type">Page.Viewport</a>
           
@@ -527,6 +570,7 @@ autosizing and more.</p>
         <p>If set, the visible area of the page will be overridden to this viewport. This viewport
 change is not observed by the page, e.g. viewport-relative elements do not change positions.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -534,7 +578,6 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
       
       </dl>
     
-        
         
       </div>
     
@@ -548,6 +591,7 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
       <div class="details-description">
         <p>Emulates the given media type or media feature for CSS media queries.</p>
 
+        
       </div>
     
         
@@ -555,25 +599,31 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">media</dt>
+        <dt class="param-name monospace optional">
+          media
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Media type to emulate. Empty string disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">features</dt>
+        <dt class="param-name monospace optional">
+          features
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Emulation/#type-MediaFeature class="param-type">MediaFeature</a> ]</span></span>
           
       <div class="details-description">
         <p>Media features to emulate.</p>
 
+        
       </div>
     
           
@@ -581,7 +631,6 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
       
       </dl>
     
-        
         
       </div>
     
@@ -596,6 +645,7 @@ change is not observed by the page, e.g. viewport-relative elements do not chang
         <p>Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
 unavailable.</p>
 
+        
       </div>
     
         
@@ -603,37 +653,46 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">latitude</dt>
+        <dt class="param-name monospace optional">
+          latitude
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock latitude</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">longitude</dt>
+        <dt class="param-name monospace optional">
+          longitude
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock longitude</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">accuracy</dt>
+        <dt class="param-name monospace optional">
+          accuracy
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock accuracy</p>
 
+        
       </div>
     
           
@@ -641,7 +700,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -655,6 +713,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Switches script execution in the page.</p>
 
+        
       </div>
     
         
@@ -662,13 +721,16 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether script execution should be disabled in the page.</p>
 
+        
       </div>
     
           
@@ -676,7 +738,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -690,6 +751,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Enables touch on platforms which do not support them.</p>
 
+        
       </div>
     
         
@@ -697,25 +759,31 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the touch event emulation should be enabled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxTouchPoints</dt>
+        <dt class="param-name monospace optional">
+          maxTouchPoints
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Maximum touch points supported. Defaults to one.</p>
 
+        
       </div>
     
           
@@ -723,7 +791,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -737,6 +804,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Allows overriding user agent with the given string.</p>
 
+        
       </div>
     
         
@@ -744,37 +812,46 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">userAgent</dt>
+        <dt class="param-name monospace ">
+          userAgent
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User agent to use.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">acceptLanguage</dt>
+        <dt class="param-name monospace optional">
+          acceptLanguage
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Browser langugage to emulate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">platform</dt>
+        <dt class="param-name monospace optional">
+          platform
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The platform navigator.platform should return.</p>
 
+        
       </div>
     
           
@@ -782,7 +859,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -796,9 +872,9 @@ unavailable.</p>
       <div class="details-description">
         <p>Requests that page scale factor is reset to initial values.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -814,6 +890,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Enables CPU throttling to emulate slow CPUs.</p>
 
+        
       </div>
     
         
@@ -821,13 +898,16 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">rate</dt>
+        <dt class="param-name monospace ">
+          rate
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Throttling rate as a slowdown factor (1 is no throttle, 2 is 2x slowdown, etc).</p>
 
+        
       </div>
     
           
@@ -835,7 +915,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -846,18 +925,26 @@ unavailable.</p>
           <a href="#method-setDocumentCookieDisabled" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">disabled</dt>
+        <dt class="param-name monospace ">
+          disabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether document.coookie API should be disabled.</p>
 
+        
       </div>
     
           
@@ -865,7 +952,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -876,30 +962,43 @@ unavailable.</p>
           <a href="#method-setEmitTouchEventsForMouse" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether touch emulation based on mouse input should be enabled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">configuration</dt>
+        <dt class="param-name monospace optional">
+          configuration
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Touch/gesture events configuration. Default: current platform.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>mobile</code>, <code>desktop</code></div>
+    
       </div>
     
           
@@ -907,7 +1006,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -921,6 +1019,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Emulates the given vision deficiency.</p>
 
+        
       </div>
     
         
@@ -928,13 +1027,18 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Vision deficiency to emulate.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>none</code>, <code>achromatopsia</code>, <code>blurredVision</code>, <code>deuteranopia</code>, <code>protanopia</code>, <code>tritanopia</code></div>
+    
       </div>
     
           
@@ -942,7 +1046,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -956,6 +1059,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Enables or disables simulating a focused and active page.</p>
 
+        
       </div>
     
         
@@ -963,13 +1067,16 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to enable to disable focus emulation.</p>
 
+        
       </div>
     
           
@@ -977,7 +1084,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -991,6 +1097,7 @@ unavailable.</p>
       <div class="details-description">
         <p>Overrides default host system locale with the specified one.</p>
 
+        
       </div>
     
         
@@ -998,7 +1105,9 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">locale</dt>
+        <dt class="param-name monospace optional">
+          locale
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1006,6 +1115,7 @@ unavailable.</p>
         <p>ICU style C locale (e.g. &quot;en_US&quot;). If not specified or empty, disables the override and
 restores default host system locale.</p>
 
+        
       </div>
     
           
@@ -1013,7 +1123,6 @@ restores default host system locale.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1027,6 +1136,7 @@ restores default host system locale.</p>
       <div class="details-description">
         <p>Sets a specified page scale factor.</p>
 
+        
       </div>
     
         
@@ -1034,13 +1144,16 @@ restores default host system locale.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">pageScaleFactor</dt>
+        <dt class="param-name monospace ">
+          pageScaleFactor
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Page scale factor.</p>
 
+        
       </div>
     
           
@@ -1048,7 +1161,6 @@ restores default host system locale.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1059,18 +1171,26 @@ restores default host system locale.</p>
           <a href="#method-setScrollbarsHidden" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">hidden</dt>
+        <dt class="param-name monospace ">
+          hidden
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether scrollbars should be always hidden.</p>
 
+        
       </div>
     
           
@@ -1078,7 +1198,6 @@ restores default host system locale.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1092,6 +1211,7 @@ restores default host system locale.</p>
       <div class="details-description">
         <p>Overrides default host system timezone with the specified one.</p>
 
+        
       </div>
     
         
@@ -1099,7 +1219,9 @@ restores default host system locale.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timezoneId</dt>
+        <dt class="param-name monospace ">
+          timezoneId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1107,6 +1229,7 @@ restores default host system locale.</p>
         <p>The timezone identifier. If empty, disables the override and
 restores default host system timezone.</p>
 
+        
       </div>
     
           
@@ -1114,7 +1237,6 @@ restores default host system timezone.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1129,6 +1251,7 @@ restores default host system timezone.</p>
         <p>Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets
 the current virtual time policy.  Note this supersedes any previous time budget.</p>
 
+        
       </div>
     
         
@@ -1136,14 +1259,23 @@ the current virtual time policy.  Note this supersedes any previous time budget.
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">policy</dt>
+        <dt class="param-name monospace ">
+          policy
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Emulation/#type-VirtualTimePolicy class="param-type">VirtualTimePolicy</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">budget</dt>
+        <dt class="param-name monospace optional">
+          budget
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -1151,12 +1283,15 @@ the current virtual time policy.  Note this supersedes any previous time budget.
         <p>If set, after this many virtual milliseconds have elapsed virtual time will be paused and a
 virtualTimeBudgetExpired event is sent.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxVirtualTimeTaskStarvationCount</dt>
+        <dt class="param-name monospace optional">
+          maxVirtualTimeTaskStarvationCount
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1164,12 +1299,15 @@ virtualTimeBudgetExpired event is sent.</p>
         <p>If set this specifies the maximum number of tasks that can be run before virtual is forced
 forwards to prevent deadlock.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">waitForNavigation</dt>
+        <dt class="param-name monospace optional">
+          waitForNavigation
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1177,18 +1315,22 @@ forwards to prevent deadlock.</p>
         <p>If set the virtual time policy change should be deferred until any frame starts navigating.
 Note any previous deferred policy change is superseded.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">initialVirtualTime</dt>
+        <dt class="param-name monospace optional">
+          initialVirtualTime
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>If set, base::Time::Now will be overriden to initially return this value.</p>
 
+        
       </div>
     
           
@@ -1200,13 +1342,16 @@ Note any previous deferred policy change is superseded.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">virtualTimeTicksBase</dt>
+        <dt class="param-name monospace ">
+          virtualTimeTicksBase
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Absolute timestamp at which virtual time was first enabled (up time in milliseconds).</p>
 
+        
       </div>
     
           
@@ -1214,7 +1359,6 @@ Note any previous deferred policy change is superseded.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1227,6 +1371,7 @@ Note any previous deferred policy change is superseded.</p>
       <div class="details-description">
         <p>Overrides value returned by the javascript navigator object.</p>
 
+        
       </div>
     
         
@@ -1234,13 +1379,16 @@ Note any previous deferred policy change is superseded.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">platform</dt>
+        <dt class="param-name monospace ">
+          platform
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The platform navigator.platform should return.</p>
 
+        
       </div>
     
           
@@ -1248,7 +1396,6 @@ Note any previous deferred policy change is superseded.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1264,6 +1411,7 @@ Note any previous deferred policy change is superseded.</p>
 (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported
 on Android.</p>
 
+        
       </div>
     
         
@@ -1271,25 +1419,31 @@ on Android.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Frame width (DIP).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Frame height (DIP).</p>
 
+        
       </div>
     
           
@@ -1297,7 +1451,6 @@ on Android.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1317,9 +1470,9 @@ on Android.</p>
       <div class="details-description">
         <p>Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1338,28 +1491,46 @@ on Android.</p>
           <a href="#type-MediaFeature" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1373,6 +1544,7 @@ on Android.</p>
       <div class="details-description">
         <p>Screen orientation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1380,25 +1552,33 @@ on Android.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Orientation type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>portraitPrimary</code>, <code>portraitSecondary</code>, <code>landscapePrimary</code>, <code>landscapeSecondary</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">angle</dt>
+        <dt class="param-name monospace ">
+          angle
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Orientation angle.</p>
 
+        
       </div>
     
           
@@ -1406,7 +1586,6 @@ on Android.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1423,15 +1602,14 @@ allow the next delayed task (if any) to run; pause: The virtual time base may no
 pauseIfNetworkFetchesPending: The virtual time base may not advance if there are any pending
 resource fetches.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>advance</code>, <code>pause</code>, <code>pauseIfNetworkFetchesPending</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">advance, pause, pauseIfNetworkFetchesPending</div>
-    
       </div>
     
       </div>

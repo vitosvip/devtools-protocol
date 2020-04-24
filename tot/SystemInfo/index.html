@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>The SystemInfo domain defines methods and events for querying low-level system information.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -189,6 +190,7 @@
       <div class="details-description">
         <p>Returns information about the system.</p>
 
+        
       </div>
     
         
@@ -197,19 +199,24 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">gpu</dt>
+        <dt class="param-name monospace ">
+          gpu
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-GPUInfo class="param-type">GPUInfo</a>
           
       <div class="details-description">
         <p>Information about the GPUs on the system.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">modelName</dt>
+        <dt class="param-name monospace ">
+          modelName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -217,12 +224,15 @@
         <p>A platform-dependent description of the model of the machine. On Mac OS, this is, for
 example, &#39;MacBookPro&#39;. Will be the empty string if not supported.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">modelVersion</dt>
+        <dt class="param-name monospace ">
+          modelVersion
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -230,12 +240,15 @@ example, &#39;MacBookPro&#39;. Will be the empty string if not supported.</p>
         <p>A platform-dependent description of the version of the machine. On Mac OS, this is, for
 example, &#39;10.1&#39;. Will be the empty string if not supported.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">commandLine</dt>
+        <dt class="param-name monospace ">
+          commandLine
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -243,6 +256,7 @@ example, &#39;10.1&#39;. Will be the empty string if not supported.</p>
         <p>The command line string used to launch the browser. Will be the empty string if not
 supported.</p>
 
+        
       </div>
     
           
@@ -250,7 +264,6 @@ supported.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -263,6 +276,7 @@ supported.</p>
       <div class="details-description">
         <p>Returns information about all running processes.</p>
 
+        
       </div>
     
         
@@ -271,13 +285,16 @@ supported.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">processInfo</dt>
+        <dt class="param-name monospace ">
+          processInfo
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/SystemInfo/#type-ProcessInfo class="param-type">ProcessInfo</a> ]</span></span>
           
       <div class="details-description">
         <p>An array of process info blocks.</p>
 
+        
       </div>
     
           
@@ -285,7 +302,6 @@ supported.</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -305,6 +321,7 @@ supported.</p>
       <div class="details-description">
         <p>Describes a single graphics processor (GPU).</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -312,97 +329,121 @@ supported.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">vendorId</dt>
+        <dt class="param-name monospace ">
+          vendorId
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>PCI ID of the GPU vendor, if available; 0 otherwise.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceId</dt>
+        <dt class="param-name monospace ">
+          deviceId
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>PCI ID of the GPU device, if available; 0 otherwise.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">subSysId</dt>
+        <dt class="param-name monospace optional">
+          subSysId
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Sub sys ID of the GPU, only available on Windows.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">revision</dt>
+        <dt class="param-name monospace optional">
+          revision
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Revision of the GPU, only available on Windows.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">vendorString</dt>
+        <dt class="param-name monospace ">
+          vendorString
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String description of the GPU vendor, if the PCI ID is not available.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceString</dt>
+        <dt class="param-name monospace ">
+          deviceString
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String description of the GPU device, if the PCI ID is not available.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">driverVendor</dt>
+        <dt class="param-name monospace ">
+          driverVendor
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String description of the GPU driver vendor.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">driverVersion</dt>
+        <dt class="param-name monospace ">
+          driverVersion
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String description of the GPU driver version.</p>
 
+        
       </div>
     
           
@@ -410,7 +451,6 @@ supported.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -424,6 +464,7 @@ supported.</p>
       <div class="details-description">
         <p>Provides information about the GPU(s) on the system.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -431,85 +472,106 @@ supported.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">devices</dt>
+        <dt class="param-name monospace ">
+          devices
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/SystemInfo/#type-GPUDevice class="param-type">GPUDevice</a> ]</span></span>
           
       <div class="details-description">
         <p>The graphics devices on the system. Element 0 is the primary GPU.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">auxAttributes</dt>
+        <dt class="param-name monospace optional">
+          auxAttributes
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>An optional dictionary of additional GPU related attributes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">featureStatus</dt>
+        <dt class="param-name monospace optional">
+          featureStatus
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>An optional dictionary of graphics features and their status.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">driverBugWorkarounds</dt>
+        <dt class="param-name monospace ">
+          driverBugWorkarounds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>An optional array of GPU driver bug workarounds.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">videoDecoding</dt>
+        <dt class="param-name monospace ">
+          videoDecoding
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/SystemInfo/#type-VideoDecodeAcceleratorCapability class="param-type">VideoDecodeAcceleratorCapability</a> ]</span></span>
           
       <div class="details-description">
         <p>Supported accelerated video decoding capabilities.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">videoEncoding</dt>
+        <dt class="param-name monospace ">
+          videoEncoding
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/SystemInfo/#type-VideoEncodeAcceleratorCapability class="param-type">VideoEncodeAcceleratorCapability</a> ]</span></span>
           
       <div class="details-description">
         <p>Supported accelerated video encoding capabilities.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">imageDecoding</dt>
+        <dt class="param-name monospace ">
+          imageDecoding
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/SystemInfo/#type-ImageDecodeAcceleratorCapability class="param-type">ImageDecodeAcceleratorCapability</a> ]</span></span>
           
       <div class="details-description">
         <p>Supported accelerated image decoding capabilities.</p>
 
+        
       </div>
     
           
@@ -517,7 +579,6 @@ supported.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -532,6 +593,7 @@ supported.</p>
         <p>Describes a supported image decoding profile with its associated minimum and
 maximum resolutions and subsampling.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -539,49 +601,61 @@ maximum resolutions and subsampling.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">imageType</dt>
+        <dt class="param-name monospace ">
+          imageType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-ImageType class="param-type">ImageType</a>
           
       <div class="details-description">
         <p>Image coded, e.g. Jpeg.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxDimensions</dt>
+        <dt class="param-name monospace ">
+          maxDimensions
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
           
       <div class="details-description">
         <p>Maximum supported dimensions of the image in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">minDimensions</dt>
+        <dt class="param-name monospace ">
+          minDimensions
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
           
       <div class="details-description">
         <p>Minimum supported dimensions of the image in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">subsamplings</dt>
+        <dt class="param-name monospace ">
+          subsamplings
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/SystemInfo/#type-SubsamplingFormat class="param-type">SubsamplingFormat</a> ]</span></span>
           
       <div class="details-description">
         <p>Optional array of supported subsampling formats, e.g. 4:2:0, if known.</p>
 
+        
       </div>
     
           
@@ -589,7 +663,6 @@ maximum resolutions and subsampling.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -603,15 +676,14 @@ maximum resolutions and subsampling.</p>
       <div class="details-description">
         <p>Image format of a given image.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>jpeg</code>, <code>webp</code>, <code>unknown</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">jpeg, webp, unknown</div>
-    
       </div>
     
       <div class="details">
@@ -624,6 +696,7 @@ maximum resolutions and subsampling.</p>
       <div class="details-description">
         <p>Represents process info.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -631,31 +704,39 @@ maximum resolutions and subsampling.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Specifies process type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Specifies process id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cpuTime</dt>
+        <dt class="param-name monospace ">
+          cpuTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -663,6 +744,7 @@ maximum resolutions and subsampling.</p>
         <p>Specifies cumulative CPU usage in seconds across all threads of the
 process since the process start.</p>
 
+        
       </div>
     
           
@@ -670,7 +752,6 @@ process since the process start.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -684,6 +765,7 @@ process since the process start.</p>
       <div class="details-description">
         <p>Describes the width and height dimensions of an entity.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -691,25 +773,31 @@ process since the process start.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Width in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Height in pixels.</p>
 
+        
       </div>
     
           
@@ -717,7 +805,6 @@ process since the process start.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -731,15 +818,14 @@ process since the process start.</p>
       <div class="details-description">
         <p>YUV subsampling type of the pixels of a given image.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>yuv420</code>, <code>yuv422</code>, <code>yuv444</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">yuv420, yuv422, yuv444</div>
-    
       </div>
     
       <div class="details">
@@ -753,6 +839,7 @@ process since the process start.</p>
         <p>Describes a supported video decoding profile with its associated minimum and
 maximum resolutions.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -760,37 +847,46 @@ maximum resolutions.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Video codec profile that is supported, e.g. VP9 Profile 2.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxResolution</dt>
+        <dt class="param-name monospace ">
+          maxResolution
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
           
       <div class="details-description">
         <p>Maximum video dimensions in pixels supported for this |profile|.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">minResolution</dt>
+        <dt class="param-name monospace ">
+          minResolution
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
           
       <div class="details-description">
         <p>Minimum video dimensions in pixels supported for this |profile|.</p>
 
+        
       </div>
     
           
@@ -798,7 +894,6 @@ maximum resolutions.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -813,6 +908,7 @@ maximum resolutions.</p>
         <p>Describes a supported video encoding profile with its associated maximum
 resolution and maximum framerate.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -820,31 +916,39 @@ resolution and maximum framerate.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Video codec profile that is supported, e.g H264 Main.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxResolution</dt>
+        <dt class="param-name monospace ">
+          maxResolution
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/SystemInfo/#type-Size class="param-type">Size</a>
           
       <div class="details-description">
         <p>Maximum video dimensions in pixels supported for this |profile|.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxFramerateNumerator</dt>
+        <dt class="param-name monospace ">
+          maxFramerateNumerator
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -853,21 +957,28 @@ resolution and maximum framerate.</p>
 |profile|, as fraction&#39;s numerator and denominator, e.g. 24/1 fps,
 24000/1001 fps, etc.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxFramerateDenominator</dt>
+        <dt class="param-name monospace ">
+          maxFramerateDenominator
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     

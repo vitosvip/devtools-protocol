@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain provides various functionality related to drawing atop the inspected page.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -254,9 +255,9 @@
       <div class="details-description">
         <p>Disables domain notifications.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -272,9 +273,9 @@
       <div class="details-description">
         <p>Enables domain notifications.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -290,6 +291,7 @@
       <div class="details-description">
         <p>For testing.</p>
 
+        
       </div>
     
         
@@ -297,37 +299,46 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Id of the node to get highlight object for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeDistance</dt>
+        <dt class="param-name monospace optional">
+          includeDistance
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to include distance info.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeStyle</dt>
+        <dt class="param-name monospace optional">
+          includeStyle
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to include style info.</p>
 
+        
       </div>
     
           
@@ -339,13 +350,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">highlight</dt>
+        <dt class="param-name monospace ">
+          highlight
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>Highlight data for the node.</p>
 
+        
       </div>
     
           
@@ -353,7 +367,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -366,9 +379,9 @@
       <div class="details-description">
         <p>Hides any highlight.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -384,6 +397,7 @@
       <div class="details-description">
         <p>Highlights owner element of the frame with given id.</p>
 
+        
       </div>
     
         
@@ -391,37 +405,46 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Identifier of the frame to highlight.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentColor</dt>
+        <dt class="param-name monospace optional">
+          contentColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The content box highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentOutlineColor</dt>
+        <dt class="param-name monospace optional">
+          contentOutlineColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The content box highlight outline color (default: transparent).</p>
 
+        
       </div>
     
           
@@ -429,7 +452,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -444,6 +466,7 @@
         <p>Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or
 objectId must be specified.</p>
 
+        
       </div>
     
         
@@ -451,61 +474,76 @@ objectId must be specified.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">highlightConfig</dt>
+        <dt class="param-name monospace ">
+          highlightConfig
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Overlay/#type-HighlightConfig class="param-type">HighlightConfig</a>
           
       <div class="details-description">
         <p>A descriptor for the highlight appearance.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace optional">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Identifier of the node to highlight.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>Identifier of the backend node to highlight.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>JavaScript object id of the node to be highlighted.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">selector</dt>
+        <dt class="param-name monospace optional">
+          selector
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Selectors to highlight relevant nodes.</p>
 
+        
       </div>
     
           
@@ -513,7 +551,6 @@ objectId must be specified.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -527,6 +564,7 @@ objectId must be specified.</p>
       <div class="details-description">
         <p>Highlights given quad. Coordinates are absolute with respect to the main frame viewport.</p>
 
+        
       </div>
     
         
@@ -534,37 +572,46 @@ objectId must be specified.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">quad</dt>
+        <dt class="param-name monospace ">
+          quad
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Quad class="param-type">DOM.Quad</a>
           
       <div class="details-description">
         <p>Quad to highlight</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">color</dt>
+        <dt class="param-name monospace optional">
+          color
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">outlineColor</dt>
+        <dt class="param-name monospace optional">
+          outlineColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The highlight outline color (default: transparent).</p>
 
+        
       </div>
     
           
@@ -572,7 +619,6 @@ objectId must be specified.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -586,6 +632,7 @@ objectId must be specified.</p>
       <div class="details-description">
         <p>Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.</p>
 
+        
       </div>
     
         
@@ -593,73 +640,91 @@ objectId must be specified.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">x</dt>
+        <dt class="param-name monospace ">
+          x
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>X coordinate</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">y</dt>
+        <dt class="param-name monospace ">
+          y
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Y coordinate</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Rectangle width</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Rectangle height</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">color</dt>
+        <dt class="param-name monospace optional">
+          color
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">outlineColor</dt>
+        <dt class="param-name monospace optional">
+          outlineColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The highlight outline color (default: transparent).</p>
 
+        
       </div>
     
           
@@ -667,7 +732,6 @@ objectId must be specified.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -682,6 +746,7 @@ objectId must be specified.</p>
         <p>Enters the &#39;inspect&#39; mode. In this mode, elements that user is hovering over are highlighted.
 Backend then generates &#39;inspectNodeRequested&#39; event upon element selection.</p>
 
+        
       </div>
     
         
@@ -689,19 +754,24 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">mode</dt>
+        <dt class="param-name monospace ">
+          mode
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Overlay/#type-InspectMode class="param-type">InspectMode</a>
           
       <div class="details-description">
         <p>Set an inspection mode.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">highlightConfig</dt>
+        <dt class="param-name monospace optional">
+          highlightConfig
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Overlay/#type-HighlightConfig class="param-type">HighlightConfig</a>
           
@@ -709,6 +779,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
         <p>A descriptor for the highlight appearance of hovered-over nodes. May be omitted if <code>enabled
 == false</code>.</p>
 
+        
       </div>
     
           
@@ -716,7 +787,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -727,18 +797,26 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
           <a href="#method-setPausedInDebuggerMessage" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">message</dt>
+        <dt class="param-name monospace optional">
+          message
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The message to display, also triggers resume and step over controls.</p>
 
+        
       </div>
     
           
@@ -746,7 +824,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -760,6 +837,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Highlights owner element of all frames detected to be ads.</p>
 
+        
       </div>
     
         
@@ -767,13 +845,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">show</dt>
+        <dt class="param-name monospace ">
+          show
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing ad highlights</p>
 
+        
       </div>
     
           
@@ -781,7 +862,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -795,6 +875,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Requests that backend shows debug borders on layers</p>
 
+        
       </div>
     
         
@@ -802,13 +883,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">show</dt>
+        <dt class="param-name monospace ">
+          show
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing debug borders</p>
 
+        
       </div>
     
           
@@ -816,7 +900,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -830,6 +913,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Requests that backend shows the FPS counter</p>
 
+        
       </div>
     
         
@@ -837,13 +921,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">show</dt>
+        <dt class="param-name monospace ">
+          show
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing the FPS counter</p>
 
+        
       </div>
     
           
@@ -851,7 +938,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -865,6 +951,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Requests that backend shows hit-test borders on layers</p>
 
+        
       </div>
     
         
@@ -872,13 +959,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">show</dt>
+        <dt class="param-name monospace ">
+          show
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing hit-test borders</p>
 
+        
       </div>
     
           
@@ -886,7 +976,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -900,6 +989,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Requests that backend shows layout shift regions</p>
 
+        
       </div>
     
         
@@ -907,13 +997,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing layout shift regions</p>
 
+        
       </div>
     
           
@@ -921,7 +1014,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -935,6 +1027,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Requests that backend shows paint rectangles</p>
 
+        
       </div>
     
         
@@ -942,13 +1035,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing paint rectangles</p>
 
+        
       </div>
     
           
@@ -956,7 +1052,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -970,6 +1065,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Requests that backend shows scroll bottleneck rects</p>
 
+        
       </div>
     
         
@@ -977,13 +1073,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">show</dt>
+        <dt class="param-name monospace ">
+          show
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True for showing scroll bottleneck rects</p>
 
+        
       </div>
     
           
@@ -991,7 +1090,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -1005,6 +1103,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Paints viewport size upon main frame resize.</p>
 
+        
       </div>
     
         
@@ -1012,13 +1111,16 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">show</dt>
+        <dt class="param-name monospace ">
+          show
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to paint size or not.</p>
 
+        
       </div>
     
           
@@ -1026,7 +1128,6 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       
       </dl>
     
-        
         
       </div>
     
@@ -1046,9 +1147,9 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       <div class="details-description">
         <p>Fired when user cancels the inspect mode.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1065,6 +1166,7 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
         <p>Fired when the node should be inspected. This happens after call to <code>setInspectMode</code> or when
 user manually inspects an element.</p>
 
+        
       </div>
     
         
@@ -1072,13 +1174,16 @@ user manually inspects an element.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace ">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>Id of the node to inspect.</p>
 
+        
       </div>
     
           
@@ -1086,7 +1191,6 @@ user manually inspects an element.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1100,6 +1204,7 @@ user manually inspects an element.</p>
       <div class="details-description">
         <p>Fired when the node should be highlighted. This happens after call to <code>setInspectMode</code>.</p>
 
+        
       </div>
     
         
@@ -1107,16 +1212,22 @@ user manually inspects an element.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1130,6 +1241,7 @@ user manually inspects an element.</p>
       <div class="details-description">
         <p>Fired when user asks to capture screenshot of some area on the page.</p>
 
+        
       </div>
     
         
@@ -1137,13 +1249,16 @@ user manually inspects an element.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">viewport</dt>
+        <dt class="param-name monospace ">
+          viewport
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Viewport class="param-type">Page.Viewport</a>
           
       <div class="details-description">
         <p>Viewport to capture, in device independent pixels (dip).</p>
 
+        
       </div>
     
           
@@ -1151,7 +1266,6 @@ user manually inspects an element.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1171,6 +1285,7 @@ user manually inspects an element.</p>
       <div class="details-description">
         <p>Configuration data for the highlighting of page elements.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1178,145 +1293,181 @@ user manually inspects an element.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">showInfo</dt>
+        <dt class="param-name monospace optional">
+          showInfo
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the node info tooltip should be shown (default: false).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">showStyles</dt>
+        <dt class="param-name monospace optional">
+          showStyles
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the node styles in the tooltip (default: false).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">showRulers</dt>
+        <dt class="param-name monospace optional">
+          showRulers
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the rulers should be shown (default: false).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">showExtensionLines</dt>
+        <dt class="param-name monospace optional">
+          showExtensionLines
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the extension lines from node to the rulers should be shown (default: false).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentColor</dt>
+        <dt class="param-name monospace optional">
+          contentColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The content box highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">paddingColor</dt>
+        <dt class="param-name monospace optional">
+          paddingColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The padding highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">borderColor</dt>
+        <dt class="param-name monospace optional">
+          borderColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The border highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">marginColor</dt>
+        <dt class="param-name monospace optional">
+          marginColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The margin highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">eventTargetColor</dt>
+        <dt class="param-name monospace optional">
+          eventTargetColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The event target element highlight fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">shapeColor</dt>
+        <dt class="param-name monospace optional">
+          shapeColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The shape outside fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">shapeMarginColor</dt>
+        <dt class="param-name monospace optional">
+          shapeMarginColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The shape margin fill color (default: transparent).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cssGridColor</dt>
+        <dt class="param-name monospace optional">
+          cssGridColor
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
           
       <div class="details-description">
         <p>The grid layout color (default: transparent).</p>
 
+        
       </div>
     
           
@@ -1324,7 +1475,6 @@ user manually inspects an element.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1335,13 +1485,16 @@ user manually inspects an element.</p>
           <a href="#type-InspectMode" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>searchForNode</code>, <code>searchForUAShadowDOM</code>, <code>captureAreaScreenshot</code>, <code>showDistances</code>, <code>none</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">searchForNode, searchForUAShadowDOM, captureAreaScreenshot, showDistances, none</div>
-    
       </div>
     
       </div>

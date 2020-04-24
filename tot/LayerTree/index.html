@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">LayerTree Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
@@ -219,6 +224,7 @@
       <div class="details-description">
         <p>Provides the reasons why the given layer was composited.</p>
 
+        
       </div>
     
         
@@ -226,13 +232,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layerId</dt>
+        <dt class="param-name monospace ">
+          layerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The id of the layer for which we want to get the reasons it was composited.</p>
 
+        
       </div>
     
           
@@ -244,25 +253,31 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">compositingReasons</dt>
+        <dt class="param-name monospace ">
+          compositingReasons
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>A list of strings specifying reasons for the given layer to become composited.</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">compositingReasonIds</dt>
+        <dt class="param-name monospace ">
+          compositingReasonIds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>A list of strings specifying reason IDs for the given layer to become composited.</p>
 
+        
       </div>
     
           
@@ -270,7 +285,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -283,9 +297,9 @@
       <div class="details-description">
         <p>Disables compositing tree inspection.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -301,9 +315,9 @@
       <div class="details-description">
         <p>Enables compositing tree inspection.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -319,6 +333,7 @@
       <div class="details-description">
         <p>Returns the snapshot identifier.</p>
 
+        
       </div>
     
         
@@ -326,13 +341,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">tiles</dt>
+        <dt class="param-name monospace ">
+          tiles
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/LayerTree/#type-PictureTile class="param-type">PictureTile</a> ]</span></span>
           
       <div class="details-description">
         <p>An array of tiles composing the snapshot.</p>
 
+        
       </div>
     
           
@@ -344,13 +362,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">snapshotId</dt>
+        <dt class="param-name monospace ">
+          snapshotId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-SnapshotId class="param-type">SnapshotId</a>
           
       <div class="details-description">
         <p>The id of the snapshot.</p>
 
+        
       </div>
     
           
@@ -358,7 +379,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -371,6 +391,7 @@
       <div class="details-description">
         <p>Returns the layer snapshot identifier.</p>
 
+        
       </div>
     
         
@@ -378,13 +399,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layerId</dt>
+        <dt class="param-name monospace ">
+          layerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The id of the layer.</p>
 
+        
       </div>
     
           
@@ -396,13 +420,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">snapshotId</dt>
+        <dt class="param-name monospace ">
+          snapshotId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-SnapshotId class="param-type">SnapshotId</a>
           
       <div class="details-description">
         <p>The id of the layer snapshot.</p>
 
+        
       </div>
     
           
@@ -410,7 +437,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -420,54 +446,71 @@
           <a href="#method-profileSnapshot" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">snapshotId</dt>
+        <dt class="param-name monospace ">
+          snapshotId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-SnapshotId class="param-type">SnapshotId</a>
           
       <div class="details-description">
         <p>The id of the layer snapshot.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">minRepeatCount</dt>
+        <dt class="param-name monospace optional">
+          minRepeatCount
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The maximum number of times to replay the snapshot (1, if not specified).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">minDuration</dt>
+        <dt class="param-name monospace optional">
+          minDuration
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>The minimum duration (in seconds) to replay the snapshot.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clipRect</dt>
+        <dt class="param-name monospace optional">
+          clipRect
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>The clip rectangle to apply when replaying the snapshot.</p>
 
+        
       </div>
     
           
@@ -479,13 +522,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timings</dt>
+        <dt class="param-name monospace ">
+          timings
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/LayerTree/#type-PaintProfile class="param-type">PaintProfile</a> ]</span></span>
           
       <div class="details-description">
         <p>The array of paint profiles, one per run.</p>
 
+        
       </div>
     
           
@@ -493,7 +539,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -506,6 +551,7 @@
       <div class="details-description">
         <p>Releases layer snapshot captured by the back-end.</p>
 
+        
       </div>
     
         
@@ -513,13 +559,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">snapshotId</dt>
+        <dt class="param-name monospace ">
+          snapshotId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-SnapshotId class="param-type">SnapshotId</a>
           
       <div class="details-description">
         <p>The id of the layer snapshot.</p>
 
+        
       </div>
     
           
@@ -527,7 +576,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -541,6 +589,7 @@
       <div class="details-description">
         <p>Replays the layer snapshot and returns the resulting bitmap.</p>
 
+        
       </div>
     
         
@@ -548,49 +597,61 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">snapshotId</dt>
+        <dt class="param-name monospace ">
+          snapshotId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-SnapshotId class="param-type">SnapshotId</a>
           
       <div class="details-description">
         <p>The id of the layer snapshot.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fromStep</dt>
+        <dt class="param-name monospace optional">
+          fromStep
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The first step to replay from (replay from the very start if not specified).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">toStep</dt>
+        <dt class="param-name monospace optional">
+          toStep
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The last step to replay to (replay till the end if not specified).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace optional">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>The scale to apply while replaying (defaults to 1).</p>
 
+        
       </div>
     
           
@@ -602,13 +663,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">dataURL</dt>
+        <dt class="param-name monospace ">
+          dataURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>A data: URL for resulting image.</p>
 
+        
       </div>
     
           
@@ -616,7 +680,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -629,6 +692,7 @@
       <div class="details-description">
         <p>Replays the layer snapshot and returns canvas log.</p>
 
+        
       </div>
     
         
@@ -636,13 +700,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">snapshotId</dt>
+        <dt class="param-name monospace ">
+          snapshotId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-SnapshotId class="param-type">SnapshotId</a>
           
       <div class="details-description">
         <p>The id of the layer snapshot.</p>
 
+        
       </div>
     
           
@@ -654,13 +721,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">commandLog</dt>
+        <dt class="param-name monospace ">
+          commandLog
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">object</span> ]</span></span>
           
       <div class="details-description">
         <p>The array of canvas function calls.</p>
 
+        
       </div>
     
           
@@ -668,7 +738,6 @@
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -684,30 +753,41 @@
           <a href="#event-layerPainted" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layerId</dt>
+        <dt class="param-name monospace ">
+          layerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The id of the painted layer.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clip</dt>
+        <dt class="param-name monospace ">
+          clip
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>Clip rectangle.</p>
 
+        
       </div>
     
           
@@ -715,7 +795,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -726,18 +805,26 @@
           <a href="#event-layerTreeDidChange" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layers</dt>
+        <dt class="param-name monospace optional">
+          layers
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/LayerTree/#type-Layer class="param-type">Layer</a> ]</span></span>
           
       <div class="details-description">
         <p>Layer tree, absent if not in the comspositing mode.</p>
 
+        
       </div>
     
           
@@ -745,7 +832,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -765,6 +851,7 @@
       <div class="details-description">
         <p>Information about a compositing layer.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -772,151 +859,189 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layerId</dt>
+        <dt class="param-name monospace ">
+          layerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The unique id for this layer.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parentLayerId</dt>
+        <dt class="param-name monospace optional">
+          parentLayerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The id of parent (not present for root).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>The backend id for the node associated with this layer.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">offsetX</dt>
+        <dt class="param-name monospace ">
+          offsetX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Offset from parent layer, X coordinate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">offsetY</dt>
+        <dt class="param-name monospace ">
+          offsetY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Offset from parent layer, Y coordinate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Layer width.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Layer height.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">transform</dt>
+        <dt class="param-name monospace optional">
+          transform
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">number</span> ]</span></span>
           
       <div class="details-description">
         <p>Transformation matrix for layer, default is identity matrix</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">anchorX</dt>
+        <dt class="param-name monospace optional">
+          anchorX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Transform anchor point X, absent if no transform specified</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">anchorY</dt>
+        <dt class="param-name monospace optional">
+          anchorY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Transform anchor point Y, absent if no transform specified</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">anchorZ</dt>
+        <dt class="param-name monospace optional">
+          anchorZ
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Transform anchor point Z, absent if no transform specified</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">paintCount</dt>
+        <dt class="param-name monospace ">
+          paintCount
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Indicates how many time this layer has painted.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">drawsContent</dt>
+        <dt class="param-name monospace ">
+          drawsContent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -924,42 +1049,52 @@
         <p>Indicates whether this layer hosts any content, rather than being used for
 transform/scrolling purposes only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">invisible</dt>
+        <dt class="param-name monospace optional">
+          invisible
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Set if layer is not visible.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollRects</dt>
+        <dt class="param-name monospace optional">
+          scrollRects
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/LayerTree/#type-ScrollRect class="param-type">ScrollRect</a> ]</span></span>
           
       <div class="details-description">
         <p>Rectangles scrolling on main thread only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stickyPositionConstraint</dt>
+        <dt class="param-name monospace optional">
+          stickyPositionConstraint
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-StickyPositionConstraint class="param-type">StickyPositionConstraint</a>
           
       <div class="details-description">
         <p>Sticky position constraint information</p>
 
+        
       </div>
     
           
@@ -967,7 +1102,6 @@ transform/scrolling purposes only.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -981,10 +1115,10 @@ transform/scrolling purposes only.</p>
       <div class="details-description">
         <p>Unique Layer identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -999,10 +1133,10 @@ transform/scrolling purposes only.</p>
       <div class="details-description">
         <p>Array of timings, one per paint step.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>array</strong></p>
-        
         
         
       </div>
@@ -1017,6 +1151,7 @@ transform/scrolling purposes only.</p>
       <div class="details-description">
         <p>Serialized fragment of layer picture along with its offset within the layer.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1024,37 +1159,46 @@ transform/scrolling purposes only.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">x</dt>
+        <dt class="param-name monospace ">
+          x
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Offset from owning layer left boundary</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">y</dt>
+        <dt class="param-name monospace ">
+          y
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Offset from owning layer top boundary</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">picture</dt>
+        <dt class="param-name monospace ">
+          picture
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded snapshot data.</p>
 
+        
       </div>
     
           
@@ -1062,7 +1206,6 @@ transform/scrolling purposes only.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1076,6 +1219,7 @@ transform/scrolling purposes only.</p>
       <div class="details-description">
         <p>Rectangle where scrolling happens on the main thread.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1083,25 +1227,33 @@ transform/scrolling purposes only.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">rect</dt>
+        <dt class="param-name monospace ">
+          rect
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>Rectangle itself.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Reason for rectangle to force scrolling on the main thread</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>RepaintsOnScroll</code>, <code>TouchEventHandler</code>, <code>WheelEventHandler</code></div>
+    
       </div>
     
           
@@ -1109,7 +1261,6 @@ transform/scrolling purposes only.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1123,10 +1274,10 @@ transform/scrolling purposes only.</p>
       <div class="details-description">
         <p>Unique snapshot identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -1141,6 +1292,7 @@ transform/scrolling purposes only.</p>
       <div class="details-description">
         <p>Sticky position constraints.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1148,49 +1300,61 @@ transform/scrolling purposes only.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">stickyBoxRect</dt>
+        <dt class="param-name monospace ">
+          stickyBoxRect
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>Layout rectangle of the sticky element before being shifted</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">containingBlockRect</dt>
+        <dt class="param-name monospace ">
+          containingBlockRect
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>Layout rectangle of the containing block of the sticky element</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nearestLayerShiftingStickyBox</dt>
+        <dt class="param-name monospace optional">
+          nearestLayerShiftingStickyBox
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The nearest sticky layer that shifts the sticky box</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nearestLayerShiftingContainingBlock</dt>
+        <dt class="param-name monospace optional">
+          nearestLayerShiftingContainingBlock
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/LayerTree/#type-LayerId class="param-type">LayerId</a>
           
       <div class="details-description">
         <p>The nearest sticky layer that shifts the containing block</p>
 
+        
       </div>
     
           
@@ -1198,7 +1362,6 @@ transform/scrolling purposes only.</p>
       
       </dl>
     
-        
         
       </div>
     

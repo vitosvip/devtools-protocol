@@ -113,6 +113,7 @@
         <p>Network domain allows tracking network activities of the page. It exposes information about http,
 file, data and other requests and responses, their headers, bodies, timing, etc.</p>
 
+        
       </div>
     
         
@@ -405,9 +406,9 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       <div class="details-description">
         <p>Clears browser cache.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -423,9 +424,9 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       <div class="details-description">
         <p>Clears browser cookies.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -441,6 +442,7 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       <div class="details-description">
         <p>Deletes browser cookies with matching name and url or domain/path pair.</p>
 
+        
       </div>
     
         
@@ -448,19 +450,24 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of the cookies to remove.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -468,30 +475,37 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
         <p>If specified, deletes all the cookies with the given name where domain and path match
 provided URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">domain</dt>
+        <dt class="param-name monospace optional">
+          domain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>If specified, deletes only cookies with the exact domain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">path</dt>
+        <dt class="param-name monospace optional">
+          path
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>If specified, deletes only cookies with the exact path.</p>
 
+        
       </div>
     
           
@@ -499,7 +513,6 @@ provided URL.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -513,9 +526,9 @@ provided URL.</p>
       <div class="details-description">
         <p>Disables network tracking, prevents network events from being sent to the client.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -531,6 +544,7 @@ provided URL.</p>
       <div class="details-description">
         <p>Activates emulation of network conditions.</p>
 
+        
       </div>
     
         
@@ -538,61 +552,76 @@ provided URL.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">offline</dt>
+        <dt class="param-name monospace ">
+          offline
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True to emulate internet disconnection.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">latency</dt>
+        <dt class="param-name monospace ">
+          latency
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Minimum latency from request sent to response headers received (ms).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">downloadThroughput</dt>
+        <dt class="param-name monospace ">
+          downloadThroughput
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Maximal aggregated download throughput (bytes/sec). -1 disables download throttling.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">uploadThroughput</dt>
+        <dt class="param-name monospace ">
+          uploadThroughput
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Maximal aggregated upload throughput (bytes/sec).  -1 disables upload throttling.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectionType</dt>
+        <dt class="param-name monospace optional">
+          connectionType
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ConnectionType class="param-type">ConnectionType</a>
           
       <div class="details-description">
         <p>Connection type if known.</p>
 
+        
       </div>
     
           
@@ -600,7 +629,6 @@ provided URL.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -614,6 +642,7 @@ provided URL.</p>
       <div class="details-description">
         <p>Enables network tracking, network events will now be delivered to the client.</p>
 
+        
       </div>
     
         
@@ -621,37 +650,46 @@ provided URL.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">maxTotalBufferSize</dt>
+        <dt class="param-name monospace optional">
+          maxTotalBufferSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Buffer size in bytes to use when preserving network payloads (XHRs, etc).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">maxResourceBufferSize</dt>
+        <dt class="param-name monospace optional">
+          maxResourceBufferSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Per-resource buffer size in bytes to use when preserving network payloads (XHRs, etc).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">maxPostDataSize</dt>
+        <dt class="param-name monospace optional">
+          maxPostDataSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Longest post body size (in bytes) that would be included in requestWillBeSent notification</p>
 
+        
       </div>
     
           
@@ -659,7 +697,6 @@ provided URL.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -674,6 +711,7 @@ provided URL.</p>
         <p>Returns all browser cookies. Depending on the backend support, will return detailed cookie
 information in the <code>cookies</code> field.</p>
 
+        
       </div>
     
         
@@ -682,13 +720,16 @@ information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace ">
+          cookies
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Network/#type-Cookie class="param-type">Cookie</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of cookie objects.</p>
 
+        
       </div>
     
           
@@ -696,7 +737,6 @@ information in the <code>cookies</code> field.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -710,6 +750,7 @@ information in the <code>cookies</code> field.</p>
         <p>Returns all browser cookies for the current URL. Depending on the backend support, will return
 detailed cookie information in the <code>cookies</code> field.</p>
 
+        
       </div>
     
         
@@ -717,13 +758,16 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">urls</dt>
+        <dt class="param-name monospace optional">
+          urls
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>The list of URLs for which applicable cookies will be fetched</p>
 
+        
       </div>
     
           
@@ -735,13 +779,16 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace ">
+          cookies
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Network/#type-Cookie class="param-type">Cookie</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of cookie objects.</p>
 
+        
       </div>
     
           
@@ -749,7 +796,6 @@ detailed cookie information in the <code>cookies</code> field.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -762,6 +808,7 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <div class="details-description">
         <p>Returns post data sent with the request. Returns an error when no data was sent with the request.</p>
 
+        
       </div>
     
         
@@ -769,13 +816,16 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Identifier of the network request to get content for.</p>
 
+        
       </div>
     
           
@@ -787,13 +837,16 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">postData</dt>
+        <dt class="param-name monospace ">
+          postData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Request body string, omitting files from multipart requests</p>
 
+        
       </div>
     
           
@@ -801,7 +854,6 @@ detailed cookie information in the <code>cookies</code> field.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -814,6 +866,7 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <div class="details-description">
         <p>Returns content served for the given request.</p>
 
+        
       </div>
     
         
@@ -821,13 +874,16 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Identifier of the network request to get content for.</p>
 
+        
       </div>
     
           
@@ -839,25 +895,31 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">body</dt>
+        <dt class="param-name monospace ">
+          body
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Response body.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">base64Encoded</dt>
+        <dt class="param-name monospace ">
+          base64Encoded
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if content was sent as base64.</p>
 
+        
       </div>
     
           
@@ -865,7 +927,6 @@ detailed cookie information in the <code>cookies</code> field.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -878,6 +939,7 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <div class="details-description">
         <p>Toggles ignoring cache for each request. If <code>true</code>, cache will not be used.</p>
 
+        
       </div>
     
         
@@ -885,13 +947,16 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cacheDisabled</dt>
+        <dt class="param-name monospace ">
+          cacheDisabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Cache disabled state.</p>
 
+        
       </div>
     
           
@@ -899,7 +964,6 @@ detailed cookie information in the <code>cookies</code> field.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -913,6 +977,7 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <div class="details-description">
         <p>Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.</p>
 
+        
       </div>
     
         
@@ -920,31 +985,39 @@ detailed cookie information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -952,90 +1025,112 @@ detailed cookie information in the <code>cookies</code> field.</p>
         <p>The request-URI to associate with the setting of the cookie. This value can affect the
 default domain and path values of the created cookie.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">domain</dt>
+        <dt class="param-name monospace optional">
+          domain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie domain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">path</dt>
+        <dt class="param-name monospace optional">
+          path
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie path.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">secure</dt>
+        <dt class="param-name monospace optional">
+          secure
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if cookie is secure.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">httpOnly</dt>
+        <dt class="param-name monospace optional">
+          httpOnly
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if cookie is http-only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sameSite</dt>
+        <dt class="param-name monospace optional">
+          sameSite
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CookieSameSite class="param-type">CookieSameSite</a>
           
       <div class="details-description">
         <p>Cookie SameSite type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">expires</dt>
+        <dt class="param-name monospace optional">
+          expires
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Cookie expiration date, session cookie if not set</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">priority</dt>
+        <dt class="param-name monospace optional">
+          priority
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CookiePriority class="param-type">CookiePriority</a>
           
       <div class="details-description">
         <p>Cookie Priority type.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1047,13 +1142,16 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">success</dt>
+        <dt class="param-name monospace ">
+          success
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if successfully set cookie.</p>
 
+        
       </div>
     
           
@@ -1061,7 +1159,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1074,6 +1171,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Sets given cookies.</p>
 
+        
       </div>
     
         
@@ -1081,13 +1179,16 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace ">
+          cookies
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Network/#type-CookieParam class="param-type">CookieParam</a> ]</span></span>
           
       <div class="details-description">
         <p>Cookies to be set.</p>
 
+        
       </div>
     
           
@@ -1095,7 +1196,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1109,6 +1209,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Specifies whether to always send extra HTTP headers with the requests from this page.</p>
 
+        
       </div>
     
         
@@ -1116,13 +1217,16 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>Map with extra HTTP headers.</p>
 
+        
       </div>
     
           
@@ -1130,7 +1234,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1144,6 +1247,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Allows overriding user agent with the given string.</p>
 
+        
       </div>
     
         
@@ -1151,37 +1255,46 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">userAgent</dt>
+        <dt class="param-name monospace ">
+          userAgent
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User agent to use.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">acceptLanguage</dt>
+        <dt class="param-name monospace optional">
+          acceptLanguage
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Browser langugage to emulate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">platform</dt>
+        <dt class="param-name monospace optional">
+          platform
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The platform navigator.platform should return.</p>
 
+        
       </div>
     
           
@@ -1189,7 +1302,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1209,6 +1321,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when data chunk was received over the network.</p>
 
+        
       </div>
     
         
@@ -1216,49 +1329,61 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dataLength</dt>
+        <dt class="param-name monospace ">
+          dataLength
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Data chunk length.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedDataLength</dt>
+        <dt class="param-name monospace ">
+          encodedDataLength
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Actual bytes received (might be less than dataLength for compressed encodings).</p>
 
+        
       </div>
     
           
@@ -1266,7 +1391,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1280,6 +1404,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when EventSource message is received.</p>
 
+        
       </div>
     
         
@@ -1287,61 +1412,76 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">eventName</dt>
+        <dt class="param-name monospace ">
+          eventName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">eventId</dt>
+        <dt class="param-name monospace ">
+          eventId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message content.</p>
 
+        
       </div>
     
           
@@ -1349,7 +1489,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1363,6 +1502,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when HTTP request has failed to load.</p>
 
+        
       </div>
     
         
@@ -1370,73 +1510,91 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ResourceType class="param-type">ResourceType</a>
           
       <div class="details-description">
         <p>Resource type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorText</dt>
+        <dt class="param-name monospace ">
+          errorText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User friendly error message.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">canceled</dt>
+        <dt class="param-name monospace optional">
+          canceled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if loading was canceled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">blockedReason</dt>
+        <dt class="param-name monospace optional">
+          blockedReason
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-BlockedReason class="param-type">BlockedReason</a>
           
       <div class="details-description">
         <p>The reason why loading was blocked, if any.</p>
 
+        
       </div>
     
           
@@ -1444,7 +1602,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1458,6 +1615,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when HTTP request has finished loading.</p>
 
+        
       </div>
     
         
@@ -1465,43 +1623,54 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedDataLength</dt>
+        <dt class="param-name monospace ">
+          encodedDataLength
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Total number of bytes received for this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">shouldReportCorbBlocking</dt>
+        <dt class="param-name monospace optional">
+          shouldReportCorbBlocking
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1509,6 +1678,7 @@ default domain and path values of the created cookie.</p>
         <p>Set when 1) response was blocked by Cross-Origin Read Blocking and also
 2) this needs to be reported to the DevTools console.</p>
 
+        
       </div>
     
           
@@ -1516,7 +1686,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1530,6 +1699,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired if request ended up loading from cache.</p>
 
+        
       </div>
     
         
@@ -1537,13 +1707,16 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
@@ -1551,7 +1724,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1565,6 +1737,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when page is about to send HTTP request.</p>
 
+        
       </div>
     
         
@@ -1572,133 +1745,166 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace ">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-LoaderId class="param-type">LoaderId</a>
           
       <div class="details-description">
         <p>Loader identifier. Empty string if the request is fetched from worker.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">documentURL</dt>
+        <dt class="param-name monospace ">
+          documentURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the document this request is loaded for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace ">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Request class="param-type">Request</a>
           
       <div class="details-description">
         <p>Request data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">wallTime</dt>
+        <dt class="param-name monospace ">
+          wallTime
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">initiator</dt>
+        <dt class="param-name monospace ">
+          initiator
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Initiator class="param-type">Initiator</a>
           
       <div class="details-description">
         <p>Request initiator.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">redirectResponse</dt>
+        <dt class="param-name monospace optional">
+          redirectResponse
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Response class="param-type">Response</a>
           
       <div class="details-description">
         <p>Redirect response data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace optional">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ResourceType class="param-type">ResourceType</a>
           
       <div class="details-description">
         <p>Type of this resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace optional">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Frame identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hasUserGesture</dt>
+        <dt class="param-name monospace optional">
+          hasUserGesture
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the request is initiated by a user gesture. Defaults to false.</p>
 
+        
       </div>
     
           
@@ -1706,7 +1912,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1720,6 +1925,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when HTTP response is available.</p>
 
+        
       </div>
     
         
@@ -1727,73 +1933,91 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace ">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-LoaderId class="param-type">LoaderId</a>
           
       <div class="details-description">
         <p>Loader identifier. Empty string if the request is fetched from worker.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ResourceType class="param-type">ResourceType</a>
           
       <div class="details-description">
         <p>Resource type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace ">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Response class="param-type">Response</a>
           
       <div class="details-description">
         <p>Response data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace optional">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>Frame identifier.</p>
 
+        
       </div>
     
           
@@ -1801,7 +2025,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1815,6 +2038,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when WebSocket is closed.</p>
 
+        
       </div>
     
         
@@ -1822,25 +2046,31 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
@@ -1848,7 +2078,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1862,6 +2091,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired upon WebSocket creation.</p>
 
+        
       </div>
     
         
@@ -1869,37 +2099,46 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>WebSocket request URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">initiator</dt>
+        <dt class="param-name monospace optional">
+          initiator
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Initiator class="param-type">Initiator</a>
           
       <div class="details-description">
         <p>Request initiator.</p>
 
+        
       </div>
     
           
@@ -1907,7 +2146,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1921,6 +2159,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when WebSocket message error occurs.</p>
 
+        
       </div>
     
         
@@ -1928,37 +2167,46 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorMessage</dt>
+        <dt class="param-name monospace ">
+          errorMessage
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>WebSocket error message.</p>
 
+        
       </div>
     
           
@@ -1966,7 +2214,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1980,6 +2227,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when WebSocket message is received.</p>
 
+        
       </div>
     
         
@@ -1987,37 +2235,46 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace ">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-WebSocketFrame class="param-type">WebSocketFrame</a>
           
       <div class="details-description">
         <p>WebSocket response data.</p>
 
+        
       </div>
     
           
@@ -2025,7 +2282,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2039,6 +2295,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when WebSocket message is sent.</p>
 
+        
       </div>
     
         
@@ -2046,37 +2303,46 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace ">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-WebSocketFrame class="param-type">WebSocketFrame</a>
           
       <div class="details-description">
         <p>WebSocket response data.</p>
 
+        
       </div>
     
           
@@ -2084,7 +2350,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2098,6 +2363,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when WebSocket handshake response becomes available.</p>
 
+        
       </div>
     
         
@@ -2105,37 +2371,46 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace ">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-WebSocketResponse class="param-type">WebSocketResponse</a>
           
       <div class="details-description">
         <p>WebSocket response data.</p>
 
+        
       </div>
     
           
@@ -2143,7 +2418,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2157,6 +2431,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Fired when WebSocket is about to initiate handshake.</p>
 
+        
       </div>
     
         
@@ -2164,49 +2439,61 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Request identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-MonotonicTime class="param-type">MonotonicTime</a>
           
       <div class="details-description">
         <p>Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">wallTime</dt>
+        <dt class="param-name monospace ">
+          wallTime
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>UTC Timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace ">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-WebSocketRequest class="param-type">WebSocketRequest</a>
           
       <div class="details-description">
         <p>WebSocket request data.</p>
 
+        
       </div>
     
           
@@ -2214,7 +2501,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2234,15 +2520,14 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>The reason why request was blocked.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>other</code>, <code>csp</code>, <code>mixed-content</code>, <code>origin</code>, <code>inspector</code>, <code>subresource-filter</code>, <code>content-type</code>, <code>collapsed-by-client</code>, <code>coep-frame-resource-needs-coep-header</code>, <code>coop-sandboxed-iframe-cannot-navigate-to-coop-page</code>, <code>corp-not-same-origin</code>, <code>corp-not-same-origin-after-defaulted-to-same-origin-by-coep</code>, <code>corp-not-same-site</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">other, csp, mixed-content, origin, inspector, subresource-filter, content-type, collapsed-by-client, coep-frame-resource-needs-coep-header, coop-sandboxed-iframe-cannot-navigate-to-coop-page, corp-not-same-origin, corp-not-same-origin-after-defaulted-to-same-origin-by-coep, corp-not-same-site</div>
-    
       </div>
     
       <div class="details">
@@ -2255,6 +2540,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Information about the cached resource.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2262,49 +2548,61 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL. This is the url of the original network request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ResourceType class="param-type">ResourceType</a>
           
       <div class="details-description">
         <p>Type of this resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace optional">
+          response
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Response class="param-type">Response</a>
           
       <div class="details-description">
         <p>Cached response data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bodySize</dt>
+        <dt class="param-name monospace ">
+          bodySize
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Cached response body size.</p>
 
+        
       </div>
     
           
@@ -2312,7 +2610,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2326,15 +2623,14 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Whether the request complied with Certificate Transparency policy.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>unknown</code>, <code>not-compliant</code>, <code>compliant</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">unknown, not-compliant, compliant</div>
-    
       </div>
     
       <div class="details">
@@ -2347,15 +2643,14 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>The underlying connection technology that the browser is supposedly using.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>none</code>, <code>cellular2g</code>, <code>cellular3g</code>, <code>cellular4g</code>, <code>bluetooth</code>, <code>ethernet</code>, <code>wifi</code>, <code>wimax</code>, <code>other</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">none, cellular2g, cellular3g, cellular4g, bluetooth, ethernet, wifi, wimax, other</div>
-    
       </div>
     
       <div class="details">
@@ -2368,6 +2663,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Cookie object</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2375,133 +2671,166 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">domain</dt>
+        <dt class="param-name monospace ">
+          domain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie domain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">path</dt>
+        <dt class="param-name monospace ">
+          path
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie path.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">expires</dt>
+        <dt class="param-name monospace ">
+          expires
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Cookie expiration date as the number of seconds since the UNIX epoch.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">size</dt>
+        <dt class="param-name monospace ">
+          size
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Cookie size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">httpOnly</dt>
+        <dt class="param-name monospace ">
+          httpOnly
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if cookie is http-only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">secure</dt>
+        <dt class="param-name monospace ">
+          secure
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if cookie is secure.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">session</dt>
+        <dt class="param-name monospace ">
+          session
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True in case of session cookie.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sameSite</dt>
+        <dt class="param-name monospace optional">
+          sameSite
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CookieSameSite class="param-type">CookieSameSite</a>
           
       <div class="details-description">
         <p>Cookie SameSite type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">priority</dt>
+        <dt class="param-name monospace ">
+          priority
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CookiePriority class="param-type">CookiePriority</a>
           
       <div class="details-description">
         <p>Cookie Priority</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2509,7 +2838,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2523,6 +2851,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Cookie parameter object</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2530,31 +2859,39 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2562,90 +2899,112 @@ default domain and path values of the created cookie.</p>
         <p>The request-URI to associate with the setting of the cookie. This value can affect the
 default domain and path values of the created cookie.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">domain</dt>
+        <dt class="param-name monospace optional">
+          domain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie domain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">path</dt>
+        <dt class="param-name monospace optional">
+          path
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cookie path.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">secure</dt>
+        <dt class="param-name monospace optional">
+          secure
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if cookie is secure.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">httpOnly</dt>
+        <dt class="param-name monospace optional">
+          httpOnly
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if cookie is http-only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sameSite</dt>
+        <dt class="param-name monospace optional">
+          sameSite
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CookieSameSite class="param-type">CookieSameSite</a>
           
       <div class="details-description">
         <p>Cookie SameSite type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">expires</dt>
+        <dt class="param-name monospace optional">
+          expires
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Cookie expiration date, session cookie if not set</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">priority</dt>
+        <dt class="param-name monospace optional">
+          priority
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CookiePriority class="param-type">CookiePriority</a>
           
       <div class="details-description">
         <p>Cookie Priority.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2653,7 +3012,6 @@ default domain and path values of the created cookie.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2668,15 +3026,14 @@ default domain and path values of the created cookie.</p>
         <p>Represents the cookie&#39;s &#39;SameSite&#39; status:
 <a href="https://tools.ietf.org/html/draft-west-first-party-cookies">https://tools.ietf.org/html/draft-west-first-party-cookies</a></p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Strict</code>, <code>Lax</code>, <code>None</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">Strict, Lax, None</div>
-    
       </div>
     
       <div class="details">
@@ -2689,15 +3046,14 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Network level fetch failure reason.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Failed</code>, <code>Aborted</code>, <code>TimedOut</code>, <code>AccessDenied</code>, <code>ConnectionClosed</code>, <code>ConnectionReset</code>, <code>ConnectionRefused</code>, <code>ConnectionAborted</code>, <code>ConnectionFailed</code>, <code>NameNotResolved</code>, <code>InternetDisconnected</code>, <code>AddressUnreachable</code>, <code>BlockedByClient</code>, <code>BlockedByResponse</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">Failed, Aborted, TimedOut, AccessDenied, ConnectionClosed, ConnectionReset, ConnectionRefused, ConnectionAborted, ConnectionFailed, NameNotResolved, InternetDisconnected, AddressUnreachable, BlockedByClient, BlockedByResponse</div>
-    
       </div>
     
       <div class="details">
@@ -2710,10 +3066,10 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Request / response headers as keys / values of JSON object.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
-        
         
         
       </div>
@@ -2728,6 +3084,7 @@ default domain and path values of the created cookie.</p>
       <div class="details-description">
         <p>Information about the request initiator.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2735,43 +3092,56 @@ default domain and path values of the created cookie.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Type of this initiator.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>parser</code>, <code>script</code>, <code>preload</code>, <code>SignedExchange</code>, <code>other</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stack</dt>
+        <dt class="param-name monospace optional">
+          stack
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>Initiator JavaScript stack trace, set for Script only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Initiator URL, set for Parser type or for Script type (when script is importing module) or for SignedExchange type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace optional">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -2779,6 +3149,7 @@ default domain and path values of the created cookie.</p>
         <p>Initiator line number, set for Parser type or for Script type (when script is importing
 module) (0-based).</p>
 
+        
       </div>
     
           
@@ -2786,7 +3157,6 @@ module) (0-based).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2800,10 +3170,10 @@ module) (0-based).</p>
       <div class="details-description">
         <p>Unique intercepted request identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -2818,10 +3188,10 @@ module) (0-based).</p>
       <div class="details-description">
         <p>Unique loader identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -2836,10 +3206,10 @@ module) (0-based).</p>
       <div class="details-description">
         <p>Monotonically increasing time in seconds since an arbitrary point in the past.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>number</strong></p>
-        
         
         
       </div>
@@ -2854,6 +3224,7 @@ module) (0-based).</p>
       <div class="details-description">
         <p>HTTP request data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2861,121 +3232,153 @@ module) (0-based).</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Request URL (without fragment).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">urlFragment</dt>
+        <dt class="param-name monospace optional">
+          urlFragment
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Fragment of the requested URL starting with hash, if present.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">method</dt>
+        <dt class="param-name monospace ">
+          method
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP request method.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP request headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">postData</dt>
+        <dt class="param-name monospace optional">
+          postData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP POST request data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hasPostData</dt>
+        <dt class="param-name monospace optional">
+          hasPostData
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True when the request has POST data. Note that postData might still be omitted when this flag is true when the data is too long.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mixedContentType</dt>
+        <dt class="param-name monospace optional">
+          mixedContentType
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-MixedContentType class="param-type">Security.MixedContentType</a>
           
       <div class="details-description">
         <p>The mixed content type of the request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">initialPriority</dt>
+        <dt class="param-name monospace ">
+          initialPriority
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ResourcePriority class="param-type">ResourcePriority</a>
           
       <div class="details-description">
         <p>Priority of the resource request at the time request is sent.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">referrerPolicy</dt>
+        <dt class="param-name monospace ">
+          referrerPolicy
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The referrer policy of the request, as defined in <a href="https://www.w3.org/TR/referrer-policy/">https://www.w3.org/TR/referrer-policy/</a></p>
 
+        
+      <div class="enum-container">Allowed Values: <code>unsafe-url</code>, <code>no-referrer-when-downgrade</code>, <code>no-referrer</code>, <code>origin</code>, <code>origin-when-cross-origin</code>, <code>same-origin</code>, <code>strict-origin</code>, <code>strict-origin-when-cross-origin</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isLinkPreload</dt>
+        <dt class="param-name monospace optional">
+          isLinkPreload
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether is loaded via link preload.</p>
 
+        
       </div>
     
           
@@ -2983,7 +3386,6 @@ module) (0-based).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2997,10 +3399,10 @@ module) (0-based).</p>
       <div class="details-description">
         <p>Unique request identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -3015,15 +3417,14 @@ module) (0-based).</p>
       <div class="details-description">
         <p>Loading priority of a resource request.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>VeryLow</code>, <code>Low</code>, <code>Medium</code>, <code>High</code>, <code>VeryHigh</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">VeryLow, Low, Medium, High, VeryHigh</div>
-    
       </div>
     
       <div class="details">
@@ -3036,6 +3437,7 @@ module) (0-based).</p>
       <div class="details-description">
         <p>Timing information for the request.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3043,7 +3445,9 @@ module) (0-based).</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestTime</dt>
+        <dt class="param-name monospace ">
+          requestTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -3051,186 +3455,232 @@ module) (0-based).</p>
         <p>Timing&#39;s requestTime is a baseline in seconds, while the other numbers are ticks in
 milliseconds relatively to this requestTime.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">proxyStart</dt>
+        <dt class="param-name monospace ">
+          proxyStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started resolving proxy.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">proxyEnd</dt>
+        <dt class="param-name monospace ">
+          proxyEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished resolving proxy.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dnsStart</dt>
+        <dt class="param-name monospace ">
+          dnsStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started DNS address resolve.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dnsEnd</dt>
+        <dt class="param-name monospace ">
+          dnsEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished DNS address resolve.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectStart</dt>
+        <dt class="param-name monospace ">
+          connectStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started connecting to the remote host.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectEnd</dt>
+        <dt class="param-name monospace ">
+          connectEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Connected to the remote host.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sslStart</dt>
+        <dt class="param-name monospace ">
+          sslStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started SSL handshake.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sslEnd</dt>
+        <dt class="param-name monospace ">
+          sslEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished SSL handshake.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">workerStart</dt>
+        <dt class="param-name monospace ">
+          workerStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started running ServiceWorker.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">workerReady</dt>
+        <dt class="param-name monospace ">
+          workerReady
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished Starting ServiceWorker.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">sendStart</dt>
+        <dt class="param-name monospace ">
+          sendStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Started sending request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sendEnd</dt>
+        <dt class="param-name monospace ">
+          sendEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished sending request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pushStart</dt>
+        <dt class="param-name monospace ">
+          pushStart
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Time the server started pushing request.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">pushEnd</dt>
+        <dt class="param-name monospace ">
+          pushEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Time the server finished pushing request.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">receiveHeadersEnd</dt>
+        <dt class="param-name monospace ">
+          receiveHeadersEnd
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Finished receiving response headers.</p>
 
+        
       </div>
     
           
@@ -3238,7 +3688,6 @@ milliseconds relatively to this requestTime.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3252,15 +3701,14 @@ milliseconds relatively to this requestTime.</p>
       <div class="details-description">
         <p>Resource type as it was perceived by the rendering engine.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Document</code>, <code>Stylesheet</code>, <code>Image</code>, <code>Media</code>, <code>Font</code>, <code>Script</code>, <code>TextTrack</code>, <code>XHR</code>, <code>Fetch</code>, <code>EventSource</code>, <code>WebSocket</code>, <code>Manifest</code>, <code>SignedExchange</code>, <code>Ping</code>, <code>CSPViolationReport</code>, <code>Other</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">Document, Stylesheet, Image, Media, Font, Script, TextTrack, XHR, Fetch, EventSource, WebSocket, Manifest, SignedExchange, Ping, CSPViolationReport, Other</div>
-    
       </div>
     
       <div class="details">
@@ -3273,6 +3721,7 @@ milliseconds relatively to this requestTime.</p>
       <div class="details-description">
         <p>HTTP response data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3280,241 +3729,301 @@ milliseconds relatively to this requestTime.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Response URL. This URL can be different from CachedResource.url in case of redirect.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>HTTP response status code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">statusText</dt>
+        <dt class="param-name monospace ">
+          statusText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP response status text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP response headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headersText</dt>
+        <dt class="param-name monospace optional">
+          headersText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP response headers text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mimeType</dt>
+        <dt class="param-name monospace ">
+          mimeType
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource mimeType as determined by the browser.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestHeaders</dt>
+        <dt class="param-name monospace optional">
+          requestHeaders
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>Refined HTTP request headers that were actually transmitted over the network.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestHeadersText</dt>
+        <dt class="param-name monospace optional">
+          requestHeadersText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP request headers text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectionReused</dt>
+        <dt class="param-name monospace ">
+          connectionReused
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies whether physical connection was actually reused for this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">connectionId</dt>
+        <dt class="param-name monospace ">
+          connectionId
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Physical connection id that was actually used for this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">remoteIPAddress</dt>
+        <dt class="param-name monospace optional">
+          remoteIPAddress
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Remote IP address.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">remotePort</dt>
+        <dt class="param-name monospace optional">
+          remotePort
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Remote port.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fromDiskCache</dt>
+        <dt class="param-name monospace optional">
+          fromDiskCache
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies that the request was served from the disk cache.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fromServiceWorker</dt>
+        <dt class="param-name monospace optional">
+          fromServiceWorker
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies that the request was served from the ServiceWorker.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fromPrefetchCache</dt>
+        <dt class="param-name monospace optional">
+          fromPrefetchCache
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies that the request was served from the prefetch cache.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedDataLength</dt>
+        <dt class="param-name monospace ">
+          encodedDataLength
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Total number of bytes received for this request so far.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timing</dt>
+        <dt class="param-name monospace optional">
+          timing
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-ResourceTiming class="param-type">ResourceTiming</a>
           
       <div class="details-description">
         <p>Timing information for the given request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">protocol</dt>
+        <dt class="param-name monospace optional">
+          protocol
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Protocol used to fetch this request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">securityState</dt>
+        <dt class="param-name monospace ">
+          securityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-SecurityState class="param-type">Security.SecurityState</a>
           
       <div class="details-description">
         <p>Security state of the request resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">securityDetails</dt>
+        <dt class="param-name monospace optional">
+          securityDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-SecurityDetails class="param-type">SecurityDetails</a>
           
       <div class="details-description">
         <p>Security details for the request.</p>
 
+        
       </div>
     
           
@@ -3522,7 +4031,6 @@ milliseconds relatively to this requestTime.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3536,6 +4044,7 @@ milliseconds relatively to this requestTime.</p>
       <div class="details-description">
         <p>Security details about a request.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3543,157 +4052,196 @@ milliseconds relatively to this requestTime.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">protocol</dt>
+        <dt class="param-name monospace ">
+          protocol
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Protocol name (e.g. &quot;TLS 1.2&quot; or &quot;QUIC&quot;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyExchange</dt>
+        <dt class="param-name monospace ">
+          keyExchange
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Key Exchange used by the connection, or the empty string if not applicable.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyExchangeGroup</dt>
+        <dt class="param-name monospace optional">
+          keyExchangeGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>(EC)DH group used by the connection, if applicable.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cipher</dt>
+        <dt class="param-name monospace ">
+          cipher
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cipher name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mac</dt>
+        <dt class="param-name monospace optional">
+          mac
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>TLS MAC. Note that AEAD ciphers do not have separate MACs.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateId</dt>
+        <dt class="param-name monospace ">
+          certificateId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Security/#type-CertificateId class="param-type">Security.CertificateId</a>
           
       <div class="details-description">
         <p>Certificate ID value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">subjectName</dt>
+        <dt class="param-name monospace ">
+          subjectName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Certificate subject name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sanList</dt>
+        <dt class="param-name monospace ">
+          sanList
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Subject Alternative Name (SAN) DNS names and IP addresses.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">issuer</dt>
+        <dt class="param-name monospace ">
+          issuer
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of the issuing CA.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">validFrom</dt>
+        <dt class="param-name monospace ">
+          validFrom
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Certificate valid from date.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">validTo</dt>
+        <dt class="param-name monospace ">
+          validTo
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Certificate valid to (expiration) date</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">signedCertificateTimestampList</dt>
+        <dt class="param-name monospace ">
+          signedCertificateTimestampList
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Network/#type-SignedCertificateTimestamp class="param-type">SignedCertificateTimestamp</a> ]</span></span>
           
       <div class="details-description">
         <p>List of signed certificate timestamps (SCTs).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateTransparencyCompliance</dt>
+        <dt class="param-name monospace ">
+          certificateTransparencyCompliance
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-CertificateTransparencyCompliance class="param-type">CertificateTransparencyCompliance</a>
           
       <div class="details-description">
         <p>Whether the request complied with Certificate Transparency policy</p>
 
+        
       </div>
     
           
@@ -3701,7 +4249,6 @@ milliseconds relatively to this requestTime.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3715,6 +4262,7 @@ milliseconds relatively to this requestTime.</p>
       <div class="details-description">
         <p>Details of a signed certificate timestamp (SCT).</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3722,97 +4270,121 @@ milliseconds relatively to this requestTime.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Validation status.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">logDescription</dt>
+        <dt class="param-name monospace ">
+          logDescription
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Log name / description.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">logId</dt>
+        <dt class="param-name monospace ">
+          logId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Log ID.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Issuance date.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hashAlgorithm</dt>
+        <dt class="param-name monospace ">
+          hashAlgorithm
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Hash algorithm.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">signatureAlgorithm</dt>
+        <dt class="param-name monospace ">
+          signatureAlgorithm
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Signature algorithm.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">signatureData</dt>
+        <dt class="param-name monospace ">
+          signatureData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Signature data.</p>
 
+        
       </div>
     
           
@@ -3820,7 +4392,6 @@ milliseconds relatively to this requestTime.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3834,10 +4405,10 @@ milliseconds relatively to this requestTime.</p>
       <div class="details-description">
         <p>UTC time in seconds, counted from January 1, 1970.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>number</strong></p>
-        
         
         
       </div>
@@ -3852,6 +4423,7 @@ milliseconds relatively to this requestTime.</p>
       <div class="details-description">
         <p>WebSocket message data. This represents an entire WebSocket message, not just a fragmented frame as the name suggests.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3859,31 +4431,39 @@ milliseconds relatively to this requestTime.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">opcode</dt>
+        <dt class="param-name monospace ">
+          opcode
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>WebSocket message opcode.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mask</dt>
+        <dt class="param-name monospace ">
+          mask
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>WebSocket message mask.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">payloadData</dt>
+        <dt class="param-name monospace ">
+          payloadData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -3892,6 +4472,7 @@ milliseconds relatively to this requestTime.</p>
 If the opcode is 1, this is a text message and payloadData is a UTF-8 string.
 If the opcode isn&#39;t 1, then payloadData is a base64 encoded string representing binary data.</p>
 
+        
       </div>
     
           
@@ -3899,7 +4480,6 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       
       </dl>
     
-        
         
       </div>
     
@@ -3913,6 +4493,7 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       <div class="details-description">
         <p>WebSocket request data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3920,13 +4501,16 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP request headers.</p>
 
+        
       </div>
     
           
@@ -3934,7 +4518,6 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       
       </dl>
     
-        
         
       </div>
     
@@ -3948,6 +4531,7 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       <div class="details-description">
         <p>WebSocket response data.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3955,73 +4539,91 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>HTTP response status code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">statusText</dt>
+        <dt class="param-name monospace ">
+          statusText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP response status text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace ">
+          headers
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP response headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headersText</dt>
+        <dt class="param-name monospace optional">
+          headersText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP response headers text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestHeaders</dt>
+        <dt class="param-name monospace optional">
+          requestHeaders
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-Headers class="param-type">Headers</a>
           
       <div class="details-description">
         <p>HTTP request headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestHeadersText</dt>
+        <dt class="param-name monospace optional">
+          requestHeadersText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTTP request headers text.</p>
 
+        
       </div>
     
           
@@ -4029,7 +4631,6 @@ If the opcode isn&#39;t 1, then payloadData is a base64 encoded string represent
       
       </dl>
     
-        
         
       </div>
     

@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Actions and events related to the inspected page belong to the page domain.</p>
 
+        
       </div>
     
         
@@ -629,6 +630,7 @@
       <div class="details-description">
         <p>Evaluates given script in every frame upon creation (before loading frame&#39;s scripts).</p>
 
+        
       </div>
     
         
@@ -636,14 +638,23 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">source</dt>
+        <dt class="param-name monospace ">
+          source
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">worldName</dt>
+        <dt class="param-name monospace optional">
+          worldName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -652,6 +663,7 @@
 This world name will be used as the ExecutionContextDescription::name when the corresponding
 event is emitted.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -663,13 +675,16 @@ event is emitted.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">identifier</dt>
+        <dt class="param-name monospace ">
+          identifier
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ScriptIdentifier class="param-type">ScriptIdentifier</a>
           
       <div class="details-description">
         <p>Identifier of the added script.</p>
 
+        
       </div>
     
           
@@ -677,7 +692,6 @@ event is emitted.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -690,9 +704,9 @@ event is emitted.</p>
       <div class="details-description">
         <p>Brings page to front (activates tab).</p>
 
+        
       </div>
     
-        
         
         
         
@@ -708,6 +722,7 @@ event is emitted.</p>
       <div class="details-description">
         <p>Capture page screenshot.</p>
 
+        
       </div>
     
         
@@ -715,49 +730,63 @@ event is emitted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">format</dt>
+        <dt class="param-name monospace optional">
+          format
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Image compression format (defaults to png).</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>jpeg</code>, <code>png</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">quality</dt>
+        <dt class="param-name monospace optional">
+          quality
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Compression quality from range [0..100] (jpeg only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clip</dt>
+        <dt class="param-name monospace optional">
+          clip
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Viewport class="param-type">Viewport</a>
           
       <div class="details-description">
         <p>Capture the screenshot of a given region only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fromSurface</dt>
+        <dt class="param-name monospace optional">
+          fromSurface
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Capture the screenshot from the surface, rather than the view. Defaults to true.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -769,13 +798,16 @@ event is emitted.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded image data.</p>
 
+        
       </div>
     
           
@@ -783,7 +815,6 @@ event is emitted.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -796,6 +827,7 @@ event is emitted.</p>
       <div class="details-description">
         <p>Creates an isolated world for the given frame.</p>
 
+        
       </div>
     
         
@@ -803,31 +835,39 @@ event is emitted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame in which the isolated world should be created.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">worldName</dt>
+        <dt class="param-name monospace optional">
+          worldName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>An optional name which is reported in the Execution Context.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">grantUniveralAccess</dt>
+        <dt class="param-name monospace optional">
+          grantUniveralAccess
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -835,6 +875,7 @@ event is emitted.</p>
         <p>Whether or not universal access should be granted to the isolated world. This is a powerful
 option, use with caution.</p>
 
+        
       </div>
     
           
@@ -846,13 +887,16 @@ option, use with caution.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace ">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ExecutionContextId class="param-type">Runtime.ExecutionContextId</a>
           
       <div class="details-description">
         <p>Execution context of the isolated world.</p>
 
+        
       </div>
     
           
@@ -860,7 +904,6 @@ option, use with caution.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -873,9 +916,9 @@ option, use with caution.</p>
       <div class="details-description">
         <p>Disables page domain notifications.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -891,9 +934,9 @@ option, use with caution.</p>
       <div class="details-description">
         <p>Enables page domain notifications.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -906,50 +949,71 @@ option, use with caution.</p>
           <a href="#method-getAppManifest" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Manifest location.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errors</dt>
+        <dt class="param-name monospace ">
+          errors
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-AppManifestError class="param-type">AppManifestError</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace optional">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Manifest content.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parsed</dt>
+        <dt class="param-name monospace optional">
+          parsed
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-AppManifestParsedProperties class="param-type">AppManifestParsedProperties</a>
           
       <div class="details-description">
         <p>Parsed manifest properties</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -957,7 +1021,6 @@ option, use with caution.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -970,6 +1033,7 @@ option, use with caution.</p>
       <div class="details-description">
         <p>Returns present frame tree structure.</p>
 
+        
       </div>
     
         
@@ -978,13 +1042,16 @@ option, use with caution.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameTree</dt>
+        <dt class="param-name monospace ">
+          frameTree
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameTree class="param-type">FrameTree</a>
           
       <div class="details-description">
         <p>Present frame tree structure.</p>
 
+        
       </div>
     
           
@@ -992,7 +1059,6 @@ option, use with caution.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1005,6 +1071,7 @@ option, use with caution.</p>
       <div class="details-description">
         <p>Returns metrics relating to the layouting of the page, such as viewport bounds/scale.</p>
 
+        
       </div>
     
         
@@ -1013,37 +1080,46 @@ option, use with caution.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">layoutViewport</dt>
+        <dt class="param-name monospace ">
+          layoutViewport
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-LayoutViewport class="param-type">LayoutViewport</a>
           
       <div class="details-description">
         <p>Metrics relating to the layout viewport.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">visualViewport</dt>
+        <dt class="param-name monospace ">
+          visualViewport
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-VisualViewport class="param-type">VisualViewport</a>
           
       <div class="details-description">
         <p>Metrics relating to the visual viewport.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentSize</dt>
+        <dt class="param-name monospace ">
+          contentSize
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
           
       <div class="details-description">
         <p>Size of scrollable area.</p>
 
+        
       </div>
     
           
@@ -1051,7 +1127,6 @@ option, use with caution.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1064,6 +1139,7 @@ option, use with caution.</p>
       <div class="details-description">
         <p>Returns navigation history for the current page.</p>
 
+        
       </div>
     
         
@@ -1072,25 +1148,31 @@ option, use with caution.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">currentIndex</dt>
+        <dt class="param-name monospace ">
+          currentIndex
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Index of the current navigation history entry.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">entries</dt>
+        <dt class="param-name monospace ">
+          entries
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-NavigationEntry class="param-type">NavigationEntry</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of navigation history entries.</p>
 
+        
       </div>
     
           
@@ -1098,7 +1180,6 @@ option, use with caution.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1111,6 +1192,7 @@ option, use with caution.</p>
       <div class="details-description">
         <p>Accepts or dismisses a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload).</p>
 
+        
       </div>
     
         
@@ -1118,19 +1200,24 @@ option, use with caution.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">accept</dt>
+        <dt class="param-name monospace ">
+          accept
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to accept or dismiss the dialog.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">promptText</dt>
+        <dt class="param-name monospace optional">
+          promptText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1138,6 +1225,7 @@ option, use with caution.</p>
         <p>The text to enter into the dialog prompt before accepting. Used only if this is a prompt
 dialog.</p>
 
+        
       </div>
     
           
@@ -1145,7 +1233,6 @@ dialog.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1159,6 +1246,7 @@ dialog.</p>
       <div class="details-description">
         <p>Navigates current page to the given URL.</p>
 
+        
       </div>
     
         
@@ -1166,61 +1254,76 @@ dialog.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL to navigate the page to.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">referrer</dt>
+        <dt class="param-name monospace optional">
+          referrer
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Referrer URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">transitionType</dt>
+        <dt class="param-name monospace optional">
+          transitionType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-TransitionType class="param-type">TransitionType</a>
           
       <div class="details-description">
         <p>Intended transition type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace optional">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Frame id to navigate, if not specified navigates the top frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">referrerPolicy</dt>
+        <dt class="param-name monospace optional">
+          referrerPolicy
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ReferrerPolicy class="param-type">ReferrerPolicy</a>
           
       <div class="details-description">
         <p>Referrer-policy used for the navigation.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1232,37 +1335,46 @@ dialog.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Frame id that has navigated (or failed to navigate)</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace optional">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-LoaderId class="param-type">Network.LoaderId</a>
           
       <div class="details-description">
         <p>Loader identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorText</dt>
+        <dt class="param-name monospace optional">
+          errorText
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User friendly error message, present if and only if navigation has failed.</p>
 
+        
       </div>
     
           
@@ -1270,7 +1382,6 @@ dialog.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1283,6 +1394,7 @@ dialog.</p>
       <div class="details-description">
         <p>Navigates current page to the given history entry.</p>
 
+        
       </div>
     
         
@@ -1290,13 +1402,16 @@ dialog.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">entryId</dt>
+        <dt class="param-name monospace ">
+          entryId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Unique id of the entry to navigate to.</p>
 
+        
       </div>
     
           
@@ -1304,7 +1419,6 @@ dialog.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1318,6 +1432,7 @@ dialog.</p>
       <div class="details-description">
         <p>Print page as PDF.</p>
 
+        
       </div>
     
         
@@ -1325,127 +1440,159 @@ dialog.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">landscape</dt>
+        <dt class="param-name monospace optional">
+          landscape
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Paper orientation. Defaults to false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">displayHeaderFooter</dt>
+        <dt class="param-name monospace optional">
+          displayHeaderFooter
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Display header and footer. Defaults to false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">printBackground</dt>
+        <dt class="param-name monospace optional">
+          printBackground
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Print background graphics. Defaults to false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace optional">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Scale of the webpage rendering. Defaults to 1.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">paperWidth</dt>
+        <dt class="param-name monospace optional">
+          paperWidth
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Paper width in inches. Defaults to 8.5 inches.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">paperHeight</dt>
+        <dt class="param-name monospace optional">
+          paperHeight
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Paper height in inches. Defaults to 11 inches.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">marginTop</dt>
+        <dt class="param-name monospace optional">
+          marginTop
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Top margin in inches. Defaults to 1cm (~0.4 inches).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">marginBottom</dt>
+        <dt class="param-name monospace optional">
+          marginBottom
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Bottom margin in inches. Defaults to 1cm (~0.4 inches).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">marginLeft</dt>
+        <dt class="param-name monospace optional">
+          marginLeft
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Left margin in inches. Defaults to 1cm (~0.4 inches).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">marginRight</dt>
+        <dt class="param-name monospace optional">
+          marginRight
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Right margin in inches. Defaults to 1cm (~0.4 inches).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pageRanges</dt>
+        <dt class="param-name monospace optional">
+          pageRanges
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1453,12 +1600,15 @@ dialog.</p>
         <p>Paper ranges to print, e.g., &#39;1-5, 8, 11-13&#39;. Defaults to the empty string, which means
 print all pages.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ignoreInvalidPageRanges</dt>
+        <dt class="param-name monospace optional">
+          ignoreInvalidPageRanges
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1466,12 +1616,15 @@ print all pages.</p>
         <p>Whether to silently ignore invalid but successfully parsed page ranges, such as &#39;3-2&#39;.
 Defaults to false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headerTemplate</dt>
+        <dt class="param-name monospace optional">
+          headerTemplate
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1487,24 +1640,30 @@ classes used to inject printing values into them:</p>
 </ul>
 <p>For example, <code>&lt;span class=title&gt;&lt;/span&gt;</code> would generate span containing the title.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">footerTemplate</dt>
+        <dt class="param-name monospace optional">
+          footerTemplate
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTML template for the print footer. Should use the same format as the <code>headerTemplate</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">preferCSSPageSize</dt>
+        <dt class="param-name monospace optional">
+          preferCSSPageSize
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1512,18 +1671,24 @@ classes used to inject printing values into them:</p>
         <p>Whether or not to prefer page size as defined by css. Defaults to false,
 in which case the content will be scaled to fit the paper size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">transferMode</dt>
+        <dt class="param-name monospace optional">
+          transferMode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>return as stream</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>ReturnAsBase64</code>, <code>ReturnAsStream</code></div>
+    
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1535,25 +1700,31 @@ in which case the content will be scaled to fit the paper size.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded pdf data. Empty if |returnAsStream| is specified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stream</dt>
+        <dt class="param-name monospace optional">
+          stream
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">IO.StreamHandle</a>
           
       <div class="details-description">
         <p>A handle of the stream that holds resulting PDF data.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1561,7 +1732,6 @@ in which case the content will be scaled to fit the paper size.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1574,6 +1744,7 @@ in which case the content will be scaled to fit the paper size.</p>
       <div class="details-description">
         <p>Reloads given page optionally ignoring the cache.</p>
 
+        
       </div>
     
         
@@ -1581,19 +1752,24 @@ in which case the content will be scaled to fit the paper size.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">ignoreCache</dt>
+        <dt class="param-name monospace optional">
+          ignoreCache
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, browser cache is ignored (as if the user pressed Shift+refresh).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scriptToEvaluateOnLoad</dt>
+        <dt class="param-name monospace optional">
+          scriptToEvaluateOnLoad
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1601,6 +1777,7 @@ in which case the content will be scaled to fit the paper size.</p>
         <p>If set, the script will be injected into all frames of the inspected page after reload.
 Argument will be ignored if reloading dataURL origin.</p>
 
+        
       </div>
     
           
@@ -1608,7 +1785,6 @@ Argument will be ignored if reloading dataURL origin.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1622,6 +1798,7 @@ Argument will be ignored if reloading dataURL origin.</p>
       <div class="details-description">
         <p>Removes given script from the list.</p>
 
+        
       </div>
     
         
@@ -1629,16 +1806,22 @@ Argument will be ignored if reloading dataURL origin.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">identifier</dt>
+        <dt class="param-name monospace ">
+          identifier
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ScriptIdentifier class="param-type">ScriptIdentifier</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1652,9 +1835,9 @@ Argument will be ignored if reloading dataURL origin.</p>
       <div class="details-description">
         <p>Resets navigation history for the current page.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1670,6 +1853,7 @@ Argument will be ignored if reloading dataURL origin.</p>
       <div class="details-description">
         <p>Sets given markup as the document&#39;s HTML.</p>
 
+        
       </div>
     
         
@@ -1677,25 +1861,31 @@ Argument will be ignored if reloading dataURL origin.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Frame id to set HTML for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">html</dt>
+        <dt class="param-name monospace ">
+          html
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>HTML content to set.</p>
 
+        
       </div>
     
           
@@ -1703,7 +1893,6 @@ Argument will be ignored if reloading dataURL origin.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1717,9 +1906,9 @@ Argument will be ignored if reloading dataURL origin.</p>
       <div class="details-description">
         <p>Force the page stop all navigations and pending resource fetches.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1735,9 +1924,9 @@ Argument will be ignored if reloading dataURL origin.</p>
       <div class="details-description">
         <p>Clears the overriden Geolocation Position and Error.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1754,6 +1943,7 @@ Argument will be ignored if reloading dataURL origin.</p>
         <p>Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
 unavailable.</p>
 
+        
       </div>
     
         
@@ -1761,37 +1951,46 @@ unavailable.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">latitude</dt>
+        <dt class="param-name monospace optional">
+          latitude
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock latitude</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">longitude</dt>
+        <dt class="param-name monospace optional">
+          longitude
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock longitude</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">accuracy</dt>
+        <dt class="param-name monospace optional">
+          accuracy
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock accuracy</p>
 
+        
       </div>
     
           
@@ -1799,7 +1998,6 @@ unavailable.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1814,6 +2012,7 @@ unavailable.</p>
         <p>Seeds compilation cache for given url. Compilation cache does not survive
 cross-process navigation.</p>
 
+        
       </div>
     
         
@@ -1821,20 +2020,30 @@ cross-process navigation.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded data</p>
 
+        
       </div>
     
           
@@ -1842,7 +2051,6 @@ cross-process navigation.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1857,6 +2065,7 @@ cross-process navigation.</p>
         <p>Returns a snapshot of the page as a string. For MHTML format, the serialization includes
 iframes, shadow DOM, external resources, and element-inline styles.</p>
 
+        
       </div>
     
         
@@ -1864,13 +2073,18 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">format</dt>
+        <dt class="param-name monospace optional">
+          format
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Format (defaults to mhtml).</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>mhtml</code></div>
+    
       </div>
     
           
@@ -1882,13 +2096,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Serialized page data.</p>
 
+        
       </div>
     
           
@@ -1896,7 +2113,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1909,9 +2125,9 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Clears seeded compilation cache.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1927,9 +2143,9 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Tries to close page, running its beforeunload hooks, if any.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1945,9 +2161,9 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Crashes renderer on the IO thread, generates minidumps.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1963,6 +2179,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Generates a report for testing.</p>
 
+        
       </div>
     
         
@@ -1970,25 +2187,31 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">message</dt>
+        <dt class="param-name monospace ">
+          message
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message to be displayed in the report.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">group</dt>
+        <dt class="param-name monospace optional">
+          group
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Specifies the endpoint group to deliver the report to.</p>
 
+        
       </div>
     
           
@@ -1996,7 +2219,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2007,22 +2229,33 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
           <a href="#method-getInstallabilityErrors" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">installabilityErrors</dt>
+        <dt class="param-name monospace ">
+          installabilityErrors
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-InstallabilityError class="param-type">InstallabilityError</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2032,22 +2265,33 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
           <a href="#method-getManifestIcons" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">primaryIcon</dt>
+        <dt class="param-name monospace optional">
+          primaryIcon
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2060,6 +2304,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Returns content of the given resource.</p>
 
+        
       </div>
     
         
@@ -2067,25 +2312,31 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Frame id to get resource for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the resource to get content for.</p>
 
+        
       </div>
     
           
@@ -2097,25 +2348,31 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">content</dt>
+        <dt class="param-name monospace ">
+          content
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource content.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">base64Encoded</dt>
+        <dt class="param-name monospace ">
+          base64Encoded
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if content was served as base64.</p>
 
+        
       </div>
     
           
@@ -2123,7 +2380,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2136,6 +2392,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Returns present frame / resource tree structure.</p>
 
+        
       </div>
     
         
@@ -2144,13 +2401,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameTree</dt>
+        <dt class="param-name monospace ">
+          frameTree
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameResourceTree class="param-type">FrameResourceTree</a>
           
       <div class="details-description">
         <p>Present frame / resource tree structure.</p>
 
+        
       </div>
     
           
@@ -2158,7 +2418,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2171,6 +2430,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Acknowledges that a screencast frame has been received by the frontend.</p>
 
+        
       </div>
     
         
@@ -2178,13 +2438,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">sessionId</dt>
+        <dt class="param-name monospace ">
+          sessionId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Frame number.</p>
 
+        
       </div>
     
           
@@ -2192,7 +2455,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2206,6 +2468,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Searches for given string in resource content.</p>
 
+        
       </div>
     
         
@@ -2213,61 +2476,76 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Frame id for resource to search in.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the resource to search in.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">query</dt>
+        <dt class="param-name monospace ">
+          query
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String to search for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">caseSensitive</dt>
+        <dt class="param-name monospace optional">
+          caseSensitive
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, search is case sensitive.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isRegex</dt>
+        <dt class="param-name monospace optional">
+          isRegex
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, treats string parameter as regex.</p>
 
+        
       </div>
     
           
@@ -2279,13 +2557,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-SearchMatch class="param-type">Debugger.SearchMatch</a> ]</span></span>
           
       <div class="details-description">
         <p>List of search matches.</p>
 
+        
       </div>
     
           
@@ -2293,7 +2574,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2306,6 +2586,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Enable Chrome&#39;s experimental ad filter on all sites.</p>
 
+        
       </div>
     
         
@@ -2313,13 +2594,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to block ads.</p>
 
+        
       </div>
     
           
@@ -2327,7 +2611,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2341,6 +2624,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Enable page Content Security Policy by-passing.</p>
 
+        
       </div>
     
         
@@ -2348,13 +2632,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to bypass page CSP.</p>
 
+        
       </div>
     
           
@@ -2362,7 +2649,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2376,6 +2662,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Set generic font families.</p>
 
+        
       </div>
     
         
@@ -2383,13 +2670,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">fontFamilies</dt>
+        <dt class="param-name monospace ">
+          fontFamilies
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FontFamilies class="param-type">FontFamilies</a>
           
       <div class="details-description">
         <p>Specifies font families to set. If a font family is not specified, it won&#39;t be changed.</p>
 
+        
       </div>
     
           
@@ -2397,7 +2687,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2411,6 +2700,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <div class="details-description">
         <p>Set default font sizes.</p>
 
+        
       </div>
     
         
@@ -2418,13 +2708,16 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">fontSizes</dt>
+        <dt class="param-name monospace ">
+          fontSizes
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FontSizes class="param-type">FontSizes</a>
           
       <div class="details-description">
         <p>Specifies font sizes to set. If a font size is not specified, it won&#39;t be changed.</p>
 
+        
       </div>
     
           
@@ -2432,7 +2725,6 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2448,6 +2740,7 @@ iframes, shadow DOM, external resources, and element-inline styles.</p>
 When file chooser interception is enabled, native file chooser dialog is not shown.
 Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
 
+        
       </div>
     
         
@@ -2455,16 +2748,22 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -2478,6 +2777,7 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
       <div class="details-description">
         <p>Controls whether page will emit lifecycle events.</p>
 
+        
       </div>
     
         
@@ -2485,13 +2785,16 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, starts emitting lifecycle events.</p>
 
+        
       </div>
     
           
@@ -2499,7 +2802,6 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2513,6 +2815,7 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
       <div class="details-description">
         <p>Forces compilation cache to be generated for every subresource script.</p>
 
+        
       </div>
     
         
@@ -2520,16 +2823,22 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -2545,6 +2854,7 @@ Instead, a protocol event <code>Page.fileChooserOpened</code> is emitted.</p>
 It will transition the page to the given state according to:
 <a href="https://github.com/WICG/web-lifecycle/">https://github.com/WICG/web-lifecycle/</a></p>
 
+        
       </div>
     
         
@@ -2552,13 +2862,18 @@ It will transition the page to the given state according to:
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">state</dt>
+        <dt class="param-name monospace ">
+          state
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Target lifecycle state</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>frozen</code>, <code>active</code></div>
+    
       </div>
     
           
@@ -2566,7 +2881,6 @@ It will transition the page to the given state according to:
       
       </dl>
     
-        
         
       </div>
     
@@ -2580,6 +2894,7 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Starts sending each frame using the <code>screencastFrame</code> event.</p>
 
+        
       </div>
     
         
@@ -2587,61 +2902,78 @@ It will transition the page to the given state according to:
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">format</dt>
+        <dt class="param-name monospace optional">
+          format
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Image compression format.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>jpeg</code>, <code>png</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">quality</dt>
+        <dt class="param-name monospace optional">
+          quality
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Compression quality from range [0..100].</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxWidth</dt>
+        <dt class="param-name monospace optional">
+          maxWidth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Maximum screenshot width.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">maxHeight</dt>
+        <dt class="param-name monospace optional">
+          maxHeight
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Maximum screenshot height.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">everyNthFrame</dt>
+        <dt class="param-name monospace optional">
+          everyNthFrame
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Send every n-th frame.</p>
 
+        
       </div>
     
           
@@ -2649,7 +2981,6 @@ It will transition the page to the given state according to:
       
       </dl>
     
-        
         
       </div>
     
@@ -2663,9 +2994,9 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Stops sending each frame in the <code>screencastFrame</code>.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -2681,9 +3012,9 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Pauses page execution. Can be resumed using generic Runtime.runIfWaitingForDebugger.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -2699,6 +3030,7 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Deprecated, please use addScriptToEvaluateOnNewDocument instead.</p>
 
+        
       </div>
     
         
@@ -2706,10 +3038,17 @@ It will transition the page to the given state according to:
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptSource</dt>
+        <dt class="param-name monospace ">
+          scriptSource
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -2719,13 +3058,16 @@ It will transition the page to the given state according to:
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">identifier</dt>
+        <dt class="param-name monospace ">
+          identifier
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ScriptIdentifier class="param-type">ScriptIdentifier</a>
           
       <div class="details-description">
         <p>Identifier of the added script.</p>
 
+        
       </div>
     
           
@@ -2733,7 +3075,6 @@ It will transition the page to the given state according to:
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2746,9 +3087,9 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Clears the overriden device metrics.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -2764,9 +3105,9 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Clears the overridden Device Orientation.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -2782,6 +3123,7 @@ It will transition the page to the given state according to:
       <div class="details-description">
         <p>Deletes browser cookie with given name, domain and path.</p>
 
+        
       </div>
     
         
@@ -2789,25 +3131,31 @@ It will transition the page to the given state according to:
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookieName</dt>
+        <dt class="param-name monospace ">
+          cookieName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of the cookie to remove.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL to match cooke domain and path.</p>
 
+        
       </div>
     
           
@@ -2815,7 +3163,6 @@ It will transition the page to the given state according to:
       
       </dl>
     
-        
         
       </div>
     
@@ -2830,6 +3177,7 @@ It will transition the page to the given state according to:
         <p>Returns all browser cookies. Depending on the backend support, will return detailed cookie
 information in the <code>cookies</code> field.</p>
 
+        
       </div>
     
         
@@ -2838,13 +3186,16 @@ information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace ">
+          cookies
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Network/#type-Cookie class="param-type">Network.Cookie</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of cookie objects.</p>
 
+        
       </div>
     
           
@@ -2852,7 +3203,6 @@ information in the <code>cookies</code> field.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -2865,6 +3215,7 @@ information in the <code>cookies</code> field.</p>
       <div class="details-description">
         <p>Deprecated, please use removeScriptToEvaluateOnNewDocument instead.</p>
 
+        
       </div>
     
         
@@ -2872,16 +3223,22 @@ information in the <code>cookies</code> field.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">identifier</dt>
+        <dt class="param-name monospace ">
+          identifier
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ScriptIdentifier class="param-type">ScriptIdentifier</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -2897,6 +3254,7 @@ information in the <code>cookies</code> field.</p>
 window.innerWidth, window.innerHeight, and &quot;device-width&quot;/&quot;device-height&quot;-related CSS media
 query results).</p>
 
+        
       </div>
     
         
@@ -2904,43 +3262,54 @@ query results).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding width value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding height value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceScaleFactor</dt>
+        <dt class="param-name monospace ">
+          deviceScaleFactor
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Overriding device scale factor value. 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mobile</dt>
+        <dt class="param-name monospace ">
+          mobile
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2948,102 +3317,127 @@ query results).</p>
         <p>Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text
 autosizing and more.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace optional">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Scale to apply to resulting view image.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">screenWidth</dt>
+        <dt class="param-name monospace optional">
+          screenWidth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding screen width value in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">screenHeight</dt>
+        <dt class="param-name monospace optional">
+          screenHeight
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding screen height value in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">positionX</dt>
+        <dt class="param-name monospace optional">
+          positionX
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding view X position on screen in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">positionY</dt>
+        <dt class="param-name monospace optional">
+          positionY
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding view Y position on screen in pixels (minimum 0, maximum 10000000).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dontSetVisibleSize</dt>
+        <dt class="param-name monospace optional">
+          dontSetVisibleSize
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Do not set visible view size, rely upon explicit setVisibleSize call.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">screenOrientation</dt>
+        <dt class="param-name monospace optional">
+          screenOrientation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Emulation/#type-ScreenOrientation class="param-type">Emulation.ScreenOrientation</a>
           
       <div class="details-description">
         <p>Screen orientation override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">viewport</dt>
+        <dt class="param-name monospace optional">
+          viewport
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Viewport class="param-type">Viewport</a>
           
       <div class="details-description">
         <p>The viewport dimensions and scale. If not set, the override is cleared.</p>
 
+        
       </div>
     
           
@@ -3051,7 +3445,6 @@ autosizing and more.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3065,6 +3458,7 @@ autosizing and more.</p>
       <div class="details-description">
         <p>Overrides the Device Orientation.</p>
 
+        
       </div>
     
         
@@ -3072,37 +3466,46 @@ autosizing and more.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">alpha</dt>
+        <dt class="param-name monospace ">
+          alpha
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock alpha</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">beta</dt>
+        <dt class="param-name monospace ">
+          beta
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock beta</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">gamma</dt>
+        <dt class="param-name monospace ">
+          gamma
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Mock gamma</p>
 
+        
       </div>
     
           
@@ -3110,7 +3513,6 @@ autosizing and more.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3124,6 +3526,7 @@ autosizing and more.</p>
       <div class="details-description">
         <p>Set the behavior when downloading a file.</p>
 
+        
       </div>
     
         
@@ -3131,7 +3534,9 @@ autosizing and more.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">behavior</dt>
+        <dt class="param-name monospace ">
+          behavior
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -3139,18 +3544,24 @@ autosizing and more.</p>
         <p>Whether to allow all or deny all download requests, or use default Chrome behavior if
 available (otherwise deny).</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>deny</code>, <code>allow</code>, <code>default</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">downloadPath</dt>
+        <dt class="param-name monospace optional">
+          downloadPath
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The default path to save downloaded files to. This is requred if behavior is set to &#39;allow&#39;</p>
 
+        
       </div>
     
           
@@ -3158,7 +3569,6 @@ available (otherwise deny).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3172,6 +3582,7 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Toggles mouse event-based touch event emulation.</p>
 
+        
       </div>
     
         
@@ -3179,25 +3590,33 @@ available (otherwise deny).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the touch event emulation should be enabled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">configuration</dt>
+        <dt class="param-name monospace optional">
+          configuration
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Touch/gesture events configuration. Default: current platform.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>mobile</code>, <code>desktop</code></div>
+    
       </div>
     
           
@@ -3205,7 +3624,6 @@ available (otherwise deny).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3222,21 +3640,32 @@ available (otherwise deny).</p>
           <a href="#event-domContentEventFired" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">Network.MonotonicTime</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -3250,6 +3679,7 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Emitted only when <code>page.interceptFileChooser</code> is enabled.</p>
 
+        
       </div>
     
         
@@ -3257,37 +3687,48 @@ available (otherwise deny).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame containing input node.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace ">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>Input node id.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">mode</dt>
+        <dt class="param-name monospace ">
+          mode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Input mode.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>selectSingle</code>, <code>selectMultiple</code></div>
+    
       </div>
     
           
@@ -3295,7 +3736,6 @@ available (otherwise deny).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3309,6 +3749,7 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Fired when frame has been attached to its parent.</p>
 
+        
       </div>
     
         
@@ -3316,37 +3757,46 @@ available (otherwise deny).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that has been attached.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parentFrameId</dt>
+        <dt class="param-name monospace ">
+          parentFrameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Parent frame identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stack</dt>
+        <dt class="param-name monospace optional">
+          stack
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>JavaScript stack trace of when frame was attached, only set if frame initiated from script.</p>
 
+        
       </div>
     
           
@@ -3354,7 +3804,6 @@ available (otherwise deny).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3368,6 +3817,7 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Fired when frame has been detached from its parent.</p>
 
+        
       </div>
     
         
@@ -3375,13 +3825,16 @@ available (otherwise deny).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that has been detached.</p>
 
+        
       </div>
     
           
@@ -3389,7 +3842,6 @@ available (otherwise deny).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3403,6 +3855,7 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Fired once navigation of the frame has completed. Frame is now associated with the new loader.</p>
 
+        
       </div>
     
         
@@ -3410,13 +3863,16 @@ available (otherwise deny).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frame</dt>
+        <dt class="param-name monospace ">
+          frame
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Frame class="param-type">Frame</a>
           
       <div class="details-description">
         <p>Frame object.</p>
 
+        
       </div>
     
           
@@ -3424,7 +3880,6 @@ available (otherwise deny).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3438,9 +3893,9 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Fired when interstitial page was hidden</p>
 
+        
       </div>
     
-        
         
         
         
@@ -3456,9 +3911,9 @@ available (otherwise deny).</p>
       <div class="details-description">
         <p>Fired when interstitial page was shown</p>
 
+        
       </div>
     
-        
         
         
         
@@ -3475,6 +3930,7 @@ available (otherwise deny).</p>
         <p>Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) has been
 closed.</p>
 
+        
       </div>
     
         
@@ -3482,25 +3938,31 @@ closed.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether dialog was confirmed.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">userInput</dt>
+        <dt class="param-name monospace ">
+          userInput
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User input in case of prompt.</p>
 
+        
       </div>
     
           
@@ -3508,7 +3970,6 @@ closed.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3523,6 +3984,7 @@ closed.</p>
         <p>Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to
 open.</p>
 
+        
       </div>
     
         
@@ -3530,43 +3992,54 @@ open.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame url.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">message</dt>
+        <dt class="param-name monospace ">
+          message
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message that will be displayed by the dialog.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-DialogType class="param-type">DialogType</a>
           
       <div class="details-description">
         <p>Dialog type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hasBrowserHandler</dt>
+        <dt class="param-name monospace ">
+          hasBrowserHandler
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -3575,18 +4048,22 @@ open.</p>
 dialog handler for given target, calling alert while Page domain is engaged will stall
 the page execution. Execution can be resumed via calling Page.handleJavaScriptDialog.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">defaultPrompt</dt>
+        <dt class="param-name monospace optional">
+          defaultPrompt
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Default dialog prompt.</p>
 
+        
       </div>
     
           
@@ -3594,7 +4071,6 @@ the page execution. Execution can be resumed via calling Page.handleJavaScriptDi
       
       </dl>
     
-        
         
       </div>
     
@@ -3608,6 +4084,7 @@ the page execution. Execution can be resumed via calling Page.handleJavaScriptDi
       <div class="details-description">
         <p>Fired for top level page lifecycle events such as navigation, load, paint, etc.</p>
 
+        
       </div>
     
         
@@ -3615,47 +4092,66 @@ the page execution. Execution can be resumed via calling Page.handleJavaScriptDi
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace ">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-LoaderId class="param-type">Network.LoaderId</a>
           
       <div class="details-description">
         <p>Loader identifier. Empty string if the request is fetched from worker.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">Network.MonotonicTime</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -3666,21 +4162,32 @@ the page execution. Execution can be resumed via calling Page.handleJavaScriptDi
           <a href="#event-loadEventFired" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-MonotonicTime class="param-type">Network.MonotonicTime</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -3695,6 +4202,7 @@ the page execution. Execution can be resumed via calling Page.handleJavaScriptDi
         <p>Fired when a new window is going to be opened, via window.open(), link click, form submission,
 etc.</p>
 
+        
       </div>
     
         
@@ -3702,49 +4210,61 @@ etc.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The URL for the new window.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">windowName</dt>
+        <dt class="param-name monospace ">
+          windowName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Window name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">windowFeatures</dt>
+        <dt class="param-name monospace ">
+          windowFeatures
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>An array of enabled window features.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">userGesture</dt>
+        <dt class="param-name monospace ">
+          userGesture
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether or not it was triggered by user gesture.</p>
 
+        
       </div>
     
           
@@ -3752,7 +4272,6 @@ etc.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3766,6 +4285,7 @@ etc.</p>
       <div class="details-description">
         <p>Fired when frame no longer has a scheduled navigation.</p>
 
+        
       </div>
     
         
@@ -3773,13 +4293,16 @@ etc.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that has cleared its scheduled navigation.</p>
 
+        
       </div>
     
           
@@ -3787,7 +4310,6 @@ etc.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3801,6 +4323,7 @@ etc.</p>
       <div class="details-description">
         <p>Fired when frame schedules a potential navigation.</p>
 
+        
       </div>
     
         
@@ -3808,19 +4331,24 @@ etc.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that has scheduled a navigation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">delay</dt>
+        <dt class="param-name monospace ">
+          delay
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -3828,30 +4356,37 @@ etc.</p>
         <p>Delay (in seconds) until the navigation is scheduled to begin. The navigation is not
 guaranteed to start.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">reason</dt>
+        <dt class="param-name monospace ">
+          reason
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ClientNavigationReason class="param-type">ClientNavigationReason</a>
           
       <div class="details-description">
         <p>The reason for the navigation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The destination URL for the scheduled navigation.</p>
 
+        
       </div>
     
           
@@ -3859,7 +4394,6 @@ guaranteed to start.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3874,6 +4408,7 @@ guaranteed to start.</p>
         <p>Issued for every compilation cache generated. Is only available
 if Page.setGenerateCompilationCache is enabled.</p>
 
+        
       </div>
     
         
@@ -3881,20 +4416,30 @@ if Page.setGenerateCompilationCache is enabled.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded data</p>
 
+        
       </div>
     
           
@@ -3902,7 +4447,6 @@ if Page.setGenerateCompilationCache is enabled.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3916,6 +4460,7 @@ if Page.setGenerateCompilationCache is enabled.</p>
       <div class="details-description">
         <p>Fired when download makes progress. Last call has |done| == true.</p>
 
+        
       </div>
     
         
@@ -3923,49 +4468,63 @@ if Page.setGenerateCompilationCache is enabled.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">guid</dt>
+        <dt class="param-name monospace ">
+          guid
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Global unique identifier of the download.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">totalBytes</dt>
+        <dt class="param-name monospace ">
+          totalBytes
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Total expected bytes to download.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">receivedBytes</dt>
+        <dt class="param-name monospace ">
+          receivedBytes
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Total bytes received.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">state</dt>
+        <dt class="param-name monospace ">
+          state
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Download status.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>inProgress</code>, <code>completed</code>, <code>canceled</code></div>
+    
       </div>
     
           
@@ -3973,7 +4532,6 @@ if Page.setGenerateCompilationCache is enabled.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3987,6 +4545,7 @@ if Page.setGenerateCompilationCache is enabled.</p>
       <div class="details-description">
         <p>Fired when page is about to start a download.</p>
 
+        
       </div>
     
         
@@ -3994,37 +4553,46 @@ if Page.setGenerateCompilationCache is enabled.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that caused download to begin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">guid</dt>
+        <dt class="param-name monospace ">
+          guid
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Global unique identifier of the download.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the resource being downloaded.</p>
 
+        
       </div>
     
           
@@ -4032,7 +4600,6 @@ if Page.setGenerateCompilationCache is enabled.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4047,6 +4614,7 @@ if Page.setGenerateCompilationCache is enabled.</p>
         <p>Fired when a renderer-initiated navigation is requested.
 Navigation may still be cancelled after the event is issued.</p>
 
+        
       </div>
     
         
@@ -4054,37 +4622,46 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that is being navigated.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">reason</dt>
+        <dt class="param-name monospace ">
+          reason
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ClientNavigationReason class="param-type">ClientNavigationReason</a>
           
       <div class="details-description">
         <p>The reason for the navigation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The destination URL for the requested navigation.</p>
 
+        
       </div>
     
           
@@ -4092,7 +4669,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4103,7 +4679,11 @@ Navigation may still be cancelled after the event is issued.</p>
           <a href="#event-frameResized" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -4119,6 +4699,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Fired when frame has started loading.</p>
 
+        
       </div>
     
         
@@ -4126,13 +4707,16 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that has started loading.</p>
 
+        
       </div>
     
           
@@ -4140,7 +4724,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4154,6 +4737,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Fired when frame has stopped loading.</p>
 
+        
       </div>
     
         
@@ -4161,13 +4745,16 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame that has stopped loading.</p>
 
+        
       </div>
     
           
@@ -4175,7 +4762,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4189,6 +4775,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Fired when same-document navigation happens, e.g. due to history API usage or anchor navigation.</p>
 
+        
       </div>
     
         
@@ -4196,25 +4783,31 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Id of the frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame&#39;s new url.</p>
 
+        
       </div>
     
           
@@ -4222,7 +4815,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4236,6 +4828,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Compressed image data requested by the <code>startScreencast</code>.</p>
 
+        
       </div>
     
         
@@ -4243,37 +4836,46 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded compressed image.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">metadata</dt>
+        <dt class="param-name monospace ">
+          metadata
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-ScreencastFrameMetadata class="param-type">ScreencastFrameMetadata</a>
           
       <div class="details-description">
         <p>Screencast frame metadata.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sessionId</dt>
+        <dt class="param-name monospace ">
+          sessionId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Frame number.</p>
 
+        
       </div>
     
           
@@ -4281,7 +4883,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4295,6 +4896,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Fired when the page with currently enabled screencast was shown or hidden `.</p>
 
+        
       </div>
     
         
@@ -4302,13 +4904,16 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">visible</dt>
+        <dt class="param-name monospace ">
+          visible
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the page is visible.</p>
 
+        
       </div>
     
           
@@ -4316,7 +4921,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4336,6 +4940,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Error while paring app manifest.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4343,49 +4948,61 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">message</dt>
+        <dt class="param-name monospace ">
+          message
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Error message.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">critical</dt>
+        <dt class="param-name monospace ">
+          critical
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>If criticial, this is a non-recoverable parse error.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">line</dt>
+        <dt class="param-name monospace ">
+          line
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Error line.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">column</dt>
+        <dt class="param-name monospace ">
+          column
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Error column.</p>
 
+        
       </div>
     
           
@@ -4393,7 +5010,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4407,15 +5023,14 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Javascript dialog type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>alert</code>, <code>confirm</code>, <code>prompt</code>, <code>beforeunload</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">alert, confirm, prompt, beforeunload</div>
-    
       </div>
     
       <div class="details">
@@ -4428,6 +5043,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Information about the Frame on the page.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4435,109 +5051,136 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">FrameId</a>
           
       <div class="details-description">
         <p>Frame unique identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parentId</dt>
+        <dt class="param-name monospace optional">
+          parentId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Parent frame identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">loaderId</dt>
+        <dt class="param-name monospace ">
+          loaderId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-LoaderId class="param-type">Network.LoaderId</a>
           
       <div class="details-description">
         <p>Identifier of the loader associated with this frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace optional">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame&#39;s name as specified in the tag.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame document&#39;s URL without fragment.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">urlFragment</dt>
+        <dt class="param-name monospace optional">
+          urlFragment
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame document&#39;s URL fragment including the &#39;#&#39;.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">securityOrigin</dt>
+        <dt class="param-name monospace ">
+          securityOrigin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame document&#39;s security origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mimeType</dt>
+        <dt class="param-name monospace ">
+          mimeType
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Frame document&#39;s mimeType as determined by the browser.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">unreachableUrl</dt>
+        <dt class="param-name monospace optional">
+          unreachableUrl
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>If the frame failed to load, this contains the URL that could not be loaded. Note that unlike url above, this URL may contain a fragment.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -4545,7 +5188,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4559,10 +5201,10 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Unique frame identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -4577,6 +5219,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Information about the Frame hierarchy.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4584,25 +5227,31 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frame</dt>
+        <dt class="param-name monospace ">
+          frame
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Frame class="param-type">Frame</a>
           
       <div class="details-description">
         <p>Frame information for this tree item.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">childFrames</dt>
+        <dt class="param-name monospace optional">
+          childFrames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-FrameTree class="param-type">FrameTree</a> ]</span></span>
           
       <div class="details-description">
         <p>Child frames.</p>
 
+        
       </div>
     
           
@@ -4610,7 +5259,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4624,6 +5272,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Layout viewport position and dimensions.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4631,49 +5280,61 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">pageX</dt>
+        <dt class="param-name monospace ">
+          pageX
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Horizontal offset relative to the document (CSS pixels).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pageY</dt>
+        <dt class="param-name monospace ">
+          pageY
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Vertical offset relative to the document (CSS pixels).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clientWidth</dt>
+        <dt class="param-name monospace ">
+          clientWidth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Width (CSS pixels), excludes scrollbar if present.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clientHeight</dt>
+        <dt class="param-name monospace ">
+          clientHeight
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Height (CSS pixels), excludes scrollbar if present.</p>
 
+        
       </div>
     
           
@@ -4681,7 +5342,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4695,6 +5355,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Navigation history entry.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4702,61 +5363,76 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Unique id of the navigation history entry.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the navigation history entry.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">userTypedURL</dt>
+        <dt class="param-name monospace ">
+          userTypedURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL that the user typed in the url bar.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace ">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Title of the navigation history entry.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">transitionType</dt>
+        <dt class="param-name monospace ">
+          transitionType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-TransitionType class="param-type">TransitionType</a>
           
       <div class="details-description">
         <p>Transition type.</p>
 
+        
       </div>
     
           
@@ -4764,7 +5440,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4778,10 +5453,10 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Unique script identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -4796,15 +5471,14 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Transition type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>link</code>, <code>typed</code>, <code>address_bar</code>, <code>auto_bookmark</code>, <code>auto_subframe</code>, <code>manual_subframe</code>, <code>generated</code>, <code>auto_toplevel</code>, <code>form_submit</code>, <code>reload</code>, <code>keyword</code>, <code>keyword_generated</code>, <code>other</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">link, typed, address_bar, auto_bookmark, auto_subframe, manual_subframe, generated, auto_toplevel, form_submit, reload, keyword, keyword_generated, other</div>
-    
       </div>
     
       <div class="details">
@@ -4817,6 +5491,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Viewport for capturing screenshot.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4824,61 +5499,76 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">x</dt>
+        <dt class="param-name monospace ">
+          x
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>X offset in device independent pixels (dip).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">y</dt>
+        <dt class="param-name monospace ">
+          y
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Y offset in device independent pixels (dip).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Rectangle width in device independent pixels (dip).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Rectangle height in device independent pixels (dip).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace ">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Page scale factor.</p>
 
+        
       </div>
     
           
@@ -4886,7 +5576,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -4900,6 +5589,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Visual viewport position, dimensions, and scale.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -4907,97 +5597,121 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">offsetX</dt>
+        <dt class="param-name monospace ">
+          offsetX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Horizontal offset relative to the layout viewport (CSS pixels).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">offsetY</dt>
+        <dt class="param-name monospace ">
+          offsetY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Vertical offset relative to the layout viewport (CSS pixels).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pageX</dt>
+        <dt class="param-name monospace ">
+          pageX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Horizontal offset relative to the document (CSS pixels).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pageY</dt>
+        <dt class="param-name monospace ">
+          pageY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Vertical offset relative to the document (CSS pixels).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clientWidth</dt>
+        <dt class="param-name monospace ">
+          clientWidth
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Width (CSS pixels), excludes scrollbar if present.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">clientHeight</dt>
+        <dt class="param-name monospace ">
+          clientHeight
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Height (CSS pixels), excludes scrollbar if present.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace ">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Scale relative to the ideal viewport (size at width=device-width).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">zoom</dt>
+        <dt class="param-name monospace optional">
+          zoom
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Page zoom factor (CSS to device independent pixels ratio).</p>
 
+        
       </div>
     
           
@@ -5005,7 +5719,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5019,6 +5732,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Parsed app manifest properties.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5026,13 +5740,16 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scope</dt>
+        <dt class="param-name monospace ">
+          scope
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Computed scope value</p>
 
+        
       </div>
     
           
@@ -5040,7 +5757,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5051,13 +5767,16 @@ Navigation may still be cancelled after the event is issued.</p>
           <a href="#type-ClientNavigationReason" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>formSubmissionGet</code>, <code>formSubmissionPost</code>, <code>httpHeaderRefresh</code>, <code>scriptInitiated</code>, <code>metaTagRefresh</code>, <code>pageBlockInterstitial</code>, <code>reload</code>, <code>anchorClick</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">formSubmissionGet, formSubmissionPost, httpHeaderRefresh, scriptInitiated, metaTagRefresh, pageBlockInterstitial, reload, anchorClick</div>
-    
       </div>
     
       <div class="details">
@@ -5070,6 +5789,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Generic font families collection.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5077,85 +5797,106 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">standard</dt>
+        <dt class="param-name monospace optional">
+          standard
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The standard font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fixed</dt>
+        <dt class="param-name monospace optional">
+          fixed
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The fixed font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">serif</dt>
+        <dt class="param-name monospace optional">
+          serif
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The serif font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sansSerif</dt>
+        <dt class="param-name monospace optional">
+          sansSerif
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The sansSerif font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cursive</dt>
+        <dt class="param-name monospace optional">
+          cursive
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The cursive font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fantasy</dt>
+        <dt class="param-name monospace optional">
+          fantasy
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The fantasy font-family.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pictograph</dt>
+        <dt class="param-name monospace optional">
+          pictograph
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The pictograph font-family.</p>
 
+        
       </div>
     
           
@@ -5163,7 +5904,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5177,6 +5917,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Default font sizes.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5184,25 +5925,31 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">standard</dt>
+        <dt class="param-name monospace optional">
+          standard
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Default standard font size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fixed</dt>
+        <dt class="param-name monospace optional">
+          fixed
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Default fixed font size.</p>
 
+        
       </div>
     
           
@@ -5210,7 +5957,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5224,6 +5970,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Information about the Resource on the page.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5231,85 +5978,106 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">Network.ResourceType</a>
           
       <div class="details-description">
         <p>Type of this resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mimeType</dt>
+        <dt class="param-name monospace ">
+          mimeType
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource mimeType as determined by the browser.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lastModified</dt>
+        <dt class="param-name monospace optional">
+          lastModified
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>last-modified timestamp as reported by server.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contentSize</dt>
+        <dt class="param-name monospace optional">
+          contentSize
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Resource content size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">failed</dt>
+        <dt class="param-name monospace optional">
+          failed
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the resource failed to load.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">canceled</dt>
+        <dt class="param-name monospace optional">
+          canceled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the resource was canceled during loading.</p>
 
+        
       </div>
     
           
@@ -5317,7 +6085,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5331,6 +6098,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Information about the Frame hierarchy along with their cached resources.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5338,37 +6106,46 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frame</dt>
+        <dt class="param-name monospace ">
+          frame
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-Frame class="param-type">Frame</a>
           
       <div class="details-description">
         <p>Frame information for this tree item.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">childFrames</dt>
+        <dt class="param-name monospace optional">
+          childFrames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-FrameResourceTree class="param-type">FrameResourceTree</a> ]</span></span>
           
       <div class="details-description">
         <p>Child frames.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">resources</dt>
+        <dt class="param-name monospace ">
+          resources
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-FrameResource class="param-type">FrameResource</a> ]</span></span>
           
       <div class="details-description">
         <p>Information about frame resources.</p>
 
+        
       </div>
     
           
@@ -5376,7 +6153,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5390,6 +6166,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>The installability error</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5397,25 +6174,31 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">errorId</dt>
+        <dt class="param-name monospace ">
+          errorId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The error id (e.g. &#39;manifest-missing-suitable-icon&#39;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorArguments</dt>
+        <dt class="param-name monospace ">
+          errorArguments
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Page/#type-InstallabilityErrorArgument class="param-type">InstallabilityErrorArgument</a> ]</span></span>
           
       <div class="details-description">
         <p>The list of error arguments (e.g. {name:&#39;minimum-icon-size-in-pixels&#39;, value:&#39;64&#39;}).</p>
 
+        
       </div>
     
           
@@ -5423,7 +6206,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5434,30 +6216,41 @@ Navigation may still be cancelled after the event is issued.</p>
           <a href="#type-InstallabilityErrorArgument" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Argument name (e.g. name:&#39;minimum-icon-size-in-pixels&#39;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Argument value (e.g. value:&#39;64&#39;).</p>
 
+        
       </div>
     
           
@@ -5465,7 +6258,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -5479,15 +6271,14 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>The referring-policy used for the navigation.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>noReferrer</code>, <code>noReferrerWhenDowngrade</code>, <code>origin</code>, <code>originWhenCrossOrigin</code>, <code>sameOrigin</code>, <code>strictOrigin</code>, <code>strictOriginWhenCrossOrigin</code>, <code>unsafeUrl</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">noReferrer, noReferrerWhenDowngrade, origin, originWhenCrossOrigin, sameOrigin, strictOrigin, strictOriginWhenCrossOrigin, unsafeUrl</div>
-    
       </div>
     
       <div class="details">
@@ -5500,6 +6291,7 @@ Navigation may still be cancelled after the event is issued.</p>
       <div class="details-description">
         <p>Screencast frame metadata.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -5507,85 +6299,106 @@ Navigation may still be cancelled after the event is issued.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">offsetTop</dt>
+        <dt class="param-name monospace ">
+          offsetTop
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Top offset in DIP.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pageScaleFactor</dt>
+        <dt class="param-name monospace ">
+          pageScaleFactor
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Page scale factor.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceWidth</dt>
+        <dt class="param-name monospace ">
+          deviceWidth
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Device screen width in DIP.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceHeight</dt>
+        <dt class="param-name monospace ">
+          deviceHeight
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Device screen height in DIP.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollOffsetX</dt>
+        <dt class="param-name monospace ">
+          scrollOffsetX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Position of horizontal scroll in CSS pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scrollOffsetY</dt>
+        <dt class="param-name monospace ">
+          scrollOffsetY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Position of vertical scroll in CSS pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace optional">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Frame swap timestamp.</p>
 
+        
       </div>
     
           
@@ -5593,7 +6406,6 @@ Navigation may still be cancelled after the event is issued.</p>
       
       </dl>
     
-        
         
       </div>
     

@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">Tracing Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
@@ -189,9 +194,9 @@
       <div class="details-description">
         <p>Stop trace events collection.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -207,6 +212,7 @@
       <div class="details-description">
         <p>Gets supported tracing categories.</p>
 
+        
       </div>
     
         
@@ -215,13 +221,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">categories</dt>
+        <dt class="param-name monospace ">
+          categories
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>A list of supported tracing categories.</p>
 
+        
       </div>
     
           
@@ -229,7 +238,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -242,6 +250,7 @@
       <div class="details-description">
         <p>Record a clock sync marker in the trace.</p>
 
+        
       </div>
     
         
@@ -249,13 +258,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">syncId</dt>
+        <dt class="param-name monospace ">
+          syncId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The ID of this clock sync marker</p>
 
+        
       </div>
     
           
@@ -263,7 +275,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -277,6 +288,7 @@
       <div class="details-description">
         <p>Request a global memory dump.</p>
 
+        
       </div>
     
         
@@ -284,13 +296,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">deterministic</dt>
+        <dt class="param-name monospace optional">
+          deterministic
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Enables more deterministic results by forcing garbage collection</p>
 
+        
       </div>
     
           
@@ -302,25 +317,31 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">dumpGuid</dt>
+        <dt class="param-name monospace ">
+          dumpGuid
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>GUID of the resulting global memory dump.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">success</dt>
+        <dt class="param-name monospace ">
+          success
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True iff the global memory dump succeeded.</p>
 
+        
       </div>
     
           
@@ -328,7 +349,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -341,6 +361,7 @@
       <div class="details-description">
         <p>Start trace events collection.</p>
 
+        
       </div>
     
         
@@ -348,43 +369,54 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">categories</dt>
+        <dt class="param-name monospace optional">
+          categories
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Category/tag filter</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">options</dt>
+        <dt class="param-name monospace optional">
+          options
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Tracing options</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">bufferUsageReportingInterval</dt>
+        <dt class="param-name monospace optional">
+          bufferUsageReportingInterval
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>If set, the agent will issue bufferUsage events at this interval, specified in milliseconds</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">transferMode</dt>
+        <dt class="param-name monospace optional">
+          transferMode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -392,12 +424,17 @@
         <p>Whether to report trace events as series of dataCollected events or to save trace to a
 stream (defaults to <code>ReportEvents</code>).</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>ReportEvents</code>, <code>ReturnAsStream</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">streamFormat</dt>
+        <dt class="param-name monospace optional">
+          streamFormat
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Tracing/#type-StreamFormat class="param-type">StreamFormat</a>
           
@@ -405,12 +442,15 @@ stream (defaults to <code>ReportEvents</code>).</p>
         <p>Trace data format to use. This only applies when using <code>ReturnAsStream</code>
 transfer mode (defaults to <code>json</code>).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">streamCompression</dt>
+        <dt class="param-name monospace optional">
+          streamCompression
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Tracing/#type-StreamCompression class="param-type">StreamCompression</a>
           
@@ -418,21 +458,28 @@ transfer mode (defaults to <code>json</code>).</p>
         <p>Compression format to use. This only applies when using <code>ReturnAsStream</code>
 transfer mode (defaults to <code>none</code>)</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">traceConfig</dt>
+        <dt class="param-name monospace optional">
+          traceConfig
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Tracing/#type-TraceConfig class="param-type">TraceConfig</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -449,12 +496,19 @@ transfer mode (defaults to <code>none</code>)</p>
           <a href="#event-bufferUsage" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">percentFull</dt>
+        <dt class="param-name monospace optional">
+          percentFull
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -462,24 +516,30 @@ transfer mode (defaults to <code>none</code>)</p>
         <p>A number in range [0..1] that indicates the used size of event buffer as a fraction of its
 total size.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">eventCount</dt>
+        <dt class="param-name monospace optional">
+          eventCount
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>An approximate number of events in the trace log.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -487,6 +547,7 @@ total size.</p>
         <p>A number in range [0..1] that indicates the used size of event buffer as a fraction of its
 total size.</p>
 
+        
       </div>
     
           
@@ -494,7 +555,6 @@ total size.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -509,6 +569,7 @@ total size.</p>
         <p>Contains an bucket of collected trace events. When tracing is stopped collected events will be
 send as a sequence of dataCollected events followed by tracingComplete event.</p>
 
+        
       </div>
     
         
@@ -516,16 +577,22 @@ send as a sequence of dataCollected events followed by tracingComplete event.</p
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">object</span> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -540,6 +607,7 @@ send as a sequence of dataCollected events followed by tracingComplete event.</p
         <p>Signals that tracing is stopped and there is no trace buffers pending flush, all data were
 delivered via dataCollected events.</p>
 
+        
       </div>
     
         
@@ -547,7 +615,9 @@ delivered via dataCollected events.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">dataLossOccurred</dt>
+        <dt class="param-name monospace ">
+          dataLossOccurred
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -555,42 +625,52 @@ delivered via dataCollected events.</p>
         <p>Indicates whether some trace data is known to have been lost, e.g. because the trace ring
 buffer wrapped around.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stream</dt>
+        <dt class="param-name monospace optional">
+          stream
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">IO.StreamHandle</a>
           
       <div class="details-description">
         <p>A handle of the stream that holds resulting trace data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">traceFormat</dt>
+        <dt class="param-name monospace optional">
+          traceFormat
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Tracing/#type-StreamFormat class="param-type">StreamFormat</a>
           
       <div class="details-description">
         <p>Trace data format of returned stream.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">streamCompression</dt>
+        <dt class="param-name monospace optional">
+          streamCompression
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Tracing/#type-StreamCompression class="param-type">StreamCompression</a>
           
       <div class="details-description">
         <p>Compression format of returned stream.</p>
 
+        
       </div>
     
           
@@ -598,7 +678,6 @@ buffer wrapped around.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -618,10 +697,10 @@ buffer wrapped around.</p>
       <div class="details-description">
         <p>Configuration for memory dump. Used only when &quot;memory-infra&quot; category is enabled.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
-        
         
         
       </div>
@@ -636,15 +715,14 @@ buffer wrapped around.</p>
       <div class="details-description">
         <p>Compression type to use for traces returned via streams.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>none</code>, <code>gzip</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">none, gzip</div>
-    
       </div>
     
       <div class="details">
@@ -658,15 +736,14 @@ buffer wrapped around.</p>
         <p>Data format of a trace. Can be either the legacy JSON format or the
 protocol buffer format. Note that the JSON format will be deprecated soon.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>json</code>, <code>proto</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">json, proto</div>
-    
       </div>
     
       <div class="details">
@@ -676,102 +753,133 @@ protocol buffer format. Note that the JSON format will be deprecated soon.</p>
           <a href="#type-TraceConfig" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">recordMode</dt>
+        <dt class="param-name monospace optional">
+          recordMode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Controls how the trace buffer stores data.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>recordUntilFull</code>, <code>recordContinuously</code>, <code>recordAsMuchAsPossible</code>, <code>echoToConsole</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">enableSampling</dt>
+        <dt class="param-name monospace optional">
+          enableSampling
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Turns on JavaScript stack sampling.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">enableSystrace</dt>
+        <dt class="param-name monospace optional">
+          enableSystrace
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Turns on system tracing.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">enableArgumentFilter</dt>
+        <dt class="param-name monospace optional">
+          enableArgumentFilter
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Turns on argument filter.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includedCategories</dt>
+        <dt class="param-name monospace optional">
+          includedCategories
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Included category filters.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">excludedCategories</dt>
+        <dt class="param-name monospace optional">
+          excludedCategories
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Excluded category filters.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">syntheticDelays</dt>
+        <dt class="param-name monospace optional">
+          syntheticDelays
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Configuration to synthesize the delays in tracing.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">memoryDumpConfig</dt>
+        <dt class="param-name monospace optional">
+          memoryDumpConfig
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Tracing/#type-MemoryDumpConfig class="param-type">MemoryDumpConfig</a>
           
       <div class="details-description">
         <p>Configuration for memory dump triggers. Used only when &quot;memory-infra&quot; category is enabled.</p>
 
+        
       </div>
     
           
@@ -779,7 +887,6 @@ protocol buffer format. Note that the JSON format will be deprecated soon.</p>
       
       </dl>
     
-        
         
       </div>
     

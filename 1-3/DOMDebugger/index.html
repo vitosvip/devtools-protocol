@@ -113,6 +113,7 @@
         <p>DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
 execution will stop on these operations as if there was a regular breakpoint set.</p>
 
+        
       </div>
     
         
@@ -180,6 +181,7 @@ execution will stop on these operations as if there was a regular breakpoint set
       <div class="details-description">
         <p>Returns event listeners of the given object.</p>
 
+        
       </div>
     
         
@@ -187,19 +189,24 @@ execution will stop on these operations as if there was a regular breakpoint set
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>Identifier of the object to return listeners for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">depth</dt>
+        <dt class="param-name monospace optional">
+          depth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -207,12 +214,15 @@ execution will stop on these operations as if there was a regular breakpoint set
         <p>The maximum depth at which Node children should be retrieved, defaults to 1. Use -1 for the
 entire subtree or provide an integer larger than 0.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">pierce</dt>
+        <dt class="param-name monospace optional">
+          pierce
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -220,6 +230,7 @@ entire subtree or provide an integer larger than 0.</p>
         <p>Whether or not iframes and shadow roots should be traversed when returning the subtree
 (default is false). Reports listeners for all contexts if pierce is enabled.</p>
 
+        
       </div>
     
           
@@ -231,13 +242,16 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">listeners</dt>
+        <dt class="param-name monospace ">
+          listeners
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/DOMDebugger/#type-EventListener class="param-type">EventListener</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of relevant listeners.</p>
 
+        
       </div>
     
           
@@ -245,7 +259,6 @@ entire subtree or provide an integer larger than 0.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -258,6 +271,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details-description">
         <p>Removes DOM breakpoint that was set using <code>setDOMBreakpoint</code>.</p>
 
+        
       </div>
     
         
@@ -265,25 +279,31 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Identifier of the node to remove breakpoint from.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
       <div class="details-description">
         <p>Type of the breakpoint to remove.</p>
 
+        
       </div>
     
           
@@ -291,7 +311,6 @@ entire subtree or provide an integer larger than 0.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -305,6 +324,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details-description">
         <p>Removes breakpoint on particular DOM event.</p>
 
+        
       </div>
     
         
@@ -312,25 +332,31 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">eventName</dt>
+        <dt class="param-name monospace ">
+          eventName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Event name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">targetName</dt>
+        <dt class="param-name monospace optional">
+          targetName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>EventTarget interface name.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -338,7 +364,6 @@ entire subtree or provide an integer larger than 0.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -352,6 +377,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details-description">
         <p>Removes breakpoint from XMLHttpRequest.</p>
 
+        
       </div>
     
         
@@ -359,13 +385,16 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL substring.</p>
 
+        
       </div>
     
           
@@ -373,7 +402,6 @@ entire subtree or provide an integer larger than 0.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -387,6 +415,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details-description">
         <p>Sets breakpoint on particular operation with DOM.</p>
 
+        
       </div>
     
         
@@ -394,25 +423,31 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Identifier of the node to set breakpoint on.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
       <div class="details-description">
         <p>Type of the operation to stop upon.</p>
 
+        
       </div>
     
           
@@ -420,7 +455,6 @@ entire subtree or provide an integer larger than 0.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -434,6 +468,7 @@ entire subtree or provide an integer larger than 0.</p>
       <div class="details-description">
         <p>Sets breakpoint on particular DOM event.</p>
 
+        
       </div>
     
         
@@ -441,19 +476,24 @@ entire subtree or provide an integer larger than 0.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">eventName</dt>
+        <dt class="param-name monospace ">
+          eventName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>DOM Event name to stop on (any DOM event will do).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">targetName</dt>
+        <dt class="param-name monospace optional">
+          targetName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -461,6 +501,7 @@ entire subtree or provide an integer larger than 0.</p>
         <p>EventTarget interface name to stop on. If equal to <code>&quot;*&quot;</code> or not provided, will stop on any
 EventTarget.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -468,7 +509,6 @@ EventTarget.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -482,6 +522,7 @@ EventTarget.</p>
       <div class="details-description">
         <p>Sets breakpoint on XMLHttpRequest.</p>
 
+        
       </div>
     
         
@@ -489,13 +530,16 @@ EventTarget.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL substring. All XHRs having this substring in the URL will get stopped upon.</p>
 
+        
       </div>
     
           
@@ -503,7 +547,6 @@ EventTarget.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -524,15 +567,14 @@ EventTarget.</p>
       <div class="details-description">
         <p>DOM breakpoint type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>subtree-modified</code>, <code>attribute-modified</code>, <code>node-removed</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">subtree-modified, attribute-modified, node-removed</div>
-    
       </div>
     
       <div class="details">
@@ -545,6 +587,7 @@ EventTarget.</p>
       <div class="details-description">
         <p>Object event listener.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -552,121 +595,151 @@ EventTarget.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p><code>EventListener</code>&#39;s type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">useCapture</dt>
+        <dt class="param-name monospace ">
+          useCapture
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p><code>EventListener</code>&#39;s useCapture.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">passive</dt>
+        <dt class="param-name monospace ">
+          passive
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p><code>EventListener</code>&#39;s passive flag.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">once</dt>
+        <dt class="param-name monospace ">
+          once
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p><code>EventListener</code>&#39;s once flag.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Script id of the handler code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number in the script (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace ">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column number in the script (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">handler</dt>
+        <dt class="param-name monospace optional">
+          handler
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
         <p>Event handler function value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">originalHandler</dt>
+        <dt class="param-name monospace optional">
+          originalHandler
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
         <p>Event original handler function value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>Node the listener is added to (if any).</p>
 
+        
       </div>
     
           
@@ -674,7 +747,6 @@ EventTarget.</p>
       
       </dl>
     
-        
         
       </div>
     

@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Supports additional targets discovery and allows to attach to them.</p>
 
+        
       </div>
     
         
@@ -209,6 +210,7 @@
       <div class="details-description">
         <p>Activates (focuses) the target.</p>
 
+        
       </div>
     
         
@@ -216,16 +218,22 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -239,6 +247,7 @@
       <div class="details-description">
         <p>Attaches to the target with given id.</p>
 
+        
       </div>
     
         
@@ -246,14 +255,23 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">flatten</dt>
+        <dt class="param-name monospace optional">
+          flatten
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -262,6 +280,7 @@
 We plan to make this the default, deprecate non-flattened mode,
 and eventually retire it. See crbug.com/991325.</p>
 
+        
       </div>
     
           
@@ -273,13 +292,16 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">sessionId</dt>
+        <dt class="param-name monospace ">
+          sessionId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-SessionID class="param-type">SessionID</a>
           
       <div class="details-description">
         <p>Id assigned to the session.</p>
 
+        
       </div>
     
           
@@ -287,7 +309,6 @@ and eventually retire it. See crbug.com/991325.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -300,6 +321,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <div class="details-description">
         <p>Closes the target. If the target is a page that gets closed too.</p>
 
+        
       </div>
     
         
@@ -307,10 +329,17 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -320,16 +349,22 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">success</dt>
+        <dt class="param-name monospace ">
+          success
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -342,6 +377,7 @@ and eventually retire it. See crbug.com/991325.</p>
       <div class="details-description">
         <p>Creates a new page.</p>
 
+        
       </div>
     
         
@@ -349,55 +385,69 @@ and eventually retire it. See crbug.com/991325.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The initial URL the page will be navigated to.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace optional">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Frame width in DIP (headless chrome only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace optional">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Frame height in DIP (headless chrome only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
       <div class="details-description">
         <p>The browser context to create the page in.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">enableBeginFrameControl</dt>
+        <dt class="param-name monospace optional">
+          enableBeginFrameControl
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -405,24 +455,30 @@ and eventually retire it. See crbug.com/991325.</p>
         <p>Whether BeginFrames for this target will be controlled via DevTools (headless chrome only,
 not supported on MacOS yet, false by default).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">newWindow</dt>
+        <dt class="param-name monospace optional">
+          newWindow
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to create a new Window or Tab (chrome-only, false by default).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">background</dt>
+        <dt class="param-name monospace optional">
+          background
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -430,6 +486,7 @@ not supported on MacOS yet, false by default).</p>
         <p>Whether to create the target in background or foreground (chrome-only,
 false by default).</p>
 
+        
       </div>
     
           
@@ -441,13 +498,16 @@ false by default).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
       <div class="details-description">
         <p>The id of the page opened.</p>
 
+        
       </div>
     
           
@@ -455,7 +515,6 @@ false by default).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -468,6 +527,7 @@ false by default).</p>
       <div class="details-description">
         <p>Detaches session with given id.</p>
 
+        
       </div>
     
         
@@ -475,25 +535,31 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">sessionId</dt>
+        <dt class="param-name monospace optional">
+          sessionId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-SessionID class="param-type">SessionID</a>
           
       <div class="details-description">
         <p>Session to detach.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace optional">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
       <div class="details-description">
         <p>Deprecated.</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
@@ -501,7 +567,6 @@ false by default).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -515,6 +580,7 @@ false by default).</p>
       <div class="details-description">
         <p>Retrieves a list of available targets.</p>
 
+        
       </div>
     
         
@@ -523,13 +589,16 @@ false by default).</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetInfos</dt>
+        <dt class="param-name monospace ">
+          targetInfos
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Target/#type-TargetInfo class="param-type">TargetInfo</a> ]</span></span>
           
       <div class="details-description">
         <p>The list of targets.</p>
 
+        
       </div>
     
           
@@ -537,7 +606,6 @@ false by default).</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -551,6 +619,7 @@ false by default).</p>
         <p>Controls whether to discover available targets and notify via
 <code>targetCreated/targetInfoChanged/targetDestroyed</code> events.</p>
 
+        
       </div>
     
         
@@ -558,13 +627,16 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">discover</dt>
+        <dt class="param-name monospace ">
+          discover
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to discover available targets.</p>
 
+        
       </div>
     
           
@@ -572,7 +644,6 @@ false by default).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -593,6 +664,7 @@ false by default).</p>
         <p>Notifies about a new protocol message received from the session (as reported in
 <code>attachedToTarget</code> event).</p>
 
+        
       </div>
     
         
@@ -600,32 +672,45 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">sessionId</dt>
+        <dt class="param-name monospace ">
+          sessionId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-SessionID class="param-type">SessionID</a>
           
       <div class="details-description">
         <p>Identifier of a session which sends a message.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">message</dt>
+        <dt class="param-name monospace ">
+          message
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace optional">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
       <div class="details-description">
         <p>Deprecated.</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
@@ -633,7 +718,6 @@ false by default).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -647,6 +731,7 @@ false by default).</p>
       <div class="details-description">
         <p>Issued when a target has crashed.</p>
 
+        
       </div>
     
         
@@ -654,32 +739,45 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">status</dt>
+        <dt class="param-name monospace ">
+          status
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Termination status type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorCode</dt>
+        <dt class="param-name monospace ">
+          errorCode
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Termination error code.</p>
 
+        
       </div>
     
           
@@ -687,7 +785,6 @@ false by default).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -701,6 +798,7 @@ false by default).</p>
       <div class="details-description">
         <p>Issued when a possible inspection target is created.</p>
 
+        
       </div>
     
         
@@ -708,16 +806,22 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetInfo</dt>
+        <dt class="param-name monospace ">
+          targetInfo
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetInfo class="param-type">TargetInfo</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -731,6 +835,7 @@ false by default).</p>
       <div class="details-description">
         <p>Issued when a target is destroyed.</p>
 
+        
       </div>
     
         
@@ -738,16 +843,22 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -762,6 +873,7 @@ false by default).</p>
         <p>Issued when some information about a target has changed. This only happens between
 <code>targetCreated</code> and <code>targetDestroyed</code>.</p>
 
+        
       </div>
     
         
@@ -769,16 +881,22 @@ false by default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetInfo</dt>
+        <dt class="param-name monospace ">
+          targetInfo
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetInfo class="param-type">TargetInfo</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -798,10 +916,10 @@ false by default).</p>
       <div class="details-description">
         <p>Unique identifier of attached debugging session.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -813,8 +931,12 @@ false by default).</p>
           <a href="#type-TargetID" class="permalink">#</a>
         </h4>
         
-        <p class="type-type">Type: <strong>string</strong></p>
+      <div class="details-description">
         
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
         
         
       </div>
@@ -826,73 +948,118 @@ false by default).</p>
           <a href="#type-TargetInfo" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace ">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace ">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">attached</dt>
+        <dt class="param-name monospace ">
+          attached
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the target has an attached client.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">openerId</dt>
+        <dt class="param-name monospace optional">
+          openerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Target/#type-TargetID class="param-type">TargetID</a>
           
       <div class="details-description">
         <p>Opener target Id</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
       </dl>
     
-        
         
       </div>
     

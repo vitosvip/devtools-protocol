@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">Accessibility Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
@@ -199,9 +204,9 @@
       <div class="details-description">
         <p>Disables the accessibility domain.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -218,9 +223,9 @@
         <p>Enables the accessibility domain which causes <code>AXNodeId</code>s to remain consistent between method calls.
 This turns on accessibility for the page, which can impact performance until accessibility is disabled.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -236,6 +241,7 @@ This turns on accessibility for the page, which can impact performance until acc
       <div class="details-description">
         <p>Fetches the entire accessibility tree</p>
 
+        
       </div>
     
         
@@ -244,16 +250,22 @@ This turns on accessibility for the page, which can impact performance until acc
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodes</dt>
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXNode class="param-type">AXNode</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -266,6 +278,7 @@ This turns on accessibility for the page, which can impact performance until acc
       <div class="details-description">
         <p>Fetches the accessibility node and partial accessibility tree for this DOM node, if it exists.</p>
 
+        
       </div>
     
         
@@ -273,49 +286,61 @@ This turns on accessibility for the page, which can impact performance until acc
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace optional">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Identifier of the node to get the partial accessibility tree for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendNodeId</dt>
+        <dt class="param-name monospace optional">
+          backendNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>Identifier of the backend node to get the partial accessibility tree for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>JavaScript object id of the node wrapper to get the partial accessibility tree for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fetchRelatives</dt>
+        <dt class="param-name monospace optional">
+          fetchRelatives
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to fetch this nodes ancestors, siblings and children. Defaults to true.</p>
 
+        
       </div>
     
           
@@ -327,7 +352,9 @@ This turns on accessibility for the page, which can impact performance until acc
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodes</dt>
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXNode class="param-type">AXNode</a> ]</span></span>
           
@@ -335,6 +362,7 @@ This turns on accessibility for the page, which can impact performance until acc
         <p>The <code>Accessibility.AXNode</code> for this DOM node, if it exists, plus its ancestors, siblings and
 children, if requested.</p>
 
+        
       </div>
     
           
@@ -342,7 +370,6 @@ children, if requested.</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -362,6 +389,7 @@ children, if requested.</p>
       <div class="details-description">
         <p>A node in the accessibility tree.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -369,121 +397,151 @@ children, if requested.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXNodeId class="param-type">AXNodeId</a>
           
       <div class="details-description">
         <p>Unique identifier for this node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ignored</dt>
+        <dt class="param-name monospace ">
+          ignored
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether this node is ignored for accessibility</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ignoredReasons</dt>
+        <dt class="param-name monospace optional">
+          ignoredReasons
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXProperty class="param-type">AXProperty</a> ]</span></span>
           
       <div class="details-description">
         <p>Collection of reasons why this node is hidden.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">role</dt>
+        <dt class="param-name monospace optional">
+          role
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>This <code>Node</code>&#39;s role, whether explicit or implicit.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace optional">
+          name
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The accessible name for this <code>Node</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">description</dt>
+        <dt class="param-name monospace optional">
+          description
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The accessible description for this <code>Node</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The value for this <code>Node</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">properties</dt>
+        <dt class="param-name monospace optional">
+          properties
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXProperty class="param-type">AXProperty</a> ]</span></span>
           
       <div class="details-description">
         <p>All other properties</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">childIds</dt>
+        <dt class="param-name monospace optional">
+          childIds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXNodeId class="param-type">AXNodeId</a> ]</span></span>
           
       <div class="details-description">
         <p>IDs for each of this node&#39;s child nodes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">backendDOMNodeId</dt>
+        <dt class="param-name monospace optional">
+          backendDOMNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>The backend ID for the associated DOM node, if any.</p>
 
+        
       </div>
     
           
@@ -491,7 +549,6 @@ children, if requested.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -505,10 +562,10 @@ children, if requested.</p>
       <div class="details-description">
         <p>Unique accessibility node identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -520,30 +577,41 @@ children, if requested.</p>
           <a href="#type-AXProperty" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXPropertyName class="param-type">AXPropertyName</a>
           
       <div class="details-description">
         <p>The name of this property.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The value of this property.</p>
 
+        
       </div>
     
           
@@ -551,7 +619,6 @@ children, if requested.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -572,15 +639,14 @@ children, if requested.</p>
 <li>from &#39;activedescendant&#39; to &#39;owns&#39; - relationships between elements other than parent/child/sibling.</li>
 </ul>
 
+        
+      <div class="enum-container">Allowed Values: <code>busy</code>, <code>disabled</code>, <code>editable</code>, <code>focusable</code>, <code>focused</code>, <code>hidden</code>, <code>hiddenRoot</code>, <code>invalid</code>, <code>keyshortcuts</code>, <code>settable</code>, <code>roledescription</code>, <code>live</code>, <code>atomic</code>, <code>relevant</code>, <code>root</code>, <code>autocomplete</code>, <code>hasPopup</code>, <code>level</code>, <code>multiselectable</code>, <code>orientation</code>, <code>multiline</code>, <code>readonly</code>, <code>required</code>, <code>valuemin</code>, <code>valuemax</code>, <code>valuetext</code>, <code>checked</code>, <code>expanded</code>, <code>modal</code>, <code>pressed</code>, <code>selected</code>, <code>activedescendant</code>, <code>controls</code>, <code>describedby</code>, <code>details</code>, <code>errormessage</code>, <code>flowto</code>, <code>labelledby</code>, <code>owns</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">busy, disabled, editable, focusable, focused, hidden, hiddenRoot, invalid, keyshortcuts, settable, roledescription, live, atomic, relevant, root, autocomplete, hasPopup, level, multiselectable, orientation, multiline, readonly, required, valuemin, valuemax, valuetext, checked, expanded, modal, pressed, selected, activedescendant, controls, describedby, details, errormessage, flowto, labelledby, owns</div>
-    
       </div>
     
       <div class="details">
@@ -590,42 +656,56 @@ children, if requested.</p>
           <a href="#type-AXRelatedNode" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">backendDOMNodeId</dt>
+        <dt class="param-name monospace ">
+          backendDOMNodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/DOM/#type-BackendNodeId class="param-type">DOM.BackendNodeId</a>
           
       <div class="details-description">
         <p>The BackendNodeId of the related DOM node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">idref</dt>
+        <dt class="param-name monospace optional">
+          idref
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The IDRef value provided, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace optional">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The text alternative of this node in the current context.</p>
 
+        
       </div>
     
           
@@ -633,7 +713,6 @@ children, if requested.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -647,6 +726,7 @@ children, if requested.</p>
       <div class="details-description">
         <p>A single computed AX property.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -654,49 +734,61 @@ children, if requested.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValueType class="param-type">AXValueType</a>
           
       <div class="details-description">
         <p>The type of this value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <span class="param-type">any</span>
           
       <div class="details-description">
         <p>The computed value of this property.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">relatedNodes</dt>
+        <dt class="param-name monospace optional">
+          relatedNodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXRelatedNode class="param-type">AXRelatedNode</a> ]</span></span>
           
       <div class="details-description">
         <p>One or more related nodes, if applicable.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sources</dt>
+        <dt class="param-name monospace optional">
+          sources
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Accessibility/#type-AXValueSource class="param-type">AXValueSource</a> ]</span></span>
           
       <div class="details-description">
         <p>The sources which contributed to the computation of this property.</p>
 
+        
       </div>
     
           
@@ -704,7 +796,6 @@ children, if requested.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -718,15 +809,14 @@ children, if requested.</p>
       <div class="details-description">
         <p>Enum of possible native property sources (as a subtype of a particular AXValueSourceType).</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>figcaption</code>, <code>label</code>, <code>labelfor</code>, <code>labelwrapped</code>, <code>legend</code>, <code>tablecaption</code>, <code>title</code>, <code>other</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">figcaption, label, labelfor, labelwrapped, legend, tablecaption, title, other</div>
-    
       </div>
     
       <div class="details">
@@ -739,6 +829,7 @@ children, if requested.</p>
       <div class="details-description">
         <p>A single source for a computed AX property.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -746,109 +837,136 @@ children, if requested.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValueSourceType class="param-type">AXValueSourceType</a>
           
       <div class="details-description">
         <p>What type of source this is.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The value of this property source.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">attribute</dt>
+        <dt class="param-name monospace optional">
+          attribute
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The name of the relevant attribute, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">attributeValue</dt>
+        <dt class="param-name monospace optional">
+          attributeValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The value of the relevant attribute, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">superseded</dt>
+        <dt class="param-name monospace optional">
+          superseded
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether this source is superseded by a higher priority source.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nativeSource</dt>
+        <dt class="param-name monospace optional">
+          nativeSource
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValueNativeSourceType class="param-type">AXValueNativeSourceType</a>
           
       <div class="details-description">
         <p>The native markup source for this value, e.g. a <label> element.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">nativeSourceValue</dt>
+        <dt class="param-name monospace optional">
+          nativeSourceValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Accessibility/#type-AXValue class="param-type">AXValue</a>
           
       <div class="details-description">
         <p>The value, such as a node or node list, of the native source.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">invalid</dt>
+        <dt class="param-name monospace optional">
+          invalid
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the value for this property is invalid.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">invalidReason</dt>
+        <dt class="param-name monospace optional">
+          invalidReason
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Reason for the value being invalid, if it is.</p>
 
+        
       </div>
     
           
@@ -856,7 +974,6 @@ children, if requested.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -870,15 +987,14 @@ children, if requested.</p>
       <div class="details-description">
         <p>Enum of possible property sources.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>attribute</code>, <code>implicit</code>, <code>style</code>, <code>contents</code>, <code>placeholder</code>, <code>relatedElement</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">attribute, implicit, style, contents, placeholder, relatedElement</div>
-    
       </div>
     
       <div class="details">
@@ -891,15 +1007,14 @@ children, if requested.</p>
       <div class="details-description">
         <p>Enum of possible property types.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>boolean</code>, <code>tristate</code>, <code>booleanOrUndefined</code>, <code>idref</code>, <code>idrefList</code>, <code>integer</code>, <code>node</code>, <code>nodeList</code>, <code>number</code>, <code>string</code>, <code>computedString</code>, <code>token</code>, <code>tokenList</code>, <code>domRelation</code>, <code>role</code>, <code>internalRole</code>, <code>valueUndefined</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">boolean, tristate, booleanOrUndefined, idref, idrefList, integer, node, nodeList, number, string, computedString, token, tokenList, domRelation, role, internalRole, valueUndefined</div>
-    
       </div>
     
       </div>

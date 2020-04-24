@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">Storage Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         <h3>Methods</h3>
       <div class="toc-link">
@@ -204,6 +209,7 @@
       <div class="details-description">
         <p>Clears cookies.</p>
 
+        
       </div>
     
         
@@ -211,13 +217,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
       <div class="details-description">
         <p>Browser context to use when called on the browser endpoint.</p>
 
+        
       </div>
     
           
@@ -225,7 +234,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -239,6 +247,7 @@
       <div class="details-description">
         <p>Clears storage for origin.</p>
 
+        
       </div>
     
         
@@ -246,25 +255,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Security origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">storageTypes</dt>
+        <dt class="param-name monospace ">
+          storageTypes
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Comma separated list of StorageType to clear.</p>
 
+        
       </div>
     
           
@@ -272,7 +287,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -286,6 +300,7 @@
       <div class="details-description">
         <p>Returns all browser cookies.</p>
 
+        
       </div>
     
         
@@ -293,13 +308,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
       <div class="details-description">
         <p>Browser context to use when called on the browser endpoint.</p>
 
+        
       </div>
     
           
@@ -311,13 +329,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace ">
+          cookies
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Network/#type-Cookie class="param-type">Network.Cookie</a> ]</span></span>
           
       <div class="details-description">
         <p>Array of cookie objects.</p>
 
+        
       </div>
     
           
@@ -325,7 +346,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -338,6 +358,7 @@
       <div class="details-description">
         <p>Returns usage and quota in bytes.</p>
 
+        
       </div>
     
         
@@ -345,13 +366,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Security origin.</p>
 
+        
       </div>
     
           
@@ -363,37 +387,46 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">usage</dt>
+        <dt class="param-name monospace ">
+          usage
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Storage usage (bytes).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">quota</dt>
+        <dt class="param-name monospace ">
+          quota
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Storage quota (bytes).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">usageBreakdown</dt>
+        <dt class="param-name monospace ">
+          usageBreakdown
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Storage/#type-UsageForType class="param-type">UsageForType</a> ]</span></span>
           
       <div class="details-description">
         <p>Storage usage per type (bytes).</p>
 
+        
       </div>
     
           
@@ -401,7 +434,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -414,6 +446,7 @@
       <div class="details-description">
         <p>Sets given cookies.</p>
 
+        
       </div>
     
         
@@ -421,25 +454,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookies</dt>
+        <dt class="param-name monospace ">
+          cookies
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Network/#type-CookieParam class="param-type">Network.CookieParam</a> ]</span></span>
           
       <div class="details-description">
         <p>Cookies to be set.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">Browser.BrowserContextID</a>
           
       <div class="details-description">
         <p>Browser context to use when called on the browser endpoint.</p>
 
+        
       </div>
     
           
@@ -447,7 +486,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -461,6 +499,7 @@
       <div class="details-description">
         <p>Registers origin to be notified when an update occurs to its cache storage list.</p>
 
+        
       </div>
     
         
@@ -468,13 +507,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Security origin.</p>
 
+        
       </div>
     
           
@@ -482,7 +524,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -496,6 +537,7 @@
       <div class="details-description">
         <p>Registers origin to be notified when an update occurs to its IndexedDB.</p>
 
+        
       </div>
     
         
@@ -503,13 +545,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Security origin.</p>
 
+        
       </div>
     
           
@@ -517,7 +562,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -531,6 +575,7 @@
       <div class="details-description">
         <p>Unregisters origin from receiving notifications for cache storage.</p>
 
+        
       </div>
     
         
@@ -538,13 +583,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Security origin.</p>
 
+        
       </div>
     
           
@@ -552,7 +600,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -566,6 +613,7 @@
       <div class="details-description">
         <p>Unregisters origin from receiving notifications for IndexedDB.</p>
 
+        
       </div>
     
         
@@ -573,13 +621,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Security origin.</p>
 
+        
       </div>
     
           
@@ -587,7 +638,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -607,6 +657,7 @@
       <div class="details-description">
         <p>A cache&#39;s contents have been modified.</p>
 
+        
       </div>
     
         
@@ -614,25 +665,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin to update.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cacheName</dt>
+        <dt class="param-name monospace ">
+          cacheName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of cache in origin.</p>
 
+        
       </div>
     
           
@@ -640,7 +697,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -654,6 +710,7 @@
       <div class="details-description">
         <p>A cache has been added/deleted.</p>
 
+        
       </div>
     
         
@@ -661,13 +718,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin to update.</p>
 
+        
       </div>
     
           
@@ -675,7 +735,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -689,6 +748,7 @@
       <div class="details-description">
         <p>The origin&#39;s IndexedDB object store has been modified.</p>
 
+        
       </div>
     
         
@@ -696,37 +756,46 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin to update.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">databaseName</dt>
+        <dt class="param-name monospace ">
+          databaseName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Database to update.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectStoreName</dt>
+        <dt class="param-name monospace ">
+          objectStoreName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>ObjectStore to update.</p>
 
+        
       </div>
     
           
@@ -734,7 +803,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -748,6 +816,7 @@
       <div class="details-description">
         <p>The origin&#39;s IndexedDB database list has been modified.</p>
 
+        
       </div>
     
         
@@ -755,13 +824,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin to update.</p>
 
+        
       </div>
     
           
@@ -769,7 +841,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -789,15 +860,14 @@
       <div class="details-description">
         <p>Enum of possible storage types.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>appcache</code>, <code>cookies</code>, <code>file_systems</code>, <code>indexeddb</code>, <code>local_storage</code>, <code>shader_cache</code>, <code>websql</code>, <code>service_workers</code>, <code>cache_storage</code>, <code>all</code>, <code>other</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">appcache, cookies, file_systems, indexeddb, local_storage, shader_cache, websql, service_workers, cache_storage, all, other</div>
-    
       </div>
     
       <div class="details">
@@ -810,6 +880,7 @@
       <div class="details-description">
         <p>Usage for a storage type.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -817,25 +888,31 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">storageType</dt>
+        <dt class="param-name monospace ">
+          storageType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Storage/#type-StorageType class="param-type">StorageType</a>
           
       <div class="details-description">
         <p>Name of storage type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">usage</dt>
+        <dt class="param-name monospace ">
+          usage
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Storage usage (bytes).</p>
 
+        
       </div>
     
           
@@ -843,7 +920,6 @@
       
       </dl>
     
-        
         
       </div>
     

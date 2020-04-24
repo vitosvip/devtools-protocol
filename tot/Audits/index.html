@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Audits domain allows investigation of page violations and possible improvements.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -219,9 +220,9 @@
       <div class="details-description">
         <p>Disables issues domain, prevents further issues from being reported to the client.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -238,9 +239,9 @@
         <p>Enables issues domain, sends the issues collected so far to the client by means of the
 <code>issueAdded</code> event.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -257,6 +258,7 @@
         <p>Returns the response body and size if it were re-encoded with the specified settings. Only
 applies to images.</p>
 
+        
       </div>
     
         
@@ -264,49 +266,63 @@ applies to images.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">Network.RequestId</a>
           
       <div class="details-description">
         <p>Identifier of the network request to get content for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encoding</dt>
+        <dt class="param-name monospace ">
+          encoding
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The encoding to use.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>webp</code>, <code>jpeg</code>, <code>png</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">quality</dt>
+        <dt class="param-name monospace optional">
+          quality
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>The quality of the encoding (0-1). (defaults to 1)</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sizeOnly</dt>
+        <dt class="param-name monospace optional">
+          sizeOnly
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to only return the size information (defaults to false).</p>
 
+        
       </div>
     
           
@@ -318,37 +334,46 @@ applies to images.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">body</dt>
+        <dt class="param-name monospace optional">
+          body
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The encoded body as a base64 string. Omitted if sizeOnly is true.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">originalSize</dt>
+        <dt class="param-name monospace ">
+          originalSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Size before re-encoding.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">encodedSize</dt>
+        <dt class="param-name monospace ">
+          encodedSize
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Size after re-encoding.</p>
 
+        
       </div>
     
           
@@ -356,7 +381,6 @@ applies to images.</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -372,21 +396,32 @@ applies to images.</p>
           <a href="#event-issueAdded" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">issue</dt>
+        <dt class="param-name monospace ">
+          issue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-InspectorIssue class="param-type">InspectorIssue</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -406,6 +441,7 @@ applies to images.</p>
       <div class="details-description">
         <p>Information about a cookie that is affected by an inspector issue.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -413,35 +449,51 @@ applies to images.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The following three properties uniquely identify a cookie</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">path</dt>
+        <dt class="param-name monospace ">
+          path
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">domain</dt>
+        <dt class="param-name monospace ">
+          domain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -455,6 +507,7 @@ applies to images.</p>
       <div class="details-description">
         <p>Information about the frame affected by an inspector issue.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -462,16 +515,22 @@ applies to images.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -485,6 +544,7 @@ applies to images.</p>
       <div class="details-description">
         <p>Information about a request that is affected by an inspector issue.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -492,28 +552,37 @@ applies to images.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-RequestId class="param-type">Network.RequestId</a>
           
       <div class="details-description">
         <p>The unique request id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -527,6 +596,7 @@ applies to images.</p>
       <div class="details-description">
         <p>An inspector issue reported from the back-end.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -534,23 +604,36 @@ applies to images.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">code</dt>
+        <dt class="param-name monospace ">
+          code
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-InspectorIssueCode class="param-type">InspectorIssueCode</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">details</dt>
+        <dt class="param-name monospace ">
+          details
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-InspectorIssueDetails class="param-type">InspectorIssueDetails</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -566,15 +649,14 @@ applies to images.</p>
 optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">SameSiteCookieIssue, MixedContentIssue</div>
-    
       </div>
     
       <div class="details">
@@ -589,6 +671,7 @@ information about the kind of issue.</p>
 specific to the kind of issue. When adding a new issue code, please also
 add a new optional field to this type.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -596,23 +679,36 @@ add a new optional field to this type.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">sameSiteCookieIssueDetails</dt>
+        <dt class="param-name monospace optional">
+          sameSiteCookieIssueDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieIssueDetails class="param-type">SameSiteCookieIssueDetails</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">mixedContentIssueDetails</dt>
+        <dt class="param-name monospace optional">
+          mixedContentIssueDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-MixedContentIssueDetails class="param-type">MixedContentIssueDetails</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -623,12 +719,19 @@ add a new optional field to this type.</p>
           <a href="#type-MixedContentIssueDetails" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">resourceType</dt>
+        <dt class="param-name monospace optional">
+          resourceType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-MixedContentResourceType class="param-type">MixedContentResourceType</a>
           
@@ -638,48 +741,60 @@ form,...). Marked as optional because it is mapped to from
 blink::mojom::RequestContextType, which will be replaced
 by network::mojom::RequestDestination</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">resolutionStatus</dt>
+        <dt class="param-name monospace ">
+          resolutionStatus
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-MixedContentResolutionStatus class="param-type">MixedContentResolutionStatus</a>
           
       <div class="details-description">
         <p>The way the mixed content issue is being resolved.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">insecureURL</dt>
+        <dt class="param-name monospace ">
+          insecureURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The unsafe http url causing the mixed content issue.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mainResourceURL</dt>
+        <dt class="param-name monospace ">
+          mainResourceURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The url responsible for the call to an unsafe url.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace optional">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
           
@@ -687,18 +802,22 @@ by network::mojom::RequestDestination</p>
         <p>The mixed content request.
 Does not always exist (e.g. for unsafe form submission urls).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frame</dt>
+        <dt class="param-name monospace optional">
+          frame
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-AffectedFrame class="param-type">AffectedFrame</a>
           
       <div class="details-description">
         <p>Optional because not every mixed content issue is necessarily linked to a frame.</p>
 
+        
       </div>
     
           
@@ -706,7 +825,6 @@ Does not always exist (e.g. for unsafe form submission urls).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -717,13 +835,16 @@ Does not always exist (e.g. for unsafe form submission urls).</p>
           <a href="#type-MixedContentResolutionStatus" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>MixedContentBlocked</code>, <code>MixedContentAutomaticallyUpgraded</code>, <code>MixedContentWarning</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">MixedContentBlocked, MixedContentAutomaticallyUpgraded, MixedContentWarning</div>
-    
       </div>
     
       <div class="details">
@@ -733,13 +854,16 @@ Does not always exist (e.g. for unsafe form submission urls).</p>
           <a href="#type-MixedContentResourceType" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>Audio</code>, <code>Beacon</code>, <code>CSPReport</code>, <code>Download</code>, <code>EventSource</code>, <code>Favicon</code>, <code>Font</code>, <code>Form</code>, <code>Frame</code>, <code>Image</code>, <code>Import</code>, <code>Manifest</code>, <code>Ping</code>, <code>PluginData</code>, <code>PluginResource</code>, <code>Prefetch</code>, <code>Resource</code>, <code>Script</code>, <code>ServiceWorker</code>, <code>SharedWorker</code>, <code>Stylesheet</code>, <code>Track</code>, <code>Video</code>, <code>Worker</code>, <code>XMLHttpRequest</code>, <code>XSLT</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">Audio, Beacon, CSPReport, Download, EventSource, Favicon, Font, Form, Frame, Image, Import, Manifest, Ping, PluginData, PluginResource, Prefetch, Resource, Script, ServiceWorker, SharedWorker, Stylesheet, Track, Video, Worker, XMLHttpRequest, XSLT</div>
-    
       </div>
     
       <div class="details">
@@ -749,13 +873,16 @@ Does not always exist (e.g. for unsafe form submission urls).</p>
           <a href="#type-SameSiteCookieExclusionReason" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>ExcludeSameSiteUnspecifiedTreatedAsLax</code>, <code>ExcludeSameSiteNoneInsecure</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">ExcludeSameSiteUnspecifiedTreatedAsLax, ExcludeSameSiteNoneInsecure</div>
-    
       </div>
     
       <div class="details">
@@ -770,6 +897,7 @@ Does not always exist (e.g. for unsafe form submission urls).</p>
 time finding a specific cookie. With this, we can convey specific error
 information without the cookie.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -777,28 +905,51 @@ information without the cookie.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">cookie</dt>
+        <dt class="param-name monospace ">
+          cookie
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-AffectedCookie class="param-type">AffectedCookie</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">cookieWarningReasons</dt>
+        <dt class="param-name monospace ">
+          cookieWarningReasons
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieWarningReason class="param-type">SameSiteCookieWarningReason</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">cookieExclusionReasons</dt>
+        <dt class="param-name monospace ">
+          cookieExclusionReasons
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieExclusionReason class="param-type">SameSiteCookieExclusionReason</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">operation</dt>
+        <dt class="param-name monospace ">
+          operation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-SameSiteCookieOperation class="param-type">SameSiteCookieOperation</a>
           
@@ -806,35 +957,56 @@ information without the cookie.</p>
         <p>Optionally identifies the site-for-cookies and the cookie url, which
 may be used by the front-end as additional context.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">siteForCookies</dt>
+        <dt class="param-name monospace optional">
+          siteForCookies
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">cookieUrl</dt>
+        <dt class="param-name monospace optional">
+          cookieUrl
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace optional">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -845,13 +1017,16 @@ may be used by the front-end as additional context.</p>
           <a href="#type-SameSiteCookieOperation" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>SetCookie</code>, <code>ReadCookie</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">SetCookie, ReadCookie</div>
-    
       </div>
     
       <div class="details">
@@ -861,13 +1036,16 @@ may be used by the front-end as additional context.</p>
           <a href="#type-SameSiteCookieWarningReason" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>WarnSameSiteUnspecifiedCrossSiteContext</code>, <code>WarnSameSiteNoneInsecure</code>, <code>WarnSameSiteUnspecifiedLaxAllowUnsafe</code>, <code>WarnSameSiteCrossSchemeSecureUrlMethodUnsafe</code>, <code>WarnSameSiteCrossSchemeSecureUrlLax</code>, <code>WarnSameSiteCrossSchemeSecureUrlStrict</code>, <code>WarnSameSiteCrossSchemeInsecureUrlMethodUnsafe</code>, <code>WarnSameSiteCrossSchemeInsecureUrlLax</code>, <code>WarnSameSiteCrossSchemeInsecureUrlStrict</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">WarnSameSiteUnspecifiedCrossSiteContext, WarnSameSiteNoneInsecure, WarnSameSiteUnspecifiedLaxAllowUnsafe, WarnSameSiteCrossSchemeSecureUrlMethodUnsafe, WarnSameSiteCrossSchemeSecureUrlLax, WarnSameSiteCrossSchemeSecureUrlStrict, WarnSameSiteCrossSchemeInsecureUrlMethodUnsafe, WarnSameSiteCrossSchemeInsecureUrlLax, WarnSameSiteCrossSchemeInsecureUrlStrict</div>
-    
       </div>
     
       </div>

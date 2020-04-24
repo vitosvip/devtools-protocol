@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain allows detailed inspection of media elements</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -128,7 +129,17 @@
       
         <h3>Events</h3>
       <div class="toc-link">
+        <a class="monospace" href="#event-playerErrorsRaised"><span class="domain-dot">Media.</span>playerErrorsRaised</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#event-playerEventsAdded"><span class="domain-dot">Media.</span>playerEventsAdded</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#event-playerMessagesLogged"><span class="domain-dot">Media.</span>playerMessagesLogged</a>
         
       </div>
       
@@ -144,17 +155,22 @@
       
         <h3>Types</h3>
       <div class="toc-link">
+        <a class="monospace" href="#type-PlayerError"><span class="domain-dot">Media.</span>PlayerError</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-PlayerEvent"><span class="domain-dot">Media.</span>PlayerEvent</a>
         
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#type-PlayerEventType"><span class="domain-dot">Media.</span>PlayerEventType</a>
+        <a class="monospace" href="#type-PlayerId"><span class="domain-dot">Media.</span>PlayerId</a>
         
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#type-PlayerId"><span class="domain-dot">Media.</span>PlayerId</a>
+        <a class="monospace" href="#type-PlayerMessage"><span class="domain-dot">Media.</span>PlayerMessage</a>
         
       </div>
       
@@ -184,9 +200,9 @@
       <div class="details-description">
         <p>Disables the Media domain.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -202,9 +218,9 @@
       <div class="details-description">
         <p>Enables the Media domain</p>
 
+        
       </div>
     
-        
         
         
         
@@ -217,6 +233,57 @@
       <div>
         
       <div class="details">
+        <h4 class="details-name monospace" id="event-playerErrorsRaised">
+          <span class="domain-dot">Media.</span>playerErrorsRaised
+          
+          <a href="#event-playerErrorsRaised" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Send a list of any errors that need to be delivered.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          playerId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          errors
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Media/#type-PlayerError class="param-type">PlayerError</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="event-playerEventsAdded">
           <span class="domain-dot">Media.</span>playerEventsAdded
           
@@ -227,6 +294,7 @@
         <p>Send events as a list, allowing them to be batched on the browser for less
 congestion. If batched, events must ALWAYS be in chronological order.</p>
 
+        
       </div>
     
         
@@ -234,23 +302,87 @@ congestion. If batched, events must ALWAYS be in chronological order.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">playerId</dt>
+        <dt class="param-name monospace ">
+          playerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">events</dt>
+        <dt class="param-name monospace ">
+          events
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Media/#type-PlayerEvent class="param-type">PlayerEvent</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="event-playerMessagesLogged">
+          <span class="domain-dot">Media.</span>playerMessagesLogged
+          
+          <a href="#event-playerMessagesLogged" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Send a list of any messages that need to be delivered.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          playerId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          messages
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Media/#type-PlayerMessage class="param-type">PlayerMessage</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
@@ -265,6 +397,7 @@ congestion. If batched, events must ALWAYS be in chronological order.</p>
         <p>This can be called multiple times, and can be used to set / override /
 remove player properties. A null propValue indicates removal.</p>
 
+        
       </div>
     
         
@@ -272,23 +405,36 @@ remove player properties. A null propValue indicates removal.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">playerId</dt>
+        <dt class="param-name monospace ">
+          playerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">properties</dt>
+        <dt class="param-name monospace ">
+          properties
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Media/#type-PlayerProperty class="param-type">PlayerProperty</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -304,6 +450,7 @@ remove player properties. A null propValue indicates removal.</p>
 a list of active players. If an agent is restored, it will recieve the full
 list of player ids and all events again.</p>
 
+        
       </div>
     
         
@@ -311,16 +458,22 @@ list of player ids and all events again.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">players</dt>
+        <dt class="param-name monospace ">
+          players
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Media/#type-PlayerId class="param-type">PlayerId</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -331,76 +484,112 @@ list of player ids and all events again.</p>
       <div>
         
       <div class="details">
-        <h4 class="details-name monospace" id="type-PlayerEvent">
-          <span class="domain-dot">Media.</span>PlayerEvent
+        <h4 class="details-name monospace" id="type-PlayerError">
+          <span class="domain-dot">Media.</span>PlayerError
           
-          <a href="#type-PlayerEvent" class="permalink">#</a>
+          <a href="#type-PlayerError" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        <p>Corresponds to kMediaError</p>
+
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
-          <a href=/devtools-protocol/tot/Media/#type-PlayerEventType class="param-type">PlayerEventType</a>
-          
-          
-        </dd>
-      
-        <dt class="param-name monospace">timestamp</dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Media/#type-Timestamp class="param-type">Timestamp</a>
+          <span class="param-type">string</span>
           
       <div class="details-description">
-        <p>Events are timestamped relative to the start of the player creation
-not relative to the start of playback.</p>
-
+        
+        
+      <div class="enum-container">Allowed Values: <code>pipeline_error</code>, <code>media_error</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          errorCode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
-          
-        </dd>
-      
-        <dt class="param-name monospace">value</dt>
-        <dd>
-          <span class="param-type">string</span>
-          
+      <div class="details-description">
+        <p>When this switches to using media::Status instead of PipelineStatus
+we can remove &quot;errorCode&quot; and replace it with the fields from
+a Status instance. This also seems like a duplicate of the error
+level enum - there is a todo bug to have that level removed and
+use this instead. (crbug.com/1068454)</p>
+
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
         
-        
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-PlayerEventType">
-          <span class="domain-dot">Media.</span>PlayerEventType
+        <h4 class="details-name monospace" id="type-PlayerEvent">
+          <span class="domain-dot">Media.</span>PlayerEvent
           
-          <a href="#type-PlayerEventType" class="permalink">#</a>
+          <a href="#type-PlayerEvent" class="permalink">#</a>
         </h4>
         
       <div class="details-description">
-        <p>Break out events into different types</p>
+        <p>Corresponds to kMediaEventTriggered</p>
 
+        
       </div>
     
-        <p class="type-type">Type: <strong>string</strong></p>
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Media/#type-Timestamp class="param-type">Timestamp</a>
+          
+      <div class="details-description">
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">errorEvent, triggeredEvent, messageEvent</div>
+      </div>
     
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          value
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
       </div>
     
       <div class="details">
@@ -413,11 +602,74 @@ not relative to the start of playback.</p>
       <div class="details-description">
         <p>Players will get an ID that is unique within the agent context.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-PlayerMessage">
+          <span class="domain-dot">Media.</span>PlayerMessage
+          
+          <a href="#type-PlayerMessage" class="permalink">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Have one type per entry in MediaLogRecord::Type
+Corresponds to kMessage</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          level
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Keep in sync with MediaLogMessageLevel
+We are currently keeping the message level &#39;error&#39; separate from the
+PlayerError type because right now they represent different things,
+this one being a DVLOG(ERROR) style log message that gets printed
+based on what log level is selected in the UI, and the other is a
+representation of a media::PipelineStatus object. Soon however we&#39;re
+going to be moving away from using PipelineStatus for errors and
+introducing a new error type which should hopefully let us integrate
+the error log level into the PlayerError type.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>error</code>, <code>warning</code>, <code>info</code>, <code>debug</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          message
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
@@ -429,8 +681,9 @@ not relative to the start of playback.</p>
         </h4>
         
       <div class="details-description">
-        <p>Player Property type</p>
+        <p>Corresponds to kMediaPropertyChange</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -438,23 +691,36 @@ not relative to the start of playback.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -465,8 +731,12 @@ not relative to the start of playback.</p>
           <a href="#type-Timestamp" class="permalink">#</a>
         </h4>
         
-        <p class="type-type">Type: <strong>number</strong></p>
+      <div class="details-description">
         
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>number</strong></p>
         
         
       </div>

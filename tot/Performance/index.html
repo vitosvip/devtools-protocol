@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">Performance Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         <h3>Methods</h3>
       <div class="toc-link">
@@ -159,9 +164,9 @@
       <div class="details-description">
         <p>Disable collecting and reporting metrics.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -177,6 +182,7 @@
       <div class="details-description">
         <p>Enable collecting and reporting metrics.</p>
 
+        
       </div>
     
         
@@ -184,13 +190,18 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timeDomain</dt>
+        <dt class="param-name monospace optional">
+          timeDomain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Time domain to use for collecting and reporting duration metrics.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>timeTicks</code>, <code>threadTicks</code></div>
+    
       </div>
     
           
@@ -198,7 +209,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -212,6 +222,7 @@
       <div class="details-description">
         <p>Retrieve current values of run-time metrics.</p>
 
+        
       </div>
     
         
@@ -220,13 +231,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">metrics</dt>
+        <dt class="param-name monospace ">
+          metrics
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Performance/#type-Metric class="param-type">Metric</a> ]</span></span>
           
       <div class="details-description">
         <p>Current values for run-time metrics.</p>
 
+        
       </div>
     
           
@@ -234,7 +248,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -249,6 +262,7 @@
 Note that this must be called before enabling metrics collection. Calling
 this method while metrics collection is enabled returns an error.</p>
 
+        
       </div>
     
         
@@ -256,13 +270,18 @@ this method while metrics collection is enabled returns an error.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timeDomain</dt>
+        <dt class="param-name monospace ">
+          timeDomain
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Time domain</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>timeTicks</code>, <code>threadTicks</code></div>
+    
       </div>
     
           
@@ -270,7 +289,6 @@ this method while metrics collection is enabled returns an error.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -290,6 +308,7 @@ this method while metrics collection is enabled returns an error.</p>
       <div class="details-description">
         <p>Current values of the metrics.</p>
 
+        
       </div>
     
         
@@ -297,25 +316,31 @@ this method while metrics collection is enabled returns an error.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">metrics</dt>
+        <dt class="param-name monospace ">
+          metrics
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Performance/#type-Metric class="param-type">Metric</a> ]</span></span>
           
       <div class="details-description">
         <p>Current values of the metrics.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace ">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Timestamp title.</p>
 
+        
       </div>
     
           
@@ -323,7 +348,6 @@ this method while metrics collection is enabled returns an error.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -343,6 +367,7 @@ this method while metrics collection is enabled returns an error.</p>
       <div class="details-description">
         <p>Run-time execution metric.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -350,25 +375,31 @@ this method while metrics collection is enabled returns an error.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Metric name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Metric value.</p>
 
+        
       </div>
     
           
@@ -376,7 +407,6 @@ this method while metrics collection is enabled returns an error.</p>
       
       </dl>
     
-        
         
       </div>
     

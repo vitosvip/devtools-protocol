@@ -116,6 +116,7 @@ and unique identifier that can be used for further object reference. Original ob
 maintained in memory unless they are either explicitly released or are released along with the
 other objects in their object group.</p>
 
+        
       </div>
     
         
@@ -318,6 +319,7 @@ other objects in their object group.</p>
       <div class="details-description">
         <p>Add handler to promise with given promise object id.</p>
 
+        
       </div>
     
         
@@ -325,37 +327,46 @@ other objects in their object group.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">promiseObjectId</dt>
+        <dt class="param-name monospace ">
+          promiseObjectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
       <div class="details-description">
         <p>Identifier of the promise.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">returnByValue</dt>
+        <dt class="param-name monospace optional">
+          returnByValue
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the result is expected to be a JSON object that should be sent by value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">generatePreview</dt>
+        <dt class="param-name monospace optional">
+          generatePreview
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether preview should be generated for the result.</p>
 
+        
       </div>
     
           
@@ -367,25 +378,31 @@ other objects in their object group.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Promise result. Will contain rejected value if promise was rejected.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details if stack strace is available.</p>
 
+        
       </div>
     
           
@@ -393,7 +410,6 @@ other objects in their object group.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -407,6 +423,7 @@ other objects in their object group.</p>
         <p>Calls function with given declaration on the given object. Object group of the result is
 inherited from the target object.</p>
 
+        
       </div>
     
         
@@ -414,19 +431,24 @@ inherited from the target object.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">functionDeclaration</dt>
+        <dt class="param-name monospace ">
+          functionDeclaration
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Declaration of the function to call.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
@@ -434,12 +456,15 @@ inherited from the target object.</p>
         <p>Identifier of the object to call function on. Either objectId or executionContextId should
 be specified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">arguments</dt>
+        <dt class="param-name monospace optional">
+          arguments
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-CallArgument class="param-type">CallArgument</a> ]</span></span>
           
@@ -447,12 +472,15 @@ be specified.</p>
         <p>Call arguments. All call arguments must belong to the same JavaScript world as the target
 object.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">silent</dt>
+        <dt class="param-name monospace optional">
+          silent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -460,48 +488,60 @@ object.</p>
         <p>In silent mode exceptions thrown during evaluation are not reported and do not pause
 execution. Overrides <code>setPauseOnException</code> state.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">returnByValue</dt>
+        <dt class="param-name monospace optional">
+          returnByValue
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the result is expected to be a JSON object which should be sent by value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">generatePreview</dt>
+        <dt class="param-name monospace optional">
+          generatePreview
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether preview should be generated for the result.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">userGesture</dt>
+        <dt class="param-name monospace optional">
+          userGesture
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether execution should be treated as initiated by user in the UI.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">awaitPromise</dt>
+        <dt class="param-name monospace optional">
+          awaitPromise
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -509,12 +549,15 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
         <p>Whether execution should <code>await</code> for resulting value and return once awaited promise is
 resolved.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace optional">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
@@ -522,12 +565,15 @@ resolved.</p>
         <p>Specifies execution context which global object will be used to call function on. Either
 executionContextId or objectId should be specified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace optional">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -535,6 +581,7 @@ executionContextId or objectId should be specified.</p>
         <p>Symbolic group name that can be used to release multiple objects. If objectGroup is not
 specified and objectId is, objectGroup will be inherited from object.</p>
 
+        
       </div>
     
           
@@ -546,25 +593,31 @@ specified and objectId is, objectGroup will be inherited from object.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Call result.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details.</p>
 
+        
       </div>
     
           
@@ -572,7 +625,6 @@ specified and objectId is, objectGroup will be inherited from object.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -585,6 +637,7 @@ specified and objectId is, objectGroup will be inherited from object.</p>
       <div class="details-description">
         <p>Compiles expression.</p>
 
+        
       </div>
     
         
@@ -592,43 +645,54 @@ specified and objectId is, objectGroup will be inherited from object.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">expression</dt>
+        <dt class="param-name monospace ">
+          expression
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Expression to compile.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sourceURL</dt>
+        <dt class="param-name monospace ">
+          sourceURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Source url to be set for the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">persistScript</dt>
+        <dt class="param-name monospace ">
+          persistScript
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Specifies whether the compiled script should be persisted.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace optional">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
@@ -636,6 +700,7 @@ specified and objectId is, objectGroup will be inherited from object.</p>
         <p>Specifies in which execution context to perform script run. If the parameter is omitted the
 evaluation will be performed in the context of the inspected page.</p>
 
+        
       </div>
     
           
@@ -647,25 +712,31 @@ evaluation will be performed in the context of the inspected page.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace optional">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">ScriptId</a>
           
       <div class="details-description">
         <p>Id of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details.</p>
 
+        
       </div>
     
           
@@ -673,7 +744,6 @@ evaluation will be performed in the context of the inspected page.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -686,9 +756,9 @@ evaluation will be performed in the context of the inspected page.</p>
       <div class="details-description">
         <p>Disables reporting of execution contexts creation.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -704,9 +774,9 @@ evaluation will be performed in the context of the inspected page.</p>
       <div class="details-description">
         <p>Discards collected exceptions and console API calls.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -724,9 +794,9 @@ evaluation will be performed in the context of the inspected page.</p>
 When the reporting gets enabled the event will be sent immediately for each existing execution
 context.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -742,6 +812,7 @@ context.</p>
       <div class="details-description">
         <p>Evaluates expression on global object.</p>
 
+        
       </div>
     
         
@@ -749,43 +820,54 @@ context.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">expression</dt>
+        <dt class="param-name monospace ">
+          expression
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Expression to evaluate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace optional">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Symbolic group name that can be used to release multiple objects.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeCommandLineAPI</dt>
+        <dt class="param-name monospace optional">
+          includeCommandLineAPI
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Determines whether Command Line API should be available during the evaluation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">silent</dt>
+        <dt class="param-name monospace optional">
+          silent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -793,12 +875,15 @@ context.</p>
         <p>In silent mode exceptions thrown during evaluation are not reported and do not pause
 execution. Overrides <code>setPauseOnException</code> state.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">contextId</dt>
+        <dt class="param-name monospace optional">
+          contextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
@@ -806,48 +891,60 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
         <p>Specifies in which execution context to perform evaluation. If the parameter is omitted the
 evaluation will be performed in the context of the inspected page.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">returnByValue</dt>
+        <dt class="param-name monospace optional">
+          returnByValue
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the result is expected to be a JSON object that should be sent by value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">generatePreview</dt>
+        <dt class="param-name monospace optional">
+          generatePreview
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether preview should be generated for the result.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">userGesture</dt>
+        <dt class="param-name monospace optional">
+          userGesture
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether execution should be treated as initiated by user in the UI.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">awaitPromise</dt>
+        <dt class="param-name monospace optional">
+          awaitPromise
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -855,12 +952,15 @@ evaluation will be performed in the context of the inspected page.</p>
         <p>Whether execution should <code>await</code> for resulting value and return once awaited promise is
 resolved.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">throwOnSideEffect</dt>
+        <dt class="param-name monospace optional">
+          throwOnSideEffect
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -868,36 +968,45 @@ resolved.</p>
         <p>Whether to throw an exception if side effect cannot be ruled out during evaluation.
 This implies <code>disableBreaks</code> below.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">timeout</dt>
+        <dt class="param-name monospace optional">
+          timeout
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-TimeDelta class="param-type">TimeDelta</a>
           
       <div class="details-description">
         <p>Terminate execution after timing out (number of milliseconds).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">disableBreaks</dt>
+        <dt class="param-name monospace optional">
+          disableBreaks
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Disable breakpoints during execution.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">replMode</dt>
+        <dt class="param-name monospace optional">
+          replMode
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -906,6 +1015,7 @@ This implies <code>disableBreaks</code> below.</p>
 Note that <code>let</code> variables can only be re-declared if they originate from
 <code>replMode</code> themselves.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -917,25 +1027,31 @@ Note that <code>let</code> variables can only be re-declared if they originate f
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Evaluation result.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details.</p>
 
+        
       </div>
     
           
@@ -943,7 +1059,6 @@ Note that <code>let</code> variables can only be re-declared if they originate f
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -957,6 +1072,7 @@ Note that <code>let</code> variables can only be re-declared if they originate f
         <p>Returns properties of a given object. Object group of the result is inherited from the target
 object.</p>
 
+        
       </div>
     
         
@@ -964,19 +1080,24 @@ object.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
       <div class="details-description">
         <p>Identifier of the object to return properties for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ownProperties</dt>
+        <dt class="param-name monospace optional">
+          ownProperties
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -984,12 +1105,15 @@ object.</p>
         <p>If true, returns properties belonging only to the element itself, not to its prototype
 chain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">accessorPropertiesOnly</dt>
+        <dt class="param-name monospace optional">
+          accessorPropertiesOnly
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -997,18 +1121,22 @@ chain.</p>
         <p>If true, returns accessor properties (with getter/setter) only; internal properties are not
 returned either.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">generatePreview</dt>
+        <dt class="param-name monospace optional">
+          generatePreview
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether preview should be generated for the results.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1020,49 +1148,61 @@ returned either.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-PropertyDescriptor class="param-type">PropertyDescriptor</a> ]</span></span>
           
       <div class="details-description">
         <p>Object properties.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">internalProperties</dt>
+        <dt class="param-name monospace optional">
+          internalProperties
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-InternalPropertyDescriptor class="param-type">InternalPropertyDescriptor</a> ]</span></span>
           
       <div class="details-description">
         <p>Internal object properties (only of the element itself).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">privateProperties</dt>
+        <dt class="param-name monospace optional">
+          privateProperties
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-PrivatePropertyDescriptor class="param-type">PrivatePropertyDescriptor</a> ]</span></span>
           
       <div class="details-description">
         <p>Object private properties.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details.</p>
 
+        
       </div>
     
           
@@ -1070,7 +1210,6 @@ returned either.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1083,6 +1222,7 @@ returned either.</p>
       <div class="details-description">
         <p>Returns all let, const and class variables from global scope.</p>
 
+        
       </div>
     
         
@@ -1090,13 +1230,16 @@ returned either.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace optional">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
       <div class="details-description">
         <p>Specifies in which execution context to lookup global scope variables.</p>
 
+        
       </div>
     
           
@@ -1108,16 +1251,22 @@ returned either.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">names</dt>
+        <dt class="param-name monospace ">
+          names
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1127,30 +1276,41 @@ returned either.</p>
           <a href="#method-queryObjects" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">prototypeObjectId</dt>
+        <dt class="param-name monospace ">
+          prototypeObjectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
       <div class="details-description">
         <p>Identifier of the prototype to return objects for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace optional">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Symbolic group name that can be used to release the results.</p>
 
+        
       </div>
     
           
@@ -1162,13 +1322,16 @@ returned either.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objects</dt>
+        <dt class="param-name monospace ">
+          objects
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Array with objects.</p>
 
+        
       </div>
     
           
@@ -1176,7 +1339,6 @@ returned either.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1189,6 +1351,7 @@ returned either.</p>
       <div class="details-description">
         <p>Releases remote object with given id.</p>
 
+        
       </div>
     
         
@@ -1196,13 +1359,16 @@ returned either.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
       <div class="details-description">
         <p>Identifier of the object to release.</p>
 
+        
       </div>
     
           
@@ -1210,7 +1376,6 @@ returned either.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1224,6 +1389,7 @@ returned either.</p>
       <div class="details-description">
         <p>Releases all remote objects that belong to a given group.</p>
 
+        
       </div>
     
         
@@ -1231,13 +1397,16 @@ returned either.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace ">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Symbolic object group name.</p>
 
+        
       </div>
     
           
@@ -1245,7 +1414,6 @@ returned either.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1259,9 +1427,9 @@ returned either.</p>
       <div class="details-description">
         <p>Tells inspected instance to run if it was waiting for debugger to attach.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1277,6 +1445,7 @@ returned either.</p>
       <div class="details-description">
         <p>Runs script with given id in a given context.</p>
 
+        
       </div>
     
         
@@ -1284,19 +1453,24 @@ returned either.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">ScriptId</a>
           
       <div class="details-description">
         <p>Id of the script to run.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace optional">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
@@ -1304,24 +1478,30 @@ returned either.</p>
         <p>Specifies in which execution context to perform script run. If the parameter is omitted the
 evaluation will be performed in the context of the inspected page.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace optional">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Symbolic group name that can be used to release multiple objects.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">silent</dt>
+        <dt class="param-name monospace optional">
+          silent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1329,48 +1509,60 @@ evaluation will be performed in the context of the inspected page.</p>
         <p>In silent mode exceptions thrown during evaluation are not reported and do not pause
 execution. Overrides <code>setPauseOnException</code> state.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeCommandLineAPI</dt>
+        <dt class="param-name monospace optional">
+          includeCommandLineAPI
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Determines whether Command Line API should be available during the evaluation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">returnByValue</dt>
+        <dt class="param-name monospace optional">
+          returnByValue
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the result is expected to be a JSON object which should be sent by value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">generatePreview</dt>
+        <dt class="param-name monospace optional">
+          generatePreview
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether preview should be generated for the result.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">awaitPromise</dt>
+        <dt class="param-name monospace optional">
+          awaitPromise
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1378,6 +1570,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
         <p>Whether execution should <code>await</code> for resulting value and return once awaited promise is
 resolved.</p>
 
+        
       </div>
     
           
@@ -1389,25 +1582,31 @@ resolved.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Run result.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details.</p>
 
+        
       </div>
     
           
@@ -1415,7 +1614,6 @@ resolved.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1428,6 +1626,7 @@ resolved.</p>
       <div class="details-description">
         <p>Enables or disables async call stacks tracking.</p>
 
+        
       </div>
     
         
@@ -1435,7 +1634,9 @@ resolved.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">maxDepth</dt>
+        <dt class="param-name monospace ">
+          maxDepth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1443,6 +1644,7 @@ resolved.</p>
         <p>Maximum depth of async call stacks. Setting to <code>0</code> will effectively disable collecting async
 call stacks (default).</p>
 
+        
       </div>
     
           
@@ -1450,7 +1652,6 @@ call stacks (default).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1470,6 +1671,7 @@ call stacks (default).</p>
       <div class="details-description">
         <p>Issued when console API was called.</p>
 
+        
       </div>
     
         
@@ -1477,55 +1679,71 @@ call stacks (default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Type of the call.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>log</code>, <code>debug</code>, <code>info</code>, <code>error</code>, <code>warning</code>, <code>dir</code>, <code>dirxml</code>, <code>table</code>, <code>trace</code>, <code>clear</code>, <code>startGroup</code>, <code>startGroupCollapsed</code>, <code>endGroup</code>, <code>assert</code>, <code>profile</code>, <code>profileEnd</code>, <code>count</code>, <code>timeEnd</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">args</dt>
+        <dt class="param-name monospace ">
+          args
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a> ]</span></span>
           
       <div class="details-description">
         <p>Call arguments.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace ">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
       <div class="details-description">
         <p>Identifier of the context where the call was made.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Call timestamp.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackTrace</dt>
+        <dt class="param-name monospace optional">
+          stackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">StackTrace</a>
           
@@ -1534,12 +1752,15 @@ call stacks (default).</p>
 the following call types: <code>assert</code>, <code>error</code>, <code>trace</code>, <code>warning</code>. For other types the async call
 chain can be retrieved using <code>Debugger.getStackTrace</code> and <code>stackTrace.parentId</code> field.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">context</dt>
+        <dt class="param-name monospace optional">
+          context
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1548,6 +1769,7 @@ chain can be retrieved using <code>Debugger.getStackTrace</code> and <code>stack
 &#39;anonymous#unique-logger-id&#39; for call on unnamed context, &#39;name#unique-logger-id&#39; for call
 on named context.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1555,7 +1777,6 @@ on named context.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1569,6 +1790,7 @@ on named context.</p>
       <div class="details-description">
         <p>Issued when unhandled exception was revoked.</p>
 
+        
       </div>
     
         
@@ -1576,25 +1798,31 @@ on named context.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">reason</dt>
+        <dt class="param-name monospace ">
+          reason
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Reason describing why exception was revoked.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionId</dt>
+        <dt class="param-name monospace ">
+          exceptionId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The id of revoked exception, as reported in <code>exceptionThrown</code>.</p>
 
+        
       </div>
     
           
@@ -1602,7 +1830,6 @@ on named context.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1616,6 +1843,7 @@ on named context.</p>
       <div class="details-description">
         <p>Issued when exception was thrown and unhandled.</p>
 
+        
       </div>
     
         
@@ -1623,28 +1851,37 @@ on named context.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-Timestamp class="param-type">Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp of the exception.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace ">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExceptionDetails class="param-type">ExceptionDetails</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1658,6 +1895,7 @@ on named context.</p>
       <div class="details-description">
         <p>Issued when new execution context is created.</p>
 
+        
       </div>
     
         
@@ -1665,13 +1903,16 @@ on named context.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">context</dt>
+        <dt class="param-name monospace ">
+          context
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextDescription class="param-type">ExecutionContextDescription</a>
           
       <div class="details-description">
         <p>A newly created execution context.</p>
 
+        
       </div>
     
           
@@ -1679,7 +1920,6 @@ on named context.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1693,6 +1933,7 @@ on named context.</p>
       <div class="details-description">
         <p>Issued when execution context is destroyed.</p>
 
+        
       </div>
     
         
@@ -1700,13 +1941,16 @@ on named context.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace ">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
       <div class="details-description">
         <p>Id of the destroyed context</p>
 
+        
       </div>
     
           
@@ -1714,7 +1958,6 @@ on named context.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1728,9 +1971,9 @@ on named context.</p>
       <div class="details-description">
         <p>Issued when all executionContexts were cleared in browser</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1747,6 +1990,7 @@ on named context.</p>
         <p>Issued when object should be inspected (for example, as a result of inspect() command line API
 call).</p>
 
+        
       </div>
     
         
@@ -1754,23 +1998,36 @@ call).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">object</dt>
+        <dt class="param-name monospace ">
+          object
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">hints</dt>
+        <dt class="param-name monospace ">
+          hints
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1791,6 +2048,7 @@ call).</p>
         <p>Represents function call argument. Either remote object id <code>objectId</code>, primitive <code>value</code>,
 unserializable primitive value or neither of (for undefined) them should be specified.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1798,37 +2056,46 @@ unserializable primitive value or neither of (for undefined) them should be spec
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <span class="param-type">any</span>
           
       <div class="details-description">
         <p>Primitive value or serializable javascript object.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">unserializableValue</dt>
+        <dt class="param-name monospace optional">
+          unserializableValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-UnserializableValue class="param-type">UnserializableValue</a>
           
       <div class="details-description">
         <p>Primitive value which can not be JSON-stringified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
       <div class="details-description">
         <p>Remote object handle.</p>
 
+        
       </div>
     
           
@@ -1836,7 +2103,6 @@ unserializable primitive value or neither of (for undefined) them should be spec
       
       </dl>
     
-        
         
       </div>
     
@@ -1850,6 +2116,7 @@ unserializable primitive value or neither of (for undefined) them should be spec
       <div class="details-description">
         <p>Stack entry for runtime errors and assertions.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1857,61 +2124,76 @@ unserializable primitive value or neither of (for undefined) them should be spec
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">functionName</dt>
+        <dt class="param-name monospace ">
+          functionName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>JavaScript function name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">ScriptId</a>
           
       <div class="details-description">
         <p>JavaScript script id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>JavaScript script name or url.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>JavaScript script line number (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace ">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>JavaScript script column number (0-based).</p>
 
+        
       </div>
     
           
@@ -1919,7 +2201,6 @@ unserializable primitive value or neither of (for undefined) them should be spec
       
       </dl>
     
-        
         
       </div>
     
@@ -1934,6 +2215,7 @@ unserializable primitive value or neither of (for undefined) them should be spec
         <p>Detailed information about exception (or error) that was thrown during script compilation or
 execution.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1941,109 +2223,136 @@ execution.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">exceptionId</dt>
+        <dt class="param-name monospace ">
+          exceptionId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Exception id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Exception text, which should be used together with exception object when available.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number of the exception location (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace ">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column number of the exception location (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace optional">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">ScriptId</a>
           
       <div class="details-description">
         <p>Script ID of the exception location.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the exception location, to be used when the script was not reported.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackTrace</dt>
+        <dt class="param-name monospace optional">
+          stackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">StackTrace</a>
           
       <div class="details-description">
         <p>JavaScript stack trace if available.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exception</dt>
+        <dt class="param-name monospace optional">
+          exception
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Exception object if available.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace optional">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
       <div class="details-description">
         <p>Identifier of the context where exception happened.</p>
 
+        
       </div>
     
           
@@ -2051,7 +2360,6 @@ execution.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2065,6 +2373,7 @@ execution.</p>
       <div class="details-description">
         <p>Description of an isolated world.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2072,7 +2381,9 @@ execution.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ExecutionContextId class="param-type">ExecutionContextId</a>
           
@@ -2080,42 +2391,52 @@ execution.</p>
         <p>Unique id of the execution context. It can be used to specify in which execution context
 script evaluation should be performed.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Execution context origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Human readable name describing given context.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">auxData</dt>
+        <dt class="param-name monospace optional">
+          auxData
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>Embedder-specific auxiliary data.</p>
 
+        
       </div>
     
           
@@ -2123,7 +2444,6 @@ script evaluation should be performed.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2137,10 +2457,10 @@ script evaluation should be performed.</p>
       <div class="details-description">
         <p>Id of an execution context.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>integer</strong></p>
-        
         
         
       </div>
@@ -2155,6 +2475,7 @@ script evaluation should be performed.</p>
       <div class="details-description">
         <p>Object internal property descriptor. This property isn&#39;t normally visible in JavaScript code.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2162,25 +2483,31 @@ script evaluation should be performed.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Conventional property name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>The value associated with the property.</p>
 
+        
       </div>
     
           
@@ -2188,7 +2515,6 @@ script evaluation should be performed.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2202,6 +2528,7 @@ script evaluation should be performed.</p>
       <div class="details-description">
         <p>Object property descriptor.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2209,43 +2536,54 @@ script evaluation should be performed.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Property name or symbol description.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>The value associated with the property.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">writable</dt>
+        <dt class="param-name monospace optional">
+          writable
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the value associated with the property may be changed (data descriptors only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">get</dt>
+        <dt class="param-name monospace optional">
+          get
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
@@ -2253,12 +2591,15 @@ script evaluation should be performed.</p>
         <p>A function which serves as a getter for the property, or <code>undefined</code> if there is no getter
 (accessor descriptors only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">set</dt>
+        <dt class="param-name monospace optional">
+          set
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
@@ -2266,12 +2607,15 @@ script evaluation should be performed.</p>
         <p>A function which serves as a setter for the property, or <code>undefined</code> if there is no setter
 (accessor descriptors only).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">configurable</dt>
+        <dt class="param-name monospace ">
+          configurable
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2279,12 +2623,15 @@ script evaluation should be performed.</p>
         <p>True if the type of this property descriptor may be changed and if the property may be
 deleted from the corresponding object.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">enumerable</dt>
+        <dt class="param-name monospace ">
+          enumerable
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -2292,42 +2639,52 @@ deleted from the corresponding object.</p>
         <p>True if this property shows up during enumeration of the properties on the corresponding
 object.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">wasThrown</dt>
+        <dt class="param-name monospace optional">
+          wasThrown
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the result was thrown during the evaluation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isOwn</dt>
+        <dt class="param-name monospace optional">
+          isOwn
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the property is owned for the object.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">symbol</dt>
+        <dt class="param-name monospace optional">
+          symbol
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">RemoteObject</a>
           
       <div class="details-description">
         <p>Property symbol object, if the property is of the <code>symbol</code> type.</p>
 
+        
       </div>
     
           
@@ -2335,7 +2692,6 @@ object.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2349,6 +2705,7 @@ object.</p>
       <div class="details-description">
         <p>Mirror object referencing original JavaScript object.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2356,55 +2713,73 @@ object.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Object type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>object</code>, <code>function</code>, <code>undefined</code>, <code>string</code>, <code>number</code>, <code>boolean</code>, <code>symbol</code>, <code>bigint</code>, <code>wasm</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">subtype</dt>
+        <dt class="param-name monospace optional">
+          subtype
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Object subtype hint. Specified for <code>object</code> or <code>wasm</code> type values only.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>array</code>, <code>null</code>, <code>node</code>, <code>regexp</code>, <code>date</code>, <code>map</code>, <code>set</code>, <code>weakmap</code>, <code>weakset</code>, <code>iterator</code>, <code>generator</code>, <code>error</code>, <code>proxy</code>, <code>promise</code>, <code>typedarray</code>, <code>arraybuffer</code>, <code>dataview</code>, <code>i32</code>, <code>i64</code>, <code>f32</code>, <code>f64</code>, <code>v128</code>, <code>anyref</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">className</dt>
+        <dt class="param-name monospace optional">
+          className
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Object class (constructor) name. Specified for <code>object</code> type values only.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace optional">
+          value
+        </dt>
         <dd>
           <span class="param-type">any</span>
           
       <div class="details-description">
         <p>Remote object value in case of primitive values or JSON values (if it was requested).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">unserializableValue</dt>
+        <dt class="param-name monospace optional">
+          unserializableValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-UnserializableValue class="param-type">UnserializableValue</a>
           
@@ -2412,57 +2787,73 @@ object.</p>
         <p>Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this
 property.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">description</dt>
+        <dt class="param-name monospace optional">
+          description
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String representation of the object.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace optional">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObjectId class="param-type">RemoteObjectId</a>
           
       <div class="details-description">
         <p>Unique object identifier (for non-primitive values).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">preview</dt>
+        <dt class="param-name monospace optional">
+          preview
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ObjectPreview class="param-type">ObjectPreview</a>
           
       <div class="details-description">
         <p>Preview containing abbreviated property values. Specified for <code>object</code> type values only.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">customPreview</dt>
+        <dt class="param-name monospace optional">
+          customPreview
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-CustomPreview class="param-type">CustomPreview</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -2476,10 +2867,10 @@ property.</p>
       <div class="details-description">
         <p>Unique object identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -2494,10 +2885,10 @@ property.</p>
       <div class="details-description">
         <p>Unique script identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -2512,6 +2903,7 @@ property.</p>
       <div class="details-description">
         <p>Call frames for assertions or error messages.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2519,7 +2911,9 @@ property.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">description</dt>
+        <dt class="param-name monospace optional">
+          description
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -2527,42 +2921,52 @@ property.</p>
         <p>String label of this stack trace. For async traces this may be a name of the function that
 initiated the async call.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">callFrames</dt>
+        <dt class="param-name monospace ">
+          callFrames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-CallFrame class="param-type">CallFrame</a> ]</span></span>
           
       <div class="details-description">
         <p>JavaScript function name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parent</dt>
+        <dt class="param-name monospace optional">
+          parent
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">StackTrace</a>
           
       <div class="details-description">
         <p>Asynchronous JavaScript stack trace that preceded this stack, if available.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">parentId</dt>
+        <dt class="param-name monospace optional">
+          parentId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTraceId class="param-type">StackTraceId</a>
           
       <div class="details-description">
         <p>Asynchronous JavaScript stack trace that preceded this stack, if available.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2570,7 +2974,6 @@ initiated the async call.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2584,10 +2987,10 @@ initiated the async call.</p>
       <div class="details-description">
         <p>Number of milliseconds.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>number</strong></p>
-        
         
         
       </div>
@@ -2602,10 +3005,10 @@ initiated the async call.</p>
       <div class="details-description">
         <p>Number of milliseconds since epoch.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>number</strong></p>
-        
         
         
       </div>
@@ -2621,10 +3024,10 @@ initiated the async call.</p>
         <p>Primitive value which cannot be JSON-stringified. Includes values <code>-0</code>, <code>NaN</code>, <code>Infinity</code>,
 <code>-Infinity</code>, and bigint literals.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>

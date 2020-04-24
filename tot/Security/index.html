@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Security</p>
 
+        
       </div>
     
         
@@ -224,9 +225,9 @@
       <div class="details-description">
         <p>Disables tracking security state changes.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -242,9 +243,9 @@
       <div class="details-description">
         <p>Enables tracking security state changes.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -260,6 +261,7 @@
       <div class="details-description">
         <p>Handles a certificate error that fired a certificateError event.</p>
 
+        
       </div>
     
         
@@ -267,25 +269,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">eventId</dt>
+        <dt class="param-name monospace ">
+          eventId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The ID of the event.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">action</dt>
+        <dt class="param-name monospace ">
+          action
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-CertificateErrorAction class="param-type">CertificateErrorAction</a>
           
       <div class="details-description">
         <p>The action to take on the certificate error.</p>
 
+        
       </div>
     
           
@@ -293,7 +301,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -308,6 +315,7 @@
         <p>Enable/disable overriding certificate errors. If enabled, all certificate error events need to
 be handled by the DevTools client and should be answered with <code>handleCertificateError</code> commands.</p>
 
+        
       </div>
     
         
@@ -315,13 +323,16 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">override</dt>
+        <dt class="param-name monospace ">
+          override
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, certificate errors will be overridden.</p>
 
+        
       </div>
     
           
@@ -329,7 +340,6 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       
       </dl>
     
-        
         
       </div>
     
@@ -343,6 +353,7 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       <div class="details-description">
         <p>Enable/disable whether all certificate errors should be ignored.</p>
 
+        
       </div>
     
         
@@ -350,13 +361,16 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">ignore</dt>
+        <dt class="param-name monospace ">
+          ignore
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, all certificate errors will be ignored.</p>
 
+        
       </div>
     
           
@@ -364,7 +378,6 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       
       </dl>
     
-        
         
       </div>
     
@@ -384,6 +397,7 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       <div class="details-description">
         <p>The security state of the page changed.</p>
 
+        
       </div>
     
         
@@ -391,31 +405,39 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">securityState</dt>
+        <dt class="param-name monospace ">
+          securityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SecurityState class="param-type">SecurityState</a>
           
       <div class="details-description">
         <p>Security state.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">schemeIsCryptographic</dt>
+        <dt class="param-name monospace ">
+          schemeIsCryptographic
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the page was loaded over cryptographic transport such as HTTPS.</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">explanations</dt>
+        <dt class="param-name monospace ">
+          explanations
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Security/#type-SecurityStateExplanation class="param-type">SecurityStateExplanation</a> ]</span></span>
           
@@ -423,30 +445,37 @@ be handled by the DevTools client and should be answered with <code>handleCertif
         <p>List of explanations for the security state. If the overall security state is <code>insecure</code> or
 <code>warning</code>, at least one corresponding explanation should be included.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">insecureContentStatus</dt>
+        <dt class="param-name monospace ">
+          insecureContentStatus
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-InsecureContentStatus class="param-type">InsecureContentStatus</a>
           
       <div class="details-description">
         <p>Information about insecure content on the page.</p>
 
+        
       </div>
     
           <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">summary</dt>
+        <dt class="param-name monospace optional">
+          summary
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Overrides user-visible description of the state.</p>
 
+        
       </div>
     
           
@@ -454,7 +483,6 @@ be handled by the DevTools client and should be answered with <code>handleCertif
       
       </dl>
     
-        
         
       </div>
     
@@ -471,6 +499,7 @@ handled with the <code>handleCertificateError</code> command. Note: this event d
 certificate error has been allowed internally. Only one client per target should override
 certificate errors at the same time.</p>
 
+        
       </div>
     
         
@@ -478,37 +507,46 @@ certificate errors at the same time.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">eventId</dt>
+        <dt class="param-name monospace ">
+          eventId
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The ID of the event.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorType</dt>
+        <dt class="param-name monospace ">
+          errorType
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The type of the error.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestURL</dt>
+        <dt class="param-name monospace ">
+          requestURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The url that was requested.</p>
 
+        
       </div>
     
           
@@ -516,7 +554,6 @@ certificate errors at the same time.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -530,6 +567,7 @@ certificate errors at the same time.</p>
       <div class="details-description">
         <p>The security state of the page changed.</p>
 
+        
       </div>
     
         
@@ -537,13 +575,16 @@ certificate errors at the same time.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">visibleSecurityState</dt>
+        <dt class="param-name monospace ">
+          visibleSecurityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-VisibleSecurityState class="param-type">VisibleSecurityState</a>
           
       <div class="details-description">
         <p>Security state information about the page.</p>
 
+        
       </div>
     
           
@@ -551,7 +592,6 @@ certificate errors at the same time.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -572,15 +612,14 @@ certificate errors at the same time.</p>
         <p>The action to take when a certificate error occurs. continue will continue processing the
 request and cancel will cancel the request.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>continue</code>, <code>cancel</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">continue, cancel</div>
-    
       </div>
     
       <div class="details">
@@ -593,10 +632,10 @@ request and cancel will cancel the request.</p>
       <div class="details-description">
         <p>An internal certificate ID value.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>integer</strong></p>
-        
         
         
       </div>
@@ -612,15 +651,14 @@ request and cancel will cancel the request.</p>
         <p>A description of mixed content (HTTP resources on HTTPS pages), as defined by
 <a href="https://www.w3.org/TR/mixed-content/#categories">https://www.w3.org/TR/mixed-content/#categories</a></p>
 
+        
+      <div class="enum-container">Allowed Values: <code>blockable</code>, <code>optionally-blockable</code>, <code>none</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">blockable, optionally-blockable, none</div>
-    
       </div>
     
       <div class="details">
@@ -633,15 +671,14 @@ request and cancel will cancel the request.</p>
       <div class="details-description">
         <p>The security level of a page or resource.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>unknown</code>, <code>neutral</code>, <code>insecure</code>, <code>secure</code>, <code>info</code>, <code>insecure-broken</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">unknown, neutral, insecure, secure, info, insecure-broken</div>
-    
       </div>
     
       <div class="details">
@@ -654,6 +691,7 @@ request and cancel will cancel the request.</p>
       <div class="details-description">
         <p>An explanation of an factor contributing to the security state.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -661,85 +699,106 @@ request and cancel will cancel the request.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">securityState</dt>
+        <dt class="param-name monospace ">
+          securityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SecurityState class="param-type">SecurityState</a>
           
       <div class="details-description">
         <p>Security state representing the severity of the factor being explained.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace ">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Title describing the type of factor.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">summary</dt>
+        <dt class="param-name monospace ">
+          summary
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Short phrase describing the type of factor.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">description</dt>
+        <dt class="param-name monospace ">
+          description
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Full text explanation of the factor.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mixedContentType</dt>
+        <dt class="param-name monospace ">
+          mixedContentType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-MixedContentType class="param-type">MixedContentType</a>
           
       <div class="details-description">
         <p>The type of mixed content described by the explanation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificate</dt>
+        <dt class="param-name monospace ">
+          certificate
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Page certificate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">recommendations</dt>
+        <dt class="param-name monospace optional">
+          recommendations
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Recommendations to fix any issues.</p>
 
+        
       </div>
     
           
@@ -747,7 +806,6 @@ request and cancel will cancel the request.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -761,6 +819,7 @@ request and cancel will cancel the request.</p>
       <div class="details-description">
         <p>Information about insecure content on the page.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -768,85 +827,106 @@ request and cancel will cancel the request.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">ranMixedContent</dt>
+        <dt class="param-name monospace ">
+          ranMixedContent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Always false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">displayedMixedContent</dt>
+        <dt class="param-name monospace ">
+          displayedMixedContent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Always false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">containedMixedForm</dt>
+        <dt class="param-name monospace ">
+          containedMixedForm
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Always false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ranContentWithCertErrors</dt>
+        <dt class="param-name monospace ">
+          ranContentWithCertErrors
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Always false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">displayedContentWithCertErrors</dt>
+        <dt class="param-name monospace ">
+          displayedContentWithCertErrors
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Always false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ranInsecureContentStyle</dt>
+        <dt class="param-name monospace ">
+          ranInsecureContentStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SecurityState class="param-type">SecurityState</a>
           
       <div class="details-description">
         <p>Always set to unknown.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">displayedInsecureContentStyle</dt>
+        <dt class="param-name monospace ">
+          displayedInsecureContentStyle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SecurityState class="param-type">SecurityState</a>
           
       <div class="details-description">
         <p>Always set to unknown.</p>
 
+        
       </div>
     
           
@@ -854,7 +934,6 @@ request and cancel will cancel the request.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -868,6 +947,7 @@ request and cancel will cancel the request.</p>
       <div class="details-description">
         <p>Details about the security state of the page certificate.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -875,217 +955,271 @@ request and cancel will cancel the request.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">protocol</dt>
+        <dt class="param-name monospace ">
+          protocol
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Protocol name (e.g. &quot;TLS 1.2&quot; or &quot;QUIC&quot;).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyExchange</dt>
+        <dt class="param-name monospace ">
+          keyExchange
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Key Exchange used by the connection, or the empty string if not applicable.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">keyExchangeGroup</dt>
+        <dt class="param-name monospace optional">
+          keyExchangeGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>(EC)DH group used by the connection, if applicable.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">cipher</dt>
+        <dt class="param-name monospace ">
+          cipher
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Cipher name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mac</dt>
+        <dt class="param-name monospace optional">
+          mac
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>TLS MAC. Note that AEAD ciphers do not have separate MACs.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificate</dt>
+        <dt class="param-name monospace ">
+          certificate
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Page certificate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">subjectName</dt>
+        <dt class="param-name monospace ">
+          subjectName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Certificate subject name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">issuer</dt>
+        <dt class="param-name monospace ">
+          issuer
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of the issuing CA.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">validFrom</dt>
+        <dt class="param-name monospace ">
+          validFrom
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Certificate valid from date.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">validTo</dt>
+        <dt class="param-name monospace ">
+          validTo
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">Network.TimeSinceEpoch</a>
           
       <div class="details-description">
         <p>Certificate valid to (expiration) date</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateNetworkError</dt>
+        <dt class="param-name monospace optional">
+          certificateNetworkError
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The highest priority network error code, if the certificate has an error.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateHasWeakSignature</dt>
+        <dt class="param-name monospace ">
+          certificateHasWeakSignature
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the certificate uses a weak signature aglorithm.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateHasSha1Signature</dt>
+        <dt class="param-name monospace ">
+          certificateHasSha1Signature
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the certificate has a SHA1 signature in the chain.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">modernSSL</dt>
+        <dt class="param-name monospace ">
+          modernSSL
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if modern SSL</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">obsoleteSslProtocol</dt>
+        <dt class="param-name monospace ">
+          obsoleteSslProtocol
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the connection is using an obsolete SSL protocol.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">obsoleteSslKeyExchange</dt>
+        <dt class="param-name monospace ">
+          obsoleteSslKeyExchange
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the connection is using an obsolete SSL key exchange.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">obsoleteSslCipher</dt>
+        <dt class="param-name monospace ">
+          obsoleteSslCipher
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the connection is using an obsolete SSL cipher.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">obsoleteSslSignature</dt>
+        <dt class="param-name monospace ">
+          obsoleteSslSignature
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if the connection is using an obsolete SSL signature.</p>
 
+        
       </div>
     
           
@@ -1093,7 +1227,6 @@ request and cancel will cancel the request.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1104,30 +1237,41 @@ request and cancel will cancel the request.</p>
           <a href="#type-SafetyTipInfo" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">safetyTipStatus</dt>
+        <dt class="param-name monospace ">
+          safetyTipStatus
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SafetyTipStatus class="param-type">SafetyTipStatus</a>
           
       <div class="details-description">
         <p>Describes whether the page triggers any safety tips or reputation warnings. Default is unknown.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">safeUrl</dt>
+        <dt class="param-name monospace optional">
+          safeUrl
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The URL the safety tip suggested (&quot;Did you mean?&quot;). Only filled in for lookalike matches.</p>
 
+        
       </div>
     
           
@@ -1135,7 +1279,6 @@ request and cancel will cancel the request.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1146,13 +1289,16 @@ request and cancel will cancel the request.</p>
           <a href="#type-SafetyTipStatus" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>badReputation</code>, <code>lookalike</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">badReputation, lookalike</div>
-    
       </div>
     
       <div class="details">
@@ -1165,6 +1311,7 @@ request and cancel will cancel the request.</p>
       <div class="details-description">
         <p>Security state information about the page.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1172,49 +1319,61 @@ request and cancel will cancel the request.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">securityState</dt>
+        <dt class="param-name monospace ">
+          securityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SecurityState class="param-type">SecurityState</a>
           
       <div class="details-description">
         <p>The security level of the page.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">certificateSecurityState</dt>
+        <dt class="param-name monospace optional">
+          certificateSecurityState
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-CertificateSecurityState class="param-type">CertificateSecurityState</a>
           
       <div class="details-description">
         <p>Security state details about the page certificate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">safetyTipInfo</dt>
+        <dt class="param-name monospace optional">
+          safetyTipInfo
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Security/#type-SafetyTipInfo class="param-type">SafetyTipInfo</a>
           
       <div class="details-description">
         <p>The type of Safety Tip triggered on the page. Note that this field will be set even if the Safety Tip UI was not actually shown.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">securityStateIssueIds</dt>
+        <dt class="param-name monospace ">
+          securityStateIssueIds
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Array of security state issues ids.</p>
 
+        
       </div>
     
           
@@ -1222,7 +1381,6 @@ request and cancel will cancel the request.</p>
       
       </dl>
     
-        
         
       </div>
     

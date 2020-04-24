@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>The Browser domain defines methods and events for browser managing.</p>
 
+        
       </div>
     
         
@@ -254,9 +255,9 @@
       <div class="details-description">
         <p>Close browser gracefully.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -272,6 +273,7 @@
       <div class="details-description">
         <p>Returns version information.</p>
 
+        
       </div>
     
         
@@ -280,61 +282,76 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">protocolVersion</dt>
+        <dt class="param-name monospace ">
+          protocolVersion
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Protocol version.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">product</dt>
+        <dt class="param-name monospace ">
+          product
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Product name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">revision</dt>
+        <dt class="param-name monospace ">
+          revision
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Product revision.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">userAgent</dt>
+        <dt class="param-name monospace ">
+          userAgent
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>User-Agent.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">jsVersion</dt>
+        <dt class="param-name monospace ">
+          jsVersion
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>V8 version.</p>
 
+        
       </div>
     
           
@@ -342,7 +359,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -355,9 +371,9 @@
       <div class="details-description">
         <p>Crashes browser on the main thread.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -373,9 +389,9 @@
       <div class="details-description">
         <p>Crashes GPU process.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -392,6 +408,7 @@
         <p>Returns the command line switches for the browser process if, and only if
 --enable-automation is on the commandline.</p>
 
+        
       </div>
     
         
@@ -400,13 +417,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">arguments</dt>
+        <dt class="param-name monospace ">
+          arguments
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Commandline parameters</p>
 
+        
       </div>
     
           
@@ -414,7 +434,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -427,6 +446,7 @@
       <div class="details-description">
         <p>Get a Chrome histogram by name.</p>
 
+        
       </div>
     
         
@@ -434,25 +454,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Requested histogram name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">delta</dt>
+        <dt class="param-name monospace optional">
+          delta
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, retrieve delta since last call.</p>
 
+        
       </div>
     
           
@@ -464,13 +490,16 @@
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">histogram</dt>
+        <dt class="param-name monospace ">
+          histogram
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-Histogram class="param-type">Histogram</a>
           
       <div class="details-description">
         <p>Histogram.</p>
 
+        
       </div>
     
           
@@ -478,7 +507,6 @@
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -491,6 +519,7 @@
       <div class="details-description">
         <p>Get Chrome histograms.</p>
 
+        
       </div>
     
         
@@ -498,7 +527,9 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">query</dt>
+        <dt class="param-name monospace optional">
+          query
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -507,18 +538,22 @@
 substring in their name are extracted. An empty or absent query returns
 all histograms.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">delta</dt>
+        <dt class="param-name monospace optional">
+          delta
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, retrieve delta since last call.</p>
 
+        
       </div>
     
           
@@ -530,13 +565,16 @@ all histograms.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">histograms</dt>
+        <dt class="param-name monospace ">
+          histograms
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Browser/#type-Histogram class="param-type">Histogram</a> ]</span></span>
           
       <div class="details-description">
         <p>Histograms.</p>
 
+        
       </div>
     
           
@@ -544,7 +582,6 @@ all histograms.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -557,6 +594,7 @@ all histograms.</p>
       <div class="details-description">
         <p>Get position and size of the browser window.</p>
 
+        
       </div>
     
         
@@ -564,13 +602,16 @@ all histograms.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">windowId</dt>
+        <dt class="param-name monospace ">
+          windowId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-WindowID class="param-type">WindowID</a>
           
       <div class="details-description">
         <p>Browser window id.</p>
 
+        
       </div>
     
           
@@ -582,7 +623,9 @@ all histograms.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">bounds</dt>
+        <dt class="param-name monospace ">
+          bounds
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-Bounds class="param-type">Bounds</a>
           
@@ -590,6 +633,7 @@ all histograms.</p>
         <p>Bounds information of the window. When window state is &#39;minimized&#39;, the restored window
 position and size are returned.</p>
 
+        
       </div>
     
           
@@ -597,7 +641,6 @@ position and size are returned.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -610,6 +653,7 @@ position and size are returned.</p>
       <div class="details-description">
         <p>Get the browser window that contains the devtools target.</p>
 
+        
       </div>
     
         
@@ -617,13 +661,16 @@ position and size are returned.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">targetId</dt>
+        <dt class="param-name monospace optional">
+          targetId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Target/#type-TargetID class="param-type">Target.TargetID</a>
           
       <div class="details-description">
         <p>Devtools agent host id. If called as a part of the session, associated targetId is used.</p>
 
+        
       </div>
     
           
@@ -635,19 +682,24 @@ position and size are returned.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">windowId</dt>
+        <dt class="param-name monospace ">
+          windowId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-WindowID class="param-type">WindowID</a>
           
       <div class="details-description">
         <p>Browser window id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bounds</dt>
+        <dt class="param-name monospace ">
+          bounds
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-Bounds class="param-type">Bounds</a>
           
@@ -655,6 +707,7 @@ position and size are returned.</p>
         <p>Bounds information of the window. When window state is &#39;minimized&#39;, the restored window
 position and size are returned.</p>
 
+        
       </div>
     
           
@@ -662,7 +715,6 @@ position and size are returned.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -675,6 +727,7 @@ position and size are returned.</p>
       <div class="details-description">
         <p>Grant specific permissions to the given origin and reject all others.</p>
 
+        
       </div>
     
         
@@ -682,32 +735,45 @@ position and size are returned.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">permissions</dt>
+        <dt class="param-name monospace ">
+          permissions
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Browser/#type-PermissionType class="param-type">PermissionType</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace optional">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin the permission applies to, all origins if not specified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">BrowserContextID</a>
           
       <div class="details-description">
         <p>BrowserContext to override permissions. When omitted, default browser context is used.</p>
 
+        
       </div>
     
           
@@ -715,7 +781,6 @@ position and size are returned.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -729,6 +794,7 @@ position and size are returned.</p>
       <div class="details-description">
         <p>Reset all permission management for all origins.</p>
 
+        
       </div>
     
         
@@ -736,13 +802,16 @@ position and size are returned.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">BrowserContextID</a>
           
       <div class="details-description">
         <p>BrowserContext to reset permissions. When omitted, default browser context is used.</p>
 
+        
       </div>
     
           
@@ -750,7 +819,6 @@ position and size are returned.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -764,6 +832,7 @@ position and size are returned.</p>
       <div class="details-description">
         <p>Set dock tile details, platform-specific.</p>
 
+        
       </div>
     
         
@@ -771,20 +840,30 @@ position and size are returned.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">badgeLabel</dt>
+        <dt class="param-name monospace optional">
+          badgeLabel
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">image</dt>
+        <dt class="param-name monospace optional">
+          image
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Png encoded image.</p>
 
+        
       </div>
     
           
@@ -792,7 +871,6 @@ position and size are returned.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -806,6 +884,7 @@ position and size are returned.</p>
       <div class="details-description">
         <p>Set the behavior when downloading a file.</p>
 
+        
       </div>
     
         
@@ -813,7 +892,9 @@ position and size are returned.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">behavior</dt>
+        <dt class="param-name monospace ">
+          behavior
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -822,24 +903,32 @@ position and size are returned.</p>
 available (otherwise deny). |allowAndName| allows download and names files according to
 their dowmload guids.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>deny</code>, <code>allow</code>, <code>allowAndName</code>, <code>default</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">BrowserContextID</a>
           
       <div class="details-description">
         <p>BrowserContext to set download behavior. When omitted, default browser context is used.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">downloadPath</dt>
+        <dt class="param-name monospace optional">
+          downloadPath
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -847,6 +936,7 @@ their dowmload guids.</p>
         <p>The default path to save downloaded files to. This is requred if behavior is set to &#39;allow&#39;
 or &#39;allowAndName&#39;.</p>
 
+        
       </div>
     
           
@@ -854,7 +944,6 @@ or &#39;allowAndName&#39;.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -868,6 +957,7 @@ or &#39;allowAndName&#39;.</p>
       <div class="details-description">
         <p>Set permission settings for given origin.</p>
 
+        
       </div>
     
         
@@ -875,49 +965,61 @@ or &#39;allowAndName&#39;.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">permission</dt>
+        <dt class="param-name monospace ">
+          permission
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-PermissionDescriptor class="param-type">PermissionDescriptor</a>
           
       <div class="details-description">
         <p>Descriptor of permission to override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">setting</dt>
+        <dt class="param-name monospace ">
+          setting
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-PermissionSetting class="param-type">PermissionSetting</a>
           
       <div class="details-description">
         <p>Setting of the permission.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace optional">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin the permission applies to, all origins if not specified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">browserContextId</dt>
+        <dt class="param-name monospace optional">
+          browserContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-BrowserContextID class="param-type">BrowserContextID</a>
           
       <div class="details-description">
         <p>Context to override. When omitted, default browser context is used.</p>
 
+        
       </div>
     
           
@@ -925,7 +1027,6 @@ or &#39;allowAndName&#39;.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -939,6 +1040,7 @@ or &#39;allowAndName&#39;.</p>
       <div class="details-description">
         <p>Set position and/or size of the browser window.</p>
 
+        
       </div>
     
         
@@ -946,19 +1048,24 @@ or &#39;allowAndName&#39;.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">windowId</dt>
+        <dt class="param-name monospace ">
+          windowId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-WindowID class="param-type">WindowID</a>
           
       <div class="details-description">
         <p>Browser window id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bounds</dt>
+        <dt class="param-name monospace ">
+          bounds
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-Bounds class="param-type">Bounds</a>
           
@@ -966,6 +1073,7 @@ or &#39;allowAndName&#39;.</p>
         <p>New window bounds. The &#39;minimized&#39;, &#39;maximized&#39; and &#39;fullscreen&#39; states cannot be combined
 with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves unspecified fields unchanged.</p>
 
+        
       </div>
     
           
@@ -973,7 +1081,6 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       
       </dl>
     
-        
         
       </div>
     
@@ -994,6 +1101,7 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <div class="details-description">
         <p>Browser window bounds information</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1001,61 +1109,76 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">left</dt>
+        <dt class="param-name monospace optional">
+          left
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The offset from the left edge of the screen to the window in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">top</dt>
+        <dt class="param-name monospace optional">
+          top
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The offset from the top edge of the screen to the window in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace optional">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The window width in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace optional">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>The window height in pixels.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">windowState</dt>
+        <dt class="param-name monospace optional">
+          windowState
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Browser/#type-WindowState class="param-type">WindowState</a>
           
       <div class="details-description">
         <p>The window state. Default to normal.</p>
 
+        
       </div>
     
           
@@ -1063,7 +1186,6 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       
       </dl>
     
-        
         
       </div>
     
@@ -1074,8 +1196,12 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
           <a href="#type-BrowserContextID" class="permalink">#</a>
         </h4>
         
-        <p class="type-type">Type: <strong>string</strong></p>
+      <div class="details-description">
         
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
         
         
       </div>
@@ -1090,6 +1216,7 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <div class="details-description">
         <p>Chrome histogram bucket.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1097,37 +1224,46 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">low</dt>
+        <dt class="param-name monospace ">
+          low
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Minimum value (inclusive).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">high</dt>
+        <dt class="param-name monospace ">
+          high
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Maximum value (exclusive).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">count</dt>
+        <dt class="param-name monospace ">
+          count
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Number of samples.</p>
 
+        
       </div>
     
           
@@ -1135,7 +1271,6 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       
       </dl>
     
-        
         
       </div>
     
@@ -1149,6 +1284,7 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <div class="details-description">
         <p>Chrome histogram.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1156,49 +1292,61 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sum</dt>
+        <dt class="param-name monospace ">
+          sum
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Sum of sample values.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">count</dt>
+        <dt class="param-name monospace ">
+          count
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Total number of samples.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">buckets</dt>
+        <dt class="param-name monospace ">
+          buckets
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Browser/#type-Bucket class="param-type">Bucket</a> ]</span></span>
           
       <div class="details-description">
         <p>Buckets.</p>
 
+        
       </div>
     
           
@@ -1206,7 +1354,6 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       
       </dl>
     
-        
         
       </div>
     
@@ -1221,6 +1368,7 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
         <p>Definition of PermissionDescriptor defined in the Permissions API:
 <a href="https://w3c.github.io/permissions/#dictdef-permissiondescriptor">https://w3c.github.io/permissions/#dictdef-permissiondescriptor</a>.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1228,7 +1376,9 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1236,24 +1386,30 @@ with &#39;left&#39;, &#39;top&#39;, &#39;width&#39; or &#39;height&#39;. Leaves 
         <p>Name of permission.
 See <a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/modules/permissions/permission_descriptor.idl">https://cs.chromium.org/chromium/src/third_party/blink/renderer/modules/permissions/permission_descriptor.idl</a> for valid permission names.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sysex</dt>
+        <dt class="param-name monospace optional">
+          sysex
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>For &quot;midi&quot; permission, may also specify sysex control.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">userVisibleOnly</dt>
+        <dt class="param-name monospace optional">
+          userVisibleOnly
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1261,30 +1417,37 @@ See <a href="https://cs.chromium.org/chromium/src/third_party/blink/renderer/mod
         <p>For &quot;push&quot; permission, may specify userVisibleOnly.
 Note that userVisibleOnly = true is the only currently supported type.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace optional">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>For &quot;wake-lock&quot; permission, must specify type as either &quot;screen&quot; or &quot;system&quot;.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">allowWithoutSanitization</dt>
+        <dt class="param-name monospace optional">
+          allowWithoutSanitization
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>For &quot;clipboard&quot; permission, may specify allowWithoutSanitization.</p>
 
+        
       </div>
     
           
@@ -1292,7 +1455,6 @@ Note that userVisibleOnly = true is the only currently supported type.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1303,13 +1465,16 @@ Note that userVisibleOnly = true is the only currently supported type.</p>
           <a href="#type-PermissionSetting" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>granted</code>, <code>denied</code>, <code>prompt</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">granted, denied, prompt</div>
-    
       </div>
     
       <div class="details">
@@ -1319,13 +1484,16 @@ Note that userVisibleOnly = true is the only currently supported type.</p>
           <a href="#type-PermissionType" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>accessibilityEvents</code>, <code>audioCapture</code>, <code>backgroundSync</code>, <code>backgroundFetch</code>, <code>clipboardReadWrite</code>, <code>clipboardSanitizedWrite</code>, <code>durableStorage</code>, <code>flash</code>, <code>geolocation</code>, <code>midi</code>, <code>midiSysex</code>, <code>nfc</code>, <code>notifications</code>, <code>paymentHandler</code>, <code>periodicBackgroundSync</code>, <code>protectedMediaIdentifier</code>, <code>sensors</code>, <code>videoCapture</code>, <code>idleDetection</code>, <code>wakeLockScreen</code>, <code>wakeLockSystem</code></div>
+    
+      </div>
+    
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">accessibilityEvents, audioCapture, backgroundSync, backgroundFetch, clipboardReadWrite, clipboardSanitizedWrite, durableStorage, flash, geolocation, midi, midiSysex, nfc, notifications, paymentHandler, periodicBackgroundSync, protectedMediaIdentifier, sensors, videoCapture, idleDetection, wakeLockScreen, wakeLockSystem</div>
-    
       </div>
     
       <div class="details">
@@ -1335,8 +1503,12 @@ Note that userVisibleOnly = true is the only currently supported type.</p>
           <a href="#type-WindowID" class="permalink">#</a>
         </h4>
         
-        <p class="type-type">Type: <strong>integer</strong></p>
+      <div class="details-description">
         
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>integer</strong></p>
         
         
       </div>
@@ -1351,15 +1523,14 @@ Note that userVisibleOnly = true is the only currently supported type.</p>
       <div class="details-description">
         <p>The state of the browser window.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>normal</code>, <code>minimized</code>, <code>maximized</code>, <code>fullscreen</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">normal, minimized, maximized, fullscreen</div>
-    
       </div>
     
       </div>

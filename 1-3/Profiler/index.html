@@ -109,6 +109,11 @@
       <div id="header">
         <h2 class="heading">Profiler Domain</h2>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         <h3>Methods</h3>
       <div class="toc-link">
@@ -211,7 +216,11 @@
           <a href="#method-disable" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -224,7 +233,11 @@
           <a href="#method-enable" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -241,6 +254,7 @@
         <p>Collect coverage data for the current isolate. The coverage data may be incomplete due to
 garbage collection.</p>
 
+        
       </div>
     
         
@@ -249,13 +263,16 @@ garbage collection.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Profiler/#type-ScriptCoverage class="param-type">ScriptCoverage</a> ]</span></span>
           
       <div class="details-description">
         <p>Coverage data for the current isolate.</p>
 
+        
       </div>
     
           
@@ -263,7 +280,6 @@ garbage collection.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -276,6 +292,7 @@ garbage collection.</p>
       <div class="details-description">
         <p>Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.</p>
 
+        
       </div>
     
         
@@ -283,13 +300,16 @@ garbage collection.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">interval</dt>
+        <dt class="param-name monospace ">
+          interval
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>New sampling interval in microseconds.</p>
 
+        
       </div>
     
           
@@ -297,7 +317,6 @@ garbage collection.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -308,7 +327,11 @@ garbage collection.</p>
           <a href="#method-start" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
         
+        
+      </div>
+    
         
         
         
@@ -326,6 +349,7 @@ garbage collection.</p>
 coverage may be incomplete. Enabling prevents running optimized code and resets execution
 counters.</p>
 
+        
       </div>
     
         
@@ -333,37 +357,46 @@ counters.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callCount</dt>
+        <dt class="param-name monospace optional">
+          callCount
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Collect accurate call counts beyond simple &#39;covered&#39; or &#39;not covered&#39;.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">detailed</dt>
+        <dt class="param-name monospace optional">
+          detailed
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Collect block-based coverage.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">allowTriggeredUpdates</dt>
+        <dt class="param-name monospace optional">
+          allowTriggeredUpdates
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Allow the backend to send updates on its own initiative</p>
 
+        
       </div>
     
           
@@ -375,13 +408,16 @@ counters.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Monotonically increasing time (in seconds) when the coverage update was taken in the backend.</p>
 
+        
       </div>
     
           
@@ -389,7 +425,6 @@ counters.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -399,19 +434,27 @@ counters.</p>
           <a href="#method-stop" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
         
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Profiler/#type-Profile class="param-type">Profile</a>
           
       <div class="details-description">
         <p>Recorded profile.</p>
 
+        
       </div>
     
           
@@ -419,7 +462,6 @@ counters.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -433,9 +475,9 @@ counters.</p>
         <p>Disable precise code coverage. Disabling releases unnecessary execution count records and allows
 executing optimized code.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -452,6 +494,7 @@ executing optimized code.</p>
         <p>Collect coverage data for the current isolate, and resets execution counters. Precise code
 coverage needs to have started.</p>
 
+        
       </div>
     
         
@@ -460,25 +503,31 @@ coverage needs to have started.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Profiler/#type-ScriptCoverage class="param-type">ScriptCoverage</a> ]</span></span>
           
       <div class="details-description">
         <p>Coverage data for the current isolate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Monotonically increasing time (in seconds) when the coverage update was taken in the backend.</p>
 
+        
       </div>
     
           
@@ -486,7 +535,6 @@ coverage needs to have started.</p>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -502,44 +550,69 @@ coverage needs to have started.</p>
           <a href="#event-consoleProfileFinished" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Debugger.Location</a>
           
       <div class="details-description">
         <p>Location of console.profileEnd().</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">profile</dt>
+        <dt class="param-name monospace ">
+          profile
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Profiler/#type-Profile class="param-type">Profile</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace optional">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Profile title passed as an argument to console.profile().</p>
 
+        
       </div>
     
           
@@ -547,7 +620,6 @@ coverage needs to have started.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -561,6 +633,7 @@ coverage needs to have started.</p>
       <div class="details-description">
         <p>Sent when new profile recording is started using console.profile() call.</p>
 
+        
       </div>
     
         
@@ -568,32 +641,45 @@ coverage needs to have started.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Debugger/#type-Location class="param-type">Debugger.Location</a>
           
       <div class="details-description">
         <p>Location of console.profile().</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">title</dt>
+        <dt class="param-name monospace optional">
+          title
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Profile title passed as an argument to console.profile().</p>
 
+        
       </div>
     
           
@@ -601,7 +687,6 @@ coverage needs to have started.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -621,6 +706,7 @@ coverage needs to have started.</p>
       <div class="details-description">
         <p>Coverage data for a source range.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -628,37 +714,46 @@ coverage needs to have started.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">startOffset</dt>
+        <dt class="param-name monospace ">
+          startOffset
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>JavaScript script source offset for the range start.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endOffset</dt>
+        <dt class="param-name monospace ">
+          endOffset
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>JavaScript script source offset for the range end.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">count</dt>
+        <dt class="param-name monospace ">
+          count
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Collected execution count of the source range.</p>
 
+        
       </div>
     
           
@@ -666,7 +761,6 @@ coverage needs to have started.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -680,6 +774,7 @@ coverage needs to have started.</p>
       <div class="details-description">
         <p>Coverage data for a JavaScript function.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -687,37 +782,46 @@ coverage needs to have started.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">functionName</dt>
+        <dt class="param-name monospace ">
+          functionName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>JavaScript function name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ranges</dt>
+        <dt class="param-name monospace ">
+          ranges
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Profiler/#type-CoverageRange class="param-type">CoverageRange</a> ]</span></span>
           
       <div class="details-description">
         <p>Source ranges inside the function with coverage data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isBlockCoverage</dt>
+        <dt class="param-name monospace ">
+          isBlockCoverage
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether coverage data for this function has block granularity.</p>
 
+        
       </div>
     
           
@@ -725,7 +829,6 @@ coverage needs to have started.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -739,6 +842,7 @@ coverage needs to have started.</p>
       <div class="details-description">
         <p>Specifies a number of samples attributed to a certain source position.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -746,25 +850,31 @@ coverage needs to have started.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">line</dt>
+        <dt class="param-name monospace ">
+          line
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Source line number (1-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">ticks</dt>
+        <dt class="param-name monospace ">
+          ticks
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Number of samples attributed to the source line.</p>
 
+        
       </div>
     
           
@@ -772,7 +882,6 @@ coverage needs to have started.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -786,6 +895,7 @@ coverage needs to have started.</p>
       <div class="details-description">
         <p>Profile.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -793,55 +903,69 @@ coverage needs to have started.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodes</dt>
+        <dt class="param-name monospace ">
+          nodes
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Profiler/#type-ProfileNode class="param-type">ProfileNode</a> ]</span></span>
           
       <div class="details-description">
         <p>The list of profile nodes. First item is the root node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startTime</dt>
+        <dt class="param-name monospace ">
+          startTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Profiling start timestamp in microseconds.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endTime</dt>
+        <dt class="param-name monospace ">
+          endTime
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Profiling end timestamp in microseconds.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">samples</dt>
+        <dt class="param-name monospace optional">
+          samples
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Ids of samples top nodes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timeDeltas</dt>
+        <dt class="param-name monospace optional">
+          timeDeltas
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
@@ -849,6 +973,7 @@ coverage needs to have started.</p>
         <p>Time intervals between adjacent samples in microseconds. The first delta is relative to the
 profile startTime.</p>
 
+        
       </div>
     
           
@@ -856,7 +981,6 @@ profile startTime.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -870,6 +994,7 @@ profile startTime.</p>
       <div class="details-description">
         <p>Profile node. Holds callsite information, execution statistics and child nodes.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -877,55 +1002,69 @@ profile startTime.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">id</dt>
+        <dt class="param-name monospace ">
+          id
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Unique id of the node.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">callFrame</dt>
+        <dt class="param-name monospace ">
+          callFrame
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-CallFrame class="param-type">Runtime.CallFrame</a>
           
       <div class="details-description">
         <p>Function location.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hitCount</dt>
+        <dt class="param-name monospace optional">
+          hitCount
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Number of samples where this node was on top of the call stack.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">children</dt>
+        <dt class="param-name monospace optional">
+          children
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">integer</span> ]</span></span>
           
       <div class="details-description">
         <p>Child node ids.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deoptReason</dt>
+        <dt class="param-name monospace optional">
+          deoptReason
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -933,18 +1072,22 @@ profile startTime.</p>
         <p>The reason of being not optimized. The function may be deoptimized or marked as don&#39;t
 optimize.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">positionTicks</dt>
+        <dt class="param-name monospace optional">
+          positionTicks
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Profiler/#type-PositionTickInfo class="param-type">PositionTickInfo</a> ]</span></span>
           
       <div class="details-description">
         <p>An array of source position ticks.</p>
 
+        
       </div>
     
           
@@ -952,7 +1095,6 @@ optimize.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -966,6 +1108,7 @@ optimize.</p>
       <div class="details-description">
         <p>Coverage data for a JavaScript script.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -973,37 +1116,46 @@ optimize.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>JavaScript script id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>JavaScript script name or url.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">functions</dt>
+        <dt class="param-name monospace ">
+          functions
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Profiler/#type-FunctionCoverage class="param-type">FunctionCoverage</a> ]</span></span>
           
       <div class="details-description">
         <p>Functions contained in the script that has coverage data.</p>
 
+        
       </div>
     
           
@@ -1011,7 +1163,6 @@ optimize.</p>
       
       </dl>
     
-        
         
       </div>
     

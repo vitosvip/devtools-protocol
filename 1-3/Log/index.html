@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Provides access to log entries.</p>
 
+        
       </div>
     
         
@@ -174,9 +175,9 @@
       <div class="details-description">
         <p>Clears the log.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -192,9 +193,9 @@
       <div class="details-description">
         <p>Disables log domain, prevents further log entries from being reported to the client.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -211,9 +212,9 @@
         <p>Enables log domain, sends the entries collected so far to the client by means of the
 <code>entryAdded</code> notification.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -229,6 +230,7 @@
       <div class="details-description">
         <p>start violation reporting.</p>
 
+        
       </div>
     
         
@@ -236,13 +238,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">config</dt>
+        <dt class="param-name monospace ">
+          config
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Log/#type-ViolationSetting class="param-type">ViolationSetting</a> ]</span></span>
           
       <div class="details-description">
         <p>Configuration for violations.</p>
 
+        
       </div>
     
           
@@ -250,7 +255,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -264,9 +268,9 @@
       <div class="details-description">
         <p>Stop violation reporting.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -288,6 +292,7 @@
       <div class="details-description">
         <p>Issued when new message was logged.</p>
 
+        
       </div>
     
         
@@ -295,13 +300,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">entry</dt>
+        <dt class="param-name monospace ">
+          entry
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Log/#type-LogEntry class="param-type">LogEntry</a>
           
       <div class="details-description">
         <p>The entry.</p>
 
+        
       </div>
     
           
@@ -309,7 +317,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -329,6 +336,7 @@
       <div class="details-description">
         <p>Log entry.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -336,121 +344,155 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">source</dt>
+        <dt class="param-name monospace ">
+          source
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Log entry source.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>xml</code>, <code>javascript</code>, <code>network</code>, <code>storage</code>, <code>appcache</code>, <code>rendering</code>, <code>security</code>, <code>deprecation</code>, <code>worker</code>, <code>violation</code>, <code>intervention</code>, <code>recommendation</code>, <code>other</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">level</dt>
+        <dt class="param-name monospace ">
+          level
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Log entry severity.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>verbose</code>, <code>info</code>, <code>warning</code>, <code>error</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Logged text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timestamp</dt>
+        <dt class="param-name monospace ">
+          timestamp
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-Timestamp class="param-type">Runtime.Timestamp</a>
           
       <div class="details-description">
         <p>Timestamp when this entry was added.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the resource if known.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace optional">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number in the resource.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackTrace</dt>
+        <dt class="param-name monospace optional">
+          stackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>JavaScript stack trace.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">networkRequestId</dt>
+        <dt class="param-name monospace optional">
+          networkRequestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-3/Network/#type-RequestId class="param-type">Network.RequestId</a>
           
       <div class="details-description">
         <p>Identifier of the network request associated with this entry.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">workerId</dt>
+        <dt class="param-name monospace optional">
+          workerId
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Identifier of the worker associated with this entry.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">args</dt>
+        <dt class="param-name monospace optional">
+          args
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/1-3/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a> ]</span></span>
           
       <div class="details-description">
         <p>Call arguments.</p>
 
+        
       </div>
     
           
@@ -458,7 +500,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -472,6 +513,7 @@
       <div class="details-description">
         <p>Violation configuration setting.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -479,25 +521,33 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Violation type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>longTask</code>, <code>longLayout</code>, <code>blockedEvent</code>, <code>blockedParser</code>, <code>discouragedAPIUse</code>, <code>handler</code>, <code>recurringHandler</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">threshold</dt>
+        <dt class="param-name monospace ">
+          threshold
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Time threshold to trigger upon.</p>
 
+        
       </div>
     
           
@@ -505,7 +555,6 @@
       
       </dl>
     
-        
         
       </div>
     

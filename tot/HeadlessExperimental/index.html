@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain provides experimental commands only supported in headless mode.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -162,6 +163,7 @@ screenshot from the resulting frame. Requires that the target was created with e
 BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw, see also
 <a href="https://goo.gl/3zHXhB">https://goo.gl/3zHXhB</a> for more background.</p>
 
+        
       </div>
     
         
@@ -169,7 +171,9 @@ BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">frameTimeTicks</dt>
+        <dt class="param-name monospace optional">
+          frameTimeTicks
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -177,12 +181,15 @@ BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw
         <p>Timestamp of this BeginFrame in Renderer TimeTicks (milliseconds of uptime). If not set,
 the current time will be used.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">interval</dt>
+        <dt class="param-name monospace optional">
+          interval
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -190,12 +197,15 @@ the current time will be used.</p>
         <p>The interval between BeginFrames that is reported to the compositor, in milliseconds.
 Defaults to a 60 frames/second interval, i.e. about 16.666 milliseconds.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">noDisplayUpdates</dt>
+        <dt class="param-name monospace optional">
+          noDisplayUpdates
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -204,12 +214,15 @@ Defaults to a 60 frames/second interval, i.e. about 16.666 milliseconds.</p>
 true, only side effects of the BeginFrame will be run, such as layout and animations, but
 any visual updates may not be visible on the display or in screenshots.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">screenshot</dt>
+        <dt class="param-name monospace optional">
+          screenshot
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/HeadlessExperimental/#type-ScreenshotParams class="param-type">ScreenshotParams</a>
           
@@ -218,6 +231,7 @@ any visual updates may not be visible on the display or in screenshots.</p>
 no screenshot will be captured. Note that capturing a screenshot can fail, for example,
 during renderer initialization. In such a case, no screenshot data will be returned.</p>
 
+        
       </div>
     
           
@@ -229,7 +243,9 @@ during renderer initialization. In such a case, no screenshot data will be retur
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">hasDamage</dt>
+        <dt class="param-name monospace ">
+          hasDamage
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -237,18 +253,22 @@ during renderer initialization. In such a case, no screenshot data will be retur
         <p>Whether the BeginFrame resulted in damage and, thus, a new frame was committed to the
 display. Reported for diagnostic uses, may be removed in the future.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">screenshotData</dt>
+        <dt class="param-name monospace optional">
+          screenshotData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Base64-encoded image data of the screenshot, if one was requested and successfully taken.</p>
 
+        
       </div>
     
           
@@ -256,7 +276,6 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -269,9 +288,9 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
       <div class="details-description">
         <p>Disables headless events for the target.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -287,9 +306,9 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
       <div class="details-description">
         <p>Enables headless events for the target.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -313,6 +332,7 @@ display. Reported for diagnostic uses, may be removed in the future.</p>
 Deprecated. Issue beginFrame unconditionally instead and use result from
 beginFrame to detect whether the frames were suppressed.</p>
 
+        
       </div>
     
         
@@ -320,13 +340,16 @@ beginFrame to detect whether the frames were suppressed.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">needsBeginFrames</dt>
+        <dt class="param-name monospace ">
+          needsBeginFrames
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True if BeginFrames are needed, false otherwise.</p>
 
+        
       </div>
     
           
@@ -334,7 +357,6 @@ beginFrame to detect whether the frames were suppressed.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -354,6 +376,7 @@ beginFrame to detect whether the frames were suppressed.</p>
       <div class="details-description">
         <p>Encoding options for a screenshot.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -361,25 +384,33 @@ beginFrame to detect whether the frames were suppressed.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">format</dt>
+        <dt class="param-name monospace optional">
+          format
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Image compression format (defaults to png).</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>jpeg</code>, <code>png</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">quality</dt>
+        <dt class="param-name monospace optional">
+          quality
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Compression quality from range [0..100] (jpeg only).</p>
 
+        
       </div>
     
           
@@ -387,7 +418,6 @@ beginFrame to detect whether the frames were suppressed.</p>
       
       </dl>
     
-        
         
       </div>
     

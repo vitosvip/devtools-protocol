@@ -113,6 +113,7 @@
         <p>Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
 breakpoints, stepping through execution, exploring stack traces, etc.</p>
 
+        
       </div>
     
         
@@ -355,6 +356,7 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       <div class="details-description">
         <p>Continues execution until specific location is reached.</p>
 
+        
       </div>
     
         
@@ -362,28 +364,39 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location to continue to.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">targetCallFrames</dt>
+        <dt class="param-name monospace optional">
+          targetCallFrames
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>any</code>, <code>current</code></div>
+    
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -397,9 +410,9 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       <div class="details-description">
         <p>Disables debugger for given page.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -416,6 +429,7 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
         <p>Enables debugger for the given page. Clients should not assume that the debugging has been
 enabled until the result for this command is received.</p>
 
+        
       </div>
     
         
@@ -423,7 +437,9 @@ enabled until the result for this command is received.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">maxScriptsCacheSize</dt>
+        <dt class="param-name monospace optional">
+          maxScriptsCacheSize
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
@@ -431,6 +447,7 @@ enabled until the result for this command is received.</p>
         <p>The maximum size in bytes of collected scripts (not referenced by other heap objects)
 the debugger can hold. Puts no limit if paramter is omitted.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -442,13 +459,16 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">debuggerId</dt>
+        <dt class="param-name monospace ">
+          debuggerId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-UniqueDebuggerId class="param-type">Runtime.UniqueDebuggerId</a>
           
       <div class="details-description">
         <p>Unique identifier of the debugger.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -456,7 +476,6 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -469,6 +488,7 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
       <div class="details-description">
         <p>Evaluates expression on a given call frame.</p>
 
+        
       </div>
     
         
@@ -476,31 +496,39 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrameId</dt>
+        <dt class="param-name monospace ">
+          callFrameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
       <div class="details-description">
         <p>Call frame identifier to evaluate on.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">expression</dt>
+        <dt class="param-name monospace ">
+          expression
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Expression to evaluate.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">objectGroup</dt>
+        <dt class="param-name monospace optional">
+          objectGroup
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -508,12 +536,15 @@ the debugger can hold. Puts no limit if paramter is omitted.</p>
         <p>String object group name to put result into (allows rapid releasing resulting object handles
 using <code>releaseObjectGroup</code>).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">includeCommandLineAPI</dt>
+        <dt class="param-name monospace optional">
+          includeCommandLineAPI
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -521,12 +552,15 @@ using <code>releaseObjectGroup</code>).</p>
         <p>Specifies whether command line API should be available to the evaluated expression, defaults
 to false.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">silent</dt>
+        <dt class="param-name monospace optional">
+          silent
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -534,54 +568,67 @@ to false.</p>
         <p>In silent mode exceptions thrown during evaluation are not reported and do not pause
 execution. Overrides <code>setPauseOnException</code> state.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">returnByValue</dt>
+        <dt class="param-name monospace optional">
+          returnByValue
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the result is expected to be a JSON object that should be sent by value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">generatePreview</dt>
+        <dt class="param-name monospace optional">
+          generatePreview
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether preview should be generated for the result.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">throwOnSideEffect</dt>
+        <dt class="param-name monospace optional">
+          throwOnSideEffect
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to throw an exception if side effect cannot be ruled out during evaluation.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">timeout</dt>
+        <dt class="param-name monospace optional">
+          timeout
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-TimeDelta class="param-type">Runtime.TimeDelta</a>
           
       <div class="details-description">
         <p>Terminate execution after timing out (number of milliseconds).</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -593,25 +640,31 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
         <p>Object wrapper for the evaluation result.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ExceptionDetails class="param-type">Runtime.ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details.</p>
 
+        
       </div>
     
           
@@ -619,7 +672,6 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -633,6 +685,7 @@ execution. Overrides <code>setPauseOnException</code> state.</p>
         <p>Returns possible locations for breakpoint. scriptId in start and end range locations should be
 the same.</p>
 
+        
       </div>
     
         
@@ -640,19 +693,24 @@ the same.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">start</dt>
+        <dt class="param-name monospace ">
+          start
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Start of range to search possible breakpoint locations in.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">end</dt>
+        <dt class="param-name monospace optional">
+          end
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
@@ -660,18 +718,22 @@ the same.</p>
         <p>End of range to search possible breakpoint locations in (excluding). When not specified, end
 of scripts is used as end of range.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">restrictToFunction</dt>
+        <dt class="param-name monospace optional">
+          restrictToFunction
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Only consider locations which are in the same (non-nested) function as start.</p>
 
+        
       </div>
     
           
@@ -683,13 +745,16 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">locations</dt>
+        <dt class="param-name monospace ">
+          locations
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-BreakLocation class="param-type">BreakLocation</a> ]</span></span>
           
       <div class="details-description">
         <p>List of the possible breakpoint locations.</p>
 
+        
       </div>
     
           
@@ -697,7 +762,6 @@ of scripts is used as end of range.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -710,6 +774,7 @@ of scripts is used as end of range.</p>
       <div class="details-description">
         <p>Returns source for the script with given id.</p>
 
+        
       </div>
     
         
@@ -717,13 +782,16 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Id of the script to get source for.</p>
 
+        
       </div>
     
           
@@ -735,25 +803,31 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptSource</dt>
+        <dt class="param-name monospace ">
+          scriptSource
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Script source (empty in case of Wasm bytecode).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">bytecode</dt>
+        <dt class="param-name monospace optional">
+          bytecode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Wasm bytecode.</p>
 
+        
       </div>
     
           
@@ -761,7 +835,6 @@ of scripts is used as end of range.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -774,9 +847,9 @@ of scripts is used as end of range.</p>
       <div class="details-description">
         <p>Stops on the next JavaScript statement.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -792,6 +865,7 @@ of scripts is used as end of range.</p>
       <div class="details-description">
         <p>Removes JavaScript breakpoint.</p>
 
+        
       </div>
     
         
@@ -799,16 +873,22 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakpointId</dt>
+        <dt class="param-name monospace ">
+          breakpointId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -822,6 +902,7 @@ of scripts is used as end of range.</p>
       <div class="details-description">
         <p>Restarts particular call frame from the beginning.</p>
 
+        
       </div>
     
         
@@ -829,13 +910,16 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrameId</dt>
+        <dt class="param-name monospace ">
+          callFrameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
       <div class="details-description">
         <p>Call frame identifier to evaluate on.</p>
 
+        
       </div>
     
           
@@ -847,37 +931,46 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrames</dt>
+        <dt class="param-name monospace ">
+          callFrames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-CallFrame class="param-type">CallFrame</a> ]</span></span>
           
       <div class="details-description">
         <p>New stack trace.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">asyncStackTrace</dt>
+        <dt class="param-name monospace optional">
+          asyncStackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>Async stack trace, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">asyncStackTraceId</dt>
+        <dt class="param-name monospace optional">
+          asyncStackTraceId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
       <div class="details-description">
         <p>Async stack trace, if any.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -885,7 +978,6 @@ of scripts is used as end of range.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -898,6 +990,7 @@ of scripts is used as end of range.</p>
       <div class="details-description">
         <p>Resumes JavaScript execution.</p>
 
+        
       </div>
     
         
@@ -905,7 +998,9 @@ of scripts is used as end of range.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">terminateOnResume</dt>
+        <dt class="param-name monospace optional">
+          terminateOnResume
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -916,6 +1011,7 @@ JavaScript (i.e. via evaluation) until execution of the paused code
 is actually resumed, at which point termination is triggered.
 If execution is currently not paused, this parameter has no effect.</p>
 
+        
       </div>
     
           
@@ -923,7 +1019,6 @@ If execution is currently not paused, this parameter has no effect.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -937,6 +1032,7 @@ If execution is currently not paused, this parameter has no effect.</p>
       <div class="details-description">
         <p>Searches for given string in script content.</p>
 
+        
       </div>
     
         
@@ -944,49 +1040,61 @@ If execution is currently not paused, this parameter has no effect.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Id of the script to search in.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">query</dt>
+        <dt class="param-name monospace ">
+          query
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>String to search for.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">caseSensitive</dt>
+        <dt class="param-name monospace optional">
+          caseSensitive
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, search is case sensitive.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isRegex</dt>
+        <dt class="param-name monospace optional">
+          isRegex
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>If true, treats string parameter as regex.</p>
 
+        
       </div>
     
           
@@ -998,13 +1106,16 @@ If execution is currently not paused, this parameter has no effect.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">result</dt>
+        <dt class="param-name monospace ">
+          result
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-SearchMatch class="param-type">SearchMatch</a> ]</span></span>
           
       <div class="details-description">
         <p>List of search matches.</p>
 
+        
       </div>
     
           
@@ -1012,7 +1123,6 @@ If execution is currently not paused, this parameter has no effect.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1025,6 +1135,7 @@ If execution is currently not paused, this parameter has no effect.</p>
       <div class="details-description">
         <p>Enables or disables async call stacks tracking.</p>
 
+        
       </div>
     
         
@@ -1032,7 +1143,9 @@ If execution is currently not paused, this parameter has no effect.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">maxDepth</dt>
+        <dt class="param-name monospace ">
+          maxDepth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1040,6 +1153,7 @@ If execution is currently not paused, this parameter has no effect.</p>
         <p>Maximum depth of async call stacks. Setting to <code>0</code> will effectively disable collecting async
 call stacks (default).</p>
 
+        
       </div>
     
           
@@ -1047,7 +1161,6 @@ call stacks (default).</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1061,6 +1174,7 @@ call stacks (default).</p>
       <div class="details-description">
         <p>Sets JavaScript breakpoint at a given location.</p>
 
+        
       </div>
     
         
@@ -1068,19 +1182,24 @@ call stacks (default).</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location to set breakpoint in.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">condition</dt>
+        <dt class="param-name monospace optional">
+          condition
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1088,6 +1207,7 @@ call stacks (default).</p>
         <p>Expression to use as a breakpoint condition. When specified, debugger will only stop on the
 breakpoint if this expression evaluates to true.</p>
 
+        
       </div>
     
           
@@ -1099,25 +1219,31 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakpointId</dt>
+        <dt class="param-name monospace ">
+          breakpointId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
       <div class="details-description">
         <p>Id of the created breakpoint for further reference.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">actualLocation</dt>
+        <dt class="param-name monospace ">
+          actualLocation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location this breakpoint resolved into.</p>
 
+        
       </div>
     
           
@@ -1125,7 +1251,6 @@ breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1141,6 +1266,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
 <code>locations</code> property. Further matching script parsing will result in subsequent
 <code>breakpointResolved</code> events issued. This logical breakpoint will survive page reloads.</p>
 
+        
       </div>
     
         
@@ -1148,31 +1274,39 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number to set breakpoint at.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the resources to set breakpoint on.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">urlRegex</dt>
+        <dt class="param-name monospace optional">
+          urlRegex
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1180,36 +1314,45 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
         <p>Regex pattern for the URLs of the resources to set breakpoints on. Either <code>url</code> or
 <code>urlRegex</code> must be specified.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scriptHash</dt>
+        <dt class="param-name monospace optional">
+          scriptHash
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Script hash of the resources to set breakpoint on.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace optional">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Offset in the line to set breakpoint at.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">condition</dt>
+        <dt class="param-name monospace optional">
+          condition
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1217,6 +1360,7 @@ command is issued, all existing parsed scripts will have breakpoints resolved an
         <p>Expression to use as a breakpoint condition. When specified, debugger will only stop on the
 breakpoint if this expression evaluates to true.</p>
 
+        
       </div>
     
           
@@ -1228,25 +1372,31 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakpointId</dt>
+        <dt class="param-name monospace ">
+          breakpointId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
       <div class="details-description">
         <p>Id of the created breakpoint for further reference.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">locations</dt>
+        <dt class="param-name monospace ">
+          locations
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a> ]</span></span>
           
       <div class="details-description">
         <p>List of the locations this breakpoint resolved into upon addition.</p>
 
+        
       </div>
     
           
@@ -1254,7 +1404,6 @@ breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1267,6 +1416,7 @@ breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Activates / deactivates all breakpoints on the page.</p>
 
+        
       </div>
     
         
@@ -1274,13 +1424,16 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">active</dt>
+        <dt class="param-name monospace ">
+          active
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>New value for breakpoints active state.</p>
 
+        
       </div>
     
           
@@ -1288,7 +1441,6 @@ breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1302,6 +1454,7 @@ breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Sets instrumentation breakpoint.</p>
 
+        
       </div>
     
         
@@ -1309,13 +1462,18 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">instrumentation</dt>
+        <dt class="param-name monospace ">
+          instrumentation
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Instrumentation name.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>beforeScriptExecution</code>, <code>beforeScriptWithSourceMapExecution</code></div>
+    
       </div>
     
           
@@ -1327,13 +1485,16 @@ breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakpointId</dt>
+        <dt class="param-name monospace ">
+          breakpointId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
       <div class="details-description">
         <p>Id of the created breakpoint for further reference.</p>
 
+        
       </div>
     
           
@@ -1341,7 +1502,6 @@ breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1355,6 +1515,7 @@ breakpoint if this expression evaluates to true.</p>
         <p>Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or
 no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
 
+        
       </div>
     
         
@@ -1362,13 +1523,18 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">state</dt>
+        <dt class="param-name monospace ">
+          state
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Pause on exceptions mode.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>none</code>, <code>uncaught</code>, <code>all</code></div>
+    
       </div>
     
           
@@ -1376,7 +1542,6 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1390,6 +1555,7 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
       <div class="details-description">
         <p>Edits JavaScript source live.</p>
 
+        
       </div>
     
         
@@ -1397,31 +1563,39 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Id of the script to edit.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scriptSource</dt>
+        <dt class="param-name monospace ">
+          scriptSource
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>New content of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">dryRun</dt>
+        <dt class="param-name monospace optional">
+          dryRun
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1429,6 +1603,7 @@ no exceptions. Initial pause on exceptions state is <code>none</code>.</p>
         <p>If true the change will not actually be applied. Dry run may be used to get result
 description without actually modifying the code.</p>
 
+        
       </div>
     
           
@@ -1440,61 +1615,76 @@ description without actually modifying the code.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrames</dt>
+        <dt class="param-name monospace optional">
+          callFrames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-CallFrame class="param-type">CallFrame</a> ]</span></span>
           
       <div class="details-description">
         <p>New stack trace in case editing has happened while VM was stopped.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackChanged</dt>
+        <dt class="param-name monospace optional">
+          stackChanged
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether current call stack  was modified after applying the changes.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">asyncStackTrace</dt>
+        <dt class="param-name monospace optional">
+          asyncStackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>Async stack trace, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">asyncStackTraceId</dt>
+        <dt class="param-name monospace optional">
+          asyncStackTraceId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
       <div class="details-description">
         <p>Async stack trace, if any.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">exceptionDetails</dt>
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ExceptionDetails class="param-type">Runtime.ExceptionDetails</a>
           
       <div class="details-description">
         <p>Exception details if any.</p>
 
+        
       </div>
     
           
@@ -1502,7 +1692,6 @@ description without actually modifying the code.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1515,6 +1704,7 @@ description without actually modifying the code.</p>
       <div class="details-description">
         <p>Makes page not interrupt on any pauses (breakpoint, exception, dom exception etc).</p>
 
+        
       </div>
     
         
@@ -1522,13 +1712,16 @@ description without actually modifying the code.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">skip</dt>
+        <dt class="param-name monospace ">
+          skip
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>New value for skip pauses state.</p>
 
+        
       </div>
     
           
@@ -1536,7 +1729,6 @@ description without actually modifying the code.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1551,6 +1743,7 @@ description without actually modifying the code.</p>
         <p>Changes value of variable in a callframe. Object-based scopes are not supported and must be
 mutated manually.</p>
 
+        
       </div>
     
         
@@ -1558,7 +1751,9 @@ mutated manually.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scopeNumber</dt>
+        <dt class="param-name monospace ">
+          scopeNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -1566,42 +1761,52 @@ mutated manually.</p>
         <p>0-based number of scope as was listed in scope chain. Only &#39;local&#39;, &#39;closure&#39; and &#39;catch&#39;
 scope types are allowed. Other scopes could be manipulated manually.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">variableName</dt>
+        <dt class="param-name monospace ">
+          variableName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Variable name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">newValue</dt>
+        <dt class="param-name monospace ">
+          newValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-CallArgument class="param-type">Runtime.CallArgument</a>
           
       <div class="details-description">
         <p>New variable value.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">callFrameId</dt>
+        <dt class="param-name monospace ">
+          callFrameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
       <div class="details-description">
         <p>Id of callframe that holds variable.</p>
 
+        
       </div>
     
           
@@ -1609,7 +1814,6 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1623,6 +1827,7 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
       <div class="details-description">
         <p>Steps into the function call.</p>
 
+        
       </div>
     
         
@@ -1630,7 +1835,9 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakOnAsyncCall</dt>
+        <dt class="param-name monospace optional">
+          breakOnAsyncCall
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -1638,6 +1845,7 @@ scope types are allowed. Other scopes could be manipulated manually.</p>
         <p>Debugger will pause on the execution of the first async task which was scheduled
 before next pause.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -1645,7 +1853,6 @@ before next pause.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1659,9 +1866,9 @@ before next pause.</p>
       <div class="details-description">
         <p>Steps out of the function call.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1677,9 +1884,9 @@ before next pause.</p>
       <div class="details-description">
         <p>Steps over the statement.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -1695,6 +1902,7 @@ before next pause.</p>
       <div class="details-description">
         <p>This command is deprecated. Use getScriptSource instead.</p>
 
+        
       </div>
     
         
@@ -1702,13 +1910,16 @@ before next pause.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Id of the Wasm script to get source for.</p>
 
+        
       </div>
     
           
@@ -1720,13 +1931,16 @@ before next pause.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">bytecode</dt>
+        <dt class="param-name monospace ">
+          bytecode
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Script source.</p>
 
+        
       </div>
     
           
@@ -1734,7 +1948,6 @@ before next pause.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1747,6 +1960,7 @@ before next pause.</p>
       <div class="details-description">
         <p>Returns stack trace with given <code>stackTraceId</code>.</p>
 
+        
       </div>
     
         
@@ -1754,10 +1968,17 @@ before next pause.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">stackTraceId</dt>
+        <dt class="param-name monospace ">
+          stackTraceId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -1767,16 +1988,22 @@ before next pause.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">stackTrace</dt>
+        <dt class="param-name monospace ">
+          stackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1792,6 +2019,7 @@ scripts by performing &#39;step in&#39; several times, finally resorting to &#39
 Positions array contains positions where blackbox state is changed. First interval isn&#39;t
 blackboxed. Array should be sorted.</p>
 
+        
       </div>
     
         
@@ -1799,28 +2027,37 @@ blackboxed. Array should be sorted.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Id of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">positions</dt>
+        <dt class="param-name monospace ">
+          positions
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-ScriptPosition class="param-type">ScriptPosition</a> ]</span></span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -1836,6 +2073,7 @@ blackboxed. Array should be sorted.</p>
 scripts with url matching one of the patterns. VM will try to leave blackboxed script by
 performing &#39;step in&#39; several times, finally resorting to &#39;step out&#39; if unsuccessful.</p>
 
+        
       </div>
     
         
@@ -1843,13 +2081,16 @@ performing &#39;step in&#39; several times, finally resorting to &#39;step out&#
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">patterns</dt>
+        <dt class="param-name monospace ">
+          patterns
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Array of regexps that will be used to check script url for blackbox state.</p>
 
+        
       </div>
     
           
@@ -1857,7 +2098,6 @@ performing &#39;step in&#39; several times, finally resorting to &#39;step out&#
       
       </dl>
     
-        
         
       </div>
     
@@ -1873,6 +2113,7 @@ performing &#39;step in&#39; several times, finally resorting to &#39;step out&#
 If another function was created from the same source as a given one,
 calling it will also trigger the breakpoint.</p>
 
+        
       </div>
     
         
@@ -1880,19 +2121,24 @@ calling it will also trigger the breakpoint.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>Function object id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">condition</dt>
+        <dt class="param-name monospace optional">
+          condition
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1900,6 +2146,7 @@ calling it will also trigger the breakpoint.</p>
         <p>Expression to use as a breakpoint condition. When specified, debugger will
 stop on the breakpoint if this expression evaluates to true.</p>
 
+        
       </div>
     
           
@@ -1911,13 +2158,16 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakpointId</dt>
+        <dt class="param-name monospace ">
+          breakpointId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
       <div class="details-description">
         <p>Id of the created breakpoint for further reference.</p>
 
+        
       </div>
     
           
@@ -1925,7 +2175,6 @@ stop on the breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -1938,6 +2187,7 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Changes return value in top frame. Available only at return break position.</p>
 
+        
       </div>
     
         
@@ -1945,13 +2195,16 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">newValue</dt>
+        <dt class="param-name monospace ">
+          newValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-CallArgument class="param-type">Runtime.CallArgument</a>
           
       <div class="details-description">
         <p>New return value.</p>
 
+        
       </div>
     
           
@@ -1959,7 +2212,6 @@ stop on the breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1970,18 +2222,26 @@ stop on the breakpoint if this expression evaluates to true.</p>
           <a href="#method-pauseOnAsyncCall" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         
         
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">parentStackTraceId</dt>
+        <dt class="param-name monospace ">
+          parentStackTraceId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
       <div class="details-description">
         <p>Debugger will pause when async call with given stack trace is started.</p>
 
+        
       </div>
     
           
@@ -1989,7 +2249,6 @@ stop on the breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2009,6 +2268,7 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Fired when breakpoint is resolved to an actual script and location.</p>
 
+        
       </div>
     
         
@@ -2016,25 +2276,31 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">breakpointId</dt>
+        <dt class="param-name monospace ">
+          breakpointId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-BreakpointId class="param-type">BreakpointId</a>
           
       <div class="details-description">
         <p>Breakpoint unique identifier.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Actual breakpoint location.</p>
 
+        
       </div>
     
           
@@ -2042,7 +2308,6 @@ stop on the breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2056,6 +2321,7 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Fired when the virtual machine stopped on breakpoint or exception or any other stop criteria.</p>
 
+        
       </div>
     
         
@@ -2063,85 +2329,108 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrames</dt>
+        <dt class="param-name monospace ">
+          callFrames
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-CallFrame class="param-type">CallFrame</a> ]</span></span>
           
       <div class="details-description">
         <p>Call stack the virtual machine stopped on.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">reason</dt>
+        <dt class="param-name monospace ">
+          reason
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Pause reason.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>ambiguous</code>, <code>assert</code>, <code>debugCommand</code>, <code>DOM</code>, <code>EventListener</code>, <code>exception</code>, <code>instrumentation</code>, <code>OOM</code>, <code>other</code>, <code>promiseRejection</code>, <code>XHR</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace optional">
+          data
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>Object containing break-specific auxiliary properties.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hitBreakpoints</dt>
+        <dt class="param-name monospace optional">
+          hitBreakpoints
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <span class="param-type">string</span> ]</span></span>
           
       <div class="details-description">
         <p>Hit breakpoints IDs</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">asyncStackTrace</dt>
+        <dt class="param-name monospace optional">
+          asyncStackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>Async stack trace, if any.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">asyncStackTraceId</dt>
+        <dt class="param-name monospace optional">
+          asyncStackTraceId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
       <div class="details-description">
         <p>Async stack trace, if any.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">asyncCallStackTraceId</dt>
+        <dt class="param-name monospace optional">
+          asyncCallStackTraceId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTraceId class="param-type">Runtime.StackTraceId</a>
           
       <div class="details-description">
         <p>Never present, will be removed.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
@@ -2149,7 +2438,6 @@ stop on the breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2163,9 +2451,9 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Fired when the virtual machine resumed execution.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -2181,6 +2469,7 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <div class="details-description">
         <p>Fired when virtual machine fails to parse the script.</p>
 
+        
       </div>
     
         
@@ -2188,193 +2477,241 @@ stop on the breakpoint if this expression evaluates to true.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Identifier of the script parsed.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL or name of the script parsed (if any).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startLine</dt>
+        <dt class="param-name monospace ">
+          startLine
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line offset of the script within the resource with given URL (for script tags).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startColumn</dt>
+        <dt class="param-name monospace ">
+          startColumn
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column offset of the script within the resource with given URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endLine</dt>
+        <dt class="param-name monospace ">
+          endLine
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Last line of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endColumn</dt>
+        <dt class="param-name monospace ">
+          endColumn
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Length of the last line of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace ">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ExecutionContextId class="param-type">Runtime.ExecutionContextId</a>
           
       <div class="details-description">
         <p>Specifies script creation context.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hash</dt>
+        <dt class="param-name monospace ">
+          hash
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Content hash of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextAuxData</dt>
+        <dt class="param-name monospace optional">
+          executionContextAuxData
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>Embedder-specific auxiliary data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">sourceMapURL</dt>
+        <dt class="param-name monospace optional">
+          sourceMapURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of source map associated with script (if any).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hasSourceURL</dt>
+        <dt class="param-name monospace optional">
+          hasSourceURL
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if this script has sourceURL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isModule</dt>
+        <dt class="param-name monospace optional">
+          isModule
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if this script is ES6 module.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">length</dt>
+        <dt class="param-name monospace optional">
+          length
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>This script length.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackTrace</dt>
+        <dt class="param-name monospace optional">
+          stackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>JavaScript top stack frame of where the script parsed event was triggered if available.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">codeOffset</dt>
+        <dt class="param-name monospace optional">
+          codeOffset
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>If the scriptLanguage is WebAssembly, the code section offset in the module.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">scriptLanguage</dt>
+        <dt class="param-name monospace optional">
+          scriptLanguage
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-ScriptLanguage class="param-type">Debugger.ScriptLanguage</a>
           
       <div class="details-description">
         <p>The language of the script.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2382,7 +2719,6 @@ stop on the breakpoint if this expression evaluates to true.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2397,6 +2733,7 @@ stop on the breakpoint if this expression evaluates to true.</p>
         <p>Fired when virtual machine parses script. This event is also fired for all known and uncollected
 scripts upon enabling debugger.</p>
 
+        
       </div>
     
         
@@ -2404,205 +2741,256 @@ scripts upon enabling debugger.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Identifier of the script parsed.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL or name of the script parsed (if any).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startLine</dt>
+        <dt class="param-name monospace ">
+          startLine
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line offset of the script within the resource with given URL (for script tags).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">startColumn</dt>
+        <dt class="param-name monospace ">
+          startColumn
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column offset of the script within the resource with given URL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endLine</dt>
+        <dt class="param-name monospace ">
+          endLine
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Last line of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endColumn</dt>
+        <dt class="param-name monospace ">
+          endColumn
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Length of the last line of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextId</dt>
+        <dt class="param-name monospace ">
+          executionContextId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ExecutionContextId class="param-type">Runtime.ExecutionContextId</a>
           
       <div class="details-description">
         <p>Specifies script creation context.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hash</dt>
+        <dt class="param-name monospace ">
+          hash
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Content hash of the script.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">executionContextAuxData</dt>
+        <dt class="param-name monospace optional">
+          executionContextAuxData
+        </dt>
         <dd>
           <span class="param-type">object</span>
           
       <div class="details-description">
         <p>Embedder-specific auxiliary data.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isLiveEdit</dt>
+        <dt class="param-name monospace optional">
+          isLiveEdit
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if this script is generated as a result of the live edit operation.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">sourceMapURL</dt>
+        <dt class="param-name monospace optional">
+          sourceMapURL
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of source map associated with script (if any).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">hasSourceURL</dt>
+        <dt class="param-name monospace optional">
+          hasSourceURL
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if this script has sourceURL.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">isModule</dt>
+        <dt class="param-name monospace optional">
+          isModule
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if this script is ES6 module.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">length</dt>
+        <dt class="param-name monospace optional">
+          length
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>This script length.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">stackTrace</dt>
+        <dt class="param-name monospace optional">
+          stackTrace
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-StackTrace class="param-type">Runtime.StackTrace</a>
           
       <div class="details-description">
         <p>JavaScript top stack frame of where the script parsed event was triggered if available.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">codeOffset</dt>
+        <dt class="param-name monospace optional">
+          codeOffset
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>If the scriptLanguage is WebAssembly, the code section offset in the module.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">scriptLanguage</dt>
+        <dt class="param-name monospace optional">
+          scriptLanguage
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-ScriptLanguage class="param-type">Debugger.ScriptLanguage</a>
           
       <div class="details-description">
         <p>The language of the script.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -2610,7 +2998,6 @@ scripts upon enabling debugger.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2627,57 +3014,79 @@ scripts upon enabling debugger.</p>
           <a href="#type-BreakLocation" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Script identifier as reported in the <code>Debugger.scriptParsed</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number in the script (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace optional">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column number in the script (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace optional">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>debuggerStatement</code>, <code>call</code>, <code>return</code></div>
+    
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -2691,10 +3100,10 @@ scripts upon enabling debugger.</p>
       <div class="details-description">
         <p>Breakpoint identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -2709,6 +3118,7 @@ scripts upon enabling debugger.</p>
       <div class="details-description">
         <p>JavaScript call frame. Array of call frames form the call stack.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2716,97 +3126,121 @@ scripts upon enabling debugger.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">callFrameId</dt>
+        <dt class="param-name monospace ">
+          callFrameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
           
       <div class="details-description">
         <p>Call frame identifier. This identifier is only valid while the virtual machine is paused.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">functionName</dt>
+        <dt class="param-name monospace ">
+          functionName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Name of the JavaScript function called on this call frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">functionLocation</dt>
+        <dt class="param-name monospace optional">
+          functionLocation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location in the source code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">location</dt>
+        <dt class="param-name monospace ">
+          location
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location in the source code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>JavaScript script name or url.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scopeChain</dt>
+        <dt class="param-name monospace ">
+          scopeChain
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Debugger/#type-Scope class="param-type">Scope</a> ]</span></span>
           
       <div class="details-description">
         <p>Scope chain for this call frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">this</dt>
+        <dt class="param-name monospace ">
+          this
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
         <p><code>this</code> object for this call frame.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">returnValue</dt>
+        <dt class="param-name monospace optional">
+          returnValue
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
       <div class="details-description">
         <p>The value being returned, if the function is at return point.</p>
 
+        
       </div>
     
           
@@ -2814,7 +3248,6 @@ scripts upon enabling debugger.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2828,10 +3261,10 @@ scripts upon enabling debugger.</p>
       <div class="details-description">
         <p>Call frame identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -2846,6 +3279,7 @@ scripts upon enabling debugger.</p>
       <div class="details-description">
         <p>Location in the source code.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2853,37 +3287,46 @@ scripts upon enabling debugger.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">scriptId</dt>
+        <dt class="param-name monospace ">
+          scriptId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-ScriptId class="param-type">Runtime.ScriptId</a>
           
       <div class="details-description">
         <p>Script identifier as reported in the <code>Debugger.scriptParsed</code>.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number in the script (0-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace optional">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column number in the script (0-based).</p>
 
+        
       </div>
     
           
@@ -2891,7 +3334,6 @@ scripts upon enabling debugger.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2905,6 +3347,7 @@ scripts upon enabling debugger.</p>
       <div class="details-description">
         <p>Scope description.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -2912,19 +3355,26 @@ scripts upon enabling debugger.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Scope type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>global</code>, <code>local</code>, <code>with</code>, <code>closure</code>, <code>catch</code>, <code>block</code>, <code>script</code>, <code>eval</code>, <code>module</code>, <code>wasm-expression-stack</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">object</dt>
+        <dt class="param-name monospace ">
+          object
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
           
@@ -2933,37 +3383,51 @@ scripts upon enabling debugger.</p>
 object; for the rest of the scopes, it is artificial transient object enumerating scope
 variables as its properties.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace optional">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">startLocation</dt>
+        <dt class="param-name monospace optional">
+          startLocation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location in the source code where scope starts</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">endLocation</dt>
+        <dt class="param-name monospace optional">
+          endLocation
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Debugger/#type-Location class="param-type">Location</a>
           
       <div class="details-description">
         <p>Location in the source code where scope ends</p>
 
+        
       </div>
     
           
@@ -2971,7 +3435,6 @@ variables as its properties.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -2985,15 +3448,14 @@ variables as its properties.</p>
       <div class="details-description">
         <p>Enum of possible script languages.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>JavaScript</code>, <code>WebAssembly</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">JavaScript, WebAssembly</div>
-    
       </div>
     
       <div class="details">
@@ -3006,6 +3468,7 @@ variables as its properties.</p>
       <div class="details-description">
         <p>Search match for resource.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3013,25 +3476,31 @@ variables as its properties.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Line number in resource content.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">lineContent</dt>
+        <dt class="param-name monospace ">
+          lineContent
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Line with match content.</p>
 
+        
       </div>
     
           
@@ -3039,7 +3508,6 @@ variables as its properties.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -3053,6 +3521,7 @@ variables as its properties.</p>
       <div class="details-description">
         <p>Location in the source code.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -3060,23 +3529,36 @@ variables as its properties.</p>
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">lineNumber</dt>
+        <dt class="param-name monospace ">
+          lineNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">columnNumber</dt>
+        <dt class="param-name monospace ">
+          columnNumber
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     

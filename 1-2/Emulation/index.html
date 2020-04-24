@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain emulates different environments for the page.</p>
 
+        
       </div>
     
         
@@ -159,9 +160,9 @@
       <div class="details-description">
         <p>Clears the overriden device metrics.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -177,6 +178,7 @@
       <div class="details-description">
         <p>Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and &quot;device-width&quot;/&quot;device-height&quot;-related CSS media query results).</p>
 
+        
       </div>
     
         
@@ -184,157 +186,196 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">width</dt>
+        <dt class="param-name monospace ">
+          width
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding width value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">height</dt>
+        <dt class="param-name monospace ">
+          height
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding height value in pixels (minimum 0, maximum 10000000). 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">deviceScaleFactor</dt>
+        <dt class="param-name monospace ">
+          deviceScaleFactor
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Overriding device scale factor value. 0 disables the override.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">mobile</dt>
+        <dt class="param-name monospace ">
+          mobile
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text autosizing and more.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">fitWindow</dt>
+        <dt class="param-name monospace ">
+          fitWindow
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether a view that exceeds the available browser window area should be scaled down to fit.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scale</dt>
+        <dt class="param-name monospace optional">
+          scale
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Scale to apply to resulting view image. Ignored in |fitWindow| mode.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">offsetX</dt>
+        <dt class="param-name monospace optional">
+          offsetX
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Not used.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">offsetY</dt>
+        <dt class="param-name monospace optional">
+          offsetY
+        </dt>
         <dd>
           <span class="param-type">number</span>
           
       <div class="details-description">
         <p>Not used.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span><span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
         </dd>
       
-        <dt class="param-name monospace">screenWidth</dt>
+        <dt class="param-name monospace optional">
+          screenWidth
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding screen width value in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">screenHeight</dt>
+        <dt class="param-name monospace optional">
+          screenHeight
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding screen height value in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">positionX</dt>
+        <dt class="param-name monospace optional">
+          positionX
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding view X position on screen in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">positionY</dt>
+        <dt class="param-name monospace optional">
+          positionY
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Overriding view Y position on screen in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
-        <dt class="param-name monospace">screenOrientation</dt>
+        <dt class="param-name monospace optional">
+          screenOrientation
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/Emulation/#type-ScreenOrientation class="param-type">ScreenOrientation</a>
           
       <div class="details-description">
         <p>Screen orientation override.</p>
 
+        
       </div>
     
           
@@ -342,7 +383,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -356,6 +396,7 @@
       <div class="details-description">
         <p>Emulates the given media for CSS media queries.</p>
 
+        
       </div>
     
         
@@ -363,13 +404,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">media</dt>
+        <dt class="param-name monospace ">
+          media
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Media type to emulate. Empty string disables the override.</p>
 
+        
       </div>
     
           
@@ -377,7 +421,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -391,6 +434,7 @@
       <div class="details-description">
         <p>Toggles mouse event-based touch event emulation.</p>
 
+        
       </div>
     
         
@@ -398,25 +442,33 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">enabled</dt>
+        <dt class="param-name monospace ">
+          enabled
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Whether the touch event emulation should be enabled.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">configuration</dt>
+        <dt class="param-name monospace optional">
+          configuration
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Touch/gesture events configuration. Default: current platform.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>mobile</code>, <code>desktop</code></div>
+    
       </div>
     
           
@@ -424,7 +476,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -445,6 +496,7 @@
       <div class="details-description">
         <p>Screen orientation.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -452,25 +504,33 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Orientation type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>portraitPrimary</code>, <code>portraitSecondary</code>, <code>landscapePrimary</code>, <code>landscapeSecondary</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">angle</dt>
+        <dt class="param-name monospace ">
+          angle
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Orientation angle.</p>
 
+        
       </div>
     
           
@@ -478,7 +538,6 @@
       
       </dl>
     
-        
         
       </div>
     

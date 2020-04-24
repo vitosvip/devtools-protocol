@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>Input/Output operations for streams produced by DevTools.</p>
 
+        
       </div>
     
         
@@ -154,6 +155,7 @@
       <div class="details-description">
         <p>Close the stream, discard any temporary backing storage.</p>
 
+        
       </div>
     
         
@@ -161,13 +163,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">handle</dt>
+        <dt class="param-name monospace ">
+          handle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">StreamHandle</a>
           
       <div class="details-description">
         <p>Handle of the stream to close.</p>
 
+        
       </div>
     
           
@@ -175,7 +180,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -189,6 +193,7 @@
       <div class="details-description">
         <p>Read a chunk of the stream</p>
 
+        
       </div>
     
         
@@ -196,19 +201,24 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">handle</dt>
+        <dt class="param-name monospace ">
+          handle
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">StreamHandle</a>
           
       <div class="details-description">
         <p>Handle of the stream to read.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">offset</dt>
+        <dt class="param-name monospace optional">
+          offset
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
@@ -216,18 +226,22 @@
         <p>Seek to the specified offset before reading (if not specificed, proceed with offset
 following the last read). Some types of streams may only support sequential reads.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">size</dt>
+        <dt class="param-name monospace optional">
+          size
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Maximum number of bytes to read (left upon the agent discretion if not specified).</p>
 
+        
       </div>
     
           
@@ -239,37 +253,46 @@ following the last read). Some types of streams may only support sequential read
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">base64Encoded</dt>
+        <dt class="param-name monospace optional">
+          base64Encoded
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Set if the data is base64-encoded</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">data</dt>
+        <dt class="param-name monospace ">
+          data
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Data that were read.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">eof</dt>
+        <dt class="param-name monospace ">
+          eof
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>Set if the end-of-file condition occured while reading.</p>
 
+        
       </div>
     
           
@@ -277,7 +300,6 @@ following the last read). Some types of streams may only support sequential read
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -290,6 +312,7 @@ following the last read). Some types of streams may only support sequential read
       <div class="details-description">
         <p>Return UUID of Blob object specified by a remote object id.</p>
 
+        
       </div>
     
         
@@ -297,13 +320,16 @@ following the last read). Some types of streams may only support sequential read
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">objectId</dt>
+        <dt class="param-name monospace ">
+          objectId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Runtime/#type-RemoteObjectId class="param-type">Runtime.RemoteObjectId</a>
           
       <div class="details-description">
         <p>Object id of a Blob object wrapper.</p>
 
+        
       </div>
     
           
@@ -315,13 +341,16 @@ following the last read). Some types of streams may only support sequential read
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">uuid</dt>
+        <dt class="param-name monospace ">
+          uuid
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>UUID of the specified Blob.</p>
 
+        
       </div>
     
           
@@ -329,7 +358,6 @@ following the last read). Some types of streams may only support sequential read
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -350,10 +378,10 @@ following the last read). Some types of streams may only support sequential read
         <p>This is either obtained from another method or specifed as <code>blob:&amp;lt;uuid&amp;gt;</code> where
 <code>&amp;lt;uuid&amp;gt</code> is an UUID of a Blob.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>

@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>A domain for letting clients substitute browser&#39;s network layer with client code.</p>
 
+        
       </div>
     
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -214,6 +215,7 @@
       <div class="details-description">
         <p>Continues the request, optionally modifying some of its parameters.</p>
 
+        
       </div>
     
         
@@ -221,61 +223,76 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>An id the client received in requestPaused event.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>If set, the request url will be modified in a way that&#39;s not observable by page.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">method</dt>
+        <dt class="param-name monospace optional">
+          method
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>If set, the request method is overridden.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">postData</dt>
+        <dt class="param-name monospace optional">
+          postData
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>If set, overrides the post data in the request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">headers</dt>
+        <dt class="param-name monospace optional">
+          headers
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Fetch/#type-HeaderEntry class="param-type">HeaderEntry</a> ]</span></span>
           
       <div class="details-description">
         <p>If set, overrides the request headers.</p>
 
+        
       </div>
     
           
@@ -283,7 +300,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -297,6 +313,7 @@
       <div class="details-description">
         <p>Continues a request supplying authChallengeResponse following authRequired event.</p>
 
+        
       </div>
     
         
@@ -304,25 +321,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>An id the client received in authRequired event.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">authChallengeResponse</dt>
+        <dt class="param-name monospace ">
+          authChallengeResponse
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-AuthChallengeResponse class="param-type">AuthChallengeResponse</a>
           
       <div class="details-description">
         <p>Response to  with an authChallenge.</p>
 
+        
       </div>
     
           
@@ -330,7 +353,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -344,9 +366,9 @@
       <div class="details-description">
         <p>Disables the fetch domain.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -363,6 +385,7 @@
         <p>Enables issuing of requestPaused events. A request will be paused until client
 calls one of failRequest, fulfillRequest or continueRequest/continueWithAuth.</p>
 
+        
       </div>
     
         
@@ -370,7 +393,9 @@ calls one of failRequest, fulfillRequest or continueRequest/continueWithAuth.</p
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">patterns</dt>
+        <dt class="param-name monospace optional">
+          patterns
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Fetch/#type-RequestPattern class="param-type">RequestPattern</a> ]</span></span>
           
@@ -379,12 +404,15 @@ calls one of failRequest, fulfillRequest or continueRequest/continueWithAuth.</p
 fetchRequested event and will be paused until clients response. If not set,
 all requests will be affected.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">handleAuthRequests</dt>
+        <dt class="param-name monospace optional">
+          handleAuthRequests
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
@@ -392,6 +420,7 @@ all requests will be affected.</p>
         <p>If true, authRequired events will be issued and requests will be paused
 expecting a call to continueWithAuth.</p>
 
+        
       </div>
     
           
@@ -399,7 +428,6 @@ expecting a call to continueWithAuth.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -413,6 +441,7 @@ expecting a call to continueWithAuth.</p>
       <div class="details-description">
         <p>Causes the request to fail with specified reason.</p>
 
+        
       </div>
     
         
@@ -420,25 +449,31 @@ expecting a call to continueWithAuth.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>An id the client received in requestPaused event.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">errorReason</dt>
+        <dt class="param-name monospace ">
+          errorReason
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-ErrorReason class="param-type">Network.ErrorReason</a>
           
       <div class="details-description">
         <p>Causes the request to fail with the given reason.</p>
 
+        
       </div>
     
           
@@ -446,7 +481,6 @@ expecting a call to continueWithAuth.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -460,6 +494,7 @@ expecting a call to continueWithAuth.</p>
       <div class="details-description">
         <p>Provides response to the request.</p>
 
+        
       </div>
     
         
@@ -467,43 +502,54 @@ expecting a call to continueWithAuth.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>An id the client received in requestPaused event.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">responseCode</dt>
+        <dt class="param-name monospace ">
+          responseCode
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>An HTTP response code.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">responseHeaders</dt>
+        <dt class="param-name monospace optional">
+          responseHeaders
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Fetch/#type-HeaderEntry class="param-type">HeaderEntry</a> ]</span></span>
           
       <div class="details-description">
         <p>Response headers.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">binaryResponseHeaders</dt>
+        <dt class="param-name monospace optional">
+          binaryResponseHeaders
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -513,24 +559,30 @@ series of name: value pairs. Prefer the above method unless you
 need to represent some non-UTF8 values that can&#39;t be transmitted
 over the protocol as text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">body</dt>
+        <dt class="param-name monospace optional">
+          body
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>A response body.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">responsePhrase</dt>
+        <dt class="param-name monospace optional">
+          responsePhrase
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -538,6 +590,7 @@ over the protocol as text.</p>
         <p>A textual representation of responseCode.
 If absent, a standard phrase matching responseCode is used.</p>
 
+        
       </div>
     
           
@@ -545,7 +598,6 @@ If absent, a standard phrase matching responseCode is used.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -564,6 +616,7 @@ takeResponseBodyForInterceptionAsStream. Calling other methods that
 affect the request or disabling fetch domain before body is received
 results in an undefined behavior.</p>
 
+        
       </div>
     
         
@@ -571,13 +624,16 @@ results in an undefined behavior.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Identifier for the intercepted request to get body for.</p>
 
+        
       </div>
     
           
@@ -589,25 +645,31 @@ results in an undefined behavior.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">body</dt>
+        <dt class="param-name monospace ">
+          body
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Response body.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">base64Encoded</dt>
+        <dt class="param-name monospace ">
+          base64Encoded
+        </dt>
         <dd>
           <span class="param-type">boolean</span>
           
       <div class="details-description">
         <p>True, if content was sent as base64.</p>
 
+        
       </div>
     
           
@@ -615,7 +677,6 @@ results in an undefined behavior.</p>
       
       </dl>
     
-        
       </div>
     
       <div class="details">
@@ -637,6 +698,7 @@ This method is mutually exclusive with getResponseBody.
 Calling other methods that affect the request or disabling fetch
 domain before body is received results in an undefined behavior.</p>
 
+        
       </div>
     
         
@@ -644,10 +706,17 @@ domain before body is received results in an undefined behavior.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
@@ -657,16 +726,22 @@ domain before body is received results in an undefined behavior.</p>
       <h5 class="properties-name">Return Object</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">stream</dt>
+        <dt class="param-name monospace ">
+          stream
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/IO/#type-StreamHandle class="param-type">IO.StreamHandle</a>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
       </div>
     
       </div>
@@ -686,6 +761,7 @@ domain before body is received results in an undefined behavior.</p>
         <p>Issued when the domain is enabled with handleAuthRequests set to true.
 The request is paused until client responds with continueWithAuth.</p>
 
+        
       </div>
     
         
@@ -693,55 +769,69 @@ The request is paused until client responds with continueWithAuth.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Each request the page makes will have a unique id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace ">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-Request class="param-type">Network.Request</a>
           
       <div class="details-description">
         <p>The details of the request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>The id of the frame that initiated the request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">resourceType</dt>
+        <dt class="param-name monospace ">
+          resourceType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">Network.ResourceType</a>
           
       <div class="details-description">
         <p>How the requested resource will be used.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">authChallenge</dt>
+        <dt class="param-name monospace ">
+          authChallenge
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-AuthChallenge class="param-type">AuthChallenge</a>
           
@@ -750,6 +840,7 @@ The request is paused until client responds with continueWithAuth.</p>
 If this is set, client should respond with continueRequest that
 contains AuthChallengeResponse.</p>
 
+        
       </div>
     
           
@@ -757,7 +848,6 @@ contains AuthChallengeResponse.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -776,6 +866,7 @@ The stage of the request can be determined by presence of responseErrorReason
 and responseStatusCode -- the request is at the response stage if either
 of these fields is present and in the request stage otherwise.</p>
 
+        
       </div>
     
         
@@ -783,91 +874,114 @@ of these fields is present and in the request stage otherwise.</p>
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">requestId</dt>
+        <dt class="param-name monospace ">
+          requestId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
       <div class="details-description">
         <p>Each request the page makes will have a unique id.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">request</dt>
+        <dt class="param-name monospace ">
+          request
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-Request class="param-type">Network.Request</a>
           
       <div class="details-description">
         <p>The details of the request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">frameId</dt>
+        <dt class="param-name monospace ">
+          frameId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Page/#type-FrameId class="param-type">Page.FrameId</a>
           
       <div class="details-description">
         <p>The id of the frame that initiated the request.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">resourceType</dt>
+        <dt class="param-name monospace ">
+          resourceType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">Network.ResourceType</a>
           
       <div class="details-description">
         <p>How the requested resource will be used.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">responseErrorReason</dt>
+        <dt class="param-name monospace optional">
+          responseErrorReason
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-ErrorReason class="param-type">Network.ErrorReason</a>
           
       <div class="details-description">
         <p>Response error if intercepted at response stage.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">responseStatusCode</dt>
+        <dt class="param-name monospace optional">
+          responseStatusCode
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Response code if intercepted at response stage.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">responseHeaders</dt>
+        <dt class="param-name monospace optional">
+          responseHeaders
+        </dt>
         <dd>
           <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Fetch/#type-HeaderEntry class="param-type">HeaderEntry</a> ]</span></span>
           
       <div class="details-description">
         <p>Response headers if intercepted at the response stage.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">networkId</dt>
+        <dt class="param-name monospace optional">
+          networkId
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestId class="param-type">RequestId</a>
           
@@ -875,6 +989,7 @@ of these fields is present and in the request stage otherwise.</p>
         <p>If the intercepted request had a corresponding Network.requestWillBeSent event fired for it,
 then this networkId will be the same as the requestId present in the requestWillBeSent event.</p>
 
+        
       </div>
     
           
@@ -882,7 +997,6 @@ then this networkId will be the same as the requestId present in the requestWill
       
       </dl>
     
-        
         
       </div>
     
@@ -902,6 +1016,7 @@ then this networkId will be the same as the requestId present in the requestWill
       <div class="details-description">
         <p>Response HTTP header entry</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -909,23 +1024,36 @@ then this networkId will be the same as the requestId present in the requestWill
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">name</dt>
+        <dt class="param-name monospace ">
+          name
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
-        <dt class="param-name monospace">value</dt>
+        <dt class="param-name monospace ">
+          value
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
+      <div class="details-description">
+        
+        
+      </div>
+    
           
         </dd>
       
       </dl>
     
-        
         
       </div>
     
@@ -939,10 +1067,10 @@ then this networkId will be the same as the requestId present in the requestWill
       <div class="details-description">
         <p>Unique request identifier.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
-        
         
         
       </div>
@@ -957,6 +1085,7 @@ then this networkId will be the same as the requestId present in the requestWill
       <div class="details-description">
         <p>Authorization challenge for HTTP status code 401 or 407.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -964,49 +1093,63 @@ then this networkId will be the same as the requestId present in the requestWill
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">source</dt>
+        <dt class="param-name monospace optional">
+          source
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Source of the authentication challenge.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Server</code>, <code>Proxy</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">origin</dt>
+        <dt class="param-name monospace ">
+          origin
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Origin of the challenger.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">scheme</dt>
+        <dt class="param-name monospace ">
+          scheme
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The authentication scheme used, such as basic or digest</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">realm</dt>
+        <dt class="param-name monospace ">
+          realm
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>The realm of the challenge. May be empty.</p>
 
+        
       </div>
     
           
@@ -1014,7 +1157,6 @@ then this networkId will be the same as the requestId present in the requestWill
       
       </dl>
     
-        
         
       </div>
     
@@ -1028,6 +1170,7 @@ then this networkId will be the same as the requestId present in the requestWill
       <div class="details-description">
         <p>Response to an AuthChallenge.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -1035,7 +1178,9 @@ then this networkId will be the same as the requestId present in the requestWill
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">response</dt>
+        <dt class="param-name monospace ">
+          response
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1044,12 +1189,17 @@ then this networkId will be the same as the requestId present in the requestWill
 deferring to the default behavior of the net stack, which will likely either the Cancel
 authentication or display a popup dialog box.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Default</code>, <code>CancelAuth</code>, <code>ProvideCredentials</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">username</dt>
+        <dt class="param-name monospace optional">
+          username
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1057,12 +1207,15 @@ authentication or display a popup dialog box.</p>
         <p>The username to provide, possibly empty. Should only be set if response is
 ProvideCredentials.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">password</dt>
+        <dt class="param-name monospace optional">
+          password
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1070,6 +1223,7 @@ ProvideCredentials.</p>
         <p>The password to provide, possibly empty. Should only be set if response is
 ProvideCredentials.</p>
 
+        
       </div>
     
           
@@ -1077,7 +1231,6 @@ ProvideCredentials.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1088,12 +1241,19 @@ ProvideCredentials.</p>
           <a href="#type-RequestPattern" class="permalink">#</a>
         </h4>
         
+      <div class="details-description">
+        
+        
+      </div>
+    
         <p class="type-type">Type: <strong>object</strong></p>
         
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">urlPattern</dt>
+        <dt class="param-name monospace optional">
+          urlPattern
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
@@ -1101,30 +1261,37 @@ ProvideCredentials.</p>
         <p>Wildcards (&#39;<em>&#39; -&gt; zero or more, &#39;?&#39; -&gt; exactly one) are allowed. Escape character is
 backslash. Omitting is equivalent to &quot;</em>&quot;.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">resourceType</dt>
+        <dt class="param-name monospace optional">
+          resourceType
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Network/#type-ResourceType class="param-type">Network.ResourceType</a>
           
       <div class="details-description">
         <p>If set, only requests for matching resource types will be intercepted.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">requestStage</dt>
+        <dt class="param-name monospace optional">
+          requestStage
+        </dt>
         <dd>
           <a href=/devtools-protocol/tot/Fetch/#type-RequestStage class="param-type">RequestStage</a>
           
       <div class="details-description">
         <p>Stage at wich to begin intercepting requests. Default is Request.</p>
 
+        
       </div>
     
           
@@ -1132,7 +1299,6 @@ backslash. Omitting is equivalent to &quot;</em>&quot;.</p>
       
       </dl>
     
-        
         
       </div>
     
@@ -1148,15 +1314,14 @@ backslash. Omitting is equivalent to &quot;</em>&quot;.</p>
 sent. Response will intercept after the response is received (but before response
 body is received.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>Request</code>, <code>Response</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">Request, Response</div>
-    
       </div>
     
       </div>

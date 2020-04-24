@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>This domain is deprecated - use Runtime or Log instead.</p>
 
+        
       </div>
     
         <span class="deprecated" title="Deprecated, please adopt alternative">Deprecated</span>
@@ -159,9 +160,9 @@
       <div class="details-description">
         <p>Does nothing.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -177,9 +178,9 @@
       <div class="details-description">
         <p>Disables console domain, prevents further console messages from being reported to the client.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -196,9 +197,9 @@
         <p>Enables console domain, sends the messages collected so far to the client by means of the
 <code>messageAdded</code> notification.</p>
 
+        
       </div>
     
-        
         
         
         
@@ -220,6 +221,7 @@
       <div class="details-description">
         <p>Issued when new console message is added.</p>
 
+        
       </div>
     
         
@@ -227,13 +229,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">message</dt>
+        <dt class="param-name monospace ">
+          message
+        </dt>
         <dd>
           <a href=/devtools-protocol/v8/Console/#type-ConsoleMessage class="param-type">ConsoleMessage</a>
           
       <div class="details-description">
         <p>Console message that has been added.</p>
 
+        
       </div>
     
           
@@ -241,7 +246,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -261,6 +265,7 @@
       <div class="details-description">
         <p>Console message.</p>
 
+        
       </div>
     
         <p class="type-type">Type: <strong>object</strong></p>
@@ -268,73 +273,95 @@
       <h5 class="properties-name">properties</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">source</dt>
+        <dt class="param-name monospace ">
+          source
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message source.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>xml</code>, <code>javascript</code>, <code>network</code>, <code>console-api</code>, <code>storage</code>, <code>appcache</code>, <code>rendering</code>, <code>security</code>, <code>other</code>, <code>deprecation</code>, <code>worker</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">level</dt>
+        <dt class="param-name monospace ">
+          level
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message severity.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>log</code>, <code>warning</code>, <code>error</code>, <code>debug</code>, <code>info</code></div>
+    
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">text</dt>
+        <dt class="param-name monospace ">
+          text
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Message text.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace optional">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>URL of the message origin.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">line</dt>
+        <dt class="param-name monospace optional">
+          line
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Line number in the resource that generated this message (1-based).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">column</dt>
+        <dt class="param-name monospace optional">
+          column
+        </dt>
         <dd>
           <span class="param-type">integer</span>
           
       <div class="details-description">
         <p>Column number in the resource that generated this message (1-based).</p>
 
+        
       </div>
     
           
@@ -342,7 +369,6 @@
       
       </dl>
     
-        
         
       </div>
     

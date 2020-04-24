@@ -112,6 +112,7 @@
       <div class="details-description">
         <p>DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript execution will stop on these operations as if there was a regular breakpoint set.</p>
 
+        
       </div>
     
         
@@ -169,6 +170,7 @@
       <div class="details-description">
         <p>Removes DOM breakpoint that was set using <code>setDOMBreakpoint</code>.</p>
 
+        
       </div>
     
         
@@ -176,25 +178,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Identifier of the node to remove breakpoint from.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
       <div class="details-description">
         <p>Type of the breakpoint to remove.</p>
 
+        
       </div>
     
           
@@ -202,7 +210,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -216,6 +223,7 @@
       <div class="details-description">
         <p>Removes breakpoint on particular DOM event.</p>
 
+        
       </div>
     
         
@@ -223,25 +231,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">eventName</dt>
+        <dt class="param-name monospace ">
+          eventName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Event name.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">targetName</dt>
+        <dt class="param-name monospace optional">
+          targetName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>EventTarget interface name.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -249,7 +263,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -263,6 +276,7 @@
       <div class="details-description">
         <p>Removes breakpoint from XMLHttpRequest.</p>
 
+        
       </div>
     
         
@@ -270,13 +284,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL substring.</p>
 
+        
       </div>
     
           
@@ -284,7 +301,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -298,6 +314,7 @@
       <div class="details-description">
         <p>Sets breakpoint on particular operation with DOM.</p>
 
+        
       </div>
     
         
@@ -305,25 +322,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">nodeId</dt>
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
           
       <div class="details-description">
         <p>Identifier of the node to set breakpoint on.</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">type</dt>
+        <dt class="param-name monospace ">
+          type
+        </dt>
         <dd>
           <a href=/devtools-protocol/1-2/DOMDebugger/#type-DOMBreakpointType class="param-type">DOMBreakpointType</a>
           
       <div class="details-description">
         <p>Type of the operation to stop upon.</p>
 
+        
       </div>
     
           
@@ -331,7 +354,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -345,6 +367,7 @@
       <div class="details-description">
         <p>Sets breakpoint on particular DOM event.</p>
 
+        
       </div>
     
         
@@ -352,25 +375,31 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">eventName</dt>
+        <dt class="param-name monospace ">
+          eventName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>DOM Event name to stop on (any DOM event will do).</p>
 
+        
       </div>
     
           
         </dd>
       
-        <dt class="param-name monospace">targetName</dt>
+        <dt class="param-name monospace optional">
+          targetName
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>EventTarget interface name to stop on. If equal to <code>"*"</code> or not provided, will stop on any EventTarget.</p>
 
+        
       </div>
     
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -378,7 +407,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -392,6 +420,7 @@
       <div class="details-description">
         <p>Sets breakpoint on XMLHttpRequest.</p>
 
+        
       </div>
     
         
@@ -399,13 +428,16 @@
       <h5 class="properties-name">parameters</h5>
       <dl class="properties-container">
         
-        <dt class="param-name monospace">url</dt>
+        <dt class="param-name monospace ">
+          url
+        </dt>
         <dd>
           <span class="param-type">string</span>
           
       <div class="details-description">
         <p>Resource URL substring. All XHRs having this substring in the URL will get stopped upon.</p>
 
+        
       </div>
     
           
@@ -413,7 +445,6 @@
       
       </dl>
     
-        
         
       </div>
     
@@ -434,15 +465,14 @@
       <div class="details-description">
         <p>DOM breakpoint type.</p>
 
+        
+      <div class="enum-container">Allowed Values: <code>subtree-modified</code>, <code>attribute-modified</code>, <code>node-removed</code></div>
+    
       </div>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
         
-        
-      <h5 class="properties-name">Allowed Values</h5>
-      <div class="enum-container monospace">subtree-modified, attribute-modified, node-removed</div>
-    
       </div>
     
       </div>
