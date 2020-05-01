@@ -170,7 +170,7 @@ class m{constructor(e,t,s){this.__parts=[],this.template=e,this.processor=t,this
           margin-left: auto;
         }
         input::placeholder {
-          color: var(--header-text-color);
+          color: hsla(0, 0%, 100%, 0.5);
         }
         input:focus {
           transition: border-bottom-color 0.4s ease;
@@ -178,5 +178,5 @@ class m{constructor(e,t,s){this.__parts=[],this.template=e,this.processor=t,this
           outline: none;
         }
       </style>
-      <input placeholder="Search..." aria-label="Search" @keyup=${this.handleArrows}/>
+      <input placeholder="Start typing to search..." aria-label="Search" @keyup=${this.handleArrows}/>
     `,this.shadowRoot,{eventContext:this})}handleArrows(e){switch(e.code){case"ArrowDown":return void this.menu.focusDown();case"ArrowUp":return void this.menu.focusUp();case"Enter":return e.preventDefault(),void this.menu.select()}"Escape"===e.code&&(this.inputElement.value="",this.inputElement.blur());const t=this.inputElement.value;""!==t?(this.menu.connected||this.menuContainer.replaceWith(this.menu),this.menu.searchString=t):this.menu.replaceWith(this.menuContainer)}});const P=document.querySelector(".menu-link"),I=document.querySelector("aside"),B=document.querySelector("main"),O=document.querySelector(".aside-close-button");function W(){I.classList.contains("shown")&&(I.classList.remove("shown"),P.focus())}document.addEventListener("keydown",e=>{e.metaKey||(e.keyCode>=65&&e.keyCode<=90&&document.querySelector("cr-search-control").inputElement.focus(),"Escape"===e.key&&I.classList.contains("shown")&&I.classList.remove("shown"))}),P.addEventListener("click",e=>{e.stopPropagation(),I.addEventListener("transitionend",()=>{O.focus()},{once:!0}),I.classList.add("shown")}),B.addEventListener("click",W),O.addEventListener("click",W);
