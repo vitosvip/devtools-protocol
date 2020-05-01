@@ -185,6 +185,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-setShowHinge"><span class="domain-dot">Overlay.</span>setShowHinge</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-setShowHitTestBorders"><span class="domain-dot">Overlay.</span>setShowHitTestBorders</a>
         
       </div>
@@ -233,6 +238,11 @@
         <h3>Types</h3>
       <div class="toc-link">
         <a class="monospace" href="#type-HighlightConfig"><span class="domain-dot">Overlay.</span>HighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-HingeConfig"><span class="domain-dot">Overlay.</span>HingeConfig</a>
         
       </div>
       
@@ -983,6 +993,47 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setShowHinge">
+          <span class="domain-dot">Overlay.</span>setShowHinge
+          
+          <a href="#method-setShowHinge"
+             class="permalink"
+             data-slug="Overlay.setShowHinge"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Add a dual screen device hinge</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace optional">
+          hingeConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-HingeConfig class="param-type">HingeConfig</a>
+          
+      <div class="details-description">
+        <p>hinge data, null means hideHinge</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setShowHitTestBorders">
           <span class="domain-dot">Overlay.</span>setShowHitTestBorders
           
@@ -1537,6 +1588,77 @@ user manually inspects an element.</p>
           
       <div class="details-description">
         <p>The grid layout color (default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-HingeConfig">
+          <span class="domain-dot">Overlay.</span>HingeConfig
+          
+          <a href="#type-HingeConfig"
+             class="permalink"
+             data-slug="Overlay.HingeConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Configuration for dual screen hinge</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          rect
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-Rect class="param-type">DOM.Rect</a>
+          
+      <div class="details-description">
+        <p>A rectangle represent hinge</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          contentColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight fill color (default: a dark color).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          outlineColor
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-RGBA class="param-type">DOM.RGBA</a>
+          
+      <div class="details-description">
+        <p>The content box highlight outline color (default: transparent).</p>
 
         
       </div>
