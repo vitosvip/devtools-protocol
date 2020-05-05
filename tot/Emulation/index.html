@@ -252,6 +252,16 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-UserAgentBrandVersion"><span class="domain-dot">Emulation.</span>UserAgentBrandVersion</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-UserAgentMetadata"><span class="domain-dot">Emulation.</span>UserAgentMetadata</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-VirtualTimePolicy"><span class="domain-dot">Emulation.</span>VirtualTimePolicy</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -887,6 +897,21 @@ unavailable.</p>
       </div>
     
           
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          userAgentMetadata
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Emulation/#type-UserAgentMetadata class="param-type">UserAgentMetadata</a>
+          
+      <div class="details-description">
+        <p>To be sent in Sec-CH-UA-* headers and returned in navigator.userAgentData</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
       </dl>
@@ -1658,6 +1683,184 @@ on Android.</p>
       <div class="details-description">
         <p>Orientation angle.</p>
 
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-UserAgentBrandVersion">
+          <span class="domain-dot">Emulation.</span>UserAgentBrandVersion
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-UserAgentBrandVersion"
+             class="permalink"
+             data-slug="Emulation.UserAgentBrandVersion"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Used to specify User Agent Cient Hints to emulate. See <a href="https://wicg.github.io/ua-client-hints">https://wicg.github.io/ua-client-hints</a></p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          brand
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          version
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-UserAgentMetadata">
+          <span class="domain-dot">Emulation.</span>UserAgentMetadata
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#type-UserAgentMetadata"
+             class="permalink"
+             data-slug="Emulation.UserAgentMetadata"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Used to specify User Agent Cient Hints to emulate. See <a href="https://wicg.github.io/ua-client-hints">https://wicg.github.io/ua-client-hints</a></p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          brands
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Emulation/#type-UserAgentBrandVersion class="param-type">UserAgentBrandVersion</a> ]</span></span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          fullVersion
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          platform
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          platformVersion
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          architecture
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          model
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          mobile
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        
         
       </div>
     
