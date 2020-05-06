@@ -241,6 +241,11 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-executeWasmEvaluator"><span class="domain-dot">Debugger.</span>executeWasmEvaluator</a>
+        <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getStackTrace"><span class="domain-dot">Debugger.</span>getStackTrace</a>
         <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
       </div>
@@ -314,6 +319,11 @@ breakpoints, stepping through execution, exploring stack traces, etc.</p>
       
       <div class="toc-link">
         <a class="monospace" href="#type-CallFrameId"><span class="domain-dot">Debugger.</span>CallFrameId</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-DebugSymbols"><span class="domain-dot">Debugger.</span>DebugSymbols</a>
         
       </div>
       
@@ -2025,6 +2035,112 @@ before next pause.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-executeWasmEvaluator">
+          <span class="domain-dot">Debugger.</span>executeWasmEvaluator
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+          <a href="#method-executeWasmEvaluator"
+             class="permalink"
+             data-slug="Debugger.executeWasmEvaluator"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Execute a Wasm Evaluator module on a given call frame.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          callFrameId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Debugger/#type-CallFrameId class="param-type">CallFrameId</a>
+          
+      <div class="details-description">
+        <p>WebAssembly call frame identifier to evaluate on.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          evaluator
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Code of the evaluator module.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          timeout
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-TimeDelta class="param-type">Runtime.TimeDelta</a>
+          
+      <div class="details-description">
+        <p>Terminate execution after timing out (number of milliseconds).</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          result
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-RemoteObject class="param-type">Runtime.RemoteObject</a>
+          
+      <div class="details-description">
+        <p>Object wrapper for the evaluation result.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          exceptionDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Runtime/#type-ExceptionDetails class="param-type">Runtime.ExceptionDetails</a>
+          
+      <div class="details-description">
+        <p>Exception details.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-getStackTrace">
           <span class="domain-dot">Debugger.</span>getStackTrace
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
@@ -3103,6 +3219,21 @@ scripts upon enabling debugger.</p>
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace optional">
+          debugSymbols
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Debugger/#type-DebugSymbols class="param-type">Debugger.DebugSymbols</a>
+          
+      <div class="details-description">
+        <p>If the scriptLanguage is WebASsembly, the source of debug symbols for the module.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
@@ -3385,6 +3516,64 @@ scripts upon enabling debugger.</p>
     
         <p class="type-type">Type: <strong>string</strong></p>
         
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-DebugSymbols">
+          <span class="domain-dot">Debugger.</span>DebugSymbols
+          
+          <a href="#type-DebugSymbols"
+             class="permalink"
+             data-slug="Debugger.DebugSymbols"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Debug symbols available for a wasm script.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          type
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Type of the debug symbols.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>None</code>, <code>SourceMap</code>, <code>EmbeddedDWARF</code>, <code>ExternalDWARF</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          externalURL
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>URL of the external symbol source.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
         
       </div>
     
