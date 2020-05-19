@@ -157,6 +157,16 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-BlockedByResponseIssueDetails"><span class="domain-dot">Audits.</span>BlockedByResponseIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-BlockedByResponseReason"><span class="domain-dot">Audits.</span>BlockedByResponseReason</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-InspectorIssue"><span class="domain-dot">Audits.</span>InspectorIssue</a>
         
       </div>
@@ -610,6 +620,100 @@ applies to images.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-BlockedByResponseIssueDetails">
+          <span class="domain-dot">Audits.</span>BlockedByResponseIssueDetails
+          
+          <a href="#type-BlockedByResponseIssueDetails"
+             class="permalink"
+             data-slug="Audits.BlockedByResponseIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Details for a request that has been blocked with the BLOCKED_BY_RESPONSE
+code. Currently only used for COEP/COOP, but may be extended to include
+some CSP errors in the future.</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          request
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedRequest class="param-type">AffectedRequest</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          frame
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedFrame class="param-type">AffectedFrame</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          reason
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-BlockedByResponseReason class="param-type">BlockedByResponseReason</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-BlockedByResponseReason">
+          <span class="domain-dot">Audits.</span>BlockedByResponseReason
+          
+          <a href="#type-BlockedByResponseReason"
+             class="permalink"
+             data-slug="Audits.BlockedByResponseReason"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Enum indicating the reason a response has been blocked. These reasons are
+refinements of the net error BLOCKED_BY_RESPONSE.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>CoepFrameResourceNeedsCoepHeader</code>, <code>CoopSandboxedIFrameCannotNavigateToCoopPage</code>, <code>CorpNotSameOrigin</code>, <code>CorpNotSameOriginAfterDefaultedToSameOriginByCoep</code>, <code>CorpNotSameSite</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-InspectorIssue">
           <span class="domain-dot">Audits.</span>InspectorIssue
           
@@ -679,7 +783,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code></div>
     
       </div>
     
@@ -730,6 +834,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-MixedContentIssueDetails class="param-type">MixedContentIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          blockedByResponseIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-BlockedByResponseIssueDetails class="param-type">BlockedByResponseIssueDetails</a>
           
       <div class="details-description">
         
