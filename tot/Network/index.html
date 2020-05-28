@@ -458,6 +458,11 @@ file, data and other requests and responses, their headers, bodies, timing, etc.
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-ServiceWorkerResponseSource"><span class="domain-dot">Network.</span>ServiceWorkerResponseSource</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-SignedCertificateTimestamp"><span class="domain-dot">Network.</span>SignedCertificateTimestamp</a>
         
       </div>
@@ -5650,6 +5655,51 @@ milliseconds relatively to this requestTime.</p>
         </dd>
       
         <dt class="param-name monospace optional">
+          serviceWorkerResponseSource
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-ServiceWorkerResponseSource class="param-type">ServiceWorkerResponseSource</a>
+          
+      <div class="details-description">
+        <p>Response source of response from ServiceWorker.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          responseTime
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Network/#type-TimeSinceEpoch class="param-type">TimeSinceEpoch</a>
+          
+      <div class="details-description">
+        <p>The time at which the returned response was generated.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          cacheStorageCacheName
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Cache Storage Cache Name.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
           protocol
         </dt>
         <dd>
@@ -5917,6 +5967,29 @@ milliseconds relatively to this requestTime.</p>
       
       </dl>
     
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-ServiceWorkerResponseSource">
+          <span class="domain-dot">Network.</span>ServiceWorkerResponseSource
+          
+          <a href="#type-ServiceWorkerResponseSource"
+             class="permalink"
+             data-slug="Network.ServiceWorkerResponseSource"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Source of serviceworker response.</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>cache-storage</code>, <code>http-cache</code>, <code>fallback-code</code>, <code>network</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
         
       </div>
     
