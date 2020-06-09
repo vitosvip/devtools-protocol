@@ -2850,6 +2850,23 @@ document.written STYLE tags.</p>
         </dd>
       
         <dt class="param-name monospace ">
+          isMutable
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>Whether this stylesheet is mutable. Inline stylesheets become mutable
+after they have been modified via CSSOM API.</p>
+<link> element's stylesheets are never mutable. Constructed stylesheets
+(new CSSStyleSheet()) are mutable immediately after creation.
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
           startLine
         </dt>
         <dd>
