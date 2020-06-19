@@ -1119,6 +1119,24 @@ Note that <code>let</code> variables can only be re-declared if they originate f
           <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
         </dd>
       
+        <dt class="param-name monospace optional">
+          allowUnsafeEvalBlockedByCSP
+        </dt>
+        <dd>
+          <span class="param-type">boolean</span>
+          
+      <div class="details-description">
+        <p>The Content Security Policy (CSP) for the target might block &#39;unsafe-eval&#39;
+which includes eval(), Function(), setTimeout() and setInterval()
+when called with non-callable arguments. This flag bypasses CSP for this
+evaluation and allows unsafe-eval. Defaults to true.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
       </dl>
     
         
