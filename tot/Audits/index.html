@@ -167,6 +167,21 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-HeavyAdIssueDetails"><span class="domain-dot">Audits.</span>HeavyAdIssueDetails</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-HeavyAdReason"><span class="domain-dot">Audits.</span>HeavyAdReason</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#type-HeavyAdResolutionStatus"><span class="domain-dot">Audits.</span>HeavyAdResolutionStatus</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-InspectorIssue"><span class="domain-dot">Audits.</span>InspectorIssue</a>
         
       </div>
@@ -714,6 +729,120 @@ refinements of the net error BLOCKED_BY_RESPONSE.</p>
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="type-HeavyAdIssueDetails">
+          <span class="domain-dot">Audits.</span>HeavyAdIssueDetails
+          
+          <a href="#type-HeavyAdIssueDetails"
+             class="permalink"
+             data-slug="Audits.HeavyAdIssueDetails"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          resolution
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-HeavyAdResolutionStatus class="param-type">HeavyAdResolutionStatus</a>
+          
+      <div class="details-description">
+        <p>The resolution status, either blocking the content or warning.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          reason
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-HeavyAdReason class="param-type">HeavyAdReason</a>
+          
+      <div class="details-description">
+        <p>The reason the ad was blocked, total network or cpu or peak cpu.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          frame
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-AffectedFrame class="param-type">AffectedFrame</a>
+          
+      <div class="details-description">
+        <p>The frame that was blocked.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-HeavyAdReason">
+          <span class="domain-dot">Audits.</span>HeavyAdReason
+          
+          <a href="#type-HeavyAdReason"
+             class="permalink"
+             data-slug="Audits.HeavyAdReason"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>NetworkTotalLimit</code>, <code>CpuTotalLimit</code>, <code>CpuPeakLimit</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-HeavyAdResolutionStatus">
+          <span class="domain-dot">Audits.</span>HeavyAdResolutionStatus
+          
+          <a href="#type-HeavyAdResolutionStatus"
+             class="permalink"
+             data-slug="Audits.HeavyAdResolutionStatus"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      <div class="enum-container">Allowed Values: <code>HeavyAdBlocked</code>, <code>HeavyAdWarning</code></div>
+    
+      </div>
+    
+        <p class="type-type">Type: <strong>string</strong></p>
+        
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="type-InspectorIssue">
           <span class="domain-dot">Audits.</span>InspectorIssue
           
@@ -783,7 +912,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code></div>
     
       </div>
     
@@ -848,6 +977,20 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-BlockedByResponseIssueDetails class="param-type">BlockedByResponseIssueDetails</a>
+          
+      <div class="details-description">
+        
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          heavyAdIssueDetails
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Audits/#type-HeavyAdIssueDetails class="param-type">HeavyAdIssueDetails</a>
           
       <div class="details-description">
         
