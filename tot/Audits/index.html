@@ -167,16 +167,6 @@
       </div>
       
       <div class="toc-link">
-        <a class="monospace" href="#type-ContentSecurityPolicyIssueDetails"><span class="domain-dot">Audits.</span>ContentSecurityPolicyIssueDetails</a>
-        
-      </div>
-      
-      <div class="toc-link">
-        <a class="monospace" href="#type-ContentSecurityPolicyViolationType"><span class="domain-dot">Audits.</span>ContentSecurityPolicyViolationType</a>
-        
-      </div>
-      
-      <div class="toc-link">
         <a class="monospace" href="#type-HeavyAdIssueDetails"><span class="domain-dot">Audits.</span>HeavyAdIssueDetails</a>
         
       </div>
@@ -739,111 +729,6 @@ refinements of the net error BLOCKED_BY_RESPONSE.</p>
       </div>
     
       <div class="details">
-        <h4 class="details-name monospace" id="type-ContentSecurityPolicyIssueDetails">
-          <span class="domain-dot">Audits.</span>ContentSecurityPolicyIssueDetails
-          
-          <a href="#type-ContentSecurityPolicyIssueDetails"
-             class="permalink"
-             data-slug="Audits.ContentSecurityPolicyIssueDetails"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        
-        
-      </div>
-    
-        <p class="type-type">Type: <strong>object</strong></p>
-        
-      <h5 class="properties-name">properties</h5>
-      <dl class="properties-container">
-        
-        <dt class="param-name monospace optional">
-          blockedURL
-        </dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>The url not included in allowed sources.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace ">
-          violatedDirective
-        </dt>
-        <dd>
-          <span class="param-type">string</span>
-          
-      <div class="details-description">
-        <p>Specific directive that is violated, causing the CSP issue.</p>
-
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace ">
-          contentSecurityPolicyViolationType
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Audits/#type-ContentSecurityPolicyViolationType class="param-type">ContentSecurityPolicyViolationType</a>
-          
-      <div class="details-description">
-        
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          frameAncestor
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Audits/#type-AffectedFrame class="param-type">AffectedFrame</a>
-          
-      <div class="details-description">
-        
-        
-      </div>
-    
-          
-        </dd>
-      
-      </dl>
-    
-        
-      </div>
-    
-      <div class="details">
-        <h4 class="details-name monospace" id="type-ContentSecurityPolicyViolationType">
-          <span class="domain-dot">Audits.</span>ContentSecurityPolicyViolationType
-          
-          <a href="#type-ContentSecurityPolicyViolationType"
-             class="permalink"
-             data-slug="Audits.ContentSecurityPolicyViolationType"
-             title="Double click to copy markdown-formatted URL">#</a>
-        </h4>
-        
-      <div class="details-description">
-        
-        
-      <div class="enum-container">Allowed Values: <code>kInlineViolation</code>, <code>kEvalViolation</code>, <code>kURLViolation</code>, <code>kTrustedTypesSinkViolation</code>, <code>kTrustedTypesPolicyViolation</code></div>
-    
-      </div>
-    
-        <p class="type-type">Type: <strong>string</strong></p>
-        
-        
-      </div>
-    
-      <div class="details">
         <h4 class="details-name monospace" id="type-HeavyAdIssueDetails">
           <span class="domain-dot">Audits.</span>HeavyAdIssueDetails
           
@@ -1027,7 +912,7 @@ optional fields in InspectorIssueDetails to convey more specific
 information about the kind of issue.</p>
 
         
-      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code>, <code>ContentSecurityPolicyIssue</code></div>
+      <div class="enum-container">Allowed Values: <code>SameSiteCookieIssue</code>, <code>MixedContentIssue</code>, <code>BlockedByResponseIssue</code>, <code>HeavyAdIssue</code></div>
     
       </div>
     
@@ -1106,20 +991,6 @@ add a new optional field to this type.</p>
         </dt>
         <dd>
           <a href=/devtools-protocol/tot/Audits/#type-HeavyAdIssueDetails class="param-type">HeavyAdIssueDetails</a>
-          
-      <div class="details-description">
-        
-        
-      </div>
-    
-          
-        </dd>
-      
-        <dt class="param-name monospace optional">
-          contentSecurityPolicyIssueDetails
-        </dt>
-        <dd>
-          <a href=/devtools-protocol/tot/Audits/#type-ContentSecurityPolicyIssueDetails class="param-type">ContentSecurityPolicyIssueDetails</a>
           
       <div class="details-description">
         
