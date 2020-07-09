@@ -242,6 +242,11 @@
       
         <h3>Types</h3>
       <div class="toc-link">
+        <a class="monospace" href="#type-DisplayFeature"><span class="domain-dot">Emulation.</span>DisplayFeature</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-MediaFeature"><span class="domain-dot">Emulation.</span>MediaFeature</a>
         
       </div>
@@ -596,6 +601,22 @@ autosizing and more.</p>
       <div class="details-description">
         <p>If set, the visible area of the page will be overridden to this viewport. This viewport
 change is not observed by the page, e.g. viewport-relative elements do not change positions.</p>
+
+        
+      </div>
+    
+          <span class="experimental" title="This may be changed, moved or removed">Experimental</span>
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          displayFeature
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Emulation/#type-DisplayFeature class="param-type">DisplayFeature</a>
+          
+      <div class="details-description">
+        <p>If set, the display feature of a multi-segment screen. If not set, multi-segment support
+is turned-off.</p>
 
         
       </div>
@@ -1583,6 +1604,81 @@ on Android.</p>
       <h3 id="types">Types</h3>
       <div>
         
+      <div class="details">
+        <h4 class="details-name monospace" id="type-DisplayFeature">
+          <span class="domain-dot">Emulation.</span>DisplayFeature
+          
+          <a href="#type-DisplayFeature"
+             class="permalink"
+             data-slug="Emulation.DisplayFeature"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          orientation
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Orientation of a display feature in relation to screen</p>
+
+        
+      <div class="enum-container">Allowed Values: <code>vertical</code>, <code>horizontal</code></div>
+    
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          offset
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>The offset from the screen origin in either the x (for vertical
+orientation) or y (for horizontal orientation) direction.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          maskLength
+        </dt>
+        <dd>
+          <span class="param-type">integer</span>
+          
+      <div class="details-description">
+        <p>A display feature may mask content such that it is not physically
+displayed - this length along with the offset describes this area.
+A display feature that only splits content will have a 0 mask_length.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
       <div class="details">
         <h4 class="details-name monospace" id="type-MediaFeature">
           <span class="domain-dot">Emulation.</span>MediaFeature
