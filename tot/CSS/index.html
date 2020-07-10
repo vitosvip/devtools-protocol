@@ -312,6 +312,11 @@ subsequently load the required stylesheet contents using the <code>getStyleSheet
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-FontVariationAxis"><span class="domain-dot">CSS.</span>FontVariationAxis</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-InheritedStyleEntry"><span class="domain-dot">CSS.</span>InheritedStyleEntry</a>
         
       </div>
@@ -3003,7 +3008,8 @@ after they have been modified via CSSOM API.</p>
         </h4>
         
       <div class="details-description">
-        <p>Properties of a web font: <a href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions">https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions</a></p>
+        <p>Properties of a web font: <a href="https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions">https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions</a>
+and additional information such as platformFontFamily and fontVariationAxes.</p>
 
         
       </div>
@@ -3126,6 +3132,122 @@ after they have been modified via CSSOM API.</p>
           
       <div class="details-description">
         <p>The resolved platform font family</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace optional">
+          fontVariationAxes
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/CSS/#type-FontVariationAxis class="param-type">FontVariationAxis</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Available variation settings (a.k.a. &quot;axes&quot;).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-FontVariationAxis">
+          <span class="domain-dot">CSS.</span>FontVariationAxis
+          
+          <a href="#type-FontVariationAxis"
+             class="permalink"
+             data-slug="CSS.FontVariationAxis"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Information about font variation axes for variable fonts</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          tag
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>The font-variation-setting tag (a.k.a. &quot;axis tag&quot;).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          name
+        </dt>
+        <dd>
+          <span class="param-type">string</span>
+          
+      <div class="details-description">
+        <p>Human-readable variation name in the default language (normally, &quot;en&quot;).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          minValue
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>The minimum value (inclusive) the font supports for this tag.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          maxValue
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>The maximum value (inclusive) the font supports for this tag.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          defaultValue
+        </dt>
+        <dd>
+          <span class="param-type">number</span>
+          
+      <div class="details-description">
+        <p>The default value.</p>
 
         
       </div>
