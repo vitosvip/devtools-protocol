@@ -130,6 +130,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#method-getGridHighlightObjectsForTest"><span class="domain-dot">Overlay.</span>getGridHighlightObjectsForTest</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#method-getHighlightObjectForTest"><span class="domain-dot">Overlay.</span>getHighlightObjectForTest</a>
         
       </div>
@@ -181,6 +186,11 @@
       
       <div class="toc-link">
         <a class="monospace" href="#method-setShowFPSCounter"><span class="domain-dot">Overlay.</span>setShowFPSCounter</a>
+        
+      </div>
+      
+      <div class="toc-link">
+        <a class="monospace" href="#method-setShowGridOverlays"><span class="domain-dot">Overlay.</span>setShowGridOverlays</a>
         
       </div>
       
@@ -247,6 +257,11 @@
       </div>
       
       <div class="toc-link">
+        <a class="monospace" href="#type-GridNodeHighlightConfig"><span class="domain-dot">Overlay.</span>GridNodeHighlightConfig</a>
+        
+      </div>
+      
+      <div class="toc-link">
         <a class="monospace" href="#type-HighlightConfig"><span class="domain-dot">Overlay.</span>HighlightConfig</a>
         
       </div>
@@ -307,6 +322,67 @@
         
         
         
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="method-getGridHighlightObjectsForTest">
+          <span class="domain-dot">Overlay.</span>getGridHighlightObjectsForTest
+          
+          <a href="#method-getGridHighlightObjectsForTest"
+             class="permalink"
+             data-slug="Overlay.getGridHighlightObjectsForTest"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>For Persistent Grid testing.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          nodeIds
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>Ids of the node to get highlight object for.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      <h5 class="properties-name">Return Object</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          highlights
+        </dt>
+        <dd>
+          <span class="param-type">object</span>
+          
+      <div class="details-description">
+        <p>Grid Highlight data for the node ids provided.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
       </div>
     
       <div class="details">
@@ -1033,6 +1109,47 @@ Backend then generates &#39;inspectNodeRequested&#39; event upon element selecti
       </div>
     
       <div class="details">
+        <h4 class="details-name monospace" id="method-setShowGridOverlays">
+          <span class="domain-dot">Overlay.</span>setShowGridOverlays
+          
+          <a href="#method-setShowGridOverlays"
+             class="permalink"
+             data-slug="Overlay.setShowGridOverlays"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Highlight multiple elements with the CSS Grid overlay.</p>
+
+        
+      </div>
+    
+        
+        
+      <h5 class="properties-name">parameters</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          gridNodeHighlightConfigs
+        </dt>
+        <dd>
+          <span class="param-type">array<span class="param-type__array">[ <a href=/devtools-protocol/tot/Overlay/#type-GridNodeHighlightConfig class="param-type">GridNodeHighlightConfig</a> ]</span></span>
+          
+      <div class="details-description">
+        <p>An array of node identifiers and descriptors for the highlight appearance.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
         <h4 class="details-name monospace" id="method-setShowHinge">
           <span class="domain-dot">Overlay.</span>setShowHinge
           
@@ -1665,6 +1782,62 @@ user manually inspects an element.</p>
           
       <div class="details-description">
         <p>The named grid areas border color (Default: transparent).</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+      </dl>
+    
+        
+      </div>
+    
+      <div class="details">
+        <h4 class="details-name monospace" id="type-GridNodeHighlightConfig">
+          <span class="domain-dot">Overlay.</span>GridNodeHighlightConfig
+          
+          <a href="#type-GridNodeHighlightConfig"
+             class="permalink"
+             data-slug="Overlay.GridNodeHighlightConfig"
+             title="Double click to copy markdown-formatted URL">#</a>
+        </h4>
+        
+      <div class="details-description">
+        <p>Configurations for Persistent Grid Highlight</p>
+
+        
+      </div>
+    
+        <p class="type-type">Type: <strong>object</strong></p>
+        
+      <h5 class="properties-name">properties</h5>
+      <dl class="properties-container">
+        
+        <dt class="param-name monospace ">
+          gridHighlightConfig
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/Overlay/#type-GridHighlightConfig class="param-type">GridHighlightConfig</a>
+          
+      <div class="details-description">
+        <p>A descriptor for the highlight appearance.</p>
+
+        
+      </div>
+    
+          
+        </dd>
+      
+        <dt class="param-name monospace ">
+          nodeId
+        </dt>
+        <dd>
+          <a href=/devtools-protocol/tot/DOM/#type-NodeId class="param-type">DOM.NodeId</a>
+          
+      <div class="details-description">
+        <p>Identifier of the node to highlight.</p>
 
         
       </div>
